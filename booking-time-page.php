@@ -97,6 +97,10 @@
         height: 100%;
         border-radius: var(--border-radius-4);
     }
+
+    .movie-selecting-section .rating {
+        margin-bottom: 48px;
+    }
     
     .movie-selecting-section .content {
         width: 75%;
@@ -135,7 +139,14 @@
 
     .movie-selecting-section .content p {
         margin-bottom: 8px;
+        font-size: 20px;
     }
+    
+    .movie-selecting-section .content .movie-length,
+    .movie-selecting-section .content .movie-director { opacity: var(--opacity-90); }
+
+    .movie-selecting-section .content .length-data, 
+    .movie-selecting-section .content .director-data { opacity: var(--opacity-75); }
 
     /* -----------movie date----------- */
     .movie-date .fa-calendar-check {
@@ -355,15 +366,17 @@
                             <div>
                                 <span class="title-en italic-20 mb-3">Eternals</span>
                             </div>
-                            <div class="rating mb-5">
+                            <div class="rating">
                                 <i class="fas fa-star "></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
-                            <p><span class="sub-title-r">片長：156分鐘</span></p>
-                            <p><span class="sub-title-r">導演：趙婷</span></p>
+
+                            <p><span class="movie-length"></span>片場：<span class="length-data">156分鐘</span></p>
+                            <p><span class="movie-director"></span>導演：<span class="director-data">趙婷</span></p>
+                            
                         </div>
                     </div>
                 </div>

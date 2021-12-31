@@ -49,6 +49,14 @@
         margin-right: 20px;
     }
 
+    /* -------section margin bottom------- */
+    .movie-detail-section { margin: 144px 0; }
+     
+    .related-articles-section,
+    .actors-list-section { 
+        margin-bottom: 144px; 
+    }
+
     /* -----------------movinon navbar----------------- */
     .movinon-navbar {
         background-color: rgba(18, 18, 18, 0.5);
@@ -137,10 +145,7 @@
     }
 
     /* -----------------movie detail section----------------- */
-    .movie-detail-section {
-        margin-top: 144px;
-        margin-bottom: 144px;
-    }
+    .movie-detail-section { margin: 144px 0; }
 
     .movie-detail-section .social-media {
         margin-bottom: 32px;
@@ -151,15 +156,8 @@
         opacity: var(--opacity-75);
     }
 
-    .movie-detail-section .movie-info,
-    .movie-detail-section .movie-division {
-        padding-left: 112px;
-        padding-right: 112px;
-        margin-bottom: 72px;
-    }
-
     .movie-detail-section
-    .movie-info
+    .movie-poster
     .img-wrap {
         width: 100%;
         object-fit: cover;
@@ -168,7 +166,7 @@
     }
 
     .movie-detail-section
-    .movie-info
+    .movie-poster
     .img-wrap 
     img {
         width: 100%;
@@ -176,46 +174,77 @@
         border-radius: var(--border-radius-4);
     }
     
-    .movie-detail-section .content {
-        padding-left: 32px;
-    }
-
-    .movie-detail-section .content span {
-        display: inline-block;
-    }
+    .movie-detail-section .content { padding-left: 32px; }
+    .movie-detail-section .content span {  display: inline-block; }
 
     .movie-detail-section .pg-rate {
         border: 1px solid #E2A526;
         border-radius: var(--border-radius-50);
         padding: 4px 12px;
         opacity: var(--opacity-75);
+        margin-bottom: 8px;
     }
 
-    .movie-detail-section .title-en {
-        opacity: var(--opacity-50);
-    }
-
-    .movie-detail-section .reputation {
+    .movie-detail-section .rating {
         margin-bottom: 32px;
     }
 
+    .movie-detail-section .title-tc { 
+        margin-bottom: 4px; 
+        font-size: 48px;
+        font-weight: 700;
+    }
+
+    .movie-detail-section .title-en { 
+        margin-bottom: 16px;
+        opacity: var(--opacity-50); 
+        font-style: italic;
+        font-size: 20px;
+    }
+
+    .movie-detail-section .reputation { 
+        margin-bottom: 32px;
+        display: flex;
+        align-items: center;
+    }
+
     .movie-detail-section .reputation .img-wrap1 {
-        width: 12%;
+        width: 24px;
         margin-right: 8px;
     }
 
     .movie-detail-section .reputation .img-wrap2 {
-        width: 22%;
+        width: 48px;
         margin-right: 8px;
+        margin-top: 4px;
     }
     
     .movie-detail-section .reputation .img-wrap1 img,
     .movie-detail-section .reputation .img-wrap2 img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         object-position: center center;
     }
+
+    .movie-detail-section .content .sub-title-r { 
+        margin-bottom: 8px; 
+        opacity: var(--opacity-90);
+        font-size: 20px;
+    }
+
+    .movie-detail-section .content p { 
+        margin-bottom: 8px;
+        font-size: 20px;
+    }
+
+    .movie-detail-section .content .release-date,
+    .movie-detail-section .content .movie-length,
+    .movie-detail-section .content .movie-director {  opacity: var(--opacity-90); }
+
+    .movie-detail-section .content .date-data,
+    .movie-detail-section .content .length-data,
+    .movie-detail-section .content .director-data {  opacity: var(--opacity-75); }
 
     .movie-detail-section .cat-tags {
         margin-bottom: 56px;
@@ -226,7 +255,7 @@
     .movie-detail-section .cat-tags .cat-tag {
         border: 1px solid rgba(255,255,255,0.75);
         border-radius: var(--border-radius-50);
-        padding: 6px 20px 4px 20px;
+        padding: 6px 20px;
         margin-right: 16px;
         margin-bottom: 32px;
     }
@@ -239,6 +268,8 @@
         padding-top: 20px;
         border-top: 1px solid rgba(255,255,255,0.75);
         margin-bottom: 40px;
+        font-size: 20px;
+        opacity: var(--opacity-90);
     }
 
     .movie-detail-section .booking-trailer button {
@@ -253,12 +284,12 @@
     }
 
     /* -----------------related articles section----------------- */
-    .related-articles-section {
-        margin-bottom: 144px;
-    }
 
-    .related-articles-section .subtitle {
+    .related-articles-section .subtitle,
+    .actors-list-section .subtitle,
+    .movie-stills-section .subtitle {
         margin-bottom: 32px;
+        padding: 0 16px;
     }
 
     .related-articles-section .spoiler,
@@ -290,19 +321,21 @@
         background-color: var(--bg-color);
     }
 
-    .related-articles-section .articles-lg {
+    .related-articles-section .articles-1920 {
         width: 100%;
         margin: 0px;
     }
 
-    .related-articles-section .articles-lg .article-light {
+    .related-articles-section .articles-1920 .article-light {
         padding: 16px 32px;
+        margin-bottom: 24px;
         background-color: rgba(255,255,255,0.08);
         border-radius: var(--border-radius-8);
     }
 
-    .related-articles-section .articles-lg .article-dark {
+    .related-articles-section .articles-1920 .article-dark {
         padding: 16px 32px;
+        margin-bottom: 24px;
         background-color: rgba(255,255,255,0.02);
         border-radius: var(--border-radius-8);
     }
@@ -311,8 +344,8 @@
         opacity: var(--opacity-50);
     }
 
-    .related-articles-section .articles-lg .sub-title-r,
-    .related-articles-section .articles-md .sub-title-r {
+    .related-articles-section .articles-1920 .sub-title-r,
+    .related-articles-section .articles-xl .sub-title-r {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -321,11 +354,6 @@
     /* -----------------actors list section----------------- */
     .actors-list-section {
         width: 100%;
-        margin-bottom: 144px;
-    }
-
-    .actors-list-section .subtitle {
-        margin-bottom: 32px;
     }
     
     .actors-list-section .subtitle .sub-title-r {
@@ -405,10 +433,6 @@
         margin-bottom: 144px;
     }
 
-    .movie-stills-section .subtitle {
-        margin-bottom: 32px;
-    }
-
     .movie-stills-section .movie-stills .imgs-demo {
         max-width: 1344px;
         max-height: 588px;
@@ -450,11 +474,38 @@
         transition: .4s;
     }
 
-    .articles-md .col-xl-6 {
+    .articles-xl .col-xl-6 {
         display: flex;
-        /* align-items: center;  */
-        /* justify-content: center; */
         margin-bottom: auto;
+    }
+
+    /* =================================== @media =================================== */
+    /* ============================================================================== */
+
+    /* -----------------.container X-large >= 1200px，小於 1200px-----------------*/
+    @media screen and (max-width: 1200px) {
+        
+        /* -------section margin bottom------- */
+        .movie-detail-section { margin: 96px 0; }
+        
+        .related-articles-section,
+        .actors-list-section { 
+            margin-bottom: 96px; 
+        }
+        
+        .movie-detail-section .movie-info { padding: 0; }
+
+        .articles-xl li:nth-child(even){
+            padding: 16px 32px;
+            background-color: rgba(255,255,255,0.02);
+            border-radius: var(--border-radius-8);
+        }
+
+        .articles-xl li:nth-child(odd) {
+            padding: 16px 32px;
+            background-color: rgba(255,255,255,0.08);
+            border-radius: var(--border-radius-8);
+        }
     }
 
     /* -----------------.container large >= 992px，小於 992px-----------------*/
@@ -465,31 +516,131 @@
             background-color: var(--bg-color);
         }
 
-        .movie-detail-section .cat-tags .cat-tag {
-            margin-top: 32px;
+        /* -------section margin bottom------- */
+        .movie-detail-section { margin: 48px 0; }
+        
+        .related-articles-section,
+        .actors-list-section { 
+            margin-bottom: 48px; 
+        }
+
+        .movie-detail-section .cat-tags .cat-tag { margin-top: 32px; }
+
+        .movie-detail-section .description-title {
+            margin-bottom: 16px;
+        }
+
+        .movie-detail-section .description {
+            margin-bottom: 40px;
+            font-size: 16px;
         }
     }
 
-    /* -----------------.container large >= 1200px，小於 1200px-----------------*/
-    @media screen and (max-width: 1200px) {
-        .movie-detail-section .movie-info {
+    /* -----------------.container medium >= 768px，小於 768px-----------------*/
+    @media screen and (max-width: 768px) {
+
+        /* 小於 768px 後，將 red-line刪掉，並調整副標題 */
+        .red-line {
+            display: none;
+        }
+
+        .related-articles-section .subtitle {
+            align-items: end;
+        }
+
+        div.col-6,
+        div.col-12 {
             padding: 0;
-            margin-bottom: 72px;
+        }
+
+        .movie-detail-section .movie-poster {
+            padding: 0;
+        }
+
+        .movie-detail-section .title-tc { 
+            margin-bottom: 4px; 
+            font-size: 34px;
+        }
+
+        .movie-detail-section .title-en { 
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        .movie-detail-section .rating {
+            margin-bottom: 32px;
+            font-size: 14px;
+        }
+
+        .movie-detail-section .content p { 
+            margin-bottom: 4px;
+            font-size: 16px;
+        }
+
+        .movie-detail-section .cat-tags {
+            margin-bottom: 32px;
+        }
+
+        .movie-detail-section .cat-tags .cat-tag {
+            border: 1px solid rgba(255,255,255,0.75);
+            border-radius: var(--border-radius-50);
+            padding: 6px 20px;
+            margin-right: 16px;
+            margin-bottom: 32px;
         }
 
         .articles-md li:nth-child(even){
-            padding: 16px 32px;
+            padding: 8px 16px;
             background-color: rgba(255,255,255,0.02);
             border-radius: var(--border-radius-8);
+            margin-bottom: 8px;
         }
 
         .articles-md li:nth-child(odd) {
-            padding: 16px 32px;
+            padding: 8px 16px;
             background-color: rgba(255,255,255,0.08);
             border-radius: var(--border-radius-8);
+            margin-bottom: 8px;
         }
     }
 
+    /* -----------------.container iphoneX >= 418px，小於 418px-----------------*/
+    @media screen and (max-width: 418px) {
+
+        /* -------section margin bottom------- */
+        .movie-detail-section { margin: 32px 0; }
+        
+        .related-articles-section,
+        .actors-list-section { 
+            margin-bottom: 32px; 
+        }
+
+        .section-header-b { font-size: 20px; }
+        .related-articles-section .subtitle { margin-bottom: 24px; }
+
+        .sub-title-r, 
+        .sub-title-m,
+        .sub-title-b { font-size: 16px;}
+
+        .movie-detail-section .reputation {
+            display: none;
+        }
+
+        .movie-detail-section .content p { 
+            margin-bottom: 4px;
+            font-size: 16px;
+        }
+
+        .movie-detail-section .cat-tags {
+            margin-bottom: 24px;
+        }
+
+        .movie-detail-section .cat-tags .cat-tag {
+            padding: 8px 16px;
+            margin-right: 16px;
+            font-size: 14px;
+        }
+    }
 </style>
 
 <body>
@@ -558,29 +709,29 @@
                 </div>
                 <div class="row movie-info">
                     <div class="col-md-12 col-lg-6 d-flex">
-                        <div class="col-6">
+                        <div class="col-sm-4 col-xl-6 movie-poster">
                             <div class="img-wrap">
                                 <img src="images/poster_images/MSRbo2ocgQ6N9DdzBUk0-280 x 400.jpg" alt="">
                             </div>
                         </div>
-                        <div class="content">
+                        <div class="col-sm-8 col-xl-6 content">
                             <div>
                                 <span class="pg-rate body2-r">輔導級</span>
                             </div>
                             <div>
-                                <span class="title-tc main-header-b">永恆族</span>
+                                <span class="title-tc">永恆族</span>
                             </div>
                             <div>
-                                <span class="title-en italic-20 mb-3">Eternals</span>
+                                <span class="title-en">Eternals</span>
                             </div>
-                            <div class="rating mb-3">
+                            <div class="rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
-                            <div class="reputation d-flex align-items-end">
+                            <div class="reputation">
                                 <div class="img-wrap1">
                                     <img src="./images/Rotten_Tomatoes.svg" alt="">
                                 </div>
@@ -590,9 +741,16 @@
                                 </div>
                                 <span>79%</span>
                             </div>
-                            <p class="mb-2"><span class="sub-title-r">上映日期：<br>2021/11/03</span></p>
-                            <p class="mb-2"><span class="sub-title-r">片長：156分鐘</span></p>
-                            <p><span class="sub-title-r">導演：趙婷</span></p>
+
+                            <!-- 在 1920 螢幕上做測試 -->
+                            <!-- <p>日期：<span class="data">2021/11/03</span></p>
+                            <p>片長：<span class="data">156分鐘</span></p>
+                            <p>導演：<span class="data">趙婷</span></p> -->
+
+                            <p><span class="release-date"></span>日期：<span class="date-data">2021/11/03</span></p>
+                            <p><span class="movie-length"></span>片長：<span class="length-data">156分鐘</span></p>
+                            <p><span class="movie-director"></span>導演：<span class="director-data">趙婷</span></p>
+
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-6">
@@ -606,7 +764,7 @@
                             <span class="section-header-b">劇情大綱</span>
                         </div>
                         <div class="description">
-                            <p class="sub-title-r">《永恆族》是超越繁星的神族，七千年前來到地球，誓言保護人類，各色各異的他們，擁有超凡智慧與能力，長生不老，每人具備迥然不同的絕頂神力。然而守護地球期間，各自強大的永恆族人並非和樂融融，內部紛爭不斷，最終整個族群分崩離析，直到一群古老的宿敵現身…</p>
+                            <p>《永恆族》是超越繁星的神族，七千年前來到地球，誓言保護人類，各色各異的他們，擁有超凡智慧與能力，長生不老，每人具備迥然不同的絕頂神力。然而守護地球期間，各自強大的永恆族人並非和樂融融，內部紛爭不斷，最終整個族群分崩離析，直到一群古老的宿敵現身…</p>
                         </div>
                         <div class="booking-trailer">
                             <button type="button" class="btn mr-3">
@@ -633,19 +791,19 @@
                             <span class="section-header-b">討論區文章</span>
                         </div>
                     </div>
-                    <div class="col-6 my-auto">
+                    <div class="col-6">
                         <a href="#">
                             <div class="d-flex justify-content-end align-items-end">
-                                <div class="sub-title-b mt-2">前往討論區</div>
-                                <div class="ml-2"><i class="mb-2 fas fa-chevron-right"></i></div>
+                                <div class="sub-title-ㄩ mt-2">前往討論區</div>
+                                <div class="ml-2"><i class="fas fa-chevron-right"></i></div>
                             </div>
                         </a>
                     </div>
                 </div>
-                <div class="row articles-lg d-none d-xl-flex">
+                <div class="row articles-1920 d-none d-xl-flex">
                     <div class="col-xl-6">
                         <a href="#">
-                            <div class="article-light d-flex justify-content-between mb-4">
+                            <div class="article-light d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-free">雷</div>
                                     <div class="arti-cat-tag mr-3">選片</div>
@@ -657,7 +815,7 @@
                     </div>
                     <div class="col-xl-6">
                         <a href="#">
-                            <div class="article-light d-flex justify-content-between mb-4">
+                            <div class="article-light d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler">雷</div>
                                     <div class="arti-cat-tag mr-3">討論</div>
@@ -669,7 +827,7 @@
                     </div>
                     <div class="col-xl-6">
                         <a href="#">
-                            <div class="article-dark d-flex justify-content-between mb-4">
+                            <div class="article-dark d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler">雷</div>
                                     <div class="arti-cat-tag mr-3">討論</div>
@@ -681,7 +839,7 @@
                     </div>
                     <div class="col-xl-6">
                         <a href="#">
-                            <div class="article-dark d-flex justify-content-between mb-4">
+                            <div class="article-dark d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-free">雷</div>
                                     <div class="arti-cat-tag mr-3">討論</div>
@@ -693,7 +851,7 @@
                     </div>
                     <div class="col-xl-6">
                         <a href="#">
-                            <div class="article-light d-flex justify-content-between mb-4">
+                            <div class="article-light d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-free">雷</div>
                                     <div class="arti-cat-tag mr-3">討論</div>
@@ -705,7 +863,7 @@
                     </div>
                     <div class="col-xl-6">
                         <a href="#">
-                            <div class="article-light d-flex justify-content-between mb-4">
+                            <div class="article-light d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-free">雷</div>
                                     <div class="arti-cat-tag mr-3">討論</div>
@@ -717,7 +875,7 @@
                     </div>
                     <div class="col-xl-6">
                         <a href="#">
-                            <div class="article-dark d-flex justify-content-between mb-4">
+                            <div class="article-dark d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-free">雷</div>
                                     <div class="arti-cat-tag mr-3">討論</div>
@@ -729,7 +887,7 @@
                     </div>
                     <div class="col-xl-6">
                         <a href="#">
-                            <div class="article-dark d-flex justify-content-between mb-4">
+                            <div class="article-dark d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-free">雷</div>
                                     <div class="arti-cat-tag mr-3">討論</div>
@@ -742,7 +900,7 @@
                 </div>
 
 
-                <div class="row articles-md d-none d-md-flex d-lg-flex d-xl-none">
+                <div class="row articles-xl d-none d-md-flex d-lg-flex d-xl-none">
                     <ul>
                         <li class="mb-3"> 
                             <div class="col-12">
@@ -866,9 +1024,9 @@
                     </ul>
                 </div>
 
-                <div class="row articles-md d-flex d-sm-flex d-md-none d-lg-none d-xl-none">
+                <div class="row articles-md d-sm-flex d-md-none d-lg-none d-xl-none">
                     <ul>
-                        <li class="mb-3 px-0"> 
+                        <li> 
                             <div class="col-12">
                                 <a href="#">
                                     <div class="col-12">
@@ -887,7 +1045,7 @@
                             </div>
                         </li>
                         
-                        <li class="mb-3 px-0"> 
+                        <li> 
                             <div class="col-12">
                                 <a href="#">
                                     <div class="col-12">
@@ -906,7 +1064,7 @@
                             </div>
                         </li>
 
-                        <li class="mb-3 px-0"> 
+                        <li> 
                             <div class="col-12">
                                 <a href="#">
                                     <div class="col-12">
@@ -925,7 +1083,7 @@
                             </div>
                         </li>
                         
-                        <li class="mb-3 px-0"> 
+                        <li> 
                             <div class="col-12">
                                 <a href="#">
                                     <div class="col-12">
@@ -944,7 +1102,7 @@
                             </div>
                         </li>
 
-                        <li class="mb-3 px-0"> 
+                        <li> 
                             <div class="col-12">
                                 <a href="#">
                                     <div class="col-12">
@@ -963,7 +1121,7 @@
                             </div>
                         </li>
 
-                        <li class="mb-3 px-0"> 
+                        <li> 
                             <div class="col-12">
                                 <a href="#">
                                     <div class="col-12">
@@ -982,7 +1140,7 @@
                             </div>
                         </li>
 
-                        <li class="mb-3 px-0"> 
+                        <li> 
                             <div class="col-12">
                                 <a href="#">
                                     <div class="col-12">
@@ -1001,7 +1159,7 @@
                             </div>
                         </li>
 
-                        <li class="mb-3 px-0"> 
+                        <li> 
                             <div class="col-12">
                                 <a href="#">
                                     <div class="col-12">

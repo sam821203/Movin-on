@@ -93,14 +93,14 @@ p { line-height: var(--line-height-160); }
     font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: 0.25px;
-    line-height: 160%;
+    line-height: 100%;
 }
 
 .sub-title-m {
     font-size: 1.25rem;
     font-weight: 500;
     letter-spacing: 0.25px;
-    line-height: 160%;
+    line-height: 100%;
 }
 
 .sub-title-r {

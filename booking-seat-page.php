@@ -108,7 +108,14 @@
 
     .movie-info-section .content p {
         margin-bottom: 8px;
+        font-size: 20px;
     }
+    
+    .movie-info-section .content .movie-length,
+    .movie-info-section .content .movie-director { opacity: var(--opacity-90); }
+
+    .movie-info-section .content .length-data, 
+    .movie-info-section .content .director-data { opacity: var(--opacity-75); }
     
     /* -----------------seat dataviz section----------------- */
     .seat-dataviz {
@@ -338,8 +345,10 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star-half-alt"></i>
                                     </div>
-                                    <p><span class="sub-title-r">片長：156分鐘</span></p>
-                                    <p><span class="sub-title-r">導演：趙婷</span></p>
+
+                                    <p><span class="movie-length"></span>片場：<span class="length-data">156分鐘</span></p>
+                                    <p><span class="movie-director"></span>導演：<span class="director-data">趙婷</span></p>
+                            
                                 </div>
                             </div>
                         </div>
