@@ -477,7 +477,7 @@
     /* ============================================================================== */
 
     /* ------------------------  <418px  ------------------------*/
-    @media screen and (max-width: 418px) {
+    @media screen and (max-width: 417px) {
 
         .movie-detail-section { margin-top: 32px; }
 
@@ -522,12 +522,12 @@
     }
 
     /* ------------------------  418px-575px  ------------------------*/
-    /* @media screen and (max-width: 576px) {
+    /* @media screen and (min-width: 418px) and (max-width: 575px) {
 
     } */
     
     /* ------------------------  576px-767px  ------------------------*/
-    @media screen and (max-width: 768px) {
+    @media screen and (min-width: 576px) and (max-width: 767px) {
 
         /* 小於 768px 後，將 red-line刪掉，並調整副標題 */
         .red-line {
@@ -590,7 +590,7 @@
     }
 
     /* ------------------------  768px-991px  ------------------------*/
-    @media screen and (max-width: 992px) {
+    @media screen and (min-width: 768px) and (max-width: 991px) {
 
         body {
             background: url("images/detail_page/bg_img/bg_img_gradient_992.jpg") top center no-repeat;
@@ -613,7 +613,7 @@
     }
 
     /* ------------------------  992px-1199px  ------------------------*/
-    @media screen and (max-width: 1200px) {
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
 
         /* section margin bottom */
         .movie-detail-section { margin-top: 96px; }
@@ -645,9 +645,19 @@
     }
 
     /* ------------------------  1200px-1343px  ------------------------*/
-    @media screen and (max-width: 1344px) {
+    @media screen and (min-width: 1200px) and (max-width: 1343px) {
 
     }
+
+    /* ------------------------  1344px-1920px  ------------------------*/
+    @media screen and (min-width: 1344px) and (max-width: 1920px) {
+        .container {
+            min-width: 1344px;
+        }
+    }
+
+
+
 
 
 
@@ -719,12 +729,12 @@
                 </div>
                 <div class="row movie-info">
                     <div class="col-md-12 col-lg-6 d-flex">
-                        <div class="col-sm-4 col-lg-6 movie-poster">
+                        <div class="col-sm-4 col-xl-6 movie-poster">
                             <div class="img-wrap">
                                 <img src="images/poster_images/MSRbo2ocgQ6N9DdzBUk0-280 x 400.jpg" alt="">
                             </div>
                         </div>
-                        <div class="col-sm-8 col-lg-6 content">
+                        <div class="col-sm-8 col-xl-6 content">
                             <div>
                                 <span class="pg-rate body2-r">輔導級</span>
                             </div>
