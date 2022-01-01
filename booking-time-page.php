@@ -32,10 +32,13 @@
     
     body {
         width: 100%;
-        background: url("images/movie_booking_page/bg_img/bg_img_gradient-min.jpg") top center no-repeat;
+        background: url("images/booking_time_page/bg_img/bg_img_gradient_1200.jpg") top center no-repeat;
         background-size: contain;
         background-color: var(--bg-color);
     }
+
+    /* -------section margin bottom------- */
+    .movie-selecting-section { margin-top: 96px; }
 
     /* -----------------movinon navbar----------------- */
     .movinon-navbar {
@@ -66,15 +69,12 @@
     }
 
     /* -----------------movie selecting section----------------- */
-    .movie-selecting-section {
-        margin-top: 140px;
-    }
-
     .movie-selecting-section .movie-info,
+    .movie-selecting-section .movie-date,
     .movie-selecting-section .movie-division {
         padding-left: 112px;
         padding-right: 112px;
-        margin-bottom: 72px;
+        margin-bottom: 48px;
     }
 
     .movie-selecting-section
@@ -116,25 +116,24 @@
         border-radius: var(--border-radius-50);
         padding: 4px 12px;
         opacity: var(--opacity-75);
-        margin-bottom: 16px;
+        margin-bottom: 8px;
     }
 
-    .movie-selecting-section .title-tc {
-        margin-bottom: 4px;
-    }
-
-    .movie-selecting-section .title-en {
-        opacity: var(--opacity-50);
-    }
-
-    .movie-selecting-section .movie-date {
-        padding-left: 112px;
-        padding-right: 112px;
+    .movie-selecting-section .rating {
         margin-bottom: 32px;
     }
 
-    .movie-selecting-section .movie-division {
-        margin-bottom: 96px;
+    .movie-selecting-section .title-tc { 
+        margin-bottom: 4px; 
+        font-size: 48px;
+        font-weight: 700;
+    }
+
+    .movie-selecting-section .title-en { 
+        margin-bottom: 16px;
+        opacity: var(--opacity-50); 
+        font-style: italic;
+        font-size: 20px;
     }
 
     .movie-selecting-section .content p {
@@ -149,52 +148,67 @@
     .movie-selecting-section .content .director-data { opacity: var(--opacity-75); }
 
     /* -----------movie date----------- */
-    .movie-date .fa-calendar-check {
+    .movie-selecting-section .row.movie-date {
+        overflow: auto;
+    }
+
+    .movie-selecting-section .row.movie-date::-webkit-scrollbar {
+        display: none;
+    }
+
+    .movie-selecting-section .movie-date .fa-calendar-check {
         font-size: 20px;
         margin-right: 8px;
     }
 
-    .movie-division .fa-city {
-        font-size: 16px;
-        margin-right: 8px;
-    }
-
-    .movie-date .sub-title-r {
+    .movie-selecting-section .movie-date .sub-title-r {
         opacity: var(--opacity-90);
     }
 
-    .movie-date .day {
+    .movie-selecting-section .movie-date .day {
         text-align: center;
-        padding: 12px 12px 0px 12px;
+        padding: 12px 14px 0px 12px;
         border: 1px solid white;
         border-radius: var(--border-radius-4);
         display: block;
         opacity: var(--opacity-25);
-        margin-right: 32px;
+        margin-right: 24px;
     }
 
-    .movie-date .day span {
+    .movie-selecting-section .movie-date .day span {
         display: block;
     }
 
-    .movie-date .day .roboto-condensed {
+    .movie-selecting-section .movie-date .day .roboto-condensed {
        font-size: 56px;
        letter-spacing: -2px;
        opacity: var(--opacity-90);
     }
 
-    .movie-division .option {
-        display: block;
+    /* -----------movie division----------- */
+    .movie-selecting-section .movie-division .fa-city {
+        font-size: 16px;
+        margin-right: 8px;
+    }
+
+    .movie-selecting-section .movie-division .divisions {
+        flex-wrap: nowrap;
+    }
+
+    .movie-selecting-section .movie-division .division {
+        display: inline-block;
         padding: 8px;
         border: 1px solid white;
         border-radius: var(--border-radius-4);
         opacity: var(--opacity-25);
         margin-right: 16px;
+        margin-bottom: 16px;
     }
 
     /* -----------------movie showtime section----------------- */
     .movie-showtime-section .subtitle {
         margin-bottom: 64px;
+        padding: 0 16px;
     }
 
     .movie-showtime-section .subtitle .dot {
@@ -202,6 +216,11 @@
         height: 12px;
         margin-left: 12px;
         margin-right: 4px;
+    }
+
+    .movie-showtime-section .seat-left-info {
+        display: flex;
+        justify-content: end;
     }
 
     .red-line {
@@ -217,17 +236,9 @@
         opacity: var(--opacity-75);
     }
 
-    .green-dot {
-        background-color: #6DF14B;
-    }
-
-    .yellow-dot {
-        background-color: #F8CF40;
-    }
-
-    .red-dot {
-        background-color: #F84052;
-    }
+    .green-dot { background-color: #6DF14B; }
+    .yellow-dot { background-color: #F8CF40; }
+    .red-dot { background-color: #F84052; }
 
     .movie-showtime-section .timetable {
         padding-left: 112px;
@@ -235,12 +246,16 @@
         margin-bottom: 32px;
     }
 
-    .movie-showtime-section .gradient-line {
-        background: linear-gradient(135deg, #121212 0%,#fff 100%);
+    .movie-showtime-section .timetable .timetable-row {
+        display: flex;
+    }
+
+    .movie-showtime-section .divide-line {
+        background-color: rgba(255,255,255,0.25);
         height: 1px;
         border-radius: var(--border-radius-50);
-        margin-top: 16px;
-        margin-bottom: 16px;
+        margin-top: 32px;
+        margin-bottom: 4px;
     }
 
     .movie-showtime-section .cinema-name {
@@ -249,8 +264,15 @@
         word-break: keep-all;
     }
 
-    .movie-showtime-section .showtime-options {
+    .movie-showtime-section .showtime-options-wrap {
         width: 82%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .movie-showtime-section .showtime-options {
+        display: flex;
+        margin-bottom: 16px;
     }
 
     .movie-showtime-section .movie-type {
@@ -264,38 +286,273 @@
 
     .movie-showtime-section .movie-type span {
         display: inline-block;
-        padding: 6px 20px 6px 20px;
-        border-radius: var(--border-radius-50);
+        border-radius: var(--border-radius-4);
         background-color: rgba(255,255,255,0.1);
-    }
-    
-    .movie-showtime-section 
-    .options 
-    .showtime {
-        border: 1px solid rgba(255,255,255,0.5);
-        border-radius: var(--border-radius-50);
-        padding: 8px 16px 6px 16px;
-        margin-right: 16px;
-        margin-bottom: 16px;
+        line-height: 100%;
     }
 
+    .movie-showtime-section .movie-type span.digital {
+        padding: 12px 20px 11px 20px;
+    }
+
+    .movie-showtime-section .movie-type span.imax {
+        padding: 12px 16px 11px 16px;
+    }
+    
+    .movie-showtime-section .options .showtime {
+        border: 1px solid rgba(255,255,255,0.5);
+        border-radius: var(--border-radius-4);
+        padding: 12px 16px 10px 16px;
+        margin-right: 16px;
+        margin-bottom: 16px;
+        line-height: 100%;
+    }
+    
     .movie-showtime-section .options .dot {
         width: 8px;
         height: 8px;
     }
 
     /* -----------------selected----------------- */
-    .movie-date .selected,
-    .movie-division .selected,
+    .movie-selecting-section .movie-date .selected,
+    .movie-selecting-section .movie-division .selected,
     .timetable .showtime.selected {
         border: 1px solid var(--brand-color);
         opacity: 1;
         box-shadow: var(--box-shadow-red);
     }
+
+    /* =================================== @media =================================== */
+    /* ============================================================================== */
+
+    /* -----------------when smaller than 418px，小於 418px-----------------*/
+    @media screen and (max-width: 418px) {
+        
+        .movie-selecting-section { margin-top: 32px; }
+
+        .movie-selecting-section .movie-info,
+        .movie-selecting-section .movie-date,
+        .movie-selecting-section .movie-division {
+            padding: 0 16px;
+            margin-bottom: 32px;
+        }
+
+        .section-header-b { font-size: 20px; }
+        .related-articles-section .subtitle { margin-bottom: 24px; }
+
+        .sub-title-r, 
+        .sub-title-m,
+        .sub-title-b { font-size: 16px;}
+
+        .body1-r,
+        .body1-m,
+        .body1-b { font-size: 14px; }
+
+        .movie-selecting-section .content p { 
+            margin-bottom: 4px;
+            font-size: 16px;
+        }
+
+        .movie-selecting-section .movie-date .day span {
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        .movie-selecting-section .movie-date .day .roboto-condensed {
+            font-size: 48px;
+        }
+
+        .movie-selecting-section .movie-date .day {
+            text-align: center;
+            padding: 8px 10px 0px 8px;
+        }
+
+        /* movie showtime section */
+        .movie-showtime-section div.subtitle {
+            overflow: auto;
+            padding: 0 16px;
+        }
+
+        .movie-showtime-section div.subtitle::-webkit-scrollbar {
+            display: none;
+        }
+
+        .movie-showtime-section .options .showtime {
+            padding: 8px 16px;
+        }
+    }
+
+    /* -----------------when smaller than 576px，小於 576px-----------------*/
+    @media screen and (max-width: 576px) {
+        .movie-showtime-section .seat-left-info {
+            font-size: 14px;
+        }
+    }
+
+    /* -----------------when smaller than 768px，小於 768px-----------------*/
+    @media screen and (max-width: 768px) {
+
+        /* 小於 768px 後，將 red-line刪掉，並調整副標題 */
+        .red-line {
+            display: none;
+        }
+
+        /* movie selecting section */
+        .movie-selecting-section .movie-poster {
+            padding: 0;
+        }
+
+        .movie-selecting-section .title-tc { 
+            margin-bottom: 4px; 
+            font-size: 34px;
+        }
+
+        .movie-selecting-section .title-en { 
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        .movie-selecting-section .rating {
+            margin-bottom: 32px;
+            font-size: 14px;
+        }
+
+        .movie-selecting-section .content p { 
+            margin-bottom: 4px;
+            font-size: 16px;
+        }
+
+        .movie-selecting-section .movie-info,
+        .movie-selecting-section .movie-date,
+        .movie-selecting-section .movie-division {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .movie-selecting-section .movie-date .day {
+            margin-right: 16px;
+        }
+
+        .movie-selecting-section .movie-division .division {
+            margin-right: 12px;
+        }
+
+        /* movie showtime section */
+        .movie-showtime-section .seat-left-info {
+            justify-content: start;
+        }
+
+        .movie-showtime-section .showtime-options,
+        .movie-showtime-section .options {
+            width: 100%;
+        }
+
+        .movie-showtime-section .showtime-options {
+            display: block;
+        }
+
+        .movie-showtime-section .movie-type {
+            width: 100%;
+        }
+
+        .movie-showtime-section .movie-type span.digital {
+            padding: 12px 30px 11px 30px;
+        }
+
+        .movie-showtime-section .movie-type span.imax {
+            padding: 12px 16px 11px 16px;
+        }
+    }
+
+    /* -----------------when smaller than 992px，小於 992px-----------------*/
+    @media screen and (max-width: 992px) {
+        body {
+            background: url("images/booking_time_page/bg_img/bg_img_gradient_992.jpg") top center no-repeat;
+            background-size: contain;
+            background-color: var(--bg-color);
+        }
+
+        .movie-selecting-section { margin-top: 48px; }
+
+        .movie-selecting-section
+        .movie-info
+        .movie-poster { width: 33.33%; }
+        
+        .movie-selecting-section .content {
+            width: 66.66%;
+            padding-left: 32px;
+        }
+
+        .movie-selecting-section .movie-info,
+        .movie-selecting-section .movie-date,
+        .movie-selecting-section .movie-division {
+            padding-left: 48px;
+            padding-right: 48px;
+            margin-bottom: 48px;
+        }
+
+        /* movie showtime section */
+        .movie-showtime-section .subtitle {
+            margin-bottom: 32px;
+            padding: 0 16px;
+        }
+
+        .movie-showtime-section .timetable .timetable-row {
+            display: block;
+        }
+
+        .movie-showtime-section .timetable-row .cinema-name {
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 16px;
+        }
+
+        .movie-showtime-section .showtime-options-wrap {
+            width: 100%;
+        }
+
+        .movie-showtime-section .timetable-row .movie-type {
+            text-align: left;
+            margin-bottom: 16px;
+        }
+    }
+
+    /* -----------------when smaller than 1200px，小於 1200px-----------------*/
+    @media screen and (max-width: 1200px) {
+        
+        /* section margin bottom */
+       .movie-selecting-section { margin-top: 96px 0; }
+
+       .movie-selecting-section .movie-info,
+       .movie-selecting-section .movie-date,
+       .movie-selecting-section .movie-division {
+           padding-left: 96px;
+           padding-right: 96px;
+           margin-bottom: 72px;
+       }
+    }
+
+    /* -----------------when bigger than 1400px，大於 1400px-----------------*/
+    @media (max-width: 1400px) {
+        .container {
+            max-width: 1344px;
+        }
+
+        .movie-selecting-section .movie-info,
+        .movie-selecting-section .movie-date,
+        .movie-selecting-section .movie-division {
+            padding: 0 16px; 
+            margin-bottom: 24px;
+        }
+        .movie-showtime-section .timetable {
+            padding: 0 16px; 
+            margin-bottom: 24px;
+        }
+    }
+    
 </style>
 
 <body>
-    <!-- -----------movinon navbar----------- -->
     <nav>
         <div class="movinon-navbar">
             <div class="container">
@@ -347,7 +604,7 @@
 
     <main>
         <!-- -----------movie selecting section----------- -->
-        <section class="movie-selecting-section">
+        <section class="movie-selecting-section g-section-mb">
             <div class="container">
                 <div class="row movie-info">
                     <div class="d-flex">
@@ -361,10 +618,10 @@
                                 <span class="pg-rate body2-r">輔導級</span>
                             </div>
                             <div>
-                                <span class="title-tc main-header-b">永恆族</span>
+                                <span class="title-tc">永恆族</span>
                             </div>
                             <div>
-                                <span class="title-en italic-20 mb-3">Eternals</span>
+                                <span class="title-en">Eternals</span>
                             </div>
                             <div class="rating">
                                 <i class="fas fa-star "></i>
@@ -386,42 +643,56 @@
                         <span class="sub-title-r">日期</span>
                     </div>
                     <div class="col-12">
-                        <div class="d-flex">
-                            <div class="day selected">
-                                <span>星期一</span>
-                                <span class="sub-title-r">12月</span>
-                                <span class="roboto-condensed">15</span>
-                            </div>
-                            <div class="day day2">
-                                <span>星期二</span>
-                                <span class="sub-title-r">12月</span>
-                                <span class="roboto-condensed">16</span>
-                            </div>
-                            <div class="day day3">
-                                <span>星期三</span>
-                                <span class="sub-title-r">12月</span>
-                                <span class="roboto-condensed">17</span>
-                            </div>
-                            <div class="day day4">
-                                <span>星期四</span>
-                                <span class="sub-title-r">12月</span>
-                                <span class="roboto-condensed">18</span>
-                            </div>
-                            <div class="day day5">
-                                <span>星期五</span>
-                                <span class="sub-title-r">12月</span>
-                                <span class="roboto-condensed">19</span>
-                            </div>
-                            <div class="day day6">
-                                <span>星期六</span>
-                                <span class="sub-title-r">12月</span>
-                                <span class="roboto-condensed">20</span>
-                            </div>
-                            <div class="day day7">
-                                <span>星期天</span>
-                                <span class="sub-title-r">12月</span>
-                                <span class="roboto-condensed">21</span>
-                            </div>
+                        <div class="x d-flex">
+                            <a href="#">
+                                <div class="day selected">
+                                    <span>星期一</span>
+                                    <span class="sub-title-r">12月</span>
+                                    <span class="roboto-condensed">15</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="day day2">
+                                    <span>星期二</span>
+                                    <span class="sub-title-r">12月</span>
+                                    <span class="roboto-condensed">16</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="day day3">
+                                    <span>星期三</span>
+                                    <span class="sub-title-r">12月</span>
+                                    <span class="roboto-condensed">17</span>
+                                </div> 
+                            </a>
+                            <a href="#">
+                                <div class="day day4">
+                                    <span>星期四</span>
+                                    <span class="sub-title-r">12月</span>
+                                    <span class="roboto-condensed">18</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="day day5">
+                                    <span>星期五</span>
+                                    <span class="sub-title-r">12月</span>
+                                    <span class="roboto-condensed">19</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="day day6">
+                                    <span>星期六</span>
+                                    <span class="sub-title-r">12月</span>
+                                    <span class="roboto-condensed">20</span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="day day7">
+                                    <span>星期天</span>
+                                    <span class="sub-title-r">12月</span>
+                                    <span class="roboto-condensed">21</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -431,11 +702,19 @@
                         <span class="sub-title-r">城市</span>
                     </div>
                     <div class="col-12">
-                        <div class="options d-flex">
-                            <span class="option selected">北區</span>
-                            <span class="option">桃竹苗</span>
-                            <span class="option">中區</span>
-                            <span class="option">南區與離島</span>
+                        <div class="divisions">
+                            <a href="#">
+                                <span class="division selected">北區</span>
+                            </a>
+                            <a href="#">
+                                <span class="division">桃竹苗</span>
+                            </a>
+                            <a href="#">
+                                <span class="division">中區</span>
+                            </a>
+                            <a href="#">
+                                <span class="division">南區與離島</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -443,17 +722,23 @@
         </section>
 
         <!-- -----------movie showtime section----------- -->
-        <section class="movie-showtime-section">
+        <section class="movie-showtime-section g-section-mb">
             <div class="container">
                 <div class="row subtitle">
-                    <div class="col-6">
+                    <div class="col-sm-12 col-md-6">
                         <div class="d-flex">
                             <div class="red-line my-auto"></div>
                             <span class="section-header-b">場次時間表</span>
                         </div>
                     </div>
-                    <div class="col-6 my-auto">
-                        <div class="d-flex justify-content-end">
+                    <div class="col-sm-12 col-md-6 my-auto">
+                        <div class="seat-left-info">
+                            <!-- <span>座位狀態：</span>
+                            <span class="dot green-dot my-auto">充足</span>
+                            <span class="dot yellow-dot my-auto">緊張 (低於40%)</span>
+                            <span class="dot red-dot my-auto">告急 (低於5%)</span> -->
+
+                            <!-- 問題：如何 overflow?  -->
                             <div>座位狀態：</div>
                             <div class="dot green-dot my-auto"></div><span>充足</span>
                             <div class="dot yellow-dot my-auto"></div><span>緊張 (低於40%)</span>
@@ -461,263 +746,461 @@
                         </div>
                     </div>
                 </div>
+                <!-- 第一家電影院 -->
                 <div class="row timetable">
                     <div class="col-12">
-                        <div class="d-flex">
-                            <span class="cinema-name sub-title-r">台北天母新光影城</span>
-                            <div class="showtime-options d-flex flex-column">
-                                <div class="d-flex mb-3">
+                        <div class="timetable-row">
+                            <div class="cinema-name sub-title-r">台北天母新光影城</div>
+                            <div class="showtime-options-wrap">
+                                <div class="showtime-options">
                                     <div class="movie-type">
-                                        <span>數位</span>
+                                        <span class="digital">數位</span>
                                     </div>
                                     <div class="options d-flex flex-wrap">
-                                        <div class="showtime d-flex">
-                                            <div class="dot green-dot my-auto mr-2"></div>
-                                            <span class="body1-r">09:45</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot red-dot my-auto mr-2"></div>
-                                            <span class="body1-r">10:45</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot yellow-dot my-auto mr-2"></div>
-                                            <span class="body1-r">11:30</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot green-dot my-auto mr-2"></div>
-                                            <span class="body1-r">12:45</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot red-dot my-auto mr-2"></div>
-                                            <span class="body1-r">13:30</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot red-dot my-auto mr-2"></div>
-                                            <span class="body1-r">14:45</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot green-dot my-auto mr-2"></div>
-                                            <span class="body1-r">15:30</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot green-dot my-auto mr-2"></div>
-                                            <span class="body1-r">17:45</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot yellow-dot my-auto mr-2"></div>
-                                            <span class="body1-r">20:45</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot green-dot my-auto mr-2"></div>
-                                            <span class="body1-r">21:30</span>
-                                        </div>
+                                        <!-- 第一個場次 -->
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">09:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot red-dot my-auto mr-2"></div>
+                                                <span class="body1-r">10:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot yellow-dot my-auto mr-2"></div>
+                                                <span class="body1-r">11:30</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">12:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot red-dot my-auto mr-2"></div>
+                                                <span class="body1-r">13:30</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot red-dot my-auto mr-2"></div>
+                                                <span class="body1-r">14:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">15:30</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">17:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot yellow-dot my-auto mr-2"></div>
+                                                <span class="body1-r">20:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">21:30</span>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="d-flex mb-3">
+
+                                <div class="showtime-options">
                                     <div class="movie-type">
-                                        <span>IMAX</span>
+                                        <span class="imax">IMAX</span>
                                     </div>
                                     <div class="options d-flex flex-wrap">
-                                        <div class="showtime d-flex">
-                                            <div class="dot green-dot my-auto mr-2"></div>
-                                            <span class="body1-r">09:45</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot yellow-dot my-auto mr-2"></div>
-                                            <span class="body1-r">11:30</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot red-dot my-auto mr-2"></div>
-                                            <span class="body1-r">13:30</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot red-dot my-auto mr-2"></div>
-                                            <span class="body1-r">14:45</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot green-dot my-auto mr-2"></div>
-                                            <span class="body1-r">17:45</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="gradient-line"></div>
-                    </div>
-                </div>
-                <div class="row timetable">
-                    <div class="col-12">
-                        <div class="d-flex">
-                            <span class="cinema-name sub-title-r">林口 MITSUI OUTLET PARK
-                                威秀影城</span>
-                            <div class="showtime-options d-flex flex-column">
-                                <div class="d-flex mb-3">
-                                    <div class="movie-type">
-                                        <span>數位</span>
-                                    </div>
-                                    <div class="options d-flex flex-wrap">
-                                        <div class="showtime d-flex">
-                                            <div class="dot green-dot my-auto mr-2"></div>
-                                            <span class="body1-r">09:45</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot red-dot my-auto mr-2"></div>
-                                            <span class="body1-r">10:45</span>
-                                        </div>
-                                        <div class="showtime selected d-flex">
-                                            <div class="dot yellow-dot my-auto mr-2"></div>
-                                            <span class="body1-r">11:30</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot green-dot my-auto mr-2"></div>
-                                            <span class="body1-r">12:45</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot green-dot my-auto mr-2"></div>
-                                            <span class="body1-r">13:30</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot green-dot my-auto mr-2"></div>
-                                            <span class="body1-r">14:45</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gradient-line"></div>
-                    </div>
-                </div>
-                <div class="row timetable">
-                    <div class="col-12">
-                        <div class="d-flex">
-                            <span class="cinema-name sub-title-r">台北信義威秀影城</span>
-                            <div class="showtime-options d-flex flex-column">
-                                <div class="d-flex mb-3">
-                                    <div class="movie-type">
-                                        <span>數位</span>
-                                    </div>
-                                    <div class="options d-flex flex-wrap">
-                                        <div class="showtime d-flex">
-                                            <div class="dot green-dot my-auto mr-2"></div>
-                                            <span class="body1-r">09:45</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot red-dot my-auto mr-2"></div>
-                                            <span class="body1-r">10:45</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot yellow-dot my-auto mr-2"></div>
-                                            <span class="body1-r">11:30</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot green-dot my-auto mr-2"></div>
-                                            <span class="body1-r">12:45</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot red-dot my-auto mr-2"></div>
-                                            <span class="body1-r">13:30</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot red-dot my-auto mr-2"></div>
-                                            <span class="body1-r">14:45</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot green-dot my-auto mr-2"></div>
-                                            <span class="body1-r">15:30</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot green-dot my-auto mr-2"></div>
-                                            <span class="body1-r">17:45</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot yellow-dot my-auto mr-2"></div>
-                                            <span class="body1-r">20:45</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot green-dot my-auto mr-2"></div>
-                                            <span class="body1-r">21:30</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex mb-3">
-                                    <div class="movie-type">
-                                        <span>IMAX</span>
-                                    </div>
-                                    <div class="options d-flex flex-wrap">
-                                        <div class="showtime d-flex">
-                                            <div class="dot green-dot my-auto mr-2"></div>
-                                            <span class="body1-r">09:45</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot yellow-dot my-auto mr-2"></div>
-                                            <span class="body1-r">11:30</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot yellow-dot my-auto mr-2"></div>
-                                            <span class="body1-r">13:30</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="gradient-line"></div>
-                    </div>
-                </div>
-                <div class="row timetable">
-                    <div class="col-12">
-                        <div class="d-flex">
-                            <span class="cinema-name sub-title-r">MUVIE CINEMAS 台北松仁威秀</span>
-                            <div class="showtime-options d-flex flex-column">
-                                <div class="d-flex mb-3">
-                                    <div class="movie-type">
-                                        <span>數位</span>
-                                    </div>
-                                    <div class="options d-flex flex-wrap">
-                                        <div class="showtime d-flex">
-                                            <div class="dot green-dot my-auto mr-2"></div>
-                                            <span class="body1-r">09:45</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot red-dot my-auto mr-2"></div>
-                                            <span class="body1-r">10:45</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot yellow-dot my-auto mr-2"></div>
-                                            <span class="body1-r">11:30</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot green-dot my-auto mr-2"></div>
-                                            <span class="body1-r">12:45</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot green-dot my-auto mr-2"></div>
-                                            <span class="body1-r">13:30</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot green-dot my-auto mr-2"></div>
-                                            <span class="body1-r">14:45</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot green-dot my-auto mr-2"></div>
-                                            <span class="body1-r">13:30</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot green-dot my-auto mr-2"></div>
-                                            <span class="body1-r">14:45</span>
-                                        </div>
-                                        <div class="showtime d-flex">
-                                            <div class="dot yellow-dot my-auto mr-2"></div>
-                                            <span class="body1-r">13:30</span>
-                                        </div>
+                                        <!-- 第一個場次 -->
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">09:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot red-dot my-auto mr-2"></div>
+                                                <span class="body1-r">10:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot yellow-dot my-auto mr-2"></div>
+                                                <span class="body1-r">11:30</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">12:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot red-dot my-auto mr-2"></div>
+                                                <span class="body1-r">13:30</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot red-dot my-auto mr-2"></div>
+                                                <span class="body1-r">14:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">15:30</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">17:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot yellow-dot my-auto mr-2"></div>
+                                                <span class="body1-r">20:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">21:30</span>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="gradient-line"></div>
+                        <div class="divide-line"></div>
                     </div>
                 </div>
+                
+                <div class="row timetable">
+                    <div class="col-12">
+                        <div class="timetable-row">
+                            <div class="cinema-name sub-title-r">台北天母新光影城</div>
+                            <div class="showtime-options-wrap">
+                                <div class="showtime-options">
+                                    <div class="movie-type">
+                                        <span class="digital">數位</span>
+                                    </div>
+                                    <div class="options d-flex flex-wrap">
+                                        <!-- 第一個場次 -->
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">09:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot red-dot my-auto mr-2"></div>
+                                                <span class="body1-r">10:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot yellow-dot my-auto mr-2"></div>
+                                                <span class="body1-r">11:30</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">12:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot red-dot my-auto mr-2"></div>
+                                                <span class="body1-r">13:30</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot red-dot my-auto mr-2"></div>
+                                                <span class="body1-r">14:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">15:30</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">17:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot yellow-dot my-auto mr-2"></div>
+                                                <span class="body1-r">20:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">21:30</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divide-line"></div>
+                    </div>
+                </div>
+
+                <div class="row timetable">
+                    <div class="col-12">
+                        <div class="timetable-row">
+                            <div class="cinema-name sub-title-r">台北天母新光影城</div>
+                            <div class="showtime-options-wrap">
+                                <div class="showtime-options">
+                                    <div class="movie-type">
+                                        <span class="digital">數位</span>
+                                    </div>
+                                    <div class="options d-flex flex-wrap">
+                                        <!-- 第一個場次 -->
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">09:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot red-dot my-auto mr-2"></div>
+                                                <span class="body1-r">10:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot yellow-dot my-auto mr-2"></div>
+                                                <span class="body1-r">11:30</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">12:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot red-dot my-auto mr-2"></div>
+                                                <span class="body1-r">13:30</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot red-dot my-auto mr-2"></div>
+                                                <span class="body1-r">14:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">15:30</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">17:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot yellow-dot my-auto mr-2"></div>
+                                                <span class="body1-r">20:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">21:30</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="showtime-options">
+                                    <div class="movie-type">
+                                        <span class="imax">IMAX</span>
+                                    </div>
+                                    <div class="options d-flex flex-wrap">
+                                        <!-- 第一個場次 -->
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">09:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot red-dot my-auto mr-2"></div>
+                                                <span class="body1-r">10:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot yellow-dot my-auto mr-2"></div>
+                                                <span class="body1-r">11:30</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">12:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot red-dot my-auto mr-2"></div>
+                                                <span class="body1-r">13:30</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot red-dot my-auto mr-2"></div>
+                                                <span class="body1-r">14:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">15:30</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">17:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot yellow-dot my-auto mr-2"></div>
+                                                <span class="body1-r">20:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">21:30</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divide-line"></div>
+                    </div>
+                </div>
+
+                <div class="row timetable">
+                    <div class="col-12">
+                        <div class="timetable-row">
+                            <div class="cinema-name sub-title-r">台北天母新光影城</div>
+                            <div class="showtime-options-wrap">
+                                <div class="showtime-options">
+                                    <div class="movie-type">
+                                        <span class="digital">數位</span>
+                                    </div>
+                                    <div class="options d-flex flex-wrap">
+                                        <!-- 第一個場次 -->
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">09:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot red-dot my-auto mr-2"></div>
+                                                <span class="body1-r">10:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot yellow-dot my-auto mr-2"></div>
+                                                <span class="body1-r">11:30</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">12:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot red-dot my-auto mr-2"></div>
+                                                <span class="body1-r">13:30</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot red-dot my-auto mr-2"></div>
+                                                <span class="body1-r">14:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">15:30</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">17:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot yellow-dot my-auto mr-2"></div>
+                                                <span class="body1-r">20:45</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="showtime d-flex">
+                                                <div class="dot green-dot my-auto mr-2"></div>
+                                                <span class="body1-r">21:30</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divide-line"></div>
+                    </div>
+                </div>
+                
             </div>
         </section>
     </main>

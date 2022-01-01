@@ -217,48 +217,47 @@
     }
 
     /* ----------------------------top five---------------------------- */
-    .top-five {
+    .top-five-section {
         margin-bottom: 144px;
     }
 
-    .top-five .subtitle {
+    .top-five-section .subtitle {
         margin-top: 200px;
         margin-bottom: 32px;
     }
 
-    .top-five .subtitle .red-line, 
-    .top-five .subtitle .section-header-b {
+    .top-five-section .subtitle .red-line, 
+    .top-five-section .subtitle .section-header-b {
         margin: auto 20px auto 0px;
     }
 
-    .top-five .img-wrap {
+    .top-five-section .img-wrap {
         width: 100%;
     }
 
-    .top-five .img-wrap img {
+    .top-five-section .img-wrap img {
         width: 100%;
         height: 100%;
         border-radius: var(--border-radius-4);
     }
 
     /* ----------------------------other movies---------------------------- */
-   .other-movies .mov-card {
+    .other-movies-section .mov-card {
        position: relative;
        margin-bottom: 32px;
-       /* background-color: rgba(255,255,255,0.1); */
        background-color: rgba(32,32,32,0.75);
        padding: 24px 0px;
        text-align: center;
        border-radius: var(--border-radius-8);
     }
 
-   .other-movies .img-wrap {
+    .other-movies-section .img-wrap {
         width: 120px;
         height: 120px;
         margin: 0 auto 12px auto;
     }
 
-   .other-movies .img-wrap img {
+    .other-movies-section .img-wrap img {
         border-radius: 50%;
         width: 100%;
         height: 100%;
@@ -267,11 +266,11 @@
         opacity: var(--opacity-75);
     }
 
-    .other-movies .img-wrap:hover img {
+    .other-movies-section .img-wrap:hover img {
         opacity: var(--opacity-90);
     }
 
-    .other-movies .pg-rate { 
+    .other-movies-section .pg-rate { 
         border-radius: 0 8px 0 8px;
         padding: 4px 8px 6px 8px;
         position: absolute;
@@ -279,36 +278,98 @@
         right: 0px;
     }
 
-    .other-movies .age0 { background-color: rgba(94,179,58,0.5); }
-    .other-movies .age6 { background-color: rgba(26,162,229,0.5); }
-    .other-movies .age12 { background-color: rgba(226,165,38,0.5); }
-    .other-movies .age15 { background-color: rgba(236,119,32,0.5); }
-    .other-movies .age18 { background-color: rgba(227,11,32,0.5); }
+    .other-movies-section .age0 { background-color: rgba(94,179,58,0.5); }
+    .other-movies-section .age6 { background-color: rgba(26,162,229,0.5); }
+    .other-movies-section .age12 { background-color: rgba(226,165,38,0.5); }
+    .other-movies-section .age15 { background-color: rgba(236,119,32,0.5); }
+    .other-movies-section .age18 { background-color: rgba(227,11,32,0.5); }
 
 
-    .other-movies .italic-16 { opacity: var(--opacity-50); }
+    .other-movies-section .italic-16 { opacity: var(--opacity-50); }
 
-     @media screen and (max-width: 576px) {
-        .other-movies .mov-card {
+    /* =================================== @media =================================== */
+    /* ============================================================================== */
+
+    /* -----------------when smaller than 418px，小於 418px-----------------*/
+    @media screen and (max-width: 418px) {
+
+        /* section margin bottom */
+        .forum-info-section { margin-top: 96px; }
+
+        .main-header-b { font-size: 34px; }
+        .section-header-b { font-size: 20px; }
+
+        .forum-cards-section .subtitle,
+        .forum-cat-section .subtitle { margin-bottom: 24px; }
+
+        .sub-title-r, 
+        .sub-title-m,
+        .sub-title-b { font-size: 16px;}
+
+        .body1-r,
+        .body1-m,
+        .body1-b { font-size: 14px; }
+
+        .forum-cards-section .card-md .section-header-r { 
+            font-weight: 400;
+            margin-bottom: 4px;
+            font-size: 16px;
+        }
+
+        /* 將預設的 .body1-b 改為 .body2-m  */
+        .forum-cards-section .card-md .body1-b { 
+            font-weight: 700;
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+
+        .forum-cards-section .img-wrap .content {
+            bottom: 12px;
+            left: 12px;
+        }
+
+        .forum-cards-section .card-md,
+        .forum-cat-section .card-md {
+            margin-bottom: 16px;
+        }
+
+        .forum-cards-section .col-6.card-md:nth-child(even),
+        .forum-cat-section .col-6.card-md:nth-child(even) {
+            padding: 0 16px 0 8px;
+        }
+
+        .forum-cards-section .col-6.card-md:nth-child(odd),
+        .forum-cat-section .col-6.card-md:nth-child(odd) {
+            padding: 0 8px 0 16px;
+        }
+
+        .forum-cards-section .com-count {
+            border-radius: var(--border-radius-50);
+            padding: 2px 6px;
+            margin-left: 8px;
+        }
+    }
+    /* -----------------when smaller than 576px，小於 576px-----------------*/
+    @media screen and (max-width: 576px) {
+        .other-movies-section .mov-card {
             border-radius: var(--border-radius-4);
         }
 
-        .other-movies .img-wrap {
+        .other-movies-section .img-wrap {
             width: 80px;
             height: 80px;
         }
 
-        .other-movies .pg-rate {
+        .other-movies-section .pg-rate {
             padding: 4px;
             font-size: 14px;
             border-radius: 0 4px 0 4px;
         }
     }
 
+    /* -----------------when smaller than 992px，小於 992px-----------------*/
     /* @media screen and (max-width: 992px) {
-        .top-five .row .col {
-            width: 33.33%;
-        }
+    
     } */
 </style>
 
@@ -424,13 +485,6 @@
                                 </div>
                             </div>
                         </div>
-
-
-
-                        <!-- <div class="text-end">
-                            <a class="btn btn-outline-light me-2" href="#" data-bs-toggle="modal" data-bs-target="#exampleModalLogin">Login</a>
-                            <a type="button" class="btn btn-warning" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Sign-up</a>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -438,7 +492,8 @@
     </nav>
 
     <main>
-        <section class="top-five">
+        <!-- -----------top five section----------- -->
+        <section class="top-five-section g-section-mb">
             <div class="container">
                 <div class="row subtitle">
                     <div class="col-12">
@@ -527,7 +582,8 @@
             </div>   
         </section>
         
-        <section class="other-movies">
+        <!-- -----------other movies section----------- -->
+        <section class="other-movies-section g-section-mb">
             <div class="container">
                 <div class="row subtitle">
                     <div class="col-12">

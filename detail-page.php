@@ -31,7 +31,7 @@
     }
 
     body {
-        background: url("images/movie_booking_page/bg_img/bg_img_gradient-min.jpg") top center no-repeat;
+        background: url("images/detail_page/bg_img/bg_img_gradient_1200.jpg") top center no-repeat;
         background-size: contain;
         background-color: var(--bg-color);
     }
@@ -40,21 +40,15 @@
         padding-left: 72px;
         padding-right: 72px;
     }
-
-    .red-line {
-        background-color: var(--brand-color);
-        width: 8px;
-        height: 40px;
-        box-shadow: var(--box-shadow-red);
-        margin-right: 20px;
-    }
-
-    /* -------section margin bottom------- */
-    .movie-detail-section { margin: 144px 0; }
-     
+    
     .related-articles-section,
     .actors-list-section { 
         margin-bottom: 144px; 
+    }
+
+    .related-articles-section .fa-chevron-right {
+        opacity: var(--opacity-90);
+        font-size: 14px;
     }
 
     /* -----------------movinon navbar----------------- */
@@ -145,7 +139,7 @@
     }
 
     /* -----------------movie detail section----------------- */
-    .movie-detail-section { margin: 144px 0; }
+    .movie-detail-section { margin-top: 144px; }
 
     .movie-detail-section .social-media {
         margin-bottom: 32px;
@@ -478,65 +472,61 @@
         display: flex;
         margin-bottom: auto;
     }
-
+    
     /* =================================== @media =================================== */
     /* ============================================================================== */
 
-    /* -----------------.container X-large >= 1200px，小於 1200px-----------------*/
-    @media screen and (max-width: 1200px) {
-        
-        /* -------section margin bottom------- */
-        .movie-detail-section { margin: 96px 0; }
-        
-        .related-articles-section,
-        .actors-list-section { 
-            margin-bottom: 96px; 
-        }
-        
-        .movie-detail-section .movie-info { padding: 0; }
+    /* -----------------when smaller than 418px，小於 418px-----------------*/
+    @media screen and (max-width: 418px) {
 
-        .articles-xl li:nth-child(even){
-            padding: 16px 32px;
-            background-color: rgba(255,255,255,0.02);
-            border-radius: var(--border-radius-8);
-        }
+        .movie-detail-section { margin-top: 32px; }
 
-        .articles-xl li:nth-child(odd) {
-            padding: 16px 32px;
-            background-color: rgba(255,255,255,0.08);
-            border-radius: var(--border-radius-8);
-        }
-    }
+        .section-header-b { font-size: 20px; }
+        .related-articles-section .subtitle { margin-bottom: 24px; }
 
-    /* -----------------.container large >= 992px，小於 992px-----------------*/
-    @media screen and (max-width: 992px) {
-        body {
-            background: url("images/movie_booking_page/bg_img/TEST.jpg") top center no-repeat;
-            background-size: contain;
-            background-color: var(--bg-color);
+        .sub-title-r, 
+        .sub-title-m,
+        .sub-title-b { font-size: 16px;}
+
+        .body1-r,
+        .body1-m,
+        .body1-b { font-size: 14px; }
+
+        .spoiler,
+        .spoiler-free,
+        .arti-cat-tag,
+        .time-stamp { font-size: 14px; }
+
+        .movie-detail-section .reputation {
+            display: none;
         }
 
-        /* -------section margin bottom------- */
-        .movie-detail-section { margin: 48px 0; }
-        
-        .related-articles-section,
-        .actors-list-section { 
-            margin-bottom: 48px; 
-        }
-
-        .movie-detail-section .cat-tags .cat-tag { margin-top: 32px; }
-
-        .movie-detail-section .description-title {
-            margin-bottom: 16px;
-        }
-
-        .movie-detail-section .description {
-            margin-bottom: 40px;
+        .movie-detail-section .content p { 
+            margin-bottom: 4px;
             font-size: 16px;
         }
+
+        .movie-detail-section .cat-tags {
+            margin-bottom: 24px;
+        }
+
+        .movie-detail-section .cat-tags .cat-tag {
+            padding: 8px 16px;
+            margin-right: 16px;
+            font-size: 14px;
+        }
+
+        .movie-detail-section .movie-info {
+            padding: 0 16px;
+        }
     }
 
-    /* -----------------.container medium >= 768px，小於 768px-----------------*/
+    /* -----------------when smaller than 576px，小於 576px-----------------*/
+    /* @media screen and (max-width: 576px) {
+        
+    } */
+
+    /* -----------------when smaller than 768px，小於 768px-----------------*/
     @media screen and (max-width: 768px) {
 
         /* 小於 768px 後，將 red-line刪掉，並調整副標題 */
@@ -546,11 +536,6 @@
 
         .related-articles-section .subtitle {
             align-items: end;
-        }
-
-        div.col-6,
-        div.col-12 {
-            padding: 0;
         }
 
         .movie-detail-section .movie-poster {
@@ -590,57 +575,158 @@
         }
 
         .articles-md li:nth-child(even){
-            padding: 8px 16px;
+            padding: 16px 0;
             background-color: rgba(255,255,255,0.02);
             border-radius: var(--border-radius-8);
             margin-bottom: 8px;
         }
 
         .articles-md li:nth-child(odd) {
-            padding: 8px 16px;
+            padding: 16px 0;
             background-color: rgba(255,255,255,0.08);
             border-radius: var(--border-radius-8);
             margin-bottom: 8px;
         }
     }
 
-    /* -----------------.container iphoneX >= 418px，小於 418px-----------------*/
-    @media screen and (max-width: 418px) {
+    /* -----------------when smaller than 992px，小於 992px-----------------*/
+    @media screen and (max-width: 992px) {
+        body {
+            background: url("images/detail_page/bg_img/bg_img_gradient_992.jpg") top center no-repeat;
+            background-size: contain;
+            background-color: var(--bg-color);
+        }
 
-        /* -------section margin bottom------- */
-        .movie-detail-section { margin: 32px 0; }
+        /* section margin bottom */
+        .movie-detail-section { margin-top: 48px; }
+        .movie-detail-section .cat-tags .cat-tag { margin-top: 32px; }
+
+        .movie-detail-section .description-title {
+            margin-bottom: 16px;
+        }
+
+        .movie-detail-section .description {
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+    }
+
+    /* -----------------when smaller than 1200px，小於 1200px-----------------*/
+    @media screen and (max-width: 1200px) {
+        
+        /* section margin bottom */
+        .movie-detail-section { margin-top: 96px; }
         
         .related-articles-section,
         .actors-list-section { 
-            margin-bottom: 32px; 
+            margin-bottom: 96px; 
         }
 
-        .section-header-b { font-size: 20px; }
-        .related-articles-section .subtitle { margin-bottom: 24px; }
+        .related-articles-section .subtitle,
+        .actors-list-section .subtitle,
+        .movie-stills-section .subtitle {
+            padding: 0;
+        }
+        
+        .movie-detail-section .movie-info { padding: 0; }
 
-        .sub-title-r, 
-        .sub-title-m,
-        .sub-title-b { font-size: 16px;}
-
-        .movie-detail-section .reputation {
-            display: none;
+        .articles-xl li:nth-child(even){
+            padding: 16px 32px;
+            background-color: rgba(255,255,255,0.02);
+            border-radius: var(--border-radius-8);
         }
 
-        .movie-detail-section .content p { 
-            margin-bottom: 4px;
-            font-size: 16px;
-        }
-
-        .movie-detail-section .cat-tags {
-            margin-bottom: 24px;
-        }
-
-        .movie-detail-section .cat-tags .cat-tag {
-            padding: 8px 16px;
-            margin-right: 16px;
-            font-size: 14px;
+        .articles-xl li:nth-child(odd) {
+            padding: 16px 32px;
+            background-color: rgba(255,255,255,0.08);
+            border-radius: var(--border-radius-8);
         }
     }
+    /* -----------------  992px-1199px  -----------------*/
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+        /* section margin bottom */
+        .movie-detail-section { margin-top: 96px; }
+        
+        .related-articles-section,
+        .actors-list-section { 
+            margin-bottom: 96px; 
+        }
+
+        .related-articles-section .subtitle,
+        .actors-list-section .subtitle,
+        .movie-stills-section .subtitle {
+            padding: 0;
+        }
+        
+        .movie-detail-section .movie-info { padding: 0; }
+
+        .articles-xl li:nth-child(even){
+            padding: 16px 32px;
+            background-color: rgba(255,255,255,0.02);
+            border-radius: var(--border-radius-8);
+        }
+
+        .articles-xl li:nth-child(odd) {
+            padding: 16px 32px;
+            background-color: rgba(255,255,255,0.08);
+            border-radius: var(--border-radius-8);
+        }
+    }
+
+
+
+
+    
+
+
+    /* -----------------  <418px  -----------------*/
+    @media screen and (max-width: 417px) {
+
+        /* margin top */
+        /* .g-section-mt { margin-top: 96px; } */
+
+        /* margin bottom */
+        .g-section-mb { margin-bottom: 32px; }
+        /* .g-subtitle-mb { margin-bottom: 32px; } */
+    }
+
+    /* -----------------  576px-767px  -----------------*/
+    @media screen and (min-width: 418px) and (max-width: 575px) {
+
+        /* margin bottom */
+        .g-section-mb { margin-bottom: 40px; }
+    }
+
+    /* -----------------  576px-767px  -----------------*/
+    @media screen and (min-width: 576px) and (max-width: 767px) {
+
+    }
+
+    /* -----------------  768px-991px  -----------------*/
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+
+        /* margin bottom */
+        .g-section-mb { margin-bottom: 48px; }
+    }
+
+    /* -----------------  992px-1199px  -----------------*/
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+
+    }
+
+    /* -----------------  1200px-1343px  -----------------*/
+    @media screen and (min-width: 1200px) and (max-width: 1343px) {
+
+    }
+
+    /* 問題：container 有自己預設 1320 嘛？ */
+    /* -----------------  1344px-1920px  -----------------*/
+    @media screen and (min-width: 1344px) and (max-width: 1920px) {
+        .container {
+            min-width: 1344px;
+        }
+    }
+
 </style>
 
 <body>
@@ -693,7 +779,7 @@
 	</nav>
     <main>
         <!-- -----------movie detail section----------- -->
-        <section class="movie-detail-section">
+        <section class="movie-detail-section g-section-mb">
             <div class="container">
                 <div class="row social-media d-none d-xl-flex">
                     <div class="d-flex justify-content-end mb-2">
@@ -764,7 +850,7 @@
                             <span class="section-header-b">劇情大綱</span>
                         </div>
                         <div class="description">
-                            <p>《永恆族》是超越繁星的神族，七千年前來到地球，誓言保護人類，各色各異的他們，擁有超凡智慧與能力，長生不老，每人具備迥然不同的絕頂神力。然而守護地球期間，各自強大的永恆族人並非和樂融融，內部紛爭不斷，最終整個族群分崩離析，直到一群古老的宿敵現身…</p>
+                            <p>永恆族是超越繁星的神族，七千年前來到地球，誓言保護人類，各色各異的他們，擁有超凡智慧與能力，長生不老，每人具備迥然不同的絕頂神力。然而守護地球期間，各自強大的永恆族人並非和樂融融，內部紛爭不斷，最終整個族群分崩離析，直到一群古老的宿敵現身…</p>
                         </div>
                         <div class="booking-trailer">
                             <button type="button" class="btn mr-3">
@@ -782,7 +868,7 @@
         </section>
 
         <!-- -----------related articles section----------- -->
-        <section class="related-articles-section">
+        <section class="related-articles-section g-section-mb">
             <div class="container">
                 <div class="row subtitle">
                     <div class="col-6">
@@ -791,10 +877,10 @@
                             <span class="section-header-b">討論區文章</span>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 d-flex justify-content-end align-items-end">
                         <a href="#">
                             <div class="d-flex justify-content-end align-items-end">
-                                <div class="sub-title-ㄩ mt-2">前往討論區</div>
+                                <div class="sub-title-b mt-2">前往討論區</div>
                                 <div class="ml-2"><i class="fas fa-chevron-right"></i></div>
                             </div>
                         </a>
@@ -1183,7 +1269,7 @@
         </section>
 
         <!-- -----------actors list section----------- -->
-        <section class="actors-list-section">
+        <section class="actors-list-section g-section-mb">
             <div class="container">
                 <div class="row subtitle">
                     <div class="col-12">
@@ -1290,7 +1376,7 @@
         </section>
 
         <!-- -----------movie stills section----------- -->
-        <section class="movie-stills-section">
+        <section class="movie-stills-section g-section-mb">
             <div class="container">
                 <div class="row subtitle">
                     <div class="col-12">

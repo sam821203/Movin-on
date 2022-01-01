@@ -34,12 +34,6 @@
         width: 100%;
     }
 
-    /* main {
-        background: url("images/main_page/test.jpg") bottom center no-repeat;
-        background-size: contain;
-        background-color: var(--bg-color);
-    } */
-
     .sub-title-r {
         line-height: 170%;
     }
@@ -470,7 +464,7 @@
     }
 
     .footer-section {
-        padding: 128px 0 96px 0;
+        padding: 160px 0 96px 0;
     }
 
     .footer-section .img-wrap {
@@ -1278,13 +1272,13 @@
         });
 
         // ranking-section 輪播牆
-        let nowIndex = $(this).index();
+        let nowIndex = $(this).index() + 1;
 
         $('.next-btn').click(function() {
 
             nowIndex += 1
-            if (nowIndex > 5) {
-                nowIndex = 5
+            if (nowIndex > 4) {
+                nowIndex = 4
             }
 
             const nowX = nowIndex * -312 + 'px';

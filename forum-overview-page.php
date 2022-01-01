@@ -31,7 +31,7 @@
     }
 
     body {
-        background: url("images/forum_overview_page/bg-img-min.jpg") top center no-repeat;
+        background: url("images/forum_overview_page/bg_img.jpg") top center no-repeat;
         background-size: contain;
         background-color: var(--bg-color);
         width: 100%;
@@ -134,7 +134,10 @@
     /* -----------------forum info section----------------- */
     .forum-info-section {
         margin-top: 368px;
-        margin-bottom: 56px;
+    }
+
+    .forum-info-section .main-header-b {
+        margin-bottom: 16px;
     }
 
     .forum-info-section .sub-title-r {
@@ -153,19 +156,6 @@
         position: relative;
         height: 326px;
         overflow: auto;
-    }
-
-    ::-webkit-scrollbar {
-        width: 10px;
-        height: 10px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: rgba(255,255,255,0.25);
-    }
-
-    ::-webkit-scrollbar-track {
-        background: rgba(18,18,18,0.75);
     }
 
     .board-title .sub-title-m {
@@ -324,14 +314,6 @@
         opacity: var(--opacity-25);
     }
 
-    /* .forum-cat-section .img-wrap .content .section-header-r,
-    .forum-cat-section .img-wrap .content .sub-title-m {
-        padding-top: 8px;
-        padding-bottom: 10px;
-        text-align: center;
-        opacity: var(--opacity-25);
-    } */
-
     .forum-cat-section .img-wrap:hover .section-header-r,
     .forum-cat-section .img-wrap:hover .content .sub-title-m {
         opacity: var(--opacity-90);
@@ -343,21 +325,97 @@
         transition: .4s ease-in-out;
     }
 
-    /* -----------------.container large >= 992px，小於 992px-----------------*/
+    /* =================================== @media =================================== */
+    /* ============================================================================== */
+
+    /* -----------------when smaller than 418px，小於 418px-----------------*/
+    @media screen and (max-width: 418px) {
+        
+        .forum-info-section { margin-top: 96px; }
+
+        .main-header-b { font-size: 34px; }
+        .section-header-b { font-size: 20px; }
+
+        .forum-cards-section .subtitle,
+        .forum-cat-section .subtitle { margin-bottom: 24px; }
+
+        .sub-title-r, 
+        .sub-title-m,
+        .sub-title-b { font-size: 16px;}
+
+        .body1-r,
+        .body1-m,
+        .body1-b { font-size: 14px; }
+
+        .forum-cards-section .card-md .section-header-r { 
+            font-weight: 400;
+            margin-bottom: 4px;
+            font-size: 16px;
+        }
+
+        /* 將預設的 .body1-b 改為 .body2-m  */
+        .forum-cards-section .card-md .body1-b { 
+            font-weight: 700;
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+
+        .forum-cards-section .img-wrap .content {
+            bottom: 12px;
+            left: 12px;
+        }
+
+        .forum-cards-section .card-md,
+        .forum-cat-section .card-md {
+            margin-bottom: 16px;
+        }
+
+        .forum-cards-section .col-6.card-md:nth-child(even),
+        .forum-cat-section .col-6.card-md:nth-child(even) {
+            padding: 0 16px 0 8px;
+        }
+
+        .forum-cards-section .col-6.card-md:nth-child(odd),
+        .forum-cat-section .col-6.card-md:nth-child(odd) {
+            padding: 0 8px 0 16px;
+        }
+
+        .forum-cards-section .com-count {
+            border-radius: var(--border-radius-50);
+            padding: 2px 6px;
+            margin-left: 8px;
+        }
+    }
+
+    /* -----------------when smaller than 768px，小於 768px-----------------*/
+    @media screen and (max-width: 768px) {
+        
+        .red-line {
+            display: none;
+        }
+
+        /* 這裡強制將 .section-header-r 改為 字重500 */
+        .forum-cards-section .card-md .section-header-r { 
+            font-size: 20px; 
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+
+        .forum-cards-section .img-wrap .content {
+            bottom: 16px;
+            left: 16px;
+        }
+    }
+
+    /* -----------------when smaller than 992px，小於 992px-----------------*/
     @media screen and (max-width: 992px) {
         body {
-            background: url("images/movie_booking_page/bg_img/TEST.jpg") top center no-repeat;
+            background: url("images/forum_overview_page/bg_img_992.jpg") top center no-repeat;
             background-size: contain;
             background-color: var(--bg-color);
         }
 
-        .forum-info-section {
-            margin-top: 144px;
-            margin-bottom: 56px;
-        }
-
         /* -------movinon navbar-------*/
-
         .movinon-navbar .movinon-logo {
             max-width: 178px;
         }
@@ -387,19 +445,7 @@
         }
     }
 
-    /* -----------------.container x-large >= 1200px，小於 1200px-----------------*/
-    /* @media screen and (max-width: 1200px) {
-        .movie-detail-section .cat-tags .cat-tag {
-            margin-top: 32px;
-        }
-    } */
-
-    /* -----------------.container x-large >= 1400px，小於 1400px-----------------*/
-    @media (min-width: 1400px) {
-        .container {
-            max-width: 1344px;
-        }
-    }
+    /* -----------------when smaller than 1200px，小於 1200px-----------------*/
     
 </style>
 
@@ -449,7 +495,7 @@
 
     <main>
         <!-- -----------forum info section----------- -->
-        <section class="forum-info-section">
+        <section class="forum-info-section g-section-mb">
             <div class="container">
                 <!-- --------------------display 大於 1200-------------------- -->
                 <div class="row d-none d-xl-flex">
@@ -467,17 +513,13 @@
                             <div class="board-content">
                                 <p class="sub-title-r">於本討論區發文，需遵守全站站規與本區規則。違者將刪除文章，累犯將停權 30 天。</p>
                                 <p class="body1-r">1. 禁止發文標題爆雷，內文如有爆雷內容<br>
-                                ⚠️請於標題最前面加上 #有雷<br>
+                                ⚠️ 請於標題最前面加上 #有雷<br>
                                 2. 禁止於無雷文章回應爆雷<br>
                                 3. 禁止發表與本板主旨無關的內容與回應<br>
-                                3. 禁止發表與本板主旨無關的內容與回應<br>
-                                3. 禁止發表與本板主旨無關的內容與回應<br>
-                                3. 禁止發表與本板主旨無關的內容與回應<br>
-                                3. 禁止發表與本板主旨無關的內容與回應<br>
-                                3. 禁止發表與本板主旨無關的內容與回應<br>
-                                3. 禁止發表與本板主旨無關的內容與回應<br>
-                                3. 禁止發表與本板主旨無關的內容與回應<br>
-                                3. 禁止發表與本板主旨無關的內容與回應</p>
+                                4. 分享資訊時儘量以官網資訊爲主，且禁止分享營利個人頁面網址<br>
+                                5. 發文前請確認是否重複轉貼文章，若 7 日內有其他人張貼，請勿再次張貼<br>
+                                <br>
+                                ⚠️ 重要聲明：本討論區是以即時上載留言的方式運作，對所有留言的真實性、完整性及立場等，不負任何法律責任。而一切留言之言論只代表留言者個人意見，並非本網站之立場，用戶不應信賴內容，並應自行判斷內容之真實性。於有關情形下，用戶應尋求專業意見(如涉及醫療、法律或投資等問題)。 由於本討論區受到「即時上載留言」運作方式所規限，故不能完全監察所有留言，若讀者發現有留言出現問題，請聯絡我們。有權刪除任何留言及拒絕任何人士上載留言，同時亦有不刪除留言的權利。切勿上傳和撰寫 侵犯版權(未經授權)、粗言穢語、誹謗、渲染色情暴力或人身攻擊的言論，敬請自律。本網站保留一切法律權利。</p>
                         </div>
                         </div>
                     </div>
@@ -499,17 +541,13 @@
                             <div class="board-content">
                                 <p class="sub-title-r">於本討論區發文，需遵守全站站規與本區規則。違者將刪除文章，累犯將停權 30 天。</p>
                                 <p class="body1-r">1. 禁止發文標題爆雷，內文如有爆雷內容<br>
-                                ⚠️請於標題最前面加上 #有雷<br>
+                                ⚠️ 請於標題最前面加上 #有雷<br>
                                 2. 禁止於無雷文章回應爆雷<br>
                                 3. 禁止發表與本板主旨無關的內容與回應<br>
-                                3. 禁止發表與本板主旨無關的內容與回應<br>
-                                3. 禁止發表與本板主旨無關的內容與回應<br>
-                                3. 禁止發表與本板主旨無關的內容與回應<br>
-                                3. 禁止發表與本板主旨無關的內容與回應<br>
-                                3. 禁止發表與本板主旨無關的內容與回應<br>
-                                3. 禁止發表與本板主旨無關的內容與回應<br>
-                                3. 禁止發表與本板主旨無關的內容與回應<br>
-                                3. 禁止發表與本板主旨無關的內容與回應</p>
+                                4. 分享資訊時儘量以官網資訊爲主，且禁止分享營利個人頁面網址<br>
+                                5. 發文前請確認是否重複轉貼文章，若 7 日內有其他人張貼，請勿再次張貼<br>
+                                <br>
+                                ⚠️ 重要聲明：本討論區是以即時上載留言的方式運作，對所有留言的真實性、完整性及立場等，不負任何法律責任。而一切留言之言論只代表留言者個人意見，並非本網站之立場，用戶不應信賴內容，並應自行判斷內容之真實性。於有關情形下，用戶應尋求專業意見(如涉及醫療、法律或投資等問題)。 由於本討論區受到「即時上載留言」運作方式所規限，故不能完全監察所有留言，若讀者發現有留言出現問題，請聯絡我們。有權刪除任何留言及拒絕任何人士上載留言，同時亦有不刪除留言的權利。切勿上傳和撰寫 侵犯版權(未經授權)、粗言穢語、誹謗、渲染色情暴力或人身攻擊的言論，敬請自律。本網站保留一切法律權利。</p>
                         </div>
                         </div>
                     </div>
@@ -517,7 +555,8 @@
             </div>
         </section>
         
-        <section class="forum-cards-section">
+        <!-- -----------forum cards section----------- -->
+        <section class="forum-cards-section g-section-mb">
             <div class="container d-none d-xl-block">
                 <div class="row subtitle">
                     <div class="col-12">
@@ -534,7 +573,7 @@
                         <div class="col-12">
                             <a href="#">
                                 <div class="img-wrap card-1">
-                                    <img src="images/forum_overview_page/card-1.jpg" alt="">
+                                    <img src="images/forum_overview_page/card_1.jpg" alt="">
                                     <div class="content">
                                         <div class="section-header-r">再說一次我願意</div>
                                         <span class="body1-b">Today</span><span class="caption-12 com-count com-1-count">+<span class="count">134</span></span>
@@ -546,7 +585,7 @@
                         <div class="col-12">
                             <a href="#">
                                 <div class="img-wrap card-2">
-                                    <img src="images/forum_overview_page/card-2.jpg" alt="">
+                                    <img src="images/forum_overview_page/card_2.jpg" alt="">
                                     <div class="content">
                                         <div class="section-header-r">駭客任務</div>
                                         <span class="body1-b">Today</span><span class="caption-12 com-count com-2-count">+<span class="count">34</span></span>
@@ -558,7 +597,7 @@
                     <div class="col-8">
                         <a href="#">
                             <div class="img-wrap card-3">
-                                <img src="images/forum_overview_page/card-3.jpg" alt="">
+                                <img src="images/forum_overview_page/card_3.jpg" alt="">
                                 <div class="content">
                                     <div class="section-header-r">蜘蛛人: 無家日</div>
                                     <span class="body1-b">Today</span><span class="caption-12 com-count com-3-count">+<span class="count">134</span></span>
@@ -573,7 +612,7 @@
                     <div class="col-6">
                         <a href="#">
                             <div class="img-wrap card-4">
-                                <img src="images/forum_overview_page/card-4.jpg" alt="">
+                                <img src="images/forum_overview_page/card_4.jpg" alt="">
                                 <div class="content">
                                     <div class="section-header-r">魔鬼剋星未來世</div>
                                     <span class="body1-b">Today</span><span class="caption-12 com-count com-4-count">+<span class="count">134</span></span>
@@ -585,7 +624,7 @@
                     <div class="col-6">
                         <a href="#">
                             <div class="img-wrap card-5">
-                                <img src="images/forum_overview_page/card-5.jpg" alt="">
+                                <img src="images/forum_overview_page/card_5.jpg" alt="">
                                 <div class="content">
                                     <div class="section-header-r">梅艷芳</div>
                                     <span class="body1-b">Today</span><span class="caption-12 com-count com-5-count">+<span class="count">134</span></span>
@@ -600,7 +639,7 @@
                     <div class="col-3">
                         <a href="#">
                             <div class="img-wrap card-6">
-                                <img src="images/forum_overview_page/card-6.jpg" alt="">
+                                <img src="images/forum_overview_page/card_6.jpg" alt="">
                                 <div class="content">
                                     <div class="section-header-r">迷離夜蘇活</div>
                                     <span class="body1-b">Today</span><span class="caption-12 com-count com-6-count">+<span class="count">134</span></span>
@@ -613,7 +652,7 @@
                             <div class="col-4">
                                 <a href="#">
                                     <div class="img-wrap card-7">
-                                        <img src="images/forum_overview_page/card-7.jpg" alt="">
+                                        <img src="images/forum_overview_page/card_7.jpg" alt="">
                                         <div class="content">
                                             <div class="section-header-r">詭扯</div>
                                             <span class="body1-b">Today</span><span class="caption-12 com-count com-7-count">+<span class="count">134</span></span>
@@ -625,7 +664,7 @@
                             <div class="col-8 inner-row2">
                                 <a href="#">
                                     <div class="img-wrap card-8">
-                                        <img src="images/forum_overview_page/card-8.jpg" alt="">
+                                        <img src="images/forum_overview_page/card_8.jpg" alt="">
                                         <div class="content">
                                             <div class="section-header-r">瀑布</div>
                                             <span class="body1-b">Today</span><span class="caption-12 com-count com-8-count">+<span class="count">134</span></span>
@@ -639,7 +678,7 @@
                             <div class="col-8">
                                 <a href="#">
                                     <div class="img-wrap card-9">
-                                        <img src="images/forum_overview_page/card-9.jpg" alt="">
+                                        <img src="images/forum_overview_page/card_9.jpg" alt="">
                                         <div class="content">
                                             <div class="section-header-r">永恆族</div>
                                             <span class="body1-b">Today</span><span class="caption-12 com-count com-9-count">+<span class="count">134</span></span>
@@ -650,7 +689,7 @@
                             <div class="col-4">
                                 <a href="#">
                                     <div class="img-wrap card-10">
-                                        <img src="images/forum_overview_page/card-10.jpg" alt="">
+                                        <img src="images/forum_overview_page/card_10.jpg" alt="">
                                         <div class="content">
                                             <div class="section-header-r">金牌特務</div>
                                             <span class="body1-b">Today</span><span class="caption-12 com-count com-10-count">+<span class="count">134</span></span>
@@ -664,7 +703,7 @@
             </div>
 
             <!-- --------------------display 小於 1200-------------------- -->
-            <div class="container d-block d-lg-block d-xl-none">
+            <div class="container d-sm-block d-xl-none">
                 <div class="row subtitle">
                     <div class="col-12">
                         <div class="d-flex">
@@ -675,10 +714,10 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-6 card-md">
+                    <div class="col-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
-                                <img src="images/forum_overview_page/card-1-sm.jpg" alt="">
+                                <img src="images/forum_overview_page/card_1_1200.jpg" alt="">
                                 <div class="content">
                                     <div class="section-header-r">再說一次我願意</div>
                                     <span class="body1-b">Today</span><span class="caption-12 com-count com-1-count">+<span class="count">134</span></span>
@@ -686,10 +725,10 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6 card-md">
+                    <div class="col-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
-                                <img src="images/forum_overview_page/card-2-sm.jpg" alt="">
+                                <img src="images/forum_overview_page/card_2_1200.jpg" alt="">
                                 <div class="content">
                                     <div class="section-header-r">駭客任務</div>
                                     <span class="body1-b">Today</span><span class="caption-12 com-count com-2-count">+<span class="count">134</span></span>
@@ -697,10 +736,10 @@
                             </div>
                         </a>
                     </div> 
-                    <div class="col-sm-12 col-md-6 col-lg-6 card-md">
+                    <div class="col-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
-                                <img src="images/forum_overview_page/card-3-sm.jpg" alt="">
+                                <img src="images/forum_overview_page/card_3_1200.jpg" alt="">
                                 <div class="content">
                                     <div class="section-header-r">蜘蛛人: 無家日</div>
                                     <span class="body1-b">Today</span><span class="caption-12 com-count com-3-count">+<span class="count">134</span></span>
@@ -708,10 +747,10 @@
                             </div>
                         </a>
                     </div> 
-                    <div class="col-sm-12 col-md-6 col-lg-6 card-md">
+                    <div class="col-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
-                                <img src="images/forum_overview_page/card-4-sm.jpg" alt="">
+                                <img src="images/forum_overview_page/card_4_1200.jpg" alt="">
                                 <div class="content">
                                     <div class="section-header-r">魔鬼剋星未來世</div>
                                     <span class="body1-b">Today</span><span class="caption-12 com-count com-4-count">+<span class="count">134</span></span>
@@ -719,10 +758,10 @@
                             </div>
                         </a>
                     </div> 
-                    <div class="col-sm-12 col-md-6 col-lg-6 card-md">
+                    <div class="col-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
-                                <img src="images/forum_overview_page/card-5-sm.jpg" alt="">
+                                <img src="images/forum_overview_page/card_5_1200.jpg" alt="">
                                 <div class="content">
                                     <div class="section-header-r">梅艷芳</div>
                                     <span class="body1-b">Today</span><span class="caption-12 com-count com-5-count">+<span class="count">134</span></span>
@@ -730,10 +769,10 @@
                             </div>
                         </a>
                     </div> 
-                    <div class="col-sm-12 col-md-6 col-lg-6 card-md">
+                    <div class="col-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
-                                <img src="images/forum_overview_page/card-6-sm.jpg" alt="">
+                                <img src="images/forum_overview_page/card_6_1200.jpg" alt="">
                                 <div class="content">
                                     <div class="section-header-r">迷離夜蘇活</div>
                                     <span class="body1-b">Today</span><span class="caption-12 com-count com-6-count">+<span class="count">134</span></span>
@@ -741,10 +780,10 @@
                             </div>
                         </a>
                     </div> 
-                    <div class="col-sm-12 col-md-6 col-lg-6 card-md">
+                    <div class="col-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
-                                <img src="images/forum_overview_page/card-7-sm.jpg" alt="">
+                                <img src="images/forum_overview_page/card_7_1200.jpg" alt="">
                                 <div class="content">
                                     <div class="section-header-r">詭扯</div>
                                     <span class="body1-b">Today</span><span class="caption-12 com-count com-7-count">+<span class="count">134</span></span>
@@ -752,10 +791,10 @@
                             </div>
                         </a>
                     </div> 
-                    <div class="col-sm-12 col-md-6 col-lg-6 card-md">
+                    <div class="col-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
-                                <img src="images/forum_overview_page/card-8-sm.jpg" alt="">
+                                <img src="images/forum_overview_page/card_8_1200.jpg" alt="">
                                 <div class="content">
                                     <div class="section-header-r">瀑布</div>
                                     <span class="body1-b">Today</span><span class="caption-12 com-count com-8-count">+<span class="count">134</span></span>
@@ -763,10 +802,10 @@
                             </div>
                         </a>
                     </div> 
-                    <div class="col-sm-12 col-md-6 col-lg-6 card-md">
+                    <div class="col-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
-                                <img src="images/forum_overview_page/card-9-sm.jpg" alt="">
+                                <img src="images/forum_overview_page/card_9_1200.jpg" alt="">
                                 <div class="content">
                                     <div class="section-header-r">永恆族</div>
                                     <span class="body1-b">Today</span><span class="caption-12 com-count com-9-count">+<span class="count">134</span></span>
@@ -774,10 +813,10 @@
                             </div>
                         </a>
                     </div> 
-                    <div class="col-sm-12 col-md-6 col-lg-6 card-md">
+                    <div class="col-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
-                                <img src="images/forum_overview_page/card-10-sm.jpg" alt="">
+                                <img src="images/forum_overview_page/card_10_1200.jpg" alt="">
                                 <div class="content">
                                     <div class="section-header-r">金牌特務</div>
                                     <span class="body1-b">Today</span><span class="caption-12 com-count com-10-count">+<span class="count">134</span></span>
@@ -788,8 +827,9 @@
                 </div> 
             </div>
         </section>
-
-        <section class="forum-cat-section">
+        
+        <!-- -----------forum cat section----------- -->
+        <section class="forum-cat-section g-section-mb">
             <div class="container">
                 <div class="row subtitle">
                     <div class="col-12">
@@ -913,24 +953,6 @@
     <?php require_once './tpl/foot.php' ?>
 
     <script>
-        // var elem = document.querySelector('.grid');
-        // var msnry = new Masonry( elem, {
-        //     itemSelector: '.grid-item',
-        //     columnWidth: 200
-        // });
-
-        // external js: masonry.pkgd.js, imagesloaded.pkgd.js
-
-        // init Masonry
-        // var $grid = $('.grid').masonry({
-        // itemSelector: '.grid-item',
-        // percentPosition: true,
-        // columnWidth: '.grid-sizer'
-        // });
-
-        // $grid.imagesLoaded().progress( function() {
-        // $grid.masonry();
-        // });  
 
     </script>
 </body>

@@ -24,15 +24,13 @@ p { line-height: var(--line-height-160); }
     padding-right: 72px;
 }
 
-.container { width: 100%; }
 .subtitle { margin-bottom: 32px; }
 .subtitle .section-header-b { margin: auto 0; }
-
 
 .red-line {
     background-color: var(--brand-color);
     width: 8px;
-    height: 40px;
+    height: 32px;
     box-shadow: var(--box-shadow-red);
     margin: auto 20px auto 0px;
 }
@@ -53,6 +51,19 @@ p { line-height: var(--line-height-160); }
 
 .fa-star, .fa-star-half-alt {
     color: #F2C94C;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.25);
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(18,18,18,0.75);
 }
 
 /* ----------48px---------- */
@@ -166,4 +177,58 @@ p { line-height: var(--line-height-160); }
     font-size: 0.75rem;
     font-weight: 400;
     letter-spacing: 0.4px;
+}
+
+/* margin bottom */
+.g-section-mb { margin-bottom: 144px; }
+
+/* =================================== @media =================================== */
+/* ============================================================================== */
+
+/* -----------------  <418px  -----------------*/
+@media screen and (max-width: 417px) {
+
+    /* margin top */
+    /* .g-section-mt { margin-top: 96px; } */
+
+    /* margin bottom */
+    .g-section-mb { margin-bottom: 32px; }
+    /* .g-subtitle-mb { margin-bottom: 32px; } */
+}
+
+/* -----------------  576px-767px  -----------------*/
+@media screen and (min-width: 418px) and (max-width: 575px) {
+
+  /* margin bottom */
+  .g-section-mb { margin-bottom: 40px; }
+}
+
+/* -----------------  576px-767px  -----------------*/
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  
+}
+
+/* -----------------  768px-991px  -----------------*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    /* margin bottom */
+    .g-section-mb { margin-bottom: 48px; }
+}
+
+/* -----------------  992px-1199px  -----------------*/
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* -----------------  1200px-1343px  -----------------*/
+@media screen and (min-width: 1200px) and (max-width: 1343px) {
+
+}
+
+/* 問題：container 有自己預設 1320 嘛？ */
+/* -----------------  1344px-1920px  -----------------*/
+@media screen and (min-width: 1344px) and (max-width: 1920px) {
+    .container {
+        min-width: 1344px;
+    }
 }
