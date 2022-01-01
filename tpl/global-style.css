@@ -24,7 +24,6 @@ p { line-height: var(--line-height-160); }
     padding-right: 72px;
 }
 
-.subtitle { margin-bottom: 32px; }
 .subtitle .section-header-b { margin: auto 0; }
 
 .red-line {
@@ -179,61 +178,85 @@ p { line-height: var(--line-height-160); }
     letter-spacing: 0.4px;
 }
 
-/* margin bottom */
-.g-section-mb { margin-bottom: 144px; }
 
 /* =================================== @media =================================== */
 /* ============================================================================== */
 
-/* ------------------------  <418px  ------------------------*/
-@media screen and (max-width: 417px) {
-
-    /* margin top */
-    /* .g-section-mt { margin-top: 96px; } */
-
-    /* margin bottom */
-    .g-section-mb { margin-bottom: 32px; }
-    /* .g-subtitle-mb { margin-bottom: 32px; } */
-}
-
-/* ------------------------  418px-575px  ------------------------*/
-@media screen and (min-width: 418px) and (max-width: 575px) {
-
-  /* margin bottom */
-  .g-section-mb { margin-bottom: 40px; }
-}
-
-/* ------------------------  576px-767px  ------------------------*/
-@media screen and (min-width: 576px) and (max-width: 767px) {
-  
-}
-
-/* ------------------------  768px-991px  ------------------------*/
-@media screen and (min-width: 768px) and (max-width: 991px) {
-
-    /* margin bottom */
-    .g-section-mb { margin-bottom: 48px; }
-}
-
-/* ------------------------  992px-1199px  ------------------------*/
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-
-}
-
-/* ------------------------  1200px-1343px  ------------------------*/
-@media screen and (min-width: 1200px) and (max-width: 1343px) {
-
-}
-
 /* 問題：container 有自己預設 1320 嘛？ */
-/* ------------------------  1344px-1920px  ------------------------*/
-@media screen and (min-width: 1344px) {
+/* ------------------------  小於 1920px  ------------------------*/
+@media screen and (max-width: 1920px) {
+    
+    /* margin bottom */
+    .g-section-mb { margin-bottom: 144px; }
+    .g-subtitle-mb { margin-bottom: 32px; }
+}
+
+@media screen and (min-width: 1344px) and (max-width: 1920px) {
     .container {
         min-width: 1344px;
     }
 }
 
-/* ------------------------  1200px-1343px  ------------------------*/
+/* ------------------------  小於 1344px  ------------------------*/
 @media screen and (max-width: 1344px) {
-        
+    
+    /* margin bottom */
+    .g-section-mb { margin-bottom: 144px; }
+}
+
+/* ------------------------  小於 1200px  ------------------------*/
+@media screen and (max-width: 1200px) {
+    .g-section-mb { margin-bottom: 96px; }
+}
+
+/* ------------------------  小於 922px  ------------------------*/
+@media screen and (max-width: 992px) {
+
+    /* margin bottom */
+    .g-section-mb { margin-bottom: 72px; }
+}
+
+/* ------------------------  小於 768px  ------------------------*/
+@media screen and (max-width: 768px) {
+
+    .red-line { display: none; }
+
+    /* margin bottom */
+    .g-section-mb { margin-bottom: 56px; }
+    .g-subtitle-mb { margin-bottom: 24px; }
+}
+
+/* ------------------------  小於 576px  ------------------------*/
+@media screen and (max-width: 576px) {
+
+    /* global padding-x */
+    main { padding: 0 16px; }
+
+    /* margin bottom */
+    .g-section-mb { margin-bottom: 40px; }
+}
+
+/* ------------------------  小於 418px  ------------------------*/
+@media screen and (max-width: 418px) {
+    
+    /* margin top */
+    /* .g-section-mt { margin-top: 96px; } */
+
+    /* margin bottom */
+    .g-section-mb { margin-bottom: 40px; }
+
+    .main-header-b { font-size: 34px; }
+    .section-header-b { font-size: 20px; }
+
+    .sub-title-r, 
+    .sub-title-m,
+    .sub-title-b,
+    .italic-20 { font-size: 1rem;}
+
+    .body1-r,
+    .body1-m,
+    .body1-b,
+    .italic-16 { font-size: 0.875rem; }
+
+
 }

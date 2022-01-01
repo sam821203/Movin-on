@@ -216,14 +216,9 @@
         color: white;
     }
 
-    /* ----------------------------top five---------------------------- */
-    .top-five-section {
-        margin-bottom: 144px;
-    }
-
+    /* ----------------------------top five section---------------------------- */
     .top-five-section .subtitle {
         margin-top: 200px;
-        margin-bottom: 32px;
     }
 
     .top-five-section .subtitle .red-line, 
@@ -231,17 +226,38 @@
         margin: auto 20px auto 0px;
     }
 
+    .top-five-section .top-five-card {
+        margin-bottom: 32px;
+    }
+
     .top-five-section .img-wrap {
         width: 100%;
+        margin-bottom: 12px;
     }
 
     .top-five-section .img-wrap img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
         border-radius: var(--border-radius-4);
     }
 
-    /* ----------------------------other movies---------------------------- */
+    .top-five-section .top-five-card .rating {
+        padding-top: 4px;
+        margin-bottom: 4px;
+    }
+
+    .top-five-section .top-five-card .rating .fa-star {
+        margin-right: 6px;
+    }
+
+    .top-five-section p.italic-16 {
+        color: rgb(145, 145, 145);
+    }
+
+
+    /* ----------------------------other movies section---------------------------- */
     .other-movies-section .mov-card {
        position: relative;
        margin-bottom: 32px;
@@ -290,67 +306,70 @@
     /* =================================== @media =================================== */
     /* ============================================================================== */
 
-    /* -----------------when smaller than 418px，小於 418px-----------------*/
-    @media screen and (max-width: 418px) {
+    /* ------------------------  小於 1920px  ------------------------*/
+    @media screen and (max-width: 1920px) {
 
-        /* section margin bottom */
-        .forum-info-section { margin-top: 96px; }
+        .top-five-section .top-five-card {
+            margin-bottom: 0;
+        }
+    }
 
-        .main-header-b { font-size: 34px; }
-        .section-header-b { font-size: 20px; }
+    /* ------------------------  小於 1200px  ------------------------*/
+    @media screen and (max-width: 1200px) {
 
-        .forum-cards-section .subtitle,
-        .forum-cat-section .subtitle { margin-bottom: 24px; }
+        .top-five-section .top-five-card {
+            margin-bottom: 32px;
+        }
+    }
 
-        .sub-title-r, 
-        .sub-title-m,
-        .sub-title-b { font-size: 16px;}
+    /* ------------------------  小於 768px  ------------------------*/
+    @media screen and (max-width: 768px) {
 
-        .body1-r,
-        .body1-m,
-        .body1-b { font-size: 14px; }
-
-        .forum-cards-section .card-md .section-header-r { 
-            font-weight: 400;
-            margin-bottom: 4px;
-            font-size: 16px;
+        /* top five section */
+        .top-five-section .top-five-card {
+            margin-bottom: 32px;
         }
 
-        /* 將預設的 .body1-b 改為 .body2-m  */
-        .forum-cards-section .card-md .body1-b { 
-            font-weight: 700;
-            margin-bottom: 4px;
+        .top-five-section .rating {
             font-size: 14px;
         }
 
-        .forum-cards-section .img-wrap .content {
-            bottom: 12px;
-            left: 12px;
+        /* other movies section */
+        .other-movies-section .mov-card {
+            border-radius: var(--border-radius-4);
         }
 
-        .forum-cards-section .card-md,
-        .forum-cat-section .card-md {
-            margin-bottom: 16px;
+        .other-movies-section .img-wrap {
+            width: 88px;
+            height: 88px;
+            margin: 0 auto 12px auto;
         }
 
-        .forum-cards-section .col-6.card-md:nth-child(even),
-        .forum-cat-section .col-6.card-md:nth-child(even) {
+        .other-movies-section .pg-rate {
+            padding: 4px 6px 4px 6px;
+            border-radius: 0 4px 0 4px;
+        }
+    }
+    
+    /* ------------------------  小於 576px  ------------------------*/
+    @media screen and (max-width: 576px) {
+
+        /* top five section */
+        .top-five-section .top-five-card.col-6:nth-child(even), 
+        .top-five-section .top-five-card.col-sm-6:nth-child(even) {
             padding: 0 16px 0 8px;
         }
 
-        .forum-cards-section .col-6.card-md:nth-child(odd),
-        .forum-cat-section .col-6.card-md:nth-child(odd) {
+        .top-five-section .top-five-card.col-6:nth-child(odd),
+        .top-five-section .top-five-card.col-sm-6:nth-child(odd) {
             padding: 0 8px 0 16px;
         }
 
-        .forum-cards-section .com-count {
-            border-radius: var(--border-radius-50);
-            padding: 2px 6px;
-            margin-left: 8px;
+        .top-five-section .top-five-card .rating .fa-star {
+            margin-right: 4px;
         }
-    }
-    /* -----------------when smaller than 576px，小於 576px-----------------*/
-    @media screen and (max-width: 576px) {
+
+        /* other movies section */
         .other-movies-section .mov-card {
             border-radius: var(--border-radius-4);
         }
@@ -363,139 +382,60 @@
         .other-movies-section .pg-rate {
             padding: 4px;
             font-size: 14px;
-            border-radius: 0 4px 0 4px;
+        }
+
+        .other-movies-section .row .col-4:nth-child(3n+1),
+        .other-movies-section .row .col-sm-4:nth-child(3n+1),
+        .other-movies-section .row .col-md-4:nth-child(3n+1) {
+            padding: 0 8px 0 16px;
+        }
+
+        .other-movies-section .row .col-4:nth-child(3n+2),
+        .other-movies-section .row .col-sm-4:nth-child(3n+2),
+        .other-movies-section .row .col-md-4:nth-child(3n+2) {
+            padding: 0 8px;
+        }
+
+        .other-movies-section .row .col-4:nth-child(3n+3),
+        .other-movies-section .row .col-sm-4:nth-child(3n+3),
+        .other-movies-section .row .col-md-4:nth-child(3n+3) {
+            padding: 0 16px 0 8px;
+        }
+
+        .other-movies-section .mov-card {
+            margin-bottom: 16px;
         }
     }
 
-    /* -----------------when smaller than 992px，小於 992px-----------------*/
-    /* @media screen and (max-width: 992px) {
+    /* ------------------------  小於 418px  ------------------------*/
+    @media screen and (max-width: 418px) {
+
+        /* top five section */
+        .top-five-section .top-five-card .rating .fa-star {
+            margin-right: 2px;
+            font-size: 12px;
+        }
+
+        /* other movies section */
+        .other-movies-section .img-wrap {
+            width: 64px;
+            height: 64px;
+        }
+
+        .other-movies-section .pg-rate {
+            padding: 2px 4px 3px 4px;
+            font-size: 12px;
+        }
+    }
     
-    } */
 </style>
 
 <body>
-    <nav>
-        <div class="movinon-navbar">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="movinon-logo">
-                            <a class="d-flex align-items-center" href="#">
-                                <img src="./images/LOGO.svg" alt="">
-                            </a>
-                        </div>
-
-                        <div class="options d-flex justify-content-between">
-                            <ul class="d-flex justify-content-between">
-                                <li class="sub-title-r"><a href="#" aria-haspopup="true">電影排行榜<i class="fas fa-chevron-down text-light body1-r"></i></a>
-                                    <ul class="dropdown" aria-label="submenu">
-                                        <li class="sub-title-r"><a href="#">現正熱映</a></li>
-                                        <li class="sub-title-r"><a href="#">即將上映</a></li>
-                                        <li class="sub-title-r"><a href="#">本週新片</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="sub-title-r"><a href="#">影迷討論區</a></li>
-                                <li class="sub-title-r"><a href="#">電影新聞</a></li>
-                                <li class="sub-title-r"><a href="#">快速購票</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="navbar-icons d-flex justify-content-end my-auto">
-                            <a class="d-flex justify-content-center" href="#">
-                                <div class="img-wrap1 pr-2 d-flex align-items-center">
-                                    <img src="images/help.svg" alt="">
-                                </div>
-                            </a>
-
-                            <!-- 登入視窗連結 -->
-                            <div class="img-wrap2 d-flex align-items-center dropdown">
-                                <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false"><img src="images/account.svg" alt=""></a>
-
-                                <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
-                                    <a class="btn btn-outline-light mb-3" href="#" data-toggle="modal" data-target="#exampleModalLogin">登入</a>
-                                    <a type="button" class="btn btn-outline-light" href="#" data-toggle="modal" data-target="#exampleModal">註冊</a>
-                                </div>
-                            </div>
-                            <!-- </a> -->
-                        </div>
-
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">註冊帳號</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form class="row g-3" id="myForm">
-                                            <div class="col-md-6">
-                                                <label for="inputEmail4" class="form-label">Email</label>
-                                                <input type="email" class="form-control" id="email" placeholder="請填寫 E-mail">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="inputPassword4" class="form-label">密碼</label>
-                                                <input type="password" class="form-control" id="pwd" placeholder="請輸入密碼">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="inputEmail4" class="form-label">姓名</label>
-                                                <input type="text" class="form-control" id="name" placeholder="請輸入姓名">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="inputPassword4" class="form-label">生日</label>
-                                                <input type="text" class="form-control" id="birthdate" placeholder="請填寫生日">
-                                            </div>
-                                            <div class="col-12">
-                                                <label for="inputAddress" class="form-label">地址</label>
-                                                <input type="text" class="form-control" id="address" placeholder="請填寫地址">
-                                            </div>
-                                            <div class="col-12">
-                                                <button type="submit" class="btn" id="btn_register">註冊</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 登入視窗 -->
-                        <div class="modal fade" id="exampleModalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">登入</h5><span class="Login">Login</span>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form class="row g-3" id="myForm_login">
-                                            <div class="col-md-12">
-                                                <label for="email_login" class="form-label">Email</label>
-                                                <input type="email" class="form-control" id="email_login" placeholder="請填寫 E-mail">
-                                            </div>
-                                            <div class="col-md-12">
-                                                <label for="pwd_login" class="form-label">密碼</label>
-                                                <input type="password" class="form-control" id="pwd_login" placeholder="請輸入密碼">
-                                            </div>
-                                            <div class="col-6">
-                                                <button type="submit" class="btn" id="btn_login">登入</button>
-                                            </div>
-                                            <div class="col-6"><a href="">忘記密碼？</a></div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-
     <main>
         <!-- -----------top five section----------- -->
         <section class="top-five-section g-section-mb">
             <div class="container">
-                <div class="row subtitle">
+                <div class="row subtitle g-subtitle-mb">
                     <div class="col-12">
                         <div class="d-flex">
                             <div class="red-line"></div>
@@ -504,88 +444,286 @@
                     </div>
                 </div>
 
-                <div class="row d-none d-lg-none d-xl-flex">
-                    <div class="col">
+                <div class="row d-none d-md-flex d-flex">
+                    <div class="top-five-card col-md-4 col-lg-4 col-xl">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/main_page/rank1.jpeg" alt="">
                             </div>
                         </a>
+                        <a href="#">
+                            <div class="card-info">
+                                <div class="d-flex justify-content-between">
+                                    <div class="movie-title">
+                                        <span class="sub-title-r">永恆族</span>
+                                        <p class="italic-16">Eternals</p>
+                                    </div>
+                                    <div class="rating d-flex">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                    <div class="col">
+
+                    <div class="top-five-card col-md-4 col-lg-4 col-xl">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/main_page/rank2.jpeg" alt="">
                             </div>
                         </a>
+                        <a href="#">
+                            <div class="card-info">
+                                <div class="d-flex justify-content-between">
+                                    <div class="movie-title">
+                                        <span class="sub-title-r">刀劍神域：<br>Progressive</span>
+                                        <p class="italic-16">Sword Art Online: Progressive</p>
+                                    </div>
+                                    <div class="rating d-flex">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.7</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                    <div class="col">
+
+                    <div class="top-five-card col-md-4 col-lg-4 col-xl">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/main_page/rank3.jpeg" alt="">
                             </div>
                         </a>
+                        <a href="#">
+                            <div class="card-info">
+                                <div class="d-flex justify-content-between">
+                                    <div class="movie-title">
+                                        <span class="sub-title-r">詭扯</span>
+                                        <p class="italic-16">Treat or Trick</p>
+                                    </div>
+                                    <div class="rating d-flex">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.1</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                    <div class="col">
+
+                    <div class="top-five-card col-md-4 col-lg-4 col-xl">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/main_page/rank4.jpeg" alt="">
                             </div>
                         </a>
+                        <a href="#">
+                            <div class="card-info">
+                                <div class="d-flex justify-content-between">
+                                    <div class="movie-title">
+                                        <span class="sub-title-r">我的英雄學院劇場版：世界英雄任務</span>
+                                        <p class="italic-16">My Hero Academia The Movie : World Heores Mission</p>
+                                    </div>
+                                    <div class="rating d-flex">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.4</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                    <div class="col">
+
+                    <div class="top-five-card col-md-4 col-lg-4 col-xl">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/main_page/rank5.jpeg" alt="">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="card-info">
+                                <div class="d-flex justify-content-between">
+                                    <div class="movie-title">
+                                        <span class="sub-title-r">迷離夜蘇活</span>
+                                        <p class="italic-16">Last Night in Soho</p>
+                                    </div>
+                                    <div class="rating d-flex">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.1</span>
+                                    </div>
+                                </div>
                             </div>
                         </a>
                     </div>
                 </div>
 
-                <div class="row d-sm-flex d-xl-none d-none">
-                    <div class="col-4 mb-4">
+                <div class="row d-flex d-sm-flex d-lg-none">
+                    <div class="top-five-card col-6 col-sm-6">
+                        <a href="#">
+                            <div class="img-wrap">
+                                <img src="images/main_page/rank1.jpeg" alt="">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="card-info">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+
+                                <div class="movie-title">
+                                    <span class="sub-title-r">永恆族</span>
+                                    <p class="italic-16">Eternals</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="top-five-card col-6 col-sm-6">
+                        <a href="#">
+                            <div class="img-wrap">
+                                <img src="images/main_page/rank2.jpeg" alt="">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="card-info">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+
+                                <div class="movie-title">
+                                    <span class="sub-title-r">刀劍神域：<br>Progressive</span>
+                                    <p class="italic-16">Sword Art Online: Progressive</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="top-five-card col-6 col-sm-6">
+                        <a href="#">
+                            <div class="img-wrap">
+                                <img src="images/main_page/rank3.jpeg" alt="">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="card-info">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+
+                                <div class="movie-title">
+                                    <span class="sub-title-r">詭扯</span>
+                                    <p class="italic-16">Treat or Trick</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="top-five-card col-6 col-sm-6">
+                        <a href="#">
+                            <div class="img-wrap">
+                                <img src="images/main_page/rank4.jpeg" alt="">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="card-info">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+
+                                <div class="movie-title">
+                                    <span class="sub-title-r">我的英雄學院劇場版：世界英雄任務</span>
+                                    <p class="italic-16">My Hero Academia The Movie : World Heores Mission</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="top-five-card col-6 col-sm-6">
+                        <a href="#">
+                            <div class="img-wrap">
+                                <img src="images/main_page/rank5.jpeg" alt="">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="card-info">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+
+                                <div class="movie-title">
+                                    <span class="sub-title-r">迷離夜蘇活</span>
+                                    <p class="italic-16">Last Night in Soho</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    
+                </div>
+
+                <!-- <div class="row d-flex d-sm-flex d-xl-none">
+                    <div class="col-sm-6 col-4 mb-4">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/main_page/rank1.jpeg" alt="">
                             </div>
                         </a>
                     </div>
-                    <div class="col-4 mb-4">
+                    <div class="col-sm-6 col-4 mb-4">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/main_page/rank2.jpeg" alt="">
                             </div>
                         </a>
                     </div>
-                    <div class="col-4 mb-4">
+                    <div class="col-sm-6 col-4 mb-4">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/main_page/rank3.jpeg" alt="">
                             </div>
                         </a>
                     </div>
-                    <div class="col-4 mb-4">
+                    <div class="col-sm-6 col-4 mb-4">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/main_page/rank4.jpeg" alt="">
                             </div>
                         </a>
                     </div>
-                    <div class="col-4 mb-4">
+                    <div class="col-sm-6 col-4 mb-4">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/main_page/rank5.jpeg" alt="">
                             </div>
                         </a>
                     </div>
-                </div>
+                </div> -->
             </div>   
         </section>
         
         <!-- -----------other movies section----------- -->
         <section class="other-movies-section g-section-mb">
             <div class="container">
-                <div class="row subtitle">
+                <div class="row subtitle g-subtitle-mb">
                     <div class="col-12">
                         <div class="d-flex">
                             <div class="red-line"></div>

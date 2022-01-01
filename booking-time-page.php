@@ -74,6 +74,10 @@
     .movie-selecting-section .movie-division {
         padding-left: 112px;
         padding-right: 112px;
+    }
+
+    .movie-selecting-section .movie-info,
+    .movie-selecting-section .movie-date {
         margin-bottom: 48px;
     }
 
@@ -208,7 +212,7 @@
     /* -----------------movie showtime section----------------- */
     .movie-showtime-section .subtitle {
         margin-bottom: 64px;
-        padding: 0 16px;
+        padding: 0;
     }
 
     .movie-showtime-section .subtitle .dot {
@@ -325,77 +329,85 @@
     /* =================================== @media =================================== */
     /* ============================================================================== */
 
-    /* -----------------when smaller than 418px，小於 418px-----------------*/
-    @media screen and (max-width: 418px) {
+    /* ------------------------  大於 1400px  ------------------------*/
+    @media (max-width: 1400px) {
+
+        .movie-showtime-section .timetable {
+            padding: 0; 
+            margin-bottom: 24px;
+        }
+    }
+
+     /* ------------------------  小於 1200px  ------------------------*/
+     @media screen and (max-width: 1200px) {
         
-        .movie-selecting-section { margin-top: 32px; }
+        /* section margin bottom */
+       .movie-selecting-section { margin-top: 96px; }
+
+       .movie-selecting-section .movie-info,
+       .movie-selecting-section .movie-date,
+       .movie-selecting-section .movie-division {
+           padding-left: 96px;
+           padding-right: 96px;
+           margin-bottom: 72px;
+       }
+    }
+
+    /* ------------------------  小於 992px  ------------------------*/
+    @media screen and (max-width: 992px) {
+        body {
+            background: url("images/booking_time_page/bg_img/bg_img_gradient_992.jpg") top center no-repeat;
+            background-size: contain;
+            background-color: var(--bg-color);
+        }
+
+        .movie-selecting-section { margin-top: 48px; }
+
+        .movie-selecting-section
+        .movie-info
+        .movie-poster { width: 33.33%; }
+        
+        .movie-selecting-section .content {
+            width: 66.66%;
+            padding-left: 32px;
+        }
 
         .movie-selecting-section .movie-info,
         .movie-selecting-section .movie-date,
         .movie-selecting-section .movie-division {
-            padding: 0 16px;
-            margin-bottom: 32px;
-        }
-
-        .section-header-b { font-size: 20px; }
-        .related-articles-section .subtitle { margin-bottom: 24px; }
-
-        .sub-title-r, 
-        .sub-title-m,
-        .sub-title-b { font-size: 16px;}
-
-        .body1-r,
-        .body1-m,
-        .body1-b { font-size: 14px; }
-
-        .movie-selecting-section .content p { 
-            margin-bottom: 4px;
-            font-size: 16px;
-        }
-
-        .movie-selecting-section .movie-date .day span {
-            font-size: 14px;
-            white-space: nowrap;
-        }
-
-        .movie-selecting-section .movie-date .day .roboto-condensed {
-            font-size: 48px;
-        }
-
-        .movie-selecting-section .movie-date .day {
-            text-align: center;
-            padding: 8px 10px 0px 8px;
+            padding-left: 48px;
+            padding-right: 48px;
+            margin-bottom: 48px;
         }
 
         /* movie showtime section */
-        .movie-showtime-section div.subtitle {
-            overflow: auto;
-            padding: 0 16px;
+        .movie-showtime-section .subtitle {
+            margin-bottom: 32px;
+            padding: 0;
         }
 
-        .movie-showtime-section div.subtitle::-webkit-scrollbar {
-            display: none;
+        .movie-showtime-section .timetable .timetable-row {
+            display: block;
         }
 
-        .movie-showtime-section .options .showtime {
-            padding: 8px 16px;
+        .movie-showtime-section .timetable-row .cinema-name {
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 16px;
+        }
+
+        .movie-showtime-section .showtime-options-wrap {
+            width: 100%;
+        }
+
+        .movie-showtime-section .timetable-row .movie-type {
+            text-align: left;
+            margin-bottom: 16px;
         }
     }
 
-    /* -----------------when smaller than 576px，小於 576px-----------------*/
-    @media screen and (max-width: 576px) {
-        .movie-showtime-section .seat-left-info {
-            font-size: 14px;
-        }
-    }
-
-    /* -----------------when smaller than 768px，小於 768px-----------------*/
+    /* ------------------------  小於 768px  ------------------------*/
     @media screen and (max-width: 768px) {
-
-        /* 小於 768px 後，將 red-line刪掉，並調整副標題 */
-        .red-line {
-            display: none;
-        }
 
         /* movie selecting section */
         .movie-selecting-section .movie-poster {
@@ -425,8 +437,7 @@
         .movie-selecting-section .movie-info,
         .movie-selecting-section .movie-date,
         .movie-selecting-section .movie-division {
-            padding-left: 16px;
-            padding-right: 16px;
+            padding: 0;
         }
 
         .movie-selecting-section .movie-date .day {
@@ -464,89 +475,65 @@
         }
     }
 
-    /* -----------------when smaller than 992px，小於 992px-----------------*/
-    @media screen and (max-width: 992px) {
-        body {
-            background: url("images/booking_time_page/bg_img/bg_img_gradient_992.jpg") top center no-repeat;
-            background-size: contain;
-            background-color: var(--bg-color);
+    /* ------------------------  小於 576px  ------------------------*/
+    @media screen and (max-width: 576px) {
+        .movie-showtime-section .seat-left-info {
+            font-size: 14px;
         }
+    }
 
-        .movie-selecting-section { margin-top: 48px; }
-
-        .movie-selecting-section
-        .movie-info
-        .movie-poster { width: 33.33%; }
+    /* ------------------------ 小於 418px  ------------------------*/
+    @media screen and (max-width: 418px) {
         
-        .movie-selecting-section .content {
-            width: 66.66%;
-            padding-left: 32px;
-        }
+        .movie-selecting-section { margin-top: 32px; }
 
         .movie-selecting-section .movie-info,
         .movie-selecting-section .movie-date,
         .movie-selecting-section .movie-division {
-            padding-left: 48px;
-            padding-right: 48px;
-            margin-bottom: 48px;
+            margin-bottom: 32px;
+        }
+
+        .section-header-b { font-size: 20px; }
+        .related-articles-section .subtitle { margin-bottom: 24px; }
+
+        .sub-title-r, 
+        .sub-title-m,
+        .sub-title-b { font-size: 16px;}
+
+        .body1-r,
+        .body1-m,
+        .body1-b { font-size: 14px; }
+
+        .movie-selecting-section .content p { 
+            margin-bottom: 4px;
+            font-size: 16px;
+        }
+
+        .movie-selecting-section .movie-date .day span {
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        .movie-selecting-section .movie-date .day .roboto-condensed {
+            font-size: 48px;
+        }
+
+        .movie-selecting-section .movie-date .day {
+            text-align: center;
+            padding: 8px 10px 0px 8px;
         }
 
         /* movie showtime section */
-        .movie-showtime-section .subtitle {
-            margin-bottom: 32px;
-            padding: 0 16px;
+        .movie-showtime-section div.subtitle {
+            overflow: auto;
         }
 
-        .movie-showtime-section .timetable .timetable-row {
-            display: block;
+        .movie-showtime-section div.subtitle::-webkit-scrollbar {
+            display: none;
         }
 
-        .movie-showtime-section .timetable-row .cinema-name {
-            width: 100%;
-            padding-right: 0;
-            margin-bottom: 16px;
-        }
-
-        .movie-showtime-section .showtime-options-wrap {
-            width: 100%;
-        }
-
-        .movie-showtime-section .timetable-row .movie-type {
-            text-align: left;
-            margin-bottom: 16px;
-        }
-    }
-
-    /* -----------------when smaller than 1200px，小於 1200px-----------------*/
-    @media screen and (max-width: 1200px) {
-        
-        /* section margin bottom */
-       .movie-selecting-section { margin-top: 96px 0; }
-
-       .movie-selecting-section .movie-info,
-       .movie-selecting-section .movie-date,
-       .movie-selecting-section .movie-division {
-           padding-left: 96px;
-           padding-right: 96px;
-           margin-bottom: 72px;
-       }
-    }
-
-    /* -----------------when bigger than 1400px，大於 1400px-----------------*/
-    @media (max-width: 1400px) {
-        .container {
-            max-width: 1344px;
-        }
-
-        .movie-selecting-section .movie-info,
-        .movie-selecting-section .movie-date,
-        .movie-selecting-section .movie-division {
-            padding: 0 16px; 
-            margin-bottom: 24px;
-        }
-        .movie-showtime-section .timetable {
-            padding: 0 16px; 
-            margin-bottom: 24px;
+        .movie-showtime-section .options .showtime {
+            padding: 8px 16px;
         }
     }
     

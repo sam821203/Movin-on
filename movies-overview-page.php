@@ -32,30 +32,24 @@
         --box-shadow-red: 0px 0px 16px 4px rgba(245,61,61,0.25);
     }
 
-    .content-section .img-wrap {
+    .content-section .mycard .img-wrap {
         max-width: 198px;
-        object-fit: cover;
-        object-position: 50% 50%;
         margin-bottom: 12px;
     }
 
-    .img-wrap img{
+    .content-section .mycard .img-wrap img{
         width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
         border-radius: var(--border-radius-4);
     }
 
-    .rating {
+    .content-section .mycard-info .rating {
         padding-top: 4px;
     }
 
-    .rating .fa-star {
+    .content-section .mycard-info .rating .fa-star {
         margin-right: 6px;
-    }
-
-    .related-articles-section .articles .sub-title-r {
-        overflow:hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
     }
 
     .movies-tab-bar .playName {
@@ -94,13 +88,9 @@
         margin-bottom: 32px;
     }
 
-    .content-section p {
+    .content-section p.italic-16 {
         color: rgb(145, 145, 145);
     }
-
-    /* .movies-tab-bar {
-        margin-bottom: 128px;
-    } */
 
     .movies-tab-bar #myTab {
         display: flex;

@@ -180,14 +180,6 @@
     }
 
     /* -----------------forum cards section----------------- */
-    .forum-cards-section {
-        margin-bottom: 144px;
-    }
-
-    .forum-cards-section .subtitle {
-        margin-bottom: 32px;
-    }
-
     .forum-cards-section .subtitle .red-line, 
     .forum-cards-section .subtitle .section-header-b {
         margin: auto 20px auto 0px;
@@ -278,10 +270,6 @@
         margin-bottom: 144px;
     }
 
-    .forum-cat-section .subtitle {
-        margin-bottom: 32px;
-    }
-
     .forum-cat-section .img-wrap {
         width: 100%;
         height: 100%;
@@ -328,16 +316,74 @@
     /* =================================== @media =================================== */
     /* ============================================================================== */
 
-    /* -----------------when smaller than 418px，小於 418px-----------------*/
+    /* ------------------------  小於 1920px  ------------------------*/
+    @media screen and (max-width: 1920px) {
+        .forum-info-section {
+            margin-bottom: 48px;
+        }
+    }
+
+    /* ------------------------  小於 992px  ------------------------*/
+    @media screen and (max-width: 992px) {
+        body {
+            background: url("images/forum_overview_page/bg_img_992_min.jpg") top center no-repeat;
+            background-size: contain;
+            background-color: var(--bg-color);
+        }
+
+        /* -------movinon navbar-------*/
+        .movinon-navbar .movinon-logo {
+            max-width: 178px;
+        }
+
+        .movinon-navbar .row {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        .movinon-navbar .sub-title-r {
+            letter-spacing: 1px;
+        }
+
+        .movinon-navbar .options li {
+            display: none;
+        }
+
+        .movinon-navbar .img-wrap {
+            width: 90%;
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+
+        .movinon-navbar .img-wrap img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    /* ------------------------  小於 768px  ------------------------*/
+    @media screen and (max-width: 768px) {
+
+        /* 這裡強制將 .section-header-r 改為 字重500 */
+        .forum-cards-section .card-md .section-header-r { 
+            font-size: 20px; 
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+
+        .forum-cards-section .img-wrap .content {
+            bottom: 16px;
+            left: 16px;
+        }
+    }
+
+    /* ------------------------  小於 418px  ------------------------*/
     @media screen and (max-width: 418px) {
         
         .forum-info-section { margin-top: 96px; }
 
         .main-header-b { font-size: 34px; }
         .section-header-b { font-size: 20px; }
-
-        .forum-cards-section .subtitle,
-        .forum-cat-section .subtitle { margin-bottom: 24px; }
 
         .sub-title-r, 
         .sub-title-m,
@@ -386,67 +432,6 @@
             margin-left: 8px;
         }
     }
-
-    /* -----------------when smaller than 768px，小於 768px-----------------*/
-    @media screen and (max-width: 768px) {
-        
-        .red-line {
-            display: none;
-        }
-
-        /* 這裡強制將 .section-header-r 改為 字重500 */
-        .forum-cards-section .card-md .section-header-r { 
-            font-size: 20px; 
-            font-weight: 500;
-            margin-bottom: 6px;
-        }
-
-        .forum-cards-section .img-wrap .content {
-            bottom: 16px;
-            left: 16px;
-        }
-    }
-
-    /* -----------------when smaller than 992px，小於 992px-----------------*/
-    @media screen and (max-width: 992px) {
-        body {
-            background: url("images/forum_overview_page/bg_img_992.jpg") top center no-repeat;
-            background-size: contain;
-            background-color: var(--bg-color);
-        }
-
-        /* -------movinon navbar-------*/
-        .movinon-navbar .movinon-logo {
-            max-width: 178px;
-        }
-
-        .movinon-navbar .row {
-            padding-top: 8px;
-            padding-bottom: 8px;
-        }
-
-        .movinon-navbar .sub-title-r {
-            letter-spacing: 1px;
-        }
-
-        .movinon-navbar .options li {
-            display: none;
-        }
-
-        .movinon-navbar .img-wrap {
-            width: 90%;
-            object-fit: cover;
-            object-position: 50% 50%;
-        }
-
-        .movinon-navbar .img-wrap img {
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    /* -----------------when smaller than 1200px，小於 1200px-----------------*/
-    
 </style>
 
 <body>
@@ -495,7 +480,7 @@
 
     <main>
         <!-- -----------forum info section----------- -->
-        <section class="forum-info-section g-section-mb">
+        <section class="forum-info-section">
             <div class="container">
                 <!-- --------------------display 大於 1200-------------------- -->
                 <div class="row d-none d-xl-flex">
@@ -558,7 +543,7 @@
         <!-- -----------forum cards section----------- -->
         <section class="forum-cards-section g-section-mb">
             <div class="container d-none d-xl-block">
-                <div class="row subtitle">
+                <div class="row subtitle g-subtitle-mb">
                     <div class="col-12">
                         <div class="d-flex">
                             <div class="red-line"></div>
@@ -704,7 +689,7 @@
 
             <!-- --------------------display 小於 1200-------------------- -->
             <div class="container d-sm-block d-xl-none">
-                <div class="row subtitle">
+                <div class="row subtitle g-subtitle-mb">
                     <div class="col-12">
                         <div class="d-flex">
                             <div class="red-line"></div>
@@ -831,7 +816,7 @@
         <!-- -----------forum cat section----------- -->
         <section class="forum-cat-section g-section-mb">
             <div class="container">
-                <div class="row subtitle">
+                <div class="row subtitle g-subtitle-mb">
                     <div class="col-12">
                         <div class="d-flex">
                             <div class="red-line"></div>

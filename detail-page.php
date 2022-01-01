@@ -40,11 +40,6 @@
         padding-left: 72px;
         padding-right: 72px;
     }
-    
-    .related-articles-section,
-    .actors-list-section { 
-        margin-bottom: 144px; 
-    }
 
     .related-articles-section .fa-chevron-right {
         opacity: var(--opacity-90);
@@ -282,7 +277,6 @@
     .related-articles-section .subtitle,
     .actors-list-section .subtitle,
     .movie-stills-section .subtitle {
-        margin-bottom: 32px;
         padding: 0 16px;
     }
 
@@ -476,63 +470,63 @@
     /* =================================== @media =================================== */
     /* ============================================================================== */
 
-    /* ------------------------  <418px  ------------------------*/
-    @media screen and (max-width: 418px) {
+    /* ------------------------  小於 1344px  ------------------------*/
+    @media screen and (max-width: 1344px) {
 
-        .movie-detail-section { margin-top: 32px; }
+    }
 
-        .section-header-b { font-size: 20px; }
-        .related-articles-section .subtitle { margin-bottom: 24px; }
+    /* ------------------------  小於 1200px  ------------------------*/
+    @media screen and (max-width: 1200px) {
 
-        .sub-title-r, 
-        .sub-title-m,
-        .sub-title-b { font-size: 16px;}
+        /* section margin bottom */
+        .movie-detail-section { margin-top: 96px; }
 
-        .body1-r,
-        .body1-m,
-        .body1-b { font-size: 14px; }
-
-        .spoiler,
-        .spoiler-free,
-        .arti-cat-tag,
-        .time-stamp { font-size: 14px; }
-
-        .movie-detail-section .reputation {
-            display: none;
+        .related-articles-section .subtitle,
+        .actors-list-section .subtitle,
+        .movie-stills-section .subtitle {
+            padding: 0;
         }
 
-        .movie-detail-section .content p { 
-            margin-bottom: 4px;
-            font-size: 16px;
+        .movie-detail-section .movie-info { padding: 0; }
+
+        .articles-xl li:nth-child(even){
+            padding: 16px 32px;
+            background-color: rgba(255,255,255,0.02);
+            border-radius: var(--border-radius-8);
         }
 
-        .movie-detail-section .cat-tags {
-            margin-bottom: 24px;
-        }
-
-        .movie-detail-section .cat-tags .cat-tag {
-            padding: 8px 16px;
-            margin-right: 16px;
-            font-size: 14px;
-        }
-
-        .movie-detail-section .movie-info {
-            padding: 0 16px;
+        .articles-xl li:nth-child(odd) {
+            padding: 16px 32px;
+            background-color: rgba(255,255,255,0.08);
+            border-radius: var(--border-radius-8);
         }
     }
 
-    /* ------------------------  418px-575px  ------------------------*/
-    /* @media screen and (max-width: 576px) {
+    /* ------------------------  小於 992px  ------------------------*/
+    @media screen and (max-width: 992px) {
 
-    } */
-    
-    /* ------------------------  576px-767px  ------------------------*/
-    @media screen and (max-width: 768px) {
-
-        /* 小於 768px 後，將 red-line刪掉，並調整副標題 */
-        .red-line {
-            display: none;
+        body {
+            background: url("images/detail_page/bg_img/bg_img_gradient_992.jpg") top center no-repeat;
+            background-size: contain;
+            background-color: var(--bg-color);
         }
+
+        /* section margin bottom */
+        .movie-detail-section { margin-top: 48px; }
+        .movie-detail-section .cat-tags .cat-tag { margin-top: 32px; }
+
+        .movie-detail-section .description-title {
+            margin-bottom: 16px;
+        }
+
+        .movie-detail-section .description {
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+    }
+
+    /* ------------------------  小於 768px  ------------------------*/
+    @media screen and (max-width: 768px) {
 
         .related-articles-section .subtitle {
             align-items: end;
@@ -553,7 +547,6 @@
         }
 
         .movie-detail-section .rating {
-            margin-bottom: 32px;
             font-size: 14px;
         }
 
@@ -589,67 +582,41 @@
         }
     }
 
-    /* ------------------------  768px-991px  ------------------------*/
-    @media screen and (max-width: 992px) {
+    /* ------------------------  小於 576px  ------------------------*/
+    /* @media screen and (max-width: 576px) {
 
-        body {
-            background: url("images/detail_page/bg_img/bg_img_gradient_992.jpg") top center no-repeat;
-            background-size: contain;
-            background-color: var(--bg-color);
+    } */
+
+    /* ------------------------  小於 418px  ------------------------*/
+    @media screen and (max-width: 418px) {
+
+        .movie-detail-section { margin-top: 32px; }
+
+        .spoiler,
+        .spoiler-free,
+        .arti-cat-tag,
+        .time-stamp { font-size: 14px; }
+
+        .movie-detail-section .reputation {
+            display: none;
         }
 
-        /* section margin bottom */
-        .movie-detail-section { margin-top: 48px; }
-        .movie-detail-section .cat-tags .cat-tag { margin-top: 32px; }
-
-        .movie-detail-section .description-title {
-            margin-bottom: 16px;
-        }
-
-        .movie-detail-section .description {
-            margin-bottom: 40px;
+        .movie-detail-section .content p { 
+            margin-bottom: 4px;
             font-size: 16px;
         }
-    }
 
-    /* ------------------------  992px-1199px  ------------------------*/
-    @media screen and (max-width: 1200px) {
-
-        /* section margin bottom */
-        .movie-detail-section { margin-top: 96px; }
-        
-        .related-articles-section,
-        .actors-list-section { 
-            margin-bottom: 96px; 
+        .movie-detail-section .cat-tags {
+            margin-bottom: 24px;
         }
 
-        .related-articles-section .subtitle,
-        .actors-list-section .subtitle,
-        .movie-stills-section .subtitle {
-            padding: 0;
-        }
-        
-        .movie-detail-section .movie-info { padding: 0; }
-
-        .articles-xl li:nth-child(even){
-            padding: 16px 32px;
-            background-color: rgba(255,255,255,0.02);
-            border-radius: var(--border-radius-8);
-        }
-
-        .articles-xl li:nth-child(odd) {
-            padding: 16px 32px;
-            background-color: rgba(255,255,255,0.08);
-            border-radius: var(--border-radius-8);
+        .movie-detail-section .cat-tags .cat-tag {
+            padding: 8px 16px;
+            margin-top: 16px;
+            margin-right: 12px;
+            font-size: 14px;
         }
     }
-
-    /* ------------------------  1200px-1343px  ------------------------*/
-    @media screen and (max-width: 1344px) {
-
-    }
-
-
 
 </style>
 
@@ -794,7 +761,7 @@
         <!-- -----------related articles section----------- -->
         <section class="related-articles-section g-section-mb">
             <div class="container">
-                <div class="row subtitle">
+                <div class="row subtitle g-subtitle-mb">
                     <div class="col-6">
                         <div class="d-flex">
                             <div class="red-line my-auto"></div>
@@ -1195,7 +1162,7 @@
         <!-- -----------actors list section----------- -->
         <section class="actors-list-section g-section-mb">
             <div class="container">
-                <div class="row subtitle">
+                <div class="row subtitle g-subtitle-mb">
                     <div class="col-12">
                         <div class="d-flex">
                             <div class="red-line my-auto"></div>
@@ -1302,7 +1269,7 @@
         <!-- -----------movie stills section----------- -->
         <section class="movie-stills-section g-section-mb">
             <div class="container">
-                <div class="row subtitle">
+                <div class="row subtitle g-subtitle-mb">
                     <div class="col-12">
                         <div class="d-flex">
                             <div class="red-line my-auto"></div>
