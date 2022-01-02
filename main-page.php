@@ -639,12 +639,16 @@
 
         <section class="ranking-section">
             <div class="container">
-                <div class="row">
-                    <div class="d-flex subtitle">
-                        <div class="red-line my-auto"></div>
-                        <span class="section-header-b">電影排行榜</span>
+
+                <div class="row subtitle">
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <div class="red-line"></div>
+                            <span class="section-header-b">電影排行榜 加右邊</span>
+                        </div>
                     </div>
                 </div>
+
             </div>
             <div class="container-fluid">
                 <div class="row">

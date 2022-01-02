@@ -128,7 +128,7 @@
 
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <div class="content-section">
+                            <div class="content-section g-section-mb">
                                 <div class="container justify-content-between position-relative px-0">
                                     <div class="row">
                                         <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">

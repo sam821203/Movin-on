@@ -182,7 +182,6 @@ p { line-height: var(--line-height-160); }
 /* =================================== @media =================================== */
 /* ============================================================================== */
 
-/* 問題：container 有自己預設 1320 嘛？ */
 /* ------------------------  小於 1920px  ------------------------*/
 @media screen and (max-width: 1920px) {
     
@@ -191,14 +190,15 @@ p { line-height: var(--line-height-160); }
     .g-subtitle-mb { margin-bottom: 32px; }
 }
 
-@media screen and (min-width: 1344px) and (max-width: 1920px) {
+@media screen and (min-width: 1400px) and (max-width: 1920px) {
     .container {
         min-width: 1344px;
     }
 }
 
-/* ------------------------  小於 1344px  ------------------------*/
-@media screen and (max-width: 1344px) {
+/* 問題：container 有自己預設 1320 嘛？ */
+/* ------------------------  小於 1400px  ------------------------*/
+@media screen and (max-width: 1400px) {
     
     /* margin bottom */
     .g-section-mb { margin-bottom: 144px; }

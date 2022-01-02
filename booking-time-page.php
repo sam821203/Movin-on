@@ -227,14 +227,6 @@
         justify-content: end;
     }
 
-    .red-line {
-        background-color: var(--brand-color);
-        width: 8px;
-        height: 40px;
-        box-shadow: var(--box-shadow-red);
-        margin-right: 20px;
-    }
-
     .dot {
         border-radius: var(--border-radius-50);
         opacity: var(--opacity-75);

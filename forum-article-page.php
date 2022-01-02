@@ -45,17 +45,11 @@
         .sub-title-r {
             line-height: 170%;
         }
+        
+        /* ----------------------left side section---------------------- */
 
-        .red-line {
-            background-color: var(--brand-color);
-            width: 8px;
-            height: 40px;
-            box-shadow: var(--box-shadow-red);
-            margin-right: 20px;
-        }
-
-        /* ----------------------left side article---------------------- */
-        .left-side-article {
+        /* left side article */
+        .left-side-section .left-side-article {
             background-color: var(--card-color);
             padding: 128px 104px 56px 104px;
             border-radius: var(--border-radius-8);
@@ -63,8 +57,13 @@
         }
         
         .left-side-article p:nth-child(1) { margin-bottom: 8px; }
-        .left-side-article .section-header-b { margin-bottom: 12px; }
-        .left-side-article .subtitle { margin-bottom: 48px; }
+
+        .left-side-article .section-header-b { 
+            margin-bottom: 12px; 
+            line-height: 140%;
+        }
+
+        .left-side-article .article-extra-info { margin-bottom: 48px; }
 
         .left-side-article .date {
             margin-right: 16px;
@@ -128,7 +127,7 @@
         }
 
         .left-side-article .comment-data {
-            border-top: 1px solid #ccc;
+            border-top: 1px solid rgba(255,255,255,0.25)
         }
 
         .left-side-article .article-content {
@@ -150,18 +149,20 @@
             font-size: 20px;
         }
 
-        /* ----------------------left side comment---------------------- */
+        /* left side comment */
         .left-side-comment {
             background-color: var(--card-color);
             padding: 0 104px;
             border-radius: var(--border-radius-8);
-            margin-bottom: 144px;
         }
 
         .left-side-comment .comment-count,
         .left-side-comment .comments {
             padding-top: 64px;
             padding-bottom: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .left-side-comment .comment-count {
@@ -264,7 +265,12 @@
             margin-left: 24px;
         }
 
-        /* -------------write comment------------- */
+        .left-side-comment .fa-ellipsis-h {
+            display: flex;
+            align-items: start;
+        }
+
+        /* write comment */
         .write-comment {
             display: flex;
             padding: 40px 0 56px 0;
@@ -298,7 +304,15 @@
             box-shadow: var(--box-shadow-red);
         }
 
-        /* ----------------------aside member info---------------------- */
+        /* ----------------------aside section---------------------- */
+        .aside-section .col-xl-3,
+        .aside-section .col-xl-12,
+        .aside-section .col-lg-3,
+        .aside-section .col-lg-9 {
+            padding: 0;
+        }
+
+        /* aside ads */
         .aside-ads {
             background-color: var(--card-color);
             margin-bottom: 32px;
@@ -306,6 +320,7 @@
             height: 256px;
         }
 
+        /* aside member info */
         .aside-member-info {
             background-color: var(--card-color);
             margin-bottom: 96px;
@@ -369,7 +384,7 @@
             opacity: var(--opacity-50);
         }
         
-        /* ----------extra info---------- */
+        /* extra info */
         .aside-member-info .extra-info {
             display: flex;
             border-top: 1px solid rgba(255,255,255,0.25);
@@ -402,11 +417,7 @@
             opacity: var(--opacity-75);
         }
 
-        /* ----------aside related articles---------- */
-        .aside-related-articles .subtitle {
-            margin-bottom: 32px;
-        }
-
+        /* aside related articles */
         .aside-related-articles .related-articles {
             background-color: rgba(32,32,32,0.25);
             border: 1px solid rgba(255,255,255,0.25);
@@ -472,31 +483,217 @@
         .aside-related-articles .content p {
             line-height: 140%;
         }
-        
 
-        /* -----------------.container large >= 992px，小於 992px-----------------*/
+        /* =================================== @media =================================== */
+        /* ============================================================================== */
+
+        /* ------------------------  小於 1920px  ------------------------*/
+        @media screen and (max-width: 1920px) {
+            /* .forum-info-section {
+                margin-bottom: 48px;
+            } */
+        }
+
+        /* ------------------------  小於 1400px  ------------------------*/
+        @media screen and (max-width: 1400px) {
+
+            /* left side article */
+            .left-side-article {
+                padding: 96px 64px;
+            }
+
+            .left-side-comment { padding: 0 64px; }
+
+            /* aside member info */
+            .aside-member-info .social-media {
+                padding: 0 64px;
+            }
+
+            .aside-member-info .img-wrap {
+                padding: 0 32px;
+            }
+
+            .aside-member-info .extra-info .ticket-count {
+                padding: 16px 32px 0 32px;
+            }
+            
+            .aside-member-info .extra-info .my-ticket,
+            .aside-member-info .extra-info .my-post {
+                padding: 0 24px;
+            }
+        }
+
+        /* ------------------------  小於 1200px  ------------------------*/
+        @media screen and (max-width: 1200px) {
+
+            /* left side section */
+            .left-side-section {
+                padding: 0 32px;
+            }
+            
+            .left-side-section .left-side-article {
+                padding: 72px 64px;
+            }
+            
+            /* aside-related-articles */
+            .aside-related-articles .related-articles {
+                display: block;
+                padding-bottom: 16px;
+                margin-bottom: 32px;
+                border-radius: var(--border-radius-4);
+            }
+
+            .aside-related-articles .related-articles .img-wrap {
+                width: 100%;
+                display: flex;
+            }
+
+            .aside-related-articles .related-articles .img-wrap img {
+                border-radius: 4px 4px 0 0;
+            }
+
+            .aside-related-articles .related-articles .content {
+                width: 100%;
+                padding: 24px 16px 16px 24px;
+            }
+        }
+
+        /* ------------------------  小於 992px  ------------------------*/
         @media screen and (max-width: 992px) {
+
             body {
                 background: url("images/movie_booking_page/bg_img/TEST.jpg") top center no-repeat;
                 background-size: contain;
                 background-color: var(--bg-color);
             }
 
-            
+            .main-article .container {
+                max-width: 100%;
+            }
         }
 
-        /* -----------------.container x-large >= 1200px，小於 1200px-----------------*/
-        /* @media screen and (max-width: 1200px) {
-            .movie-detail-section .cat-tags .cat-tag {
-                margin-top: 32px;
-            }
-        } */
+        /* ------------------------  小於 768px  ------------------------*/
+        @media screen and (max-width: 768px) {
 
-        /* -----------------.container x-large >= 1400px，小於 1400px-----------------*/
-        @media (min-width: 1400px) {
-            .container {
-                max-width: 1344px;
+            /* left side section */
+            .left-side-section .left-side-article {
+                padding: 56px 48px;
             }
+
+            /* left side article */
+            .left-side-article .article-content {
+                margin-bottom: 48px;
+            }
+
+            .left-side-article p.section-header-b {
+                font-size: 1.25rem;
+            }
+
+            .left-side-article p.sub-title-r {
+                font-size: 1rem;
+            }
+
+            .left-side-article .article-extra-info .arti-cat-tag,
+            .left-side-article .article-extra-info .spoiler,
+            .left-side-article .article-extra-info .spolier-free,
+            .left-side-article .article-extra-info .comment span {
+                font-size: 0.875rem;
+            }
+
+            /* left side comment */
+            .left-side-comment .comment .content {
+                width: 88%;
+            }
+
+            .left-side-comment .comment .avatar, 
+            .left-side-comment .write-comment .avatar {
+                width: 12%;
+            }
+
+            .left-side-comment .comment-count,
+            .left-side-comment .comments {
+                padding: 48px 0 24px 0;
+            }
+
+            .left-side-comment .comment p {
+                margin-bottom: 24px;
+            }
+
+            .left-side-comment .tab-bar,
+            .left-side-comment .tab-bar.chosen,
+            .left-side-comment .sub-title-b {
+                font-size: 1rem;
+            }
+
+            .left-side-comment .reply,
+            .left-side-comment .like-count {
+                font-size: 0.875rem;
+            }
+
+        }
+
+        /* ------------------------  小於 576px  ------------------------*/
+        @media screen and (max-width: 576px) {
+
+            /* left side article */
+            .left-side-section .left-side-article,
+            .left-side-section .left-side-comment {
+                padding: 24px 0px;
+                border-radius: 0;
+                margin: 0;
+                background-color: var(--bg-color);
+            }
+
+            .left-side-article .img-wrap {
+                margin: 24px 0 32px 0;
+            }
+
+            .left-side-article .thumbs-up, 
+            .left-side-article .comment, 
+            .left-side-article .share {
+                padding: 16px;
+            }
+
+            .left-side-comment .comment {
+                padding: 20px 0 10px 0;
+            }
+
+            .left-side-comment .comment .content p {
+                margin-bottom: 8px;
+            }
+
+            /* aside-related-articles */
+            .aside-related-articles .related-articles {
+                display: block;
+                padding-bottom: 8px;
+            }
+
+            .aside-related-articles .related-articles .img-wrap {
+                height: 144px;
+            }
+        }
+
+        /* ------------------------  小於 418px  ------------------------*/
+        @media screen and (max-width: 418px) {
+
+            .left-side-section {
+                padding: 0 16px;
+            }
+
+            /* left side comment */
+            .left-side-comment .comment-count,
+            .left-side-comment .comments {
+                display: none;
+            }
+
+            .left-side-comment .comment .content {
+                padding-left: 12px;
+            }
+
+            .left-side-comment .comment .content p {
+                font-size: 0.875rem;
+            }
+
         }
     </style>
 </head>
@@ -507,11 +704,11 @@
         <div class="main-article">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-9">
+                    <div class="left-side-section col-lg-12 col-xl-9">
                         <div class="left-side-article">
                             <p class="body1-r"><span class="date body1-m">2021-11-23</span>by<span class="author-name"><a href="">Y'shtola Rhul</a></span></p>
                             <p class="section-header-b">蜘蛛人確定有三代同堂，可以看爆了吧</p>
-                            <div class="subtitle d-flex align-items-center">
+                            <div class="article-extra-info d-flex align-items-center">
                                 <span class="arti-cat-tag">情報</span><span class="spoiler">雷</span>
                             </div>
 
@@ -568,7 +765,8 @@
                             
                         </div>
                         
-                        <div class="left-side-comment">
+                        <!-- left side comment -->
+                        <div class="left-side-comment g-section-mb">
                             <div class="d-flex justify-content-center sub-title-r">
                                 <span class="comment-count sub-title-b">23</span>
                                 <span class="comments">Comments</span>
@@ -585,7 +783,7 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex justify-content-between">
                                         <div class="member-info">
                                             <a href="#">
                                                 <span class="member-name sub-title-b">KENDO777</span>
@@ -617,19 +815,19 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex justify-content-between">
                                         <div class="member-info">
                                             <a href="#">
-                                                <span class="member-name sub-title-b">KENDO777</span>
+                                                <span class="member-name sub-title-b">joe2</span>
                                             </a>
-                                            <i class="far fa-clock"></i><span class="timestamp">17小時</span>
+                                            <i class="far fa-clock"></i><span class="timestamp">1天前</span>
                                         </div>
                                         <a href="#">
                                             <i class="fas fa-ellipsis-h"></i>
                                         </a>
                                     </div>
                                     <p>
-                                        三代同堂只是幻想啦，最後的三打三是蜘蛛人，猛毒，八爪博士
+                                        八爪博士說  彼得 你長大了  喔買尬 我也崩了
                                     </p>
                                     <div class="response d-flex justify-content-end">
                                         <div class="d-flex align-items-end">
@@ -648,23 +846,23 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex justify-content-between">
                                         <div class="member-info">
                                             <a href="#">
-                                                <span class="member-name sub-title-b">KENDO777</span>
+                                                <span class="member-name sub-title-b">alldishuang</span>
                                             </a>
-                                            <i class="far fa-clock"></i><span class="timestamp">17小時</span>
+                                            <i class="far fa-clock"></i><span class="timestamp">1天前</span>
                                         </div>
                                         <a href="#">
                                             <i class="fas fa-ellipsis-h"></i>
                                         </a>
                                     </div>
                                     <p>
-                                        三代同堂只是幻想啦，最後的三打三是蜘蛛人，猛毒，八爪博士
+                                        真的超感動 QQ
                                     </p>
                                     <div class="response d-flex justify-content-end">
                                         <div class="d-flex align-items-end">
-                                            <a href="#"><i class="fas fa-thumbs-up"></i></a><span class="like-count">112</span>
+                                            <a href="#"><i class="fas fa-thumbs-up"></i></a><span class="like-count">25</span>
                                         </div>
                                         <div class="reply">
                                             <a href="#"><span>回覆</span></a>
@@ -679,19 +877,19 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex justify-content-between">
                                         <div class="member-info">
                                             <a href="#">
-                                                <span class="member-name sub-title-b">KENDO777</span>
+                                                <span class="member-name sub-title-b">riddle6</span>
                                             </a>
-                                            <i class="far fa-clock"></i><span class="timestamp">17小時</span>
+                                            <i class="far fa-clock"></i><span class="timestamp">1週前</span>
                                         </div>
                                         <a href="#">
                                             <i class="fas fa-ellipsis-h"></i>
                                         </a>
                                     </div>
                                     <p>
-                                        三代同堂只是幻想啦，最後的三打三是蜘蛛人，猛毒，八爪博士
+                                        看到陶比真的超感動  小時候雖已看了無數次  回家又再重新看了一次陶比三部曲  感謝他們給我精彩的童年
                                     </p>
                                     <div class="response d-flex justify-content-end">
                                         <div class="d-flex align-items-end">
@@ -713,7 +911,7 @@
                                     <div class="form-group">
                                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="寫些什麼"></textarea>
                                     </div>
-                                    <!-- -------------問題：為何無法置左------------- -->
+
                                     <div class="d-flex justify-content-end align-items-end">
                                         <button type="submit" class="btn btn-brand">送出</button>
                                     </div>
@@ -722,15 +920,15 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3">
-                        <div class="aside-ads">
+                    <div class="aside-section col-lg-12 col-xl-3">
+                        <div class="d-none d-lg-none d-xl-block col-xl-12 aside-ads">
                             <a href="#">
                                 <div class="img-wrap">
                                     <img src="" alt="------放廣告------">
                                 </div>
                             </a>
                         </div>
-                        <div class="aside-member-info">
+                        <div class="d-none d-lg-none d-xl-block col-xl-12 aside-member-info">
                             <div class="avatar d-flex justify-content-center">
                                 <div class="img-wrap">
                                     <img src="images/forum_article_page/aside-avatar-1.jpg" alt="">
@@ -768,8 +966,50 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="aside-related-articles">
-                            <div class="d-flex subtitle">
+
+                        <!-- 小於 1200 後顯示 d-lg-flex d-xl-none -->
+                        <div class="d-none col-xl-12 aside-member-info">
+                            <div class="avatar d-flex justify-content-center">
+                                <div class="img-wrap">
+                                    <img src="images/forum_article_page/aside-avatar-1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="name sub-title-b d-flex justify-content-center">Y'shtola Rhul</div>
+                            <div class="membership">
+                                <span class="inner-content">
+                                    <i class="fas fa-address-card"></i><span class="body2-r">白金</span>
+                                </span>
+                            </div>
+                            <p class="description body2-r">
+                                從早期BBS起家，之後開始經營電影部落格，並在許多媒體撰寫影評相關文章的草根寫手。從觀眾的角度出發，希望能協助大家找到適合自己的電影。
+                            </p>
+                            <div class="social-media">
+                                <a href="#">
+                                    <i class="fab fa-facebook-square"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-twitter-square"></i>
+                                </a>
+                            </div>
+                            <div class="extra-info">
+                                <div class="ticket">
+                                    <div class="ticket-count roboto-condensed">16</div>
+                                    <div class="my-ticket">我的票夾</div>
+                                </div>
+
+                                <div class="post">
+                                    <div class="ticket-count roboto-condensed">5</div>
+                                    <div class="my-post">發文記錄</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="d-none d-lg-none d-xl-block aside-related-articles">
+                            <div class="d-flex subtitle g-subtitle-mb">
                                 <div class="red-line my-auto"></div>
                                 <span class="section-header-b">相關看板文章</span>
                             </div>
@@ -845,6 +1085,106 @@
                                     </div>
                                 </div>
                             </a>
+                        </div>
+
+                        <div class="d-lg-block d-xl-none aside-related-articles g-section-mb">
+                            <div class="col-12 d-flex subtitle g-subtitle-mb">
+                                <div class="red-line my-auto"></div>
+                                <span class="section-header-b">相關看板文章</span>
+                            </div>
+
+                            <!-- ------------第一篇相關文章------------ -->
+                            <div class="d-flex flex-wrap">
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                                    <div class="related-articles">
+                                        <div class="img-wrap">
+                                            <img src="images/forum_article_page/related-arti-img1.jpg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <div class="d-flex tags">
+                                                <div class="spoiler body2-r">雷</div>
+                                                <div class="arti-cat-tag body2-r">新聞</div>
+                                            </div>
+                                            <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                                    <div class="related-articles">
+                                        <div class="img-wrap">
+                                            <img src="images/forum_article_page/related-arti-img1.jpg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <div class="d-flex tags">
+                                                <div class="spoiler body2-r">雷</div>
+                                                <div class="arti-cat-tag body2-r">新聞</div>
+                                            </div>
+                                            <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                                    <div class="related-articles">
+                                        <div class="img-wrap">
+                                            <img src="images/forum_article_page/related-arti-img1.jpg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <div class="d-flex tags">
+                                                <div class="spoiler body2-r">雷</div>
+                                                <div class="arti-cat-tag body2-r">新聞</div>
+                                            </div>
+                                            <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                                    <div class="related-articles">
+                                        <div class="img-wrap">
+                                            <img src="images/forum_article_page/related-arti-img1.jpg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <div class="d-flex tags">
+                                                <div class="spoiler body2-r">雷</div>
+                                                <div class="arti-cat-tag body2-r">新聞</div>
+                                            </div>
+                                            <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                                    <div class="related-articles">
+                                        <div class="img-wrap">
+                                            <img src="images/forum_article_page/related-arti-img1.jpg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <div class="d-flex tags">
+                                                <div class="spoiler body2-r">雷</div>
+                                                <div class="arti-cat-tag body2-r">新聞</div>
+                                            </div>
+                                            <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                                    <div class="related-articles">
+                                        <div class="img-wrap">
+                                            <img src="images/forum_article_page/related-arti-img1.jpg" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <div class="d-flex tags">
+                                                <div class="spoiler body2-r">雷</div>
+                                                <div class="arti-cat-tag body2-r">新聞</div>
+                                            </div>
+                                            <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

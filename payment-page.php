@@ -155,11 +155,6 @@
         padding: 12px 24px;
     }
 
-    .payment-section-l .section-header-b,
-    .payment-section-r .section-header-b {
-        margin-bottom: 32px;
-    }
-
     .payment-section-r .detail-head {
         margin-bottom: 16px;
         background-color: var(--bg-color);
@@ -283,7 +278,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-4 payment-section-l">
-                        <div class="section-header-b">票根明細</div>
+                        <div class="section-header-b g-subtitle-mb">票根明細</div>
                         <div class="body1-r"><i class="fas fa-info-circle"></i>&nbsp&nbsp請檢查票根明細，如顯示的資訊有物，<br>請洽客服中心尋求幫助，謝謝</div>
                         <div class="myticket">
                             <div class="ticket-img-wrap">
@@ -338,7 +333,7 @@
                     </div>
                     <div class="col-8 payment-section-r">
                         <div class="payment-section-r-top">
-                            <div class="section-header-b">交易明細</div>
+                            <div class="section-header-b g-subtitle-mb">交易明細</div>
                             <div class="col-12 detail-head">
                                 <div class="col-6 detail-head-l d-flex justify-content-between">
                                     <div class="col-4 head1">票種</div>
@@ -390,7 +385,7 @@
 
                             <!-- 信用卡付款 -->
                             <div>
-                                <div class="section-header-b col-12">付款方式</div>
+                                <div class="section-header-b g-subtitle-mb col-12">付款方式</div>
                                 <div class="credit-card">
                                     <div class="col-12 credit-card-subtitle">信用卡<span>請輸入卡號</span></div>
                                     <div class="card-number d-flex">
@@ -435,7 +430,7 @@
 
                             <!-- 電子發票 -->
                             <div class="e-invoice">
-                                <div class="section-header-b col-12">電子發票</div>
+                                <div class="section-header-b g-subtitle-mb col-12">電子發票</div>
                                 <div class="e-invoice-select d-flex">
                                     <form class="my-form-check col-3" name="myForm" method="post" action="">
                                         <div class="form-group d-flex">
