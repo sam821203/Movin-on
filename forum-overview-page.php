@@ -180,11 +180,6 @@
     }
 
     /* -----------------forum cards section----------------- */
-    .forum-cards-section .subtitle .red-line, 
-    .forum-cards-section .subtitle .section-header-b {
-        margin: auto 20px auto 0px;
-    }
-
     .forum-cards-section .row1,
     .forum-cards-section .row2 {
         margin-bottom: 32px;
@@ -351,13 +346,13 @@
 
         .movinon-navbar .img-wrap {
             width: 90%;
-            object-fit: cover;
-            object-position: 50% 50%;
         }
 
         .movinon-navbar .img-wrap img {
             width: 100%;
             height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
         }
     }
 
@@ -381,17 +376,6 @@
     @media screen and (max-width: 418px) {
         
         .forum-info-section { margin-top: 96px; }
-
-        .main-header-b { font-size: 34px; }
-        .section-header-b { font-size: 20px; }
-
-        .sub-title-r, 
-        .sub-title-m,
-        .sub-title-b { font-size: 16px;}
-
-        .body1-r,
-        .body1-m,
-        .body1-b { font-size: 14px; }
 
         .forum-cards-section .card-md .section-header-r { 
             font-weight: 400;

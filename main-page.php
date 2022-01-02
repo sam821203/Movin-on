@@ -1,33 +1,8 @@
 <?php require_once './tpl/head.php' ?>
+
 <style>
-    <?php require_once './tpl/global-style.css' ?> :root {
-        /* ----------color---------- */
-        --brand-color: #F53D3D;
-        --bg-color: #121212;
-        --card-color: #202020;
 
-        /* ----------line height---------- */
-        --line-height-140: 140%;
-        --line-height-160: 160%;
-
-        /* ----------border radius---------- */
-        --border-radius-4: .25rem;
-        --border-radius-8: .5rem;
-        --border-radius-50: 3.125rem;
-        --border-radius-50-percent: 50%;
-
-        /* ----------opacity---------- */
-        --opacity-90: .90;
-        --opacity-75: .75;
-        --opacity-50: .50;
-        --opacity-25: .25;
-        --opacity-10: .10;
-
-        /* ----------box shadow red---------- */
-        --box-shadow-red: 0px 0px 16px 4px rgba(245, 61, 61, 0.25);
-        --box-shadow-black: 0px 0px 24px 0px rgba(0, 0, 0, 0.75);
-        --box-shadow-black2: 0px 0px 32px 0px rgba(0, 0, 0, 0.75);
-    }
+    <?php require_once './tpl/global-style.css' ?>
 
     body {
         background-color: var(--bg-color);
@@ -40,178 +15,8 @@
 
     .btn, .btn:focus {
         box-shadow: none;
-    } 
-
-    /* -----------------movinon navbar----------------- */
-    .movinon-navbar {
-        background-color: rgba(18, 18, 18, 0.5);
-        width: 100%;
-        position: fixed;
-        top: 0%;
-        z-index: 9999;
-    }
-
-    .movinon-navbar .sub-title-r { letter-spacing: 1px; }
-    .movinon-navbar .dropdown-toggle::after { content: none; }
-
-    .movinon-navbar .movinon-logo { max-width: 202px; }
-    .movinon-logo img { width: 100%; }
-
-    .movinon-navbar .row {
-        padding-top: 12px;
-        padding-bottom: 12px;
-    }
-
-    /* -----------------options----------------- */
-    .movinon-navbar .options li {
-        display: block;
-        padding: 1rem;
-        position: relative;
-        text-decoration: none;
-        transition-duration: 0.5s;
-    }
-
-    .options li a {
-        color: #fff;
-    }
-
-    .movinon-navbar .options li:hover,
-    .movinon-navbar .options li:focus-within {
-        background: tomato;
-    }
-
-    .movinon-navbar .options li:focus-within a {
-        outline: none;
-    }
-
-    .movinon-navbar .options ul li .dropdown {
-        visibility: hidden;
-        opacity: 0;
-        position: absolute;
-        transition: all 0.5s ease;
-        margin-top: 1rem;
-        left: 0;
-        display: none;
-    }
-
-    .movinon-navbar .options ul li:hover>ul,
-    .movinon-navbar .options ul li:focus-within>ul,
-    .movinon-navbar .options ul li .dropdown:hover,
-    .movinon-navbar .options ul li .dropdown:focus {
-        visibility: visible;
-        opacity: 1;
-        display: block;
-    }
-
-    .movinon-navbar .options ul li .dropdown li {
-        width: 100%;
-    }
-
-    .movinon-navbar .fa-chevron-down {
-        margin-left: 8px;
-    }
-
-    /* -----------------navbar icons----------------- */
-    .movinon-navbar .navbar-icons .img-wrap1 {
-        width: 90%;
-        object-fit: cover;
-        object-position: 50% 50%;
-    }
-
-    .movinon-navbar .navbar-icons .img-wrap2 {
-        width: 50%;
-        object-fit: cover;
-        object-position: 50% 50%;
-    }
-
-    .movinon-navbar .img-wrap2 a {
-        padding-bottom: 0px;
-    }
-
-    .movinon-navbar .navbar-icons .img-wrap img {
-        width: 100%;
-        height: 100%;
-    }
-
-    /* -----------------dropdown menu----------------- */
-    .movinon-navbar .dropdown-menu {
-        background-color: rgba(32,32,32,0.75);
-        margin-right: 72px;
-        padding: 24px 20px;
-        text-align: center;
-    }
-
-    .movinon-navbar .modal-content {
-        background-color: rgba(32,32,32,0.75);
-        background-clip: border-box;
-        border: none;
-        border-radius: var(--border-radius-8);
-        margin-top: 216px;
-        width: 100%;
-    }
-
-    .movinon-navbar .form-control {
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid white;
-        border-radius: 0;
-    }
-
-    .movinon-navbar .modal-body {
-        padding: 32px 48px;
-    }
-
-    .movinon-navbar .modal-content .btn {
-        background-color: var(--brand-color);
-        color: white;
-        font-weight: 700;
-        box-shadow: var(--box-shadow-red);
-        padding: 4px 56px;
-        border-radius: var(--border-radius-50);
-        margin-top: 24px;
-    }
-
-    .movinon-navbar .modal-content .modal-body .col-6 {
-        display: flex;
-        align-items: end;
-    }
-
-    .movinon-navbar .modal-content .modal-body .col-6:nth-last-child(1) {
-        opacity: var(--opacity-75);
-    }
-
-    .movinon-navbar .modal-content .modal-header { border-bottom: none; }
-
-    .movinon-navbar .modal-content .modal-title {
-        font-size: 34px;
-        font-weight: 500;
-        margin-left: 40px;
-        margin-top: 32px;
-        margin-right: 12px;
-    }
-
-    .movinon-navbar .modal-content .Login {
-        font-size: 20px;
-        font-weight: 400;
-        margin-top: 36px;
-    }
-
-    .movinon-navbar .modal-content .close {
-        float: right;
-        font-size: 1.5rem;
-        font-weight: 400;
-        line-height: 1;
-        color: #fff;
-        text-shadow: none;
-        opacity: .5;
-        font-family: 'Roboto', 'sans-serif';
-        margin-top: 12px;
-        margin-right: 12px;
-    }
-
-    .movinon-navbar .modal-content .form-control {
-        color: white;
-    }
+    }  
+    
 
     /* ----------------------------hero section---------------------------- */
     .hero-section {
@@ -236,6 +41,12 @@
 
     .ranking-section .subtitle {
         margin-bottom: 0px;
+    }
+
+    .ranking-section .subtitle .sub-title-r,
+    .forum-cards-section .subtitle .sub-title-r {
+        line-height: 100%;
+        opacity: var(--opacity-90);
     }
 
     .ranking-section .wrap {
@@ -326,6 +137,37 @@
         transition: .6s;
     }
 
+    .ranking-section .content-r {
+        overflow: hidden;
+    }
+
+    .ranking-section .content-r p.section-header-b {
+        font-size: 24px;
+    }
+
+    .ranking-section .rank-hover-content1 p.section-header-b,
+    .ranking-section .rank-hover-content2 p.section-header-b,
+    .ranking-section .rank-hover-content3 p.section-header-b,
+    .ranking-section .rank-hover-content4 p.section-header-b,
+    .ranking-section .rank-hover-content5 p.section-header-b,
+    .ranking-section .rank-hover-content6 p.section-header-b,
+    .ranking-section .rank-hover-content7 p.section-header-b,
+    .ranking-section .rank-hover-content8 p.section-header-b,
+    .ranking-section .rank-hover-content9 p.section-header-b,
+    .ranking-section .rank-hover-content10 p.section-header-b,
+    .ranking-section .rank-hover-content1 .en-title,
+    .ranking-section .rank-hover-content2 .en-title,
+    .ranking-section .rank-hover-content3 .en-title,
+    .ranking-section .rank-hover-content4 .en-title,
+    .ranking-section .rank-hover-content5 .en-title,
+    .ranking-section .rank-hover-content6 .en-title,
+    .ranking-section .rank-hover-content7 .en-title,
+    .ranking-section .rank-hover-content8 .en-title,
+    .ranking-section .rank-hover-content9 .en-title,
+    .ranking-section .rank-hover-content10 .en-title {
+        white-space: nowrap;
+    }
+
     .ranking-section .rank-arrow {
         width: 0;
         height: 0;
@@ -334,16 +176,20 @@
         border-top: 75px solid #f00;
     }
 
+    /* 問題：如何不讓 .arrow-wrap 被擠壓到？ */
     .ranking-section .arrow-wrap {
-        height: 10%;
+        height: 10%
     }
 
     .ranking-section .arrow-wrap img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
+        object-position: center center;
     }
 
     .ranking-section .reputation {
+        margin-top: 16px;
         margin-bottom: 128px;
     }
 
@@ -353,13 +199,13 @@
     }
 
     .ranking-section .reputation .img-wrap1 {
-        height: 24px;
+        height: 20px;
         margin-right: 8px;
         opacity: var(--opacity-75);
     }
 
     .ranking-section .reputation .img-wrap2 {
-        height: 20px;
+        height: 16px;
         margin-right: 8px;
         opacity: var(--opacity-75);
     }
@@ -384,14 +230,18 @@
         font-style: italic;
     }
 
+    .ranking-section .rank-hover-content4 .arrow-wrap {
+        width: 14%;
+    }
+
     .ranking-section .rank-num {
         font-family: 'BenchNine', 'Roboto Condensed', sans-serif;
-        font-size: 6.5rem;
-        opacity: var(--opacity-50);
+        font-size: 6rem;
+        opacity: var(--opacity-25);
         letter-spacing: -2px;
         font-weight: 300;
         line-height: 100%;
-        margin-right: 24px;
+        margin-right: 16px;
         margin-top: -8px;
     }
 
@@ -403,7 +253,7 @@
     .ranking-section .btn-description {
         text-align: center;
         padding: 8px 20px;
-        border: 1px solid white;
+        border: 1px solid rgba(255,255,255,0.75);
         border-radius: var(--border-radius-4);
         box-shadow: var(--box-shadow-black);
         font-size: 0.875rem;
@@ -434,62 +284,158 @@
         font-size: 0.25rem;
     }
 
-    /* ----------------------------forum section---------------------------- */
-    .forum-section {
-        height: 100vh;
-    }
-
-    .forum-section .col .subtitle .sub-title-b {
-        display: flex;
-        align-items: end;
-    }
-
-    /* ----------------------------footer---------------------------- */
-
-    footer {
-        background: url("images/main_page/footer_img.jpg") top center no-repeat;
-        background-size: cover;
-    }
-
-    footer .sub-title-b {
+    /* ----------------------------forum cards section---------------------------- */
+    .forum-cards-section .row1,
+    .forum-cards-section .row2 {
         margin-bottom: 32px;
     }
 
-    footer p {
-        font-size: 1rem;
-        font-weight: 300;
-        letter-spacing: 0.5px;
-        line-height: 200%;
-        opacity: var(--opacity-90);
-    }
-
-    .footer-section {
-        padding: 160px 0 96px 0;
-    }
-
-    .footer-section .img-wrap {
-        width: 50%;
+    .forum-cards-section .card-md {
         margin-bottom: 32px;
     }
 
-    .footer-section .img-wrap img {
+    .forum-cards-section .row1 .col-4 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .forum-cards-section .img-wrap {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .forum-cards-section .img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        border-radius: var(--border-radius-8);
+    }
+
+    .forum-cards-section .img-wrap .content {
+        position: absolute;
+        bottom: 24px;
+        left: 24px;
+    }
+
+    .forum-cards-section .card-1 {
         width: 100%;
         height: 100%;
     }
 
-    .footer-section .copyright {
-        letter-spacing: 0.5px;
-        opacity: var(--opacity-75);
-        text-align: center;
-        padding: 96px 0 32px 0;
-        font-weight: 300;
+    .forum-cards-section .card-3 {
+        width: 100%;
+        height: 100%;
     }
 
-    .footer-section .col-4 .body1-r {
-        opacity: var(--opacity-50);
+    .inner-row1 {
+        margin-bottom: 32px;
+    }
+
+    /* -----------com-count----------- */
+    .com-count {
+        border-radius: var(--border-radius-50);
+        padding: 4px 8px;
+        margin-left: 8px;
+    }
+
+    .com-1-count { background-color: #AE2B2C; }
+    .com-2-count { background-color: #16CFC4; }
+    .com-3-count { background-color: #FD8942; }
+    .com-4-count { background-color: #2B6714; }
+    .com-5-count { background-color: #B41127; }
+
+    .forum-cards-section .content .section-header-r {
+        margin-bottom: 4px;
+    }
+
+    .forum-cards-section .content .body1-b {
+        opacity: var(--opacity-75);
+    }
+
+    /* =================================== @media =================================== */
+    /* ============================================================================== */
+
+    /* ------------------------  小於 1200px  ------------------------*/
+    @media screen and (max-width: 1200px) {
+
+        /* forum cards section */
+        .forum-cards-section .card-md .section-header-r { 
+            font-size: 20px; 
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+
+        .forum-cards-section .img-wrap .content {
+            bottom: 16px;
+            left: 16px;
+        }
+    }
+
+    /* ------------------------  小於 992px  ------------------------*/
+    /* @media screen and (max-width: 992px) {
+
+        
+    } */
+
+    /* ------------------------  小於 768px  ------------------------*/
+    @media screen and (max-width: 768px) {
+
+        /* 這裡強制將 .section-header-r 改為 字重500 */
+        .forum-cards-section .card-md .section-header-r { 
+            font-size: 20px; 
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+
+        .forum-cards-section .img-wrap .content {
+            bottom: 16px;
+            left: 16px;
+        }
+    }
+
+    /* ------------------------  小於 418px  ------------------------*/
+    @media screen and (max-width: 418px) {
+
+        .forum-cards-section .card-md .section-header-r { 
+            font-weight: 400;
+            margin-bottom: 4px;
+            font-size: 16px;
+        }
+
+        /* 將預設的 .body1-b 改為 .body2-m  */
+        .forum-cards-section .card-md .body1-b { 
+            font-weight: 700;
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+
+        .forum-cards-section .img-wrap .content {
+            bottom: 12px;
+            left: 12px;
+        }
+
+        .forum-cards-section .card-md {
+            margin-bottom: 16px;
+        }
+
+        .forum-cards-section .col-6.card-md:nth-child(even) {
+            padding: 0 16px 0 8px;
+        }
+
+        .forum-cards-section .col-6.card-md:nth-child(odd) {
+            padding: 0 8px 0 16px;
+        }
+
+        .forum-cards-section .com-count {
+            border-radius: var(--border-radius-50);
+            padding: 2px 6px;
+            margin-left: 8px;
+        }
     }
 </style>
-
+    
 <body>
     <nav>
         <div class="movinon-navbar">
@@ -504,17 +450,29 @@
 
                         <div class="options d-flex justify-content-between">
                             <ul class="d-flex justify-content-between">
-                                <li class="sub-title-r"><a href="#" aria-haspopup="true">電影排行榜<i class="fas fa-chevron-down text-light body1-r"></i></a>
+                                <li class="options-spacing">
+                                    
+                                    <a href="#" aria-haspopup="true">電影排行榜<i class="fas fa-chevron-down body1-r"></i></a>
+
                                     <ul class="dropdown" aria-label="submenu">
-                                        <li class="sub-title-r"><a href="#">現正熱映</a></li>
-                                        <li class="sub-title-r"><a href="#">即將上映</a></li>
-                                        <li class="sub-title-r"><a href="#">本週新片</a></li>
+                                        <li class="options-spacing"><a href="#">現正熱映</a></li>
+                                        <li class="options-spacing"><a href="#">即將上映</a></li>
+                                        <li class="options-spacing"><a href="#">本週新片</a></li>
                                     </ul>
                                 </li>
 
-                                <li class="sub-title-r"><a href="#">影迷討論區</a></li>
-                                <li class="sub-title-r"><a href="#">電影新聞</a></li>
-                                <li class="sub-title-r"><a href="#">快速購票</a></li>
+                                <li class="options-spacing"><a href="#">影迷討論區</a></li>
+                                <li class="options-spacing"><a href="#">電影新聞</a></li>
+                                <li class="options-spacing"><a href="#">立即購票</a></li>
+
+                                <!-- <li class="options-spacing">
+                                    <div class="options-outline d-flex">
+                                        <div class="img-wrap">
+                                            <img src="images/ticket_icon.svg" alt="">
+                                        </div>
+                                        <a href="#">立即購票</a>
+                                    </div>
+                                </li> -->
                             </ul>
                         </div>
 
@@ -529,13 +487,46 @@
                             <div class="img-wrap2 d-flex align-items-center dropdown">
                                 <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false"><img src="images/account.svg" alt=""></a>
 
-                                <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
-                                    <a class="btn btn-outline-light mb-3" href="#" data-toggle="modal" data-target="#exampleModalLogin">登入</a>
-                                    <a type="button" class="btn btn-outline-light" href="#" data-toggle="modal" data-target="#exampleModal">註冊</a>
+                                <!-- 問題：main-page 有辦法修改  bootstrap 的 element style 嘛？ -->
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="btn text-white mb-3" href="#" data-toggle="modal" data-target="#exampleModalLogin">
+                                        <div>登入</div>
+                                    </a>
+                                    <a type="button" class="btn text-white" href="#" data-toggle="modal" data-target="#exampleModal">
+                                        <div>註冊</div>    
+                                    </a>
                                 </div>
                             </div>
                             <!-- </a> -->
                         </div>
+                        
+                        <div class="d-block d-lg-block d-xl-none menu-bar">
+                            <div class="lines">
+                                <div class="line-1"></div>
+                                <div class="line-2"></div>
+                                <div class="line-3"></div>
+                            </div>
+                            <div class="menu-items">
+
+                                <a class="btn border-light rounded text-white mb-3" href="#" data-toggle="modal" data-target="#exampleModalLogin">登入</a>
+                                <a type="button" class="btn border-light rounded text-white mb-4" href="#" data-toggle="modal" data-target="#exampleModal">註冊</a>
+
+                                <a href="./movies-overview-page.php">
+                                    <div class="item mb-2">電影排行榜</div>
+                                </a>
+                                <a href="./forum-overview-page.php">
+                                    <div class="item mb-2">影迷討論區</div>
+                                </a>
+                                <a href="#">
+                                    <div class="item mb-2">電影新聞</div>
+                                </a>
+                                <a href="./booking-movie-page.php">
+                                    <div class="item mb-2">立即夠票</div>
+                                </a>
+                            </div>
+                        </div>
+
+                        
 
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
@@ -639,16 +630,22 @@
 
         <section class="ranking-section">
             <div class="container">
-
-                <div class="row subtitle">
-                    <div class="col-12">
+                <div class="row subtitle g-subtitle-mb">
+                    <div class="col-6">
                         <div class="d-flex">
-                            <div class="red-line"></div>
-                            <span class="section-header-b">電影排行榜 加右邊</span>
+                            <div class="red-line my-auto"></div>
+                            <span class="section-header-b">電影排行榜</span>
                         </div>
                     </div>
+                    <div class="col-6 d-flex justify-content-end align-items-end">
+                        <a href="#">
+                            <div class="d-flex justify-content-end align-items-end">
+                                <div class="sub-title-r mt-2">電影總覽頁</div>
+                                <div class="ml-2"><i class="fas fa-chevron-right"></i></div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-
             </div>
             <div class="container-fluid">
                 <div class="row">
@@ -682,7 +679,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="reputation d-flex align-items-end">
+                                    <div class="reputation d-flex align-items-center">
                                         <div class="img-wrap1">
                                             <img src="./images/Rotten_Tomatoes.svg" alt="">
                                         </div>
@@ -711,10 +708,10 @@
                                         <div class="arrow-wrap">
                                             <img src="images/rise_green.svg" alt="">
                                         </div>
-                                        <div class="rank-num">01</div>
+                                        <div class="rank-num">02</div>
                                         <div class="content-r">
-                                            <p class="section-header-b">永恆族</p>
-                                            <p class="en-title">Treat or trick</p>
+                                            <p class="section-header-b">刀劍神域 –Progressive- 無星夜的詠嘆調</p>
+                                            <p class="en-title">Sword Art Online: Progressive</p>
                                             <div class="rating">
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
@@ -725,7 +722,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="reputation d-flex align-items-end">
+                                    <div class="reputation d-flex align-items-center">
                                         <div class="img-wrap1">
                                             <img src="./images/Rotten_Tomatoes.svg" alt="">
                                         </div>
@@ -754,9 +751,9 @@
                                         <div class="arrow-wrap">
                                             <img src="images/rise_green.svg" alt="">
                                         </div>
-                                        <div class="rank-num">01</div>
+                                        <div class="rank-num">03</div>
                                         <div class="content-r">
-                                            <p class="section-header-b">永恆族</p>
+                                            <p class="section-header-b">詭扯</p>
                                             <p class="en-title">Treat or trick</p>
                                             <div class="rating">
                                                 <i class="fas fa-star"></i>
@@ -768,7 +765,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="reputation d-flex align-items-end">
+                                    <div class="reputation d-flex align-items-center">
                                         <div class="img-wrap1">
                                             <img src="./images/Rotten_Tomatoes.svg" alt="">
                                         </div>
@@ -797,10 +794,10 @@
                                         <div class="arrow-wrap">
                                             <img src="images/rise_green.svg" alt="">
                                         </div>
-                                        <div class="rank-num">01</div>
+                                        <div class="rank-num">04</div>
                                         <div class="content-r">
-                                            <p class="section-header-b">永恆族</p>
-                                            <p class="en-title">Treat or trick</p>
+                                            <p class="section-header-b">我的英雄學院劇場版：世界英雄任務</p>
+                                            <p class="en-title">My Hero Academia The Movie : World Heores Mission</p>
                                             <div class="rating">
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
@@ -811,7 +808,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="reputation d-flex align-items-end">
+                                    <div class="reputation d-flex align-items-center">
                                         <div class="img-wrap1">
                                             <img src="./images/Rotten_Tomatoes.svg" alt="">
                                         </div>
@@ -840,10 +837,10 @@
                                         <div class="arrow-wrap">
                                             <img src="images/rise_green.svg" alt="">
                                         </div>
-                                        <div class="rank-num">01</div>
+                                        <div class="rank-num">05</div>
                                         <div class="content-r">
-                                            <p class="section-header-b">永恆族</p>
-                                            <p class="en-title">Treat or trick</p>
+                                            <p class="section-header-b">迷離夜蘇活</p>
+                                            <p class="en-title">Last Night in Soho</p>
                                             <div class="rating">
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
@@ -854,7 +851,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="reputation d-flex align-items-end">
+                                    <div class="reputation d-flex align-items-center">
                                         <div class="img-wrap1">
                                             <img src="./images/Rotten_Tomatoes.svg" alt="">
                                         </div>
@@ -883,10 +880,10 @@
                                         <div class="arrow-wrap">
                                             <img src="images/rise_green.svg" alt="">
                                         </div>
-                                        <div class="rank-num">01</div>
+                                        <div class="rank-num">06</div>
                                         <div class="content-r">
-                                            <p class="section-header-b">永恆族</p>
-                                            <p class="en-title">Treat or trick</p>
+                                            <p class="section-header-b">梅艷芳</p>
+                                            <p class="en-title">Anita Mui Yim Fong</p>
                                             <div class="rating">
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
@@ -897,7 +894,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="reputation d-flex align-items-end">
+                                    <div class="reputation d-flex align-items-center">
                                         <div class="img-wrap1">
                                             <img src="./images/Rotten_Tomatoes.svg" alt="">
                                         </div>
@@ -940,7 +937,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="reputation d-flex align-items-end">
+                                    <div class="reputation d-flex align-items-center">
                                         <div class="img-wrap1">
                                             <img src="./images/Rotten_Tomatoes.svg" alt="">
                                         </div>
@@ -983,7 +980,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="reputation d-flex align-items-end">
+                                    <div class="reputation d-flex align-items-center">
                                         <div class="img-wrap1">
                                             <img src="./images/Rotten_Tomatoes.svg" alt="">
                                         </div>
@@ -1026,7 +1023,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="reputation d-flex align-items-end">
+                                    <div class="reputation d-flex align-items-center">
                                         <div class="img-wrap1">
                                             <img src="./images/Rotten_Tomatoes.svg" alt="">
                                         </div>
@@ -1069,7 +1066,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="reputation d-flex align-items-end">
+                                    <div class="reputation d-flex align-items-center">
                                         <div class="img-wrap1">
                                             <img src="./images/Rotten_Tomatoes.svg" alt="">
                                         </div>
@@ -1095,28 +1092,171 @@
                 </div>
             </div>
         </section>
-
-        <section class="forum-section">
+        
+        <!-- -----------forum cards section----------- -->
+        <section class="forum-cards-section g-section-mb">
             <div class="container d-none d-xl-block">
-                <div class="row subtitle d-none d-xl-flex">
+                <div class="row subtitle g-subtitle-mb">
                     <div class="col-6">
                         <div class="d-flex">
-                            <div class="red-line"></div>
+                            <div class="red-line my-auto"></div>
                             <span class="section-header-b">精選討論區</span>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 d-flex justify-content-end align-items-end">
                         <a href="#">
                             <div class="d-flex justify-content-end align-items-end">
-                                <div class="sub-title-b mt-2">前往討論區</div>
-                                <div class="ml-2"><i class="mb-2 fas fa-chevron-right"></i></div>
+                                <div class="sub-title-r mt-2">前往討論區</div>
+                                <div class="ml-2"><i class="fas fa-chevron-right"></i></div>
                             </div>
                         </a>
                     </div>
                 </div>
 
+                <!-- -------------------上------------------- -->
+                <div class="row row1">
+                    <div class="col-4 d-flex flex-column justify-content-between">
+                        <div class="col-12">
+                            <a href="#">
+                                <div class="img-wrap card-1">
+                                    <img src="images/forum_overview_page/card_1.jpg" alt="">
+                                    <div class="content">
+                                        <div class="section-header-r">再說一次我願意</div>
+                                        <span class="body1-b">Today</span><span class="caption-12 com-count com-1-count">+<span class="count">134</span></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
 
+                        <div class="col-12">
+                            <a href="#">
+                                <div class="img-wrap card-2">
+                                    <img src="images/forum_overview_page/card_2.jpg" alt="">
+                                    <div class="content">
+                                        <div class="section-header-r">駭客任務</div>
+                                        <span class="body1-b">Today</span><span class="caption-12 com-count com-2-count">+<span class="count">34</span></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <a href="#">
+                            <div class="img-wrap card-3">
+                                <img src="images/forum_overview_page/card_3.jpg" alt="">
+                                <div class="content">
+                                    <div class="section-header-r">蜘蛛人: 無家日</div>
+                                    <span class="body1-b">Today</span><span class="caption-12 com-count com-3-count">+<span class="count">134</span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- -------------------中------------------- -->
+                <div class="row row2">
+                    <div class="col-6">
+                        <a href="#">
+                            <div class="img-wrap card-4">
+                                <img src="images/forum_overview_page/card_4.jpg" alt="">
+                                <div class="content">
+                                    <div class="section-header-r">魔鬼剋星未來世</div>
+                                    <span class="body1-b">Today</span><span class="caption-12 com-count com-4-count">+<span class="count">134</span></span>
+                                </div>
+                            </div>
+                        </a>
+                        
+                    </div>
+                    <div class="col-6">
+                        <a href="#">
+                            <div class="img-wrap card-5">
+                                <img src="images/forum_overview_page/card_5.jpg" alt="">
+                                <div class="content">
+                                    <div class="section-header-r">梅艷芳</div>
+                                    <span class="body1-b">Today</span><span class="caption-12 com-count com-5-count">+<span class="count">134</span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
+            <!-- --------------------display 小於 1200-------------------- -->
+            <div class="container d-sm-block d-xl-none">
+                <div class="row subtitle g-subtitle-mb">
+                    <div class="col-6">
+                        <div class="d-flex">
+                            <div class="red-line my-auto"></div>
+                            <span class="section-header-b">精選討論區</span>
+                        </div>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end align-items-end">
+                        <a href="#">
+                            <div class="d-flex justify-content-end align-items-end">
+                                <div class="sub-title-r mt-2">前往討論區</div>
+                                <div class="ml-2"><i class="fas fa-chevron-right"></i></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6 card-md">
+                        <a href="#">
+                            <div class="img-wrap">
+                                <img src="images/forum_overview_page/card_1_1200.jpg" alt="">
+                                <div class="content">
+                                    <div class="section-header-r">再說一次我願意</div>
+                                    <span class="body1-b">Today</span><span class="caption-12 com-count com-1-count">+<span class="count">134</span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 card-md">
+                        <a href="#">
+                            <div class="img-wrap">
+                                <img src="images/forum_overview_page/card_2_1200.jpg" alt="">
+                                <div class="content">
+                                    <div class="section-header-r">駭客任務</div>
+                                    <span class="body1-b">Today</span><span class="caption-12 com-count com-2-count">+<span class="count">134</span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div> 
+                    <div class="col-6 card-md">
+                        <a href="#">
+                            <div class="img-wrap">
+                                <img src="images/forum_overview_page/card_3_1200.jpg" alt="">
+                                <div class="content">
+                                    <div class="section-header-r">蜘蛛人: 無家日</div>
+                                    <span class="body1-b">Today</span><span class="caption-12 com-count com-3-count">+<span class="count">134</span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div> 
+                    <div class="col-6 card-md">
+                        <a href="#">
+                            <div class="img-wrap">
+                                <img src="images/forum_overview_page/card_4_1200.jpg" alt="">
+                                <div class="content">
+                                    <div class="section-header-r">魔鬼剋星未來世</div>
+                                    <span class="body1-b">Today</span><span class="caption-12 com-count com-4-count">+<span class="count">134</span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div> 
+                    <div class="col-6 card-md">
+                        <a href="#">
+                            <div class="img-wrap">
+                                <img src="images/forum_overview_page/card_5_1200.jpg" alt="">
+                                <div class="content">
+                                    <div class="section-header-r">梅艷芳</div>
+                                    <span class="body1-b">Today</span><span class="caption-12 com-count com-5-count">+<span class="count">134</span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div> 
             </div>
         </section>
     </main>
@@ -1177,7 +1317,6 @@
                 </div>
             </div>
         </div>
-
     </footer>
 
     <?php require_once './tpl/foot.php' ?>
@@ -1289,7 +1428,6 @@
             $('.carousel-wrap').css('transform', `translateX(${nowX})`).css('transition', '.5s');
 
             // 問題：如何判斷是否已經經過排行第一了，如果有，就將 prev-btn 上層漸層
-            // 問題：為何會需要點擊兩下？
 
             // if (nowX = -312) {
             //     $('.prev-btn').css('background-image','linear-gradient(to right, rgba(18,18,18,1), rgba(18,18,18,0))').css('transition','.8s');
@@ -1310,5 +1448,41 @@
             const nowX = nowIndex * -312 + 'px';
             $('.carousel-wrap').css('transform', `translateX(${nowX})`).css('transition', '.5s');
         });
+
+        // menu bar
+        const menuBar = document.querySelector('.menu-bar');
+        let menuBarOpen = false;
+        
+        menuBar.addEventListener("click", function() {
+            if (!menuBarOpen) {
+                menuBar.classList.add('open');
+                menuBarOpen = true;
+            } else {
+                menuBar.classList.remove('open');
+                menuBarOpen = false;
+            }
+        });
+        
+        
+        // const dropDown = document.querySelector('.dropdown-menu');
+        // let dropDownShow = false;
+        
+        // dropDown.addEventListener("click", function() {
+        //     if (!dropDownShow) {
+        //         dropDown.classList.add('open');
+        //         menuBarOpen = true;
+        //     } else {
+        //         menuBar.classList.remove('open');
+        //         menuBarOpen = false;
+        //     }
+        // });
+
+        $('.dropdown-toggle').click( function () {
+            console.log('test');
+            $('.dropdown-menu.show').css({ top: '30px' });
+        });
     </script>
+
 </body>
+
+</html>

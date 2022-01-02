@@ -280,6 +280,11 @@
         padding: 0 16px;
     }
 
+    .related-articles-section .subtitle .sub-title-r {
+        line-height: 100%;
+        opacity: var(--opacity-90);
+    }
+
     .related-articles-section .spoiler,
     .related-articles-section .spoiler-free {
         border-radius: var(--border-radius-50-percent);
@@ -771,7 +776,7 @@
                     <div class="col-6 d-flex justify-content-end align-items-end">
                         <a href="#">
                             <div class="d-flex justify-content-end align-items-end">
-                                <div class="sub-title-b mt-2">前往討論區</div>
+                                <div class="sub-title-r mt-2">前往討論區</div>
                                 <div class="ml-2"><i class="fas fa-chevron-right"></i></div>
                             </div>
                         </a>
