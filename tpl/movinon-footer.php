@@ -1,18 +1,20 @@
 <!-- -----------footer Start----------- -->
 <footer class="mt-5">
-    <div class="footer-section">
+    <div class="movinon-footer">
         <div class="container">
             <div class="row">
                 <div class="col-4">
                     <div class="img-wrap">
                         <img src="images/logotype.svg" alt="">
                     </div>
-                    <p><a href="">movin'on@cinema.com</a></p>
-                    <p>call us <span class="body1-r">(02) 888 899 999</span></p>
-                    <div class="icon">
-                        <a href="#"><img src="img/icon/icon-color-02.png" alt=""></a>
-                        <a href="#"><img src="img/icon/icon-color-03.png" alt=""></a>
-                        <a href="#"><img src="img/icon/icon-color-04.png" alt=""></a>
+                    <div class="our-info">
+                        <p><a href="">movin'on@cinema.com</a></p>
+                        <p>call us <span class="body1-r">(02) 888 899 999</span></p>
+                    </div>
+                    <div class="footer-icons">
+                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter-square"></i></a>
                     </div>
                 </div>
                 <div class="col">
