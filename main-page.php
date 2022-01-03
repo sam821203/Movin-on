@@ -16,7 +16,6 @@
     .btn, .btn:focus {
         box-shadow: none;
     }  
-    
 
     /* ----------------------------hero section---------------------------- */
     .hero-section {
@@ -303,7 +302,14 @@
         width: 100%;
         height: 100%;
         position: relative;
+        box-shadow: var(--box-shadow-black);
+        border-radius: var(--border-radius-8);
+        transition: .4s;
     }
+
+    /* .forum-cards-section .img-wrap:hover {
+        box-shadow: var(--box-shadow-black2);
+    } */
 
     .forum-cards-section .img-wrap img {
         width: 100%;
@@ -442,11 +448,18 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="d-flex justify-content-between align-items-center">
-                        <div class="movinon-logo">
-                            <a class="d-flex align-items-center" href="#">
-                                <img src="./images/LOGO.svg" alt="">
-                            </a>
-                        </div>
+                        <a class="d-none d-sm-none d-md-flex d-flex align-items-center" href="#">
+                            <div class="movinon-logotype-wrap">
+                                <img src="./images/logotype.svg" alt="">
+                            </div>
+                        </a>
+                        
+                        <!-- display 小於 768px -->
+                        <a class="d-flex d-sm-flex d-md-none align-items-center" href="#">
+                            <div class="movinon-logo-wrap">
+                                <img src="./images/logo.svg" alt="">
+                            </div>
+                        </a>
 
                         <div class="options d-flex justify-content-between">
                             <ul class="d-flex justify-content-between">
@@ -455,9 +468,9 @@
                                     <a href="#" aria-haspopup="true">電影排行榜<i class="fas fa-chevron-down body1-r"></i></a>
 
                                     <ul class="dropdown" aria-label="submenu">
-                                        <li class="options-spacing"><a href="#">現正熱映</a></li>
-                                        <li class="options-spacing"><a href="#">即將上映</a></li>
-                                        <li class="options-spacing"><a href="#">本週新片</a></li>
+                                        <li><a class="hover-items" href="#">現正熱映</a></li>
+                                        <li><a class="hover-items" href="#">即將上映</a></li>
+                                        <li><a class="hover-items" href="#">本週新片</a></li>
                                     </ul>
                                 </li>
 
@@ -478,7 +491,7 @@
 
                         <div class="navbar-icons d-flex justify-content-end my-auto">
                             <a class="d-flex justify-content-center" href="#">
-                                <div class="img-wrap1 pr-2 d-flex align-items-center">
+                                <div class="img-wrap1 d-flex align-items-center">
                                     <img src="images/help.svg" alt="">
                                 </div>
                             </a>
@@ -521,7 +534,7 @@
                                     <div class="item mb-2">電影新聞</div>
                                 </a>
                                 <a href="./booking-movie-page.php">
-                                    <div class="item mb-2">立即夠票</div>
+                                    <div class="item mb-2">立即購票</div>
                                 </a>
                             </div>
                         </div>
@@ -1268,7 +1281,7 @@
                 <div class="row">
                     <div class="col-4">
                         <div class="img-wrap">
-                            <img src="images/LOGO.svg" alt="">
+                            <img src="images/logotype.svg" alt="">
                         </div>
                         <p><a href="">movin'on@cinema.com</a></p>
                         <p>call us <span class="body1-r">(02) 888 899 999</span></p>
@@ -1482,7 +1495,7 @@
             $('.dropdown-menu.show').css({ top: '30px' });
         });
     </script>
-
+    <!-- <script src="js/custom.js"></script> -->
 </body>
 
 </html>

@@ -1,4 +1,3 @@
-
 :root {
     /* ----------color---------- */
     --brand-color: #F53D3D;
@@ -217,6 +216,12 @@ p { line-height: var(--line-height-160); }
     z-index: 9999;
 }
 
+/* 因為這裡套 .container-fluid，所以需要先將 row 的 margin 預設先拿掉 */
+.movinon-navbar .row {
+    margin: 0;
+    width: 100%;
+}
+
 /* 在電腦上做測試 */
 .movinon-navbar .options-spacing { 
     letter-spacing: 1px;
@@ -224,38 +229,38 @@ p { line-height: var(--line-height-160); }
 }
 
 .movinon-navbar .dropdown-toggle::after { content: none; }
-.movinon-navbar .movinon-logo { max-width: 202px; }
-.movinon-logo img { width: 100%; }
+.movinon-navbar .movinon-logotype-wrap { width: 192px; }
 
-.movinon-navbar .row {
-    padding-top: 12px;
-    padding-bottom: 12px;
+.movinon-navbar .movinon-logotype-wrap img,
+.movinon-navbar .movinon-logo-wrap img { 
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
 }
 
 /* -----------------options----------------- */
-.movinon-navbar .options li {
+.movinon-navbar .options li.options-spacing {
     display: block;
-    padding: 24px 16px;
+    padding: 28px 16px 32px 16px;
     position: relative;
     text-decoration: none;
     transition-duration: 0.5s;
 }
 
-.options li a {
+.movinon-navbar .options a.hover-items {
+    display: block;
+    padding: 12px 16px;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+.movinon-navbar .options li a {
     color: white;
 }
 
-.movinon-navbar .row {
-    padding: 0;
-}
-
-.movinon-navbar .options li {
-    position: relative;
-    /* overflow: hidden; */
-    transition: 0.3s;
-}
-
-.movinon-navbar .options li:after {
+.movinon-navbar .options li.options-spacing:after {
     position: absolute;
     transition: 0.3s;
     content: "";
@@ -266,15 +271,17 @@ p { line-height: var(--line-height-160); }
     background: var(--brand-color);
 }
 
-.movinon-navbar .options li:hover a {
+.movinon-navbar .options li.options-spacing:hover a,
+.movinon-navbar .options li.options-spacing:hover i {
     color: var(--brand-color);
     opacity: 1;
 }
 
-.movinon-navbar .options li:hover i {
-    color: var(--brand-color);
-    opacity: 1;
+
+.movinon-navbar .options li.options-spacing:hover a.hover-items {
+    color: white;
 }
+
 
 .movinon-navbar .options li:hover:after {
     width: 100%;
@@ -285,14 +292,29 @@ p { line-height: var(--line-height-160); }
     outline: none;
 }
 
+.movinon-navbar .options ul li .dropdown:before {
+    position: absolute;
+    content: "";
+    width: 168px;
+    height: 200px;
+    background: transparent;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .movinon-navbar .options ul li .dropdown {
     visibility: hidden;
     opacity: 0;
     position: absolute;
     transition: all 0.5s ease;
-    margin-top: 1rem;
+    margin-top: 40px;
+    padding: 12px 20px;
     left: 0;
     display: none;
+    white-space: nowrap;
+    background-color: rgba(18,18,18,0.75);
+    border-radius: var(--border-radius-4);
 }
 
 .movinon-navbar .options ul li:hover>ul,
@@ -303,15 +325,6 @@ p { line-height: var(--line-height-160); }
     opacity: 1;
     display: block;
 }
-
-/* .movinon-navbar .options ul li.options-spacing:hover>ul,
-.movinon-navbar .options ul li.options-spacing:focus-within>ul,
-.movinon-navbar .options ul li .dropdown:hover,
-.movinon-navbar .options ul li .dropdown:focus {
-    visibility: visible;
-    opacity: 1;
-    display: block;
-} */
 
 .movinon-navbar .options ul li .dropdown li {
     width: 100%;
@@ -341,25 +354,24 @@ p { line-height: var(--line-height-160); }
 } */
 
 /* -----------------navbar icons----------------- */
-.movinon-navbar .navbar-icons .img-wrap1 {
-    width: 90%;
-    object-fit: cover;
-    object-position: 50% 50%;
+.movinon-navbar .navbar-icons .btn {
+    padding-right: 0;
 }
 
-.movinon-navbar .navbar-icons .img-wrap2 {
-    width: 50%;
-    object-fit: cover;
-    object-position: 50% 50%;
+.movinon-navbar .navbar-icons .img-wrap1 { width: 40px; }
+
+.movinon-navbar .navbar-icons .img-wrap2 {  width: 56px; }
+
+.movinon-navbar .navbar-icons .img-wrap1 img,
+.movinon-navbar .navbar-icons .img-wrap2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
 }
 
 .movinon-navbar .img-wrap2 a {
     padding-bottom: 0px;
-}
-
-.movinon-navbar .navbar-icons .img-wrap img {
-    width: 100%;
-    height: 100%;
 }
 
 /* menu bar */
@@ -372,6 +384,7 @@ p { line-height: var(--line-height-160); }
 .movinon-navbar .menu-bar .lines {
     position: absolute;
     top: 50%;
+    /* right: 16px; */
 }
 
 .movinon-navbar .menu-bar .lines .line-1 { top: -10px; }
@@ -392,7 +405,7 @@ p { line-height: var(--line-height-160); }
     position: fixed;
     background: rgba(18,18,18,0.75);
     top: 100px;
-    right: 72px;
+    right: 96px;
     width: 160px;
     height: 280px;
     padding: 24px;
@@ -405,17 +418,17 @@ p { line-height: var(--line-height-160); }
 }
 
 /* menu bar animation */
-.menu-bar.open .line-1 {
+.movinon-navbar .menu-bar.open .line-1 {
     top: -2px!important;
     -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
 }
 
-.menu-bar.open .line-2 {
+.movinon-navbar .menu-bar.open .line-2 {
     opacity: 0;
 }
 
-.menu-bar.open .line-3 {
+.movinon-navbar .menu-bar.open .line-3 {
     top: -2px!important;
     -webkit-transform: rotate(-135deg);
     transform: rotate(-135deg);
@@ -551,7 +564,6 @@ footer p {
     opacity: var(--opacity-50);
 }
 
-
 /* =================================== @media =================================== */
 /* ============================================================================== */
 
@@ -582,41 +594,23 @@ footer p {
     .g-section-mb { margin-bottom: 96px; }
 
     /* -------movinon navbar-------*/
-    .movinon-navbar .movinon-logo {
-        max-width: 178px;
+    .movinon-navbar .movinon-logotype-wrap {
+        width: 160px;
     }
 
     .movinon-navbar .row {
-        padding-top: 8px;
-        padding-bottom: 8px;
+        padding-top: 12px;
+        padding-bottom: 12px;
     }
 
     .movinon-navbar .sub-title-r {
         letter-spacing: 1px;
     }
 
-    .movinon-navbar .options li {
-        display: none;
-    }
-
-    .movinon-navbar .img-wrap {
-        width: 90%;
-    }
-
-    .movinon-navbar .img-wrap img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 50% 50%;
-    }
-
+    .movinon-navbar .options li.options-spacing,
     .movinon-navbar .img-wrap1 img,
     .movinon-navbar .img-wrap2 img {
         display: none;
-    }
-
-    .movinon-navbar .row {
-        padding: 16px 0;
     }
 }
 
@@ -629,12 +623,23 @@ footer p {
 
 /* ------------------------  小於 768px  ------------------------*/
 @media screen and (max-width: 768px) {
-
-    .red-line { display: none; }
+    
+    
 
     /* margin bottom */
     .g-section-mb { margin-bottom: 56px; }
     .g-subtitle-mb { margin-bottom: 24px; }
+
+    /* -------movinon navbar-------*/
+    .movinon-navbar .movinon-logo-wrap { width: 48px; }
+    .movinon-navbar .container-fluid { padding: 4px 16px; }
+    .red-line { display: none; }
+
+    .movinon-navbar .row { margin: 0; }
+
+    .movinon-navbar .menu-items {
+        right: 32px;
+    }
 }
 
 /* ------------------------  小於 576px  ------------------------*/
@@ -645,6 +650,12 @@ footer p {
 
     /* margin bottom */
     .g-section-mb { margin-bottom: 40px; }
+
+    /* -------movinon navbar-------*/
+    .movinon-navbar .row {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
 }
 
 /* ------------------------  小於 418px  ------------------------*/
@@ -668,4 +679,11 @@ footer p {
     .body1-m,
     .body1-b,
     .italic-16 { font-size: 0.875rem; }
+
+    /* -------movinon navbar-------*/
+    .movinon-navbar .movinon-logo-wrap { width: 42px; }
+    .movinon-navbar .row {
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
 }

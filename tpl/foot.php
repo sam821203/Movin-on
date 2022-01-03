@@ -14,6 +14,5 @@
     <!-- <script src="js/awesome.all.min.js"></script> -->
     <script src="https://kit.fontawesome.com/1392152695.js" crossorigin="anonymous"></script>
 
-    <!-- custom -->
-    <script src="js/custom.js"></script>
+    
 
