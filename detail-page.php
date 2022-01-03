@@ -1,34 +1,9 @@
+<!-- 這裡需要 require "./db.inc.php" -->
 <?php require_once './tpl/head.php' ?>
-<style>
+
+    <style>
 
     <?php require_once './tpl/global-style.css' ?>
-
-    :root{
-        /* ----------color---------- */
-        --brand-color: #F53D3D;
-        --bg-color: #121212;
-        --card-color: #202020;
-
-        /* ----------line height---------- */
-        --line-height-140: 140%;
-        --line-height-160: 160%;
-
-        /* ----------border radius---------- */
-        --border-radius-4: .25rem;
-        --border-radius-8: .5rem;
-        --border-radius-50: 3.125rem;
-        --border-radius-50-percent: 50%;
-        
-        /* ----------opacity---------- */
-        --opacity-90: .90;
-        --opacity-75: .75;
-        --opacity-50: .50;
-        --opacity-25: .25;
-        --opacity-10: .10;
-
-        /* ----------box shadow red---------- */
-        --box-shadow-red: 0px 0px 16px 4px rgba(245,61,61,0.25);
-    }
 
     body {
         background: url("images/detail_page/bg_img/bg_img_gradient_1200.jpg") top center no-repeat;
@@ -44,93 +19,6 @@
     .related-articles-section .fa-chevron-right {
         opacity: var(--opacity-90);
         font-size: 14px;
-    }
-
-    /* -----------------movinon navbar----------------- */
-    .movinon-navbar {
-        background-color: rgba(18, 18, 18, 0.5);
-        width: 100%;
-    }
-
-    .movinon-navbar .movinon-logo {
-        max-width: 226px;
-    }
-
-    .movinon-logo img {
-        width: 100%;
-    }   
-
-    .movinon-navbar .row {
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-
-    .movinon-navbar .options a {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
-    .movinon-navbar .sub-title-r {
-        letter-spacing: 1px;
-    }
-
-    .movinon-navbar .options li {
-        display: block;
-        padding: 1rem;
-        position: relative;
-        text-decoration: none;
-        transition-duration: 0.5s;
-    }
-    
-    .options li a {
-        color: #fff;
-    }
-
-    .movinon-navbar .options li:hover,
-    .movinon-navbar .options li:focus-within {
-        background: tomato;
-    }
-
-    .movinon-navbar .options li:focus-within a {
-        outline: none;
-    }
-
-    .movinon-navbar .options ul li .dropdown {
-        visibility: hidden;
-        opacity: 0;
-        position: absolute;
-        transition: all 0.5s ease;
-        margin-top: 1rem;
-        left: 0;
-        display: none;
-    }
-
-    .movinon-navbar .options ul li:hover > ul,
-    .movinon-navbar .options ul li:focus-within > ul,
-    .movinon-navbar .options ul li .dropdown:hover,
-    .movinon-navbar .options ul li .dropdown:focus {
-        visibility: visible;
-        opacity: 1;
-        display: block;
-    }
-
-    .movinon-navbar .options ul li .dropdown li {
-        width: 100%;
-    }
-
-    .movinon-navbar .fa-chevron-down {
-        margin-left: 8px;
-    }
-
-    .movinon-navbar .img-wrap {
-        width: 90%;
-        object-fit: cover;
-        object-position: 50% 50%;
-    }
-
-    .movinon-navbar .img-wrap img {
-        width: 100%;
-        height: 100%;
     }
 
     /* -----------------movie detail section----------------- */
@@ -357,43 +245,102 @@
         overflow: hidden;
     }
 
-    .actors-list-section .carousel-wrapper {
+    /* carousel */
+    .actors-list-section .wrap {
+        max-width: 1920px;
+        height: 640px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .actors-list-section .next-btn,
+    .actors-list-section .prev-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 3999;
+        color: white;
+        text-align: center;
+        font-size: 24px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .actors-list-section .next-btn {
+        right: 0px;
+        justify-content: flex-end;
+        padding-left: 80px;
+        padding-right: 40px;
+        background-image: linear-gradient(to right, rgba(18, 18, 18, 0), rgba(18, 18, 18, 1));
+    }
+
+    .actors-list-section .prev-btn {
+        left: 0px;
+        padding-left: 40px;
+        padding-right: 80px;
+        background-image: linear-gradient(to right, rgba(18, 18, 18, 1), rgba(18, 18, 18, 0));
+    }
+
+    .actors-list-section .carousel-wrap {
         width: 1862px;
         display: flex;
         justify-content: space-between;
-        transform: translateX(0px);
+        /* transform: translateX(0px); */
         transition: .4s;
     }
 
-    .actors-list-section .carousel-wrapper span {
+    .actors-list-section .carousel-wrap span {
         display: block;
     }
 
     .actors-list-section .img-wrap {
-        max-width: 234px;
-        max-height: 546px;
+        width: 234px;
+        height: 546px;
         overflow: hidden;
         position: relative;
         border-radius: var(--border-radius-4); 
         margin-bottom: 32px;
+        margin: 0 16px;
     }
 
     .actors-list-section .img-wrap img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center center;
         -webkit-transition: all 0.6s;
         transition: all 0.6s;
+        border-radius: var(--border-radius-4); 
     }
     
     .actors-list-section li {
         position: relative;
     }
 
-    .actors-list-section .actor-name {
+    .actors-list-section .actor-name-tc1, 
+    .actors-list-section .actor-name-en1,
+    .actors-list-section .actor-name-tc2, 
+    .actors-list-section .actor-name-en2,
+    .actors-list-section .actor-name-tc3, 
+    .actors-list-section .actor-name-en3,
+    .actors-list-section .actor-name-tc4, 
+    .actors-list-section .actor-name-en4,
+    .actors-list-section .actor-name-tc5, 
+    .actors-list-section .actor-name-en5,
+    .actors-list-section .actor-name-tc6, 
+    .actors-list-section .actor-name-en6,
+    .actors-list-section .actor-name-tc7, 
+    .actors-list-section .actor-name-en7,
+    .actors-list-section .actor-name-tc8, 
+    .actors-list-section .actor-name-en8 {
         text-decoration: none;
-        -webkit-transition: all 0.6s;
-        transition: all 0.6s;
+        -webkit-transition: all 1s;
+        transform: translateY(40%);
+        transition: all 1s;
         opacity: 0.2;
     }
 
@@ -402,7 +349,7 @@
         top: 0;
         left: 0;
         opacity: 0;
-        transition: opacity 0.5s ease-out;
+        /* transition: opacity 0.5s ease-out; */
     }
 
     .actors-list-section li:hover img {
@@ -415,10 +362,37 @@
         opacity: 1;
     }
 
-    .actors-list-section li:hover .actor-name {
-        /* bottom: -20px; */
-        transform: translateY(20%);
+    /* .actors-list-section .actor-hover-char1,
+    .actors-list-section .actor-hover-char2,
+    .actors-list-section .actor-hover-char3,
+    .actors-list-section .actor-hover-char4,
+    .actors-list-section .actor-hover-char5,
+    .actors-list-section .actor-hover-char6,
+    .actors-list-section .actor-hover-char7,
+    .actors-list-section .actor-hover-char8 {
+        transition: .6s;
+    } */
+
+    .actors-list-section li:hover .actor-name-tc1, 
+    .actors-list-section li:hover .actor-name-en1,
+    .actors-list-section li:hover .actor-name-tc2, 
+    .actors-list-section li:hover .actor-name-en2,
+    .actors-list-section li:hover .actor-name-tc3, 
+    .actors-list-section li:hover .actor-name-en3,
+    .actors-list-section li:hover .actor-name-tc4, 
+    .actors-list-section li:hover .actor-name-en4,
+    .actors-list-section li:hover .actor-name-tc5, 
+    .actors-list-section li:hover .actor-name-en5,
+    .actors-list-section li:hover .actor-name-tc6, 
+    .actors-list-section li:hover .actor-name-en6,
+    .actors-list-section li:hover .actor-name-tc7, 
+    .actors-list-section li:hover .actor-name-en7,
+    .actors-list-section li:hover .actor-name-tc8, 
+    .actors-list-section li:hover .actor-name-en8 {
+        top: 40px;
+        transform: translateY(60%);
         opacity: 1;
+        /* transition: .8s; */
     }
 
     /* -----------------movie stills section----------------- */
@@ -459,7 +433,7 @@
         overflow: hidden;
     }
 
-    .movie-stills-carousel .carousel-wrapper {
+    .movie-stills-carousel .carousel-wrap {
         width: 1114px;
         display: flex;
         justify-content: space-between;
@@ -626,53 +600,10 @@
 </style>
 
 <body>
-    <nav>
-        <div class="movinon-navbar">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="movinon-logo">
-                            <a class="d-flex align-items-center" href="#">
-                                <img src="./images/LOGO.svg" alt="">
-                            </a>
-                        </div>
 
-                        <div class="options d-flex justify-content-between">
-                            <ul class="d-flex justify-content-between">
-                                <li class="sub-title-r"><a href="#" aria-haspopup="true">電影排行榜<i class="fas fa-chevron-down text-light body1-r"></i></a>
-                                <ul class="dropdown" aria-label="submenu">
-                                    <li class="sub-title-r"><a href="#">現正熱映</a></li>
-                                    <li class="sub-title-r"><a href="#">即將上映</a></li>
-                                    <li class="sub-title-r"><a href="#">本週新片</a></li>
-                                </ul>
-                                </li>
-
-                                <li class="sub-title-r"><a href="#">影迷討論區</a></li>
-                                <li class="sub-title-r"><a href="#">電影新聞</a></li>
-                                <li class="sub-title-r"><a href="#">快速購票</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="d-flex justify-content-end align-items-center">
-                            <a href="#">
-                                <div class="img-wrap pr-2">
-                                    <img src="images/help.svg" alt="">
-                                </div>
-                            </a>
-                            <a class="d-flex justify-content-center align-items-center" href="#">
-                                <div class="img-wrap">
-                                    <img src="images/account.svg" alt="">
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-
+    <!-- movinon-navbar -->
+    <?php require_once './tpl/movinon-navbar.php' ?>
 		    
-	</nav>
     <main>
         <!-- -----------movie detail section----------- -->
         <section class="movie-detail-section g-section-mb">
@@ -1177,93 +1108,122 @@
                     </div>
                 </div>
             </div>
+
             <div class="container-fluid">
                 <div class="row mb-4">
-                    <div class="col-12">
-                        <div class="carousel-wrapper d-flex list-unstyled flex-nowrap">
-                            <li>
-                                <div class="img-wrap pb-2">
-                                    <img src="images/movie_info_page/actors_list_section/actor-1-dark.jpg" alt="">
-                                    <img class="image-hover" src="images/movie_info_page/actors_list_section/actor-4-hover.jpg" alt="">
-                                </div>
-                                <div class="actor-name text-center">
-                                    <span class="sub-title-b mb-1">中文姓名</span>
-                                    <span class="italic-16">English</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="img-wrap pb-2">
-                                    <img src="images/movie_info_page/actors_list_section/actor-2-dark.jpg" alt="">
-                                    <img class="image-hover" src="images/movie_info_page/actors_list_section/actor-4-hover.jpg" alt="">
-                                </div>
-                                <div class="actor-name text-center">
-                                    <span class="sub-title-b mb-1">中文姓名</span>
-                                    <span class="italic-16">English</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="img-wrap pb-2">
-                                    <img src="images/movie_info_page/actors_list_section/actor-3-dark.jpg" alt="">
-                                    <img class="image-hover" src="images/movie_info_page/actors_list_section/actor-4-hover.jpg" alt="">
-                                </div>
-                                <div class="actor-name text-center">
-                                    <span class="sub-title-b mb-1">中文姓名</span>
-                                    <span class="italic-16">English</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="img-wrap pb-2">
-                                    <img src="images/movie_info_page/actors_list_section/actor-4-dark.jpg" alt="">
-                                    <img class="image-hover" src="images/movie_info_page/actors_list_section/actor-4-hover.jpg" alt="">
-                                </div>
-                                <div class="actor-name text-center">
-                                    <span class="sub-title-b mb-1">中文姓名</span>
-                                    <span class="italic-16">English</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="img-wrap pb-2">
-                                    <img src="images/movie_info_page/actors_list_section/actor-5-dark.jpg" alt="">
-                                    <img class="image-hover" src="images/movie_info_page/actors_list_section/actor-4-hover.jpg" alt="">
-                                </div>
-                                <div class="actor-name text-center">
-                                    <span class="sub-title-b mb-1">中文姓名</span>
-                                    <span class="italic-16">English</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="img-wrap pb-2">
-                                    <img src="images/movie_info_page/actors_list_section/actor-6-dark.jpg" alt="">
-                                    <img class="image-hover" src="images/movie_info_page/actors_list_section/actor-4-hover.jpg" alt="">
-                                </div>
-                                <div class="actor-name text-center">
-                                    <span class="sub-title-b mb-1">中文姓名</span>
-                                    <span class="italic-16">English</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="img-wrap pb-2">
-                                    <img src="images/movie_info_page/actors_list_section/actor-7-dark.jpg" alt="">
-                                    <img class="image-hover" src="images/movie_info_page/actors_list_section/actor-4-hover.jpg" alt="">
-                                </div>
-                                <div class="actor-name text-center">
-                                    <span class="sub-title-b mb-1">中文姓名</span>
-                                    <span class="italic-16">English</span>
-                                </div>
-                            </li>
+                    <div class="wrap">
+                        <div class="next-btn">
+                            <i class="fas fa-chevron-right"></i>
                         </div>
-                    </div>
-                </div>
+                        <div class="prev-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                        <div class="carousel-wrap">
+                            <!-- 第一張圖片 img-1 -->
+                            <li class="list-unstyled">
+                                <div class="img-wrap actor1">
+                                    <img src="images/detail_page/actors_list_section/actor-1-dark.jpg" alt="">
+                                    <div>
+                                        <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <span class="actor-name-tc1  sub-title-b mb-1">中文姓名</span>
+                                    <span class="actor-name-en1 italic-16">English</span>
+                                </div>
+                            </li>
 
-                <div class="row">
-                    <div class="col-12">
-                        <div class="d-flex justify-content-between"> 
-                            <button class="bg-transparent border-0">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="bg-transparent border-0">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
+                            <li class="list-unstyled">
+                                <div class="img-wrap actor2">
+                                    <img src="images/detail_page/actors_list_section/actor-2-dark.jpg" alt="">
+                                    <div class="actor-hover-char2">
+                                        <img class="image-hover" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <span class="actor-name-tc2 sub-title-b mb-1">中文姓名</span>
+                                    <span class="actor-name-en2 italic-16">English</span>
+                                </div>
+                            </li>
+
+                            <li class="list-unstyled">
+                                <div class="img-wrap actor3">
+                                    <img src="images/detail_page/actors_list_section/actor-3-dark.jpg" alt="">
+                                    <div class="actor-hover-char3">
+                                        <img class="image-hover" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <span class="actor-name-tc3 sub-title-b mb-1">中文姓名</span>
+                                    <span class="actor-name-en3 italic-16">English</span>
+                                </div>
+                            </li>
+
+                            <li class="list-unstyled">
+                                <div class="img-wrap actor4">
+                                    <img src="images/detail_page/actors_list_section/actor-4-dark.jpg" alt="">
+                                    <div class="actor-hover-char4">
+                                        <img class="image-hover" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <span class="actor-name-tc4 sub-title-b mb-1">中文姓名</span>
+                                    <span class="actor-name-en4 italic-16">English</span>
+                                </div>
+                            </li>
+
+                            <li class="list-unstyled">
+                                <div class="img-wrap actor5">
+                                    <img src="images/detail_page/actors_list_section/actor-5-dark.jpg" alt="">
+                                    <div class="actor-hover-char5">
+                                        <img class="image-hover" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <span class="actor-name-tc5 sub-title-b mb-1">中文姓名</span>
+                                    <span class="actor-name-en5 italic-16">English</span>
+                                </div>
+                            </li>
+
+                            <li class="list-unstyled">
+                                <div class="img-wrap actor6">
+                                    <img src="images/detail_page/actors_list_section/actor-6-dark.jpg" alt="">
+                                    <div class="actor-hover-char6">
+                                        <img class="image-hover" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <span class="actor-name-tc6 sub-title-b mb-1">中文姓名</span>
+                                    <span class="actor-name-en6 italic-16">English</span>
+                                </div>
+                            </li>
+
+                            <li class="list-unstyled">
+                                <div class="img-wrap actor7">
+                                    <img src="images/detail_page/actors_list_section/actor-7-dark.jpg" alt="">
+                                    <div class="actor-hover-char7">
+                                        <img class="image-hover" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <span class="actor-name-tc7 sub-title-b mb-1">中文姓名</span>
+                                    <span class="actor-name-en7 italic-16">English</span>
+                                </div>
+                            </li>
+
+                            <li class="list-unstyled">
+                                <div class="img-wrap actor1">
+                                    <img src="images/detail_page/actors_list_section/actor-8-dark.jpg" alt="">
+                                    <div class="actor-hover-char8">
+                                        <img class="image-hover" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <span class="actor-name-tc8 sub-title-b mb-1">中文姓名</span>
+                                    <span class="actor-name-en8 italic-16">English</span>
+                                </div>
+                            </li>
+            
                         </div>
                     </div>
                 </div>
@@ -1285,7 +1245,7 @@
                 </div>
                 <div class="row movie-stills">
                     <div class="imgs-demo">
-                        <img src="images/movie_info_page/movie-stills/large-img.jpg" alt="">
+                        <img src="images/detail_page/movie-stills/large-img.jpg" alt="">
                     </div>
                 </div>
                 <div class="row movie-stills-carousel">
@@ -1295,45 +1255,45 @@
                         </button>
                     </div>
                     <div class="col-10">
-                        <div class="carousel-wrapper d-flex list-unstyled flex-nowrap">
+                        <div class="carousel-wrap d-flex list-unstyled flex-nowrap">
                             <li>
                                 <div class="img-wrap pb-2">
-                                    <img src="images/movie_info_page/movie-stills/79b7e7ceaf8de1f.jpeg" alt="">
+                                    <img src="images/detail_page/movie-stills/79b7e7ceaf8de1f.jpeg" alt="">
                                 </div>
                             </li>
                             <li>
                                 <div class="img-wrap pb-2">
-                                    <img src="images/movie_info_page/movie-stills/cba30f7a-b679-4d67-aad5-f0ea0b6686b9-1349502133.jpeg" alt="">
+                                    <img src="images/detail_page/movie-stills/cba30f7a-b679-4d67-aad5-f0ea0b6686b9-1349502133.jpeg" alt="">
                                 </div>
                             </li>
                             <li>
                                 <div class="img-wrap pb-2">
-                                    <img src="images/movie_info_page/movie-stills/large-img.jpg" alt="">
+                                    <img src="images/detail_page/movie-stills/large-img.jpg" alt="">
                                 </div>
                             </li>
                             <li>
                                 <div class="img-wrap pb-2">
-                                    <img src="images/movie_info_page/movie-stills/Eternals-1517204.jpeg" alt="">
+                                    <img src="images/detail_page/movie-stills/Eternals-1517204.jpeg" alt="">
                                 </div>
                             </li>
                             <li>
                                 <div class="img-wrap pb-2">
-                                    <img src="images/movie_info_page/movie-stills/eternals-tv-spot-e1633354006519.jpeg" alt="">
+                                    <img src="images/detail_page/movie-stills/eternals-tv-spot-e1633354006519.jpeg" alt="">
                                 </div>
                             </li>
                             <li>
                                 <div class="img-wrap pb-2">
-                                    <img src="images/movie_info_page/movie-stills/small-img.jpg" alt="">
+                                    <img src="images/detail_page/movie-stills/small-img.jpg" alt="">
                                 </div>
                             </li>
                             <li>
                                 <div class="img-wrap pb-2">
-                                    <img src="images/movie_info_page/movie-stills/small-img.jpg" alt="">
+                                    <img src="images/detail_page/movie-stills/small-img.jpg" alt="">
                                 </div>
                             </li>
                             <li>
                                 <div class="img-wrap pb-2">
-                                    <img src="images/movie_info_page/movie-stills/small-img.jpg" alt="">
+                                    <img src="images/detail_page/movie-stills/small-img.jpg" alt="">
                                 </div>
                             </li>
                         </div>
@@ -1348,17 +1308,19 @@
         </section>
     </main>    
 
+    <?php require_once './tpl/movinon-footer.php' ?>
+
     <?php require_once './tpl/foot.php' ?>
 
     <script>
-        // $('.carousel-wrapper li').hover(function () {
+        // $('.carousel-wrap li').hover(function () {
         //     $(this).children().eq(1).css('opacity', '1');
         // }, function () {
         //     $(this).children().eq(1).css('opacity', '0');
         // });
         
         // ----------carousel----------
-        let nowIndex = $(this).index();
+        let nowIndex = $(this).index() + 1;
 
         $('.actors-list-section .fa-chevron-left').click(function () {
 
@@ -1368,7 +1330,7 @@
             }
 
             let nowX = nowIndex * -266 + 'px';
-            $('.actors-list-section .carousel-wrapper').css('transform',`translateX(${nowX})`).css('transition','.8s');
+            $('.actors-list-section .carousel-wrap').css('transform',`translateX(${nowX})`).css('transition','.8s');
         });
 
         $('.actors-list-section .fa-chevron-right').click(function () {
@@ -1379,17 +1341,102 @@
             }
             
             let nowX = nowIndex * -266 + 'px';
-            $('.actors-list-section .carousel-wrapper').css('transform',`translateX(${nowX})`).css('transition','.8s');
+            $('.actors-list-section .carousel-wrap').css('transform',`translateX(${nowX})`).css('transition','.8s');
         });
 
         // ----------image demo----------
         $('.movie-stills-carousel .img-wrap > img').click(function () {
-            console.log('hi');
             const imgSrc = $(this).attr('src');
             $('.img-demo img').attr('src', imgSrc);
         })
 
+        // ----------image change actor text 1----------
+        $('.actor1').hover(function() {
+            $('.actor-hover-char1').css('opacity', '1');
+            $('.actor-name-tc1').text('角色').fadeIn();
+            $('.actor-name-en1').text('char').fadeIn();
+        }, function() {
+            $('.actor-hover-char1').css('opacity', '0');
+            $('.actor-name-tc1').text('中文').fadeIn();
+            $('.actor-name-en1').text('english').fadeIn();
+        });
 
+        // ----------image change actor text 2----------
+        $('.actor2').hover(function() {
+            $('.actor-hover-char2').css('opacity', '1');
+            $('.actor-name-tc2').text('角色');
+            $('.actor-name-en2').text('char');
+        }, function() {
+            $('.actor-hover-char2').css('opacity', '0');
+            $('.actor-name-tc2').text('中文');
+            $('.actor-name-en2').text('english');
+        });
+
+        // ----------image change actor text 3----------
+        $('.actor3').hover(function() {
+            $('.actor-hover-char3').css('opacity', '1');
+            $('.actor-name-tc3').text('角色');
+            $('.actor-name-en3').text('char');
+        }, function() {
+            $('.actor-hover-char3').css('opacity', '0');
+            $('.actor-name-tc3').text('中文');
+            $('.actor-name-en3').text('english');
+        });
+
+        // ----------image change actor text 4----------
+        $('.actor4').hover(function() {
+            $('.actor-hover-char4').css('opacity', '1');
+            $('.actor-name-tc4').text('角色');
+            $('.actor-name-en4').text('char');
+        }, function() {
+            $('.actor-hover-char4').css('opacity', '0');
+            $('.actor-name-tc4').text('中文');
+            $('.actor-name-en4').text('english');
+        });
+
+        // ----------image change actor text 5----------
+        $('.actor5').hover(function() {
+            $('.actor-hover-char5').css('opacity', '1');
+            $('.actor-name-tc5').text('角色');
+            $('.actor-name-en5').text('char');
+        }, function() {
+            $('.actor-hover-char5').css('opacity', '0');
+            $('.actor-name-tc5').text('中文');
+            $('.actor-name-en5').text('english');
+        });
+
+        // ----------image change actor text 6----------
+        $('.actor6').hover(function() {
+            $('.actor-hover-char6').css('opacity', '1');
+            $('.actor-name-tc6').text('角色');
+            $('.actor-name-en6').text('char');
+        }, function() {
+            $('.actor-hover-char6').css('opacity', '0');
+            $('.actor-name-tc6').text('中文');
+            $('.actor-name-en6').text('english');
+        });
+
+        // ----------image change actor text 7----------
+        $('.actor7').hover(function() {
+            $('.actor-hover-char7').css('opacity', '1');
+            $('.actor-name-tc7').text('角色');
+            $('.actor-name-en7').text('char');
+        }, function() {
+            $('.actor-hover-char7').css('opacity', '0');
+            $('.actor-name-tc7').text('中文');
+            $('.actor-name-en7').text('english');
+        });
+
+        // ----------image change actor text 8----------
+        $('.actor8').hover(function() {
+            $('.actor-hover-char8').css('opacity', '1');
+            $('.actor-name-tc8').text('角色');
+            $('.actor-name-en8').text('char');
+        }, function() {
+            $('.actor-hover-char8').css('opacity', '0');
+            $('.actor-name-tc8').text('中文');
+            $('.actor-name-en8').text('english');
+        });
     </script>
 </body>
 </html>

@@ -57,8 +57,8 @@
         position: relative;
     }
 
-    .next-btn,
-    .prev-btn {
+    .ranking-section .next-btn,
+    .ranking-section .prev-btn {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -72,7 +72,7 @@
         cursor: pointer;
     }
 
-    .next-btn {
+    .ranking-section .next-btn {
         right: 0px;
         justify-content: flex-end;
         padding-left: 80px;
@@ -80,7 +80,7 @@
         background-image: linear-gradient(to right, rgba(18, 18, 18, 0), rgba(18, 18, 18, 1));
     }
 
-    .prev-btn {
+    .ranking-section .prev-btn {
         left: 0px;
         padding-left: 40px;
         padding-right: 80px;
@@ -142,6 +142,26 @@
 
     .ranking-section .content-r p.section-header-b {
         font-size: 24px;
+        width: 300px;
+        margin: 0 auto;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .ranking-section .content-r p.section-header-b span {
+        display: inline-block;
+        padding-left: 100%;
+        -webkit-animation: marquee 6s linear infinite;    
+        animation: marquee 6s linear infinite;
+    }
+
+    /* Make it move */
+
+    @keyframes marquee {
+
+        0%   { transform: translate(0, 0); }
+        100% { transform: translate(-100%, 0); }
+
     }
 
     .ranking-section .rank-hover-content1 p.section-header-b,
@@ -443,181 +463,9 @@
 </style>
     
 <body>
-    <nav>
-        <div class="movinon-navbar">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a class="d-none d-sm-none d-md-flex d-flex align-items-center" href="#">
-                            <div class="movinon-logotype-wrap">
-                                <img src="./images/logotype.svg" alt="">
-                            </div>
-                        </a>
-                        
-                        <!-- display 小於 768px -->
-                        <a class="d-flex d-sm-flex d-md-none align-items-center" href="#">
-                            <div class="movinon-logo-wrap">
-                                <img src="./images/logo.svg" alt="">
-                            </div>
-                        </a>
 
-                        <div class="options d-flex justify-content-between">
-                            <ul class="d-flex justify-content-between">
-                                <li class="options-spacing">
-                                    
-                                    <a href="#" aria-haspopup="true">電影排行榜<i class="fas fa-chevron-down body1-r"></i></a>
-
-                                    <ul class="dropdown" aria-label="submenu">
-                                        <li><a class="hover-items" href="#">現正熱映</a></li>
-                                        <li><a class="hover-items" href="#">即將上映</a></li>
-                                        <li><a class="hover-items" href="#">本週新片</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="options-spacing"><a href="#">影迷討論區</a></li>
-                                <li class="options-spacing"><a href="#">電影新聞</a></li>
-                                <li class="options-spacing"><a href="#">立即購票</a></li>
-
-                                <!-- <li class="options-spacing">
-                                    <div class="options-outline d-flex">
-                                        <div class="img-wrap">
-                                            <img src="images/ticket_icon.svg" alt="">
-                                        </div>
-                                        <a href="#">立即購票</a>
-                                    </div>
-                                </li> -->
-                            </ul>
-                        </div>
-
-                        <div class="navbar-icons d-flex justify-content-end my-auto">
-                            <a class="d-flex justify-content-center" href="#">
-                                <div class="img-wrap1 d-flex align-items-center">
-                                    <img src="images/help.svg" alt="">
-                                </div>
-                            </a>
-
-                            <!-- 登入視窗連結 -->
-                            <div class="img-wrap2 d-flex align-items-center dropdown">
-                                <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false"><img src="images/account.svg" alt=""></a>
-
-                                <!-- 問題：main-page 有辦法修改  bootstrap 的 element style 嘛？ -->
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <a class="btn text-white mb-3" href="#" data-toggle="modal" data-target="#exampleModalLogin">
-                                        <div>登入</div>
-                                    </a>
-                                    <a type="button" class="btn text-white" href="#" data-toggle="modal" data-target="#exampleModal">
-                                        <div>註冊</div>    
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- </a> -->
-                        </div>
-                        
-                        <div class="d-block d-lg-block d-xl-none menu-bar">
-                            <div class="lines">
-                                <div class="line-1"></div>
-                                <div class="line-2"></div>
-                                <div class="line-3"></div>
-                            </div>
-                            <div class="menu-items">
-
-                                <a class="btn border-light rounded text-white mb-3" href="#" data-toggle="modal" data-target="#exampleModalLogin">登入</a>
-                                <a type="button" class="btn border-light rounded text-white mb-4" href="#" data-toggle="modal" data-target="#exampleModal">註冊</a>
-
-                                <a href="./movies-overview-page.php">
-                                    <div class="item mb-2">電影排行榜</div>
-                                </a>
-                                <a href="./forum-overview-page.php">
-                                    <div class="item mb-2">影迷討論區</div>
-                                </a>
-                                <a href="#">
-                                    <div class="item mb-2">電影新聞</div>
-                                </a>
-                                <a href="./booking-movie-page.php">
-                                    <div class="item mb-2">立即購票</div>
-                                </a>
-                            </div>
-                        </div>
-
-                        
-
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">註冊帳號</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form class="row g-3" id="myForm">
-                                            <div class="col-md-6">
-                                                <label for="inputEmail4" class="form-label">Email</label>
-                                                <input type="email" class="form-control" id="email" placeholder="請填寫 E-mail">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="inputPassword4" class="form-label">密碼</label>
-                                                <input type="password" class="form-control" id="pwd" placeholder="請輸入密碼">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="inputEmail4" class="form-label">姓名</label>
-                                                <input type="text" class="form-control" id="name" placeholder="請輸入姓名">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="inputPassword4" class="form-label">生日</label>
-                                                <input type="text" class="form-control" id="birthdate" placeholder="請填寫生日">
-                                            </div>
-                                            <div class="col-12">
-                                                <label for="inputAddress" class="form-label">地址</label>
-                                                <input type="text" class="form-control" id="address" placeholder="請填寫地址">
-                                            </div>
-                                            <div class="col-12">
-                                                <button type="submit" class="btn" id="btn_register">註冊</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 登入視窗 -->
-                        <div class="modal fade" id="exampleModalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">登入</h5><span class="Login">Login</span>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form class="row g-3" id="myForm_login">
-                                            <div class="col-md-12">
-                                                <label for="email_login" class="form-label">Email</label>
-                                                <input type="email" class="form-control" id="email_login" placeholder="請填寫 E-mail">
-                                            </div>
-                                            <div class="col-md-12">
-                                                <label for="pwd_login" class="form-label">密碼</label>
-                                                <input type="password" class="form-control" id="pwd_login" placeholder="請輸入密碼">
-                                            </div>
-                                            <div class="col-6">
-                                                <button type="submit" class="btn" id="btn_login">登入</button>
-                                            </div>
-                                            <div class="col-6"><a href="">忘記密碼？</a></div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <!-- <div class="text-end">
-                            <a class="btn btn-outline-light me-2" href="#" data-bs-toggle="modal" data-bs-target="#exampleModalLogin">Login</a>
-                            <a type="button" class="btn btn-warning" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Sign-up</a>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <!-- movinon-navbar -->
+    <?php require_once './tpl/movinon-navbar.php' ?>
 
     <main>
         <section class="hero-section">
@@ -680,7 +528,7 @@
                                         </div>
                                         <div class="rank-num">01</div>
                                         <div class="content-r">
-                                            <p class="section-header-b">永恆族</p>
+                                            <p class="section-header-b"><span>永恆族</span></p>
                                             <p class="en-title">Treat or trick</p>
                                             <div class="rating">
                                                 <i class="fas fa-star"></i>
@@ -723,7 +571,7 @@
                                         </div>
                                         <div class="rank-num">02</div>
                                         <div class="content-r">
-                                            <p class="section-header-b">刀劍神域 –Progressive- 無星夜的詠嘆調</p>
+                                            <p class="section-header-b"><span>刀劍神域 –Progressive- 無星夜的詠嘆調</span></p>
                                             <p class="en-title">Sword Art Online: Progressive</p>
                                             <div class="rating">
                                                 <i class="fas fa-star"></i>
@@ -766,7 +614,7 @@
                                         </div>
                                         <div class="rank-num">03</div>
                                         <div class="content-r">
-                                            <p class="section-header-b">詭扯</p>
+                                            <p class="section-header-b"><span>詭扯</span></p>
                                             <p class="en-title">Treat or trick</p>
                                             <div class="rating">
                                                 <i class="fas fa-star"></i>
@@ -809,7 +657,7 @@
                                         </div>
                                         <div class="rank-num">04</div>
                                         <div class="content-r">
-                                            <p class="section-header-b">我的英雄學院劇場版：世界英雄任務</p>
+                                            <p class="section-header-b"><span>我的英雄學院劇場版：世界英雄任務</span></p>
                                             <p class="en-title">My Hero Academia The Movie : World Heores Mission</p>
                                             <div class="rating">
                                                 <i class="fas fa-star"></i>
@@ -852,7 +700,7 @@
                                         </div>
                                         <div class="rank-num">05</div>
                                         <div class="content-r">
-                                            <p class="section-header-b">迷離夜蘇活</p>
+                                            <p class="section-header-b"><span>迷離夜蘇活</span></p>
                                             <p class="en-title">Last Night in Soho</p>
                                             <div class="rating">
                                                 <i class="fas fa-star"></i>
@@ -1274,228 +1122,12 @@
         </section>
     </main>
 
-    <!-- -----------footer Start----------- -->
-    <footer class="mt-5">
-        <div class="footer-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="img-wrap">
-                            <img src="images/logotype.svg" alt="">
-                        </div>
-                        <p><a href="">movin'on@cinema.com</a></p>
-                        <p>call us <span class="body1-r">(02) 888 899 999</span></p>
-                        <div class="icon">
-                            <a href="#"><img src="img/icon/icon-color-02.png" alt=""></a>
-                            <a href="#"><img src="img/icon/icon-color-03.png" alt=""></a>
-                            <a href="#"><img src="img/icon/icon-color-04.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <h4 class="sub-title-b">關於我們</h4>
-                        <p><a href="#">集團介紹</a></p>
-                        <p><a href="#">加入我們</a></p>
-                        <p><a href="#">新聞中心</a></p>
-                        <p><a href="#">我們的團隊</a></p>
-                        <p><a href="#">FAQ</a></p>
-                    </div>
-                    <div class="col">
-                        <h4 class="sub-title-b">條款與政策</h4>
-                        <p><a href="#">隱私條款</a></p>
-                        <p><a href="#">使用條款</a></p>
-                        <p><a href="#">付費內容服務條款</a></p>
-                        <p><a href="#">編輯獨立聲明</a></p>
-                        <p><a href="#">廣告內容政策</a></p>
-                    </div>
-                    <div class="col">
-                        <h4 class="sub-title-b">影迷互動</h4>
-                        <p><a href="#">熱門討論區</a></p>
-                        <p><a href="#">影迷討論區</a></p>
-                        <p><a href="#">討論區規定</a></p>
-                        <p><a href="#">會員中心</a></p>
-                    </div>
-                    <div class="col">
-                        <h4 class="sub-title-b">最新電影資訊</h4>
-                        <p><a href="#">查詢時刻表</a></p>
-                        <p><a href="#">現正熱映</a></p>
-                        <p><a href="#">本周新片</a></p>
-                        <p><a href="#">即將上映</a></p>
-                        <p><a href="#">新片預告</a></p>
-                    </div>
-                    <div class="col-12">
-                        <a href="">
-                            <p class="copyright body2-r">Copyright © 2021 movin'on All Rights Reserved.</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- movinon footer -->
+    <?php require_once './tpl/movinon-footer.php' ?>
 
     <?php require_once './tpl/foot.php' ?>
-
-    <script>
-        // ======================================ranking-section======================================
-
-        // 1------ranking-section hover 電影海報，跑出電影資訊
-        $('.rank1').hover(function() {
-            $('.rank-hover-content1').css('opacity', '1');
-            $('.rank1').css('margin-right', '0px').css('margin-left', '32px').css('z-index', 3000).css('transition', '0.6s');
-        }, function() {
-            $('.rank-hover-content1').css('opacity', '0');
-            $('.rank1').css('margin-right', '16px').css('margin-left', '16px').css('z-index', 1).css('transition', '0.6s');
-        });
-
-        // 2------ranking-section hover 電影海報，跑出電影資訊
-        $('.rank2').hover(function() {
-            $('.rank-hover-content2').css('opacity', '1');
-            $('.rank2').css('margin-right', '0px').css('margin-left', '0px').css('z-index', 3000).css('transition', '0.6s');
-        }, function() {
-            $('.rank-hover-content2').css('opacity', '0');
-            $('.rank2').css('margin-right', '16px').css('margin-left', '16px').css('z-index', 1).css('transition', '0.6s');
-        });
-
-        // 3------ranking-section hover 電影海報，跑出電影資訊
-        $('.rank3').hover(function() {
-            $('.rank-hover-content3').css('opacity', '1');
-            $('.rank3').css('margin-right', '0px').css('margin-left', '0px').css('z-index', 3000).css('transition', '0.6s');
-        }, function() {
-            $('.rank-hover-content3').css('opacity', '0');
-            $('.rank3').css('margin-right', '16px').css('margin-left', '16px').css('z-index', 1).css('transition', '0.6s');
-        });
-
-        // 4------ranking-section hover 電影海報，跑出電影資訊
-        $('.rank4').hover(function() {
-            $('.rank-hover-content4').css('opacity', '1');
-            $('.rank4').css('margin-right', '0px').css('margin-left', '0px').css('z-index', 3000).css('transition', '0.6s');
-        }, function() {
-            $('.rank-hover-content4').css('opacity', '0');
-            $('.rank4').css('margin-right', '16px').css('margin-left', '16px').css('z-index', 1).css('transition', '0.6s');
-        });
-
-        // 5------ranking-section hover 電影海報，跑出電影資訊
-        $('.rank5').hover(function() {
-            $('.rank-hover-content5').css('opacity', '1');
-            $('.rank5').css('margin-right', '0px').css('margin-left', '0px').css('z-index', 3000).css('transition', '0.6s');
-        }, function() {
-            $('.rank-hover-content5').css('opacity', '0');
-            $('.rank5').css('margin-right', '16px').css('margin-left', '16px').css('z-index', 1).css('transition', '0.6s');
-        });
-
-        // 6------ranking-section hover 電影海報，跑出電影資訊
-        $('.rank6').hover(function() {
-            $('.rank-hover-content6').css('opacity', '1');
-            $('.rank6').css('margin-right', '0px').css('margin-left', '0px').css('z-index', 3000).css('transition', '0.6s');
-        }, function() {
-            $('.rank-hover-content6').css('opacity', '0');
-            $('.rank6').css('margin-right', '16px').css('margin-left', '16px').css('z-index', 1).css('transition', '0.6s');
-        });
-
-        // 7------ranking-section hover 電影海報，跑出電影資訊
-        $('.rank7').hover(function() {
-            $('.rank-hover-content7').css('opacity', '1');
-            $('.rank7').css('margin-right', '0px').css('margin-left', '0px').css('z-index', 3000).css('transition', '0.6s');
-        }, function() {
-            $('.rank-hover-content7').css('opacity', '0');
-            $('.rank7').css('margin-right', '16px').css('margin-left', '16px').css('z-index', 1).css('transition', '0.6s');
-        });
-
-        // 8------ranking-section hover 電影海報，跑出電影資訊
-        $('.rank8').hover(function() {
-            $('.rank-hover-content8').css('opacity', '1');
-            $('.rank8').css('margin-right', '0px').css('margin-left', '0px').css('z-index', 3000).css('transition', '0.6s');
-        }, function() {
-            $('.rank-hover-content8').css('opacity', '0');
-            $('.rank8').css('margin-right', '16px').css('margin-left', '16px').css('z-index', 1).css('transition', '0.6s');
-        });
-
-        // 9------ranking-section hover 電影海報，跑出電影資訊
-        $('.rank9').hover(function() {
-            $('.rank-hover-content9').css('opacity', '1');
-            $('.rank9').css('margin-right', '0px').css('margin-left', '0px').css('z-index', 3000).css('transition', '0.6s');
-        }, function() {
-            $('.rank-hover-content9').css('opacity', '0');
-            $('.rank9').css('margin-right', '16px').css('margin-left', '16px').css('z-index', 1).css('transition', '0.6s');
-        });
-
-        // 10------ranking-section hover 電影海報，跑出電影資訊
-        $('.rank10').hover(function() {
-            $('.rank-hover-content10').css('opacity', '1');
-            $('.rank10').css('margin-right', '0px').css('margin-left', '0px').css('z-index', 3000).css('transition', '0.6s');
-        }, function() {
-            $('.rank-hover-content10').css('opacity', '0');
-            $('.rank10').css('margin-right', '16px').css('margin-left', '16px').css('z-index', 1).css('transition', '0.6s');
-        });
-
-        // ranking-section 輪播牆
-        let nowIndex = $(this).index() + 1;
-
-        $('.next-btn').click(function() {
-
-            nowIndex += 1
-            if (nowIndex > 4) {
-                nowIndex = 4
-            }
-
-            const nowX = nowIndex * -312 + 'px';
-            $('.carousel-wrap').css('transform', `translateX(${nowX})`).css('transition', '.5s');
-
-            // 問題：如何判斷是否已經經過排行第一了，如果有，就將 prev-btn 上層漸層
-
-            // if (nowX = -312) {
-            //     $('.prev-btn').css('background-image','linear-gradient(to right, rgba(18,18,18,1), rgba(18,18,18,0))').css('transition','.8s');
-            // } else if (nowX = 0) {
-            //     $('.prev-btn').css('background-image','linear-gradient(to right, rgba(18,18,18,0), rgba(18,18,18,0))').css('transition','1s');
-            // } else if (nowX = -3120) {
-            //     $('.next-btn').css('background-image','linear-gradient(to right, rgba(18,18,18,0), rgba(18,18,18,0))').css('transition','1s');
-            // }
-        });
-
-        $('.prev-btn').click(function() {
-
-            nowIndex -= 1
-            if (nowIndex < 0) {
-                nowIndex = 0
-            }
-
-            const nowX = nowIndex * -312 + 'px';
-            $('.carousel-wrap').css('transform', `translateX(${nowX})`).css('transition', '.5s');
-        });
-
-        // menu bar
-        const menuBar = document.querySelector('.menu-bar');
-        let menuBarOpen = false;
-        
-        menuBar.addEventListener("click", function() {
-            if (!menuBarOpen) {
-                menuBar.classList.add('open');
-                menuBarOpen = true;
-            } else {
-                menuBar.classList.remove('open');
-                menuBarOpen = false;
-            }
-        });
-        
-        
-        // const dropDown = document.querySelector('.dropdown-menu');
-        // let dropDownShow = false;
-        
-        // dropDown.addEventListener("click", function() {
-        //     if (!dropDownShow) {
-        //         dropDown.classList.add('open');
-        //         menuBarOpen = true;
-        //     } else {
-        //         menuBar.classList.remove('open');
-        //         menuBarOpen = false;
-        //     }
-        // });
-
-        $('.dropdown-toggle').click( function () {
-            console.log('test');
-            $('.dropdown-menu.show').css({ top: '30px' });
-        });
-    </script>
-    <!-- <script src="js/custom.js"></script> -->
+    
+    <script src="js/main-page.js"></script>
 </body>
 
 </html>
