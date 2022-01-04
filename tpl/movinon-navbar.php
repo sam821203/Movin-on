@@ -2,8 +2,8 @@
     <div class="movinon-navbar">
         <div class="container-fluid">
             <div class="row">
-                <div class="d-flex justify-content-between align-items-center">
-                    <a class="d-none d-sm-none d-md-flex d-flex align-items-center" href="./main-page.php">
+                <div class="d-flex justify-content-between align-items-center w-100">
+                    <a class="d-none d-sm-none d-md-flex align-items-center" href="./main-page.php">
                         <div class="movinon-logotype-wrap">
                             <img src="./images/logotype.svg" alt="">
                         </div>
@@ -65,7 +65,6 @@
                                 </a>
                             </div>
                         </div>
-                        <!-- </a> -->
                     </div>
                     
                     <div class="d-block d-lg-block d-xl-none menu-bar">
@@ -74,8 +73,8 @@
                             <div class="line-2"></div>
                             <div class="line-3"></div>
                         </div>
-                        <div class="menu-items">
 
+                        <div class="menu-items">
                             <a class="btn border-light rounded text-white mb-3" href="#" data-toggle="modal" data-target="#exampleModalLogin">登入</a>
                             <a type="button" class="btn border-light rounded text-white mb-4" href="#" data-toggle="modal" data-target="#exampleModal">註冊</a>
 

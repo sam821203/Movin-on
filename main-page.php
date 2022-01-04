@@ -138,6 +138,7 @@
 
     .ranking-section .content-r {
         overflow: hidden;
+        width: 60%;
     }
 
     .ranking-section .content-r p.section-header-b {
@@ -156,12 +157,9 @@
     }
 
     /* Make it move */
-
     @keyframes marquee {
-
         0%   { transform: translate(0, 0); }
         100% { transform: translate(-100%, 0); }
-
     }
 
     .ranking-section .rank-hover-content1 p.section-header-b,
@@ -197,7 +195,7 @@
 
     /* 問題：如何不讓 .arrow-wrap 被擠壓到？ */
     .ranking-section .arrow-wrap {
-        height: 16%;
+        height: 10%;
     }
 
     .ranking-section .arrow-wrap img {
@@ -249,12 +247,9 @@
         font-style: italic;
     }
 
-    .ranking-section .rank-hover-content4 .arrow-wrap {
-        width: 14%;
-    }
-
     .ranking-section .rank-num {
         font-family: 'BenchNine', 'Roboto Condensed', sans-serif;
+        /* font-size: 6rem; */
         font-size: 6rem;
         opacity: var(--opacity-25);
         letter-spacing: -2px;
@@ -262,6 +257,7 @@
         line-height: 100%;
         margin-right: 16px;
         margin-top: -8px;
+        width: 30%;
     }
 
     .ranking-section .content {
@@ -300,7 +296,7 @@
 
     .ranking-section .fa-star,
     .ranking-section .fa-star-half-alt {
-        font-size: 0.25rem;
+        font-size: 0.75rem;
     }
 
     /* ----------------------------forum cards section---------------------------- */
@@ -311,11 +307,6 @@
 
     .forum-cards-section .card-md {
         margin-bottom: 32px;
-    }
-
-    .forum-cards-section .row1 .col-4 {
-        padding-left: 0;
-        padding-right: 0;
     }
 
     .forum-cards-section .img-wrap {
@@ -341,9 +332,10 @@
         left: 24px;
     }
 
-    .forum-cards-section .card-1 {
-        width: 100%;
-        height: 100%;
+    .forum-cards-section .card-1,
+    .forum-cards-section .card-2 {
+        max-width: 428px;
+        max-height: 244px;
     }
 
     .forum-cards-section .card-3 {
@@ -643,7 +635,7 @@
                                     </div>
                                 </div>
                             </div>
-
+                            
                             <div class="img-wrap rank4">
                                 <img src="images/main_page/rank4.jpg" alt="">
                                 <div class="rank-hover-content4">
@@ -974,7 +966,7 @@
                 <!-- -------------------上------------------- -->
                 <div class="row row1">
                     <div class="col-4 d-flex flex-column justify-content-between">
-                        <div class="col-12">
+                        <div>
                             <a href="#">
                                 <div class="img-wrap card-1">
                                     <img src="images/forum_overview_page/card_1.jpg" alt="">
@@ -986,7 +978,7 @@
                             </a>
                         </div>
 
-                        <div class="col-12">
+                        <div>
                             <a href="#">
                                 <div class="img-wrap card-2">
                                     <img src="images/forum_overview_page/card_2.jpg" alt="">

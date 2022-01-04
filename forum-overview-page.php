@@ -76,11 +76,6 @@
         margin-bottom: 32px;
     }
 
-    .forum-cards-section .row1 .col-4 {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
     .forum-cards-section .img-wrap {
         width: 100%;
         height: 100%;
@@ -103,9 +98,10 @@
         left: 24px;
     }
 
-    .forum-cards-section .card-1 {
-        width: 100%;
-        height: 100%;
+    .forum-cards-section .card-1,
+    .forum-cards-section .card-2 {
+        max-width: 428px;
+        max-height: 244px;
     }
 
     .forum-cards-section .card-3 {
@@ -395,7 +391,7 @@
                 <!-- -------------------上------------------- -->
                 <div class="row row1">
                     <div class="col-4 d-flex flex-column justify-content-between">
-                        <div class="col-12">
+                        <div>
                             <a href="#">
                                 <div class="img-wrap card-1">
                                     <img src="images/forum_overview_page/card_1.jpg" alt="">
@@ -407,7 +403,7 @@
                             </a>
                         </div>
 
-                        <div class="col-12">
+                        <div>
                             <a href="#">
                                 <div class="img-wrap card-2">
                                     <img src="images/forum_overview_page/card_2.jpg" alt="">

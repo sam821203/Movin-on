@@ -7,10 +7,13 @@
     <!-- jQuery UI -->
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 
-    <!-- bootstrap 4.6.0 -->
-    <link rel="stylesheet" href="./js/bootstrap.bundle.min.js">
+    <!-- bootstrap 4.6.0 bundle min -->
+    <!-- <link rel="stylesheet" href="./js/bootstrap.bundle.min.js"> -->
+
+    <!-- bootstrap 4.6.0 all -->
+    <!-- <link rel="stylesheet" href="./js/test"> -->
 
     <!-- Font awesome -->
     <script src="./js/fontawesome.all.min.js"></script>
