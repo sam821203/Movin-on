@@ -192,8 +192,10 @@
                             <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">即將上映</a>
                         </li>
                     </ul>
+                </div>
 
-                    <!-- 修改這裡的 bug -->
+                <div class="row">
+                    <!-- 修改這裡的 bug，在大螢幕看原因 -->
                     <div class="tab-content" id="myTabContent">
 
                         <!-- 現正熱映 -->

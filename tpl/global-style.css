@@ -23,18 +23,23 @@
     --opacity-10: .10;
 
     /* ----------box shadow red---------- */
-    --box-shadow-red: 0px 0px 16px 4px rgba(245, 61, 61, 0.25);
+    --box-shadow-red: 0px 0px 16px 4px rgba(245, 61, 61, 0.35);
+    /* --box-shadow-red2: 0px 0px 16px 4px rgba(245, 61, 61, 0.35); */
 
+    /* ----------box shadow white---------- */
+    --box-shadow-white: 0px 0px 16px 8px rgba(255, 255, 255, 0.08);
+
+    /* ----------box shadow card---------- */
     --box-shadow-card-sm: 0px 0px 24px 4px rgba(0, 0, 0, 0.5);
     --box-shadow-card-lg: 0px 0px 24px 4px rgba(0, 0, 0, 0.25);
 
+    /* ----------box shadow black---------- */
     --box-shadow-black: 0px 0px 24px 0px rgba(0, 0, 0, 0.75);
     --box-shadow-black-25: 0px 0px 24px 0px rgba(0, 0, 0, 0.25);
 
-    --box-shadow-avatar-sm: 0px 0px 16px 4px rgba(0, 0, 0, 0.5);
+    /* ----------box shadow avatar---------- */
+    --box-shadow-avatar-sm: 0px 0px 16px 4px rgba(0, 0, 0, 0.25);
     --box-shadow-avatar-lg: 0px 0px 12px 4px rgba(0, 0, 0, 0.25);
-
-    --box-shadow-white: 0px 0px 16px 8px rgba(255, 255, 255, 0.08);
 
     /* ----------text shadow ---------- */
     --text-shadow-green: 0px 0px 12px rgba(109,241,75,0.5);

@@ -70,7 +70,7 @@
        padding: 24px 0px;
        text-align: center;
        border-radius: var(--border-radius-8);
-       box-shadow: var(--box-shadow-card);
+       box-shadow: var(--box-shadow-card-sm);
     }
 
     .other-movies-section .img-wrap {
@@ -258,7 +258,7 @@
                     <div class="top-five-card col-md-4 col-lg-4 col-xl">
                         <a href="./booking-time-page.php">
                             <div class="img-wrap">
-                                <img src="images/main_page/rank1.jpeg" alt="">
+                                <img src="images/main_page/rank1.jpg" alt="">
                             </div>
                         </a>
                         <a href="./booking-time-page.php">
@@ -280,7 +280,7 @@
                     <div class="top-five-card col-md-4 col-lg-4 col-xl">
                         <a href="#">
                             <div class="img-wrap">
-                                <img src="images/main_page/rank2.jpeg" alt="">
+                                <img src="images/main_page/rank2.jpg" alt="">
                             </div>
                         </a>
                         <a href="#">
@@ -302,7 +302,7 @@
                     <div class="top-five-card col-md-4 col-lg-4 col-xl">
                         <a href="#">
                             <div class="img-wrap">
-                                <img src="images/main_page/rank3.jpeg" alt="">
+                                <img src="images/main_page/rank3.jpg" alt="">
                             </div>
                         </a>
                         <a href="#">
@@ -346,7 +346,7 @@
                     <div class="top-five-card col-md-4 col-lg-4 col-xl">
                         <a href="#">
                             <div class="img-wrap">
-                                <img src="images/main_page/rank5.jpeg" alt="">
+                                <img src="images/main_page/rank5.jpg" alt="">
                             </div>
                         </a>
                         <a href="#">
@@ -370,7 +370,7 @@
                     <div class="top-five-card col-6 col-sm-6">
                         <a href="#">
                             <div class="img-wrap">
-                                <img src="images/main_page/rank1.jpeg" alt="">
+                                <img src="images/main_page/rank1.jpg" alt="">
                             </div>
                         </a>
                         <a href="./booking-time-page.php">
@@ -394,7 +394,7 @@
                     <div class="top-five-card col-6 col-sm-6">
                         <a href="#">
                             <div class="img-wrap">
-                                <img src="images/main_page/rank2.jpeg" alt="">
+                                <img src="images/main_page/rank2.jpg" alt="">
                             </div>
                         </a>
                         <a href="#">
@@ -418,7 +418,7 @@
                     <div class="top-five-card col-6 col-sm-6">
                         <a href="#">
                             <div class="img-wrap">
-                                <img src="images/main_page/rank3.jpeg" alt="">
+                                <img src="images/main_page/rank3.jpg" alt="">
                             </div>
                         </a>
                         <a href="#">
@@ -466,7 +466,7 @@
                     <div class="top-five-card col-6 col-sm-6">
                         <a href="#">
                             <div class="img-wrap">
-                                <img src="images/main_page/rank5.jpeg" alt="">
+                                <img src="images/main_page/rank5.jpg" alt="">
                             </div>
                         </a>
                         <a href="#">
@@ -494,35 +494,35 @@
                     <div class="col-sm-6 col-4 mb-4">
                         <a href="#">
                             <div class="img-wrap">
-                                <img src="images/main_page/rank1.jpeg" alt="">
+                                <img src="images/main_page/rank1.jpg" alt="">
                             </div>
                         </a>
                     </div>
                     <div class="col-sm-6 col-4 mb-4">
                         <a href="#">
                             <div class="img-wrap">
-                                <img src="images/main_page/rank2.jpeg" alt="">
+                                <img src="images/main_page/rank2.jpg" alt="">
                             </div>
                         </a>
                     </div>
                     <div class="col-sm-6 col-4 mb-4">
                         <a href="#">
                             <div class="img-wrap">
-                                <img src="images/main_page/rank3.jpeg" alt="">
+                                <img src="images/main_page/rank3.jpg" alt="">
                             </div>
                         </a>
                     </div>
                     <div class="col-sm-6 col-4 mb-4">
                         <a href="#">
                             <div class="img-wrap">
-                                <img src="images/main_page/rank4.jpeg" alt="">
+                                <img src="images/main_page/rank4.jpg" alt="">
                             </div>
                         </a>
                     </div>
                     <div class="col-sm-6 col-4 mb-4">
                         <a href="#">
                             <div class="img-wrap">
-                                <img src="images/main_page/rank5.jpeg" alt="">
+                                <img src="images/main_page/rank5.jpg" alt="">
                             </div>
                         </a>
                     </div>

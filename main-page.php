@@ -132,7 +132,7 @@
         border-radius: var(--border-radius-4);
         color: white;
         background: rgba(0, 0, 0, 0.75);
-        box-shadow: var(--box-shadow-black2);
+        box-shadow: var(--box-shadow-black-25);
         transition: .6s;
     }
 
@@ -688,7 +688,7 @@
                             </div>
 
                             <div class="img-wrap rank5">
-                                <img src="images/main_page/rank5.jpeg" alt="">
+                                <img src="images/main_page/rank5.jpg" alt="">
                                 <div class="rank-hover-content5">
                                     <div class="d-flex">
                                         <div class="arrow-wrap">
