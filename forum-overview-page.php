@@ -1,34 +1,9 @@
+<!-- 這裡需要 require "./db.inc.php" -->
 <?php require_once './tpl/head.php' ?>
+
 <style>
 
     <?php require_once './tpl/global-style.css' ?>
-
-    :root {
-        /* ----------color---------- */
-        --brand-color: #F53D3D;
-        --bg-color: #121212;
-        --card-color: #202020;
-
-        /* ----------line height---------- */
-        --line-height-140: 140%;
-        --line-height-160: 160%;
-
-        /* ----------border radius---------- */
-        --border-radius-4: .25rem;
-        --border-radius-8: .5rem;
-        --border-radius-50: 3.125rem;
-        --border-radius-50-percent: 50%;
-
-        /* ----------opacity---------- */
-        --opacity-90: .90;
-        --opacity-75: .75;
-        --opacity-50: .50;
-        --opacity-25: .25;
-        --opacity-10: .10;
-
-        /* ----------box shadow red---------- */
-        --box-shadow-red: 0px 0px 16px 4px rgba(245,61,61,0.25);
-    }
 
     body {
         background: url("images/forum_overview_page/bg_img.jpg") top center no-repeat;
@@ -37,91 +12,6 @@
         width: 100%;
     }
     
-    /* -----------------movinon navbar----------------- */
-    .movinon-navbar {
-        background-color: rgba(18, 18, 18, 0.5);
-        width: 100%;
-        position: fixed;
-        top: 0%;
-        z-index: 1999;
-    }
-
-    .movinon-navbar .movinon-logo {
-        max-width: 202px;
-    }
-
-    .movinon-logo img {
-        width: 100%;
-    }   
-
-    .movinon-navbar .row {
-        padding-top: 12px;
-        padding-bottom: 12px;
-    }
-
-    .movinon-navbar .sub-title-r {
-        letter-spacing: 1px;
-    }
-
-    .movinon-navbar .options li {
-        display: block;
-        padding: 1rem;
-        position: relative;
-        text-decoration: none;
-        transition-duration: 0.5s;
-    }
-    
-    .options li a {
-        color: #fff;
-    }
-
-    .movinon-navbar .options li:hover,
-    .movinon-navbar .options li:focus-within {
-        background: tomato;
-    }
-
-    .movinon-navbar .options li:focus-within a {
-        outline: none;
-    }
-
-    .movinon-navbar .options ul li .dropdown {
-        visibility: hidden;
-        opacity: 0;
-        position: absolute;
-        transition: all 0.5s ease;
-        margin-top: 1rem;
-        left: 0;
-        display: none;
-    }
-
-    .movinon-navbar .options ul li:hover > ul,
-    .movinon-navbar .options ul li:focus-within > ul,
-    .movinon-navbar .options ul li .dropdown:hover,
-    .movinon-navbar .options ul li .dropdown:focus {
-        visibility: visible;
-        opacity: 1;
-        display: block;
-    }
-
-    .movinon-navbar .options ul li .dropdown li {
-        width: 100%;
-    }
-
-    .movinon-navbar .fa-chevron-down {
-        margin-left: 8px;
-    }
-
-    .movinon-navbar .navbar-icons .img-wrap {
-        width: 90%;
-        object-fit: cover;
-        object-position: 50% 50%;
-    }
-
-    .movinon-navbar .navbar-icons .img-wrap img {
-        width: 100%;
-        height: 100%;
-    }
-
     /* -----------------all sections----------------- */
     .forum-cards-section .card-md {
         margin-bottom: 32px;
@@ -156,6 +46,7 @@
         position: relative;
         height: 326px;
         overflow: auto;
+        box-shadow: var(--box-shadow-black-25);
     }
 
     .board-title .sub-title-m {
@@ -194,6 +85,8 @@
         width: 100%;
         height: 100%;
         position: relative;
+        border-radius: var(--border-radius-8);
+        box-shadow: var(--box-shadow-black);
     }
 
     .forum-cards-section .img-wrap img {
@@ -269,6 +162,8 @@
         width: 100%;
         height: 100%;
         position: relative;
+        border-radius: var(--border-radius-8);
+        box-shadow: var(--box-shadow-black-25);
     }
 
     .forum-cat-section .img-wrap img {
@@ -419,48 +314,9 @@
 </style>
 
 <body>
-    <div class="movinon-navbar">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="movinon-logo">
-                        <a class="d-flex align-items-center" href="#">
-                            <img src="./images/LOGO.svg" alt="">
-                        </a>
-                    </div>
-
-                    <div class="options d-flex justify-content-between">
-                        <ul class="d-flex justify-content-between">
-                            <li class="sub-title-r"><a href="#" aria-haspopup="true">電影排行榜<i class="fas fa-chevron-down text-light body1-r"></i></a>
-                            <ul class="dropdown" aria-label="submenu">
-                                <li class="sub-title-r"><a href="#">現正熱映</a></li>
-                                <li class="sub-title-r"><a href="#">即將上映</a></li>
-                                <li class="sub-title-r"><a href="#">本週新片</a></li>
-                            </ul>
-                            </li>
-
-                            <li class="sub-title-r"><a href="#">影迷討論區</a></li>
-                            <li class="sub-title-r"><a href="#">電影新聞</a></li>
-                            <li class="sub-title-r"><a href="#">快速購票</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="navbar-icons d-flex justify-content-end my-auto">
-                        <a class="d-flex justify-content-center" href="#">
-                            <div class="img-wrap pr-2 d-flex align-items-center">
-                                <img src="images/help.svg" alt="">
-                            </div>
-                        </a>
-                        <a class="d-flex justify-content-center" href="#">
-                            <div class="img-wrap">
-                                <img src="images/account.svg" alt="">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
+    <!-- movinon-navbar -->
+    <?php require_once './tpl/movinon-navbar.php' ?>
 
     <main>
         <!-- -----------forum info section----------- -->
@@ -564,7 +420,7 @@
                         </div>
                     </div>
                     <div class="col-8">
-                        <a href="#">
+                        <a href="./forum-masonry-page.php">
                             <div class="img-wrap card-3">
                                 <img src="images/forum_overview_page/card_3.jpg" alt="">
                                 <div class="content">
@@ -706,7 +562,7 @@
                         </a>
                     </div> 
                     <div class="col-6 card-md">
-                        <a href="#">
+                        <a href="./forum-masonry-page.php">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/card_3_1200.jpg" alt="">
                                 <div class="content">
@@ -919,10 +775,10 @@
         </section>
     </main>    
 
+    <?php require_once './tpl/movinon-footer.php' ?>
+
     <?php require_once './tpl/foot.php' ?>
 
-    <script>
-
-    </script>
+    <script src=""></script>
 </body>
 </html>

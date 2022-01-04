@@ -1,35 +1,8 @@
 <?php require_once './tpl/head.php' ?>
 
-    <style>
+<style>
 
-        <?php require_once './tpl/global-style.css' ?>
-
-        :root {
-            /* ----------color---------- */
-            --brand-color: #F53D3D;
-            --bg-color: #121212;
-            --card-color: #202020;
-
-            /* ----------line height---------- */
-            --line-height-140: 140%;
-            --line-height-160: 160%;
-
-            /* ----------border radius---------- */
-            --border-radius-4: .25rem;
-            --border-radius-8: .5rem;
-            --border-radius-50: 3.125rem;
-            --border-radius-50-percent: 50%;
-
-            /* ----------opacity---------- */
-            --opacity-90: .90;
-            --opacity-75: .75;
-            --opacity-50: .50;
-            --opacity-25: .25;
-            --opacity-10: .10;
-
-            /* ----------box shadow red---------- */
-            --box-shadow-red: 0px 0px 16px 4px rgba(245,61,61,0.25);
-        }
+    <?php require_once './tpl/global-style.css' ?>
 
         body {
             background: url("images/forum_overview_page/bg-img-min.jpg") top center no-repeat;
@@ -54,6 +27,7 @@
             padding: 128px 104px 56px 104px;
             border-radius: var(--border-radius-8);
             margin-bottom: 32px;
+            box-shadow: var(--box-shadow-card-lg);
         }
         
         .left-side-article p:nth-child(1) { margin-bottom: 8px; }
@@ -215,6 +189,7 @@
             object-fit: cover;
             object-position: 50% 50%;
             border-radius: var(--border-radius-50-percent);
+            box-shadow: var(--box-shadow-avatar-sm);
         }
 
         .left-side-comment .comment .content {
@@ -314,18 +289,20 @@
 
         /* aside ads */
         .aside-ads {
-            background-color: var(--card-color);
             margin-bottom: 32px;
-            border-radius: var(--border-radius-8);
             height: 256px;
+            background-color: var(--card-color);
+            border-radius: var(--border-radius-8);
+            box-shadow: var(--box-shadow-card-lg);
         }
 
         /* aside member info */
         .aside-member-info {
-            background-color: var(--card-color);
             margin-bottom: 96px;
-            border-radius: var(--border-radius-8);
             font-size: 14px;
+            background-color: var(--card-color);
+            border-radius: var(--border-radius-8);
+            box-shadow: var(--box-shadow-card-lg);
         }
 
         .aside-member-info .img-wrap {
@@ -340,6 +317,7 @@
             object-fit: cover;
             object-position: center center;
             border-radius: var(--border-radius-50-percent);
+            box-shadow: var(--box-shadow-avatar-lg);
         }
 
         .aside-member-info .name {
@@ -671,6 +649,7 @@
             .aside-related-articles .related-articles .img-wrap {
                 height: 144px;
             }
+            
         }
 
         /* ------------------------  小於 418px  ------------------------*/
@@ -698,7 +677,9 @@
     </style>
 </head>
 <body>
-    <nav></nav>
+
+    <!-- movinon-navbar -->
+    <?php require_once './tpl/movinon-navbar.php' ?>
 
     <main>
         <div class="main-article">
@@ -1192,11 +1173,13 @@
         </div>
     </main>
     
+    <!-- movinon footer -->
+    <?php require_once './tpl/movinon-footer.php' ?>
+
     <?php require_once './tpl/foot.php' ?>
     
-    <script>
+    <script src=""></script>
 
-    </script>
-        
 </body>
+
 </html>

@@ -3,14 +3,14 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="d-flex justify-content-between align-items-center">
-                    <a class="d-none d-sm-none d-md-flex d-flex align-items-center" href="#">
+                    <a class="d-none d-sm-none d-md-flex d-flex align-items-center" href="./main-page.php">
                         <div class="movinon-logotype-wrap">
                             <img src="./images/logotype.svg" alt="">
                         </div>
                     </a>
                     
                     <!-- display 小於 768px -->
-                    <a class="d-flex d-sm-flex d-md-none align-items-center" href="#">
+                    <a class="d-flex d-sm-flex d-md-none align-items-center" href="./main-page.php">
                         <div class="movinon-logo-wrap">
                             <img src="./images/logo.svg" alt="">
                         </div>
@@ -23,15 +23,15 @@
                                 <a href="#" aria-haspopup="true">電影排行榜<i class="fas fa-chevron-down body1-r"></i></a>
 
                                 <ul class="dropdown" aria-label="submenu">
-                                    <li><a class="hover-items" href="#">現正熱映</a></li>
+                                    <li><a class="hover-items" href="./movies-overview-page.php">現正熱映</a></li>
                                     <li><a class="hover-items" href="#">即將上映</a></li>
                                     <li><a class="hover-items" href="#">本週新片</a></li>
                                 </ul>
                             </li>
 
-                            <li class="options-spacing"><a href="#">影迷討論區</a></li>
+                            <li class="options-spacing"><a href="./forum-overview-page.php">影迷討論區</a></li>
                             <li class="options-spacing"><a href="#">電影新聞</a></li>
-                            <li class="options-spacing"><a href="#">立即購票</a></li>
+                            <li class="options-spacing"><a href=./booking-movie-page.php>立即購票</a></li>
 
                             <!-- <li class="options-spacing">
                                 <div class="options-outline d-flex">

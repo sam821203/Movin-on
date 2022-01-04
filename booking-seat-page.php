@@ -1,44 +1,13 @@
+<!-- 這裡需要 require "./db.inc.php" -->
 <?php require_once './tpl/head.php' ?>
 
 <style>
 
     <?php require_once './tpl/global-style.css' ?>
 
-    :root {
-        /* ----------color---------- */
-        --brand-color: #F53D3D;
-        --bg-color: #121212;
-        --card-color: #202020;
-        --success-color: #6DF14B;
-
-        /* ----------line height---------- */
-        --line-height-140: 140%;
-        --line-height-160: 160%;
-
-        /* ----------border radius---------- */
-        --border-radius-4: .25rem;
-        --border-radius-8: .5rem;
-        --border-radius-50: 3.125rem;
-        --border-radius-50-percent: 50%;
-
-        /* ----------opacity---------- */
-        --opacity-90: .90;
-        --opacity-75: .75;
-        --opacity-50: .50;
-        --opacity-25: .25;
-        --opacity-10: .10;
-
-        /* ----------box shadow---------- */
-        --box-shadow-red: 0px 0px 16px 4px rgba(245,61,61,0.25);
-        --box-shadow-green: 0px 0px 12px 0px rgba(109,241,75,0.25);
-
-        /* ----------text shadow ---------- */
-        --text-shadow-green: 0px 0px 12px rgba(109,241,75,0.5);
-    }
-
     body {
         width: 100%;
-        background: url("images/movie_booking_page/bg_img/bg_img_gradient-min.jpg") top center no-repeat;
+        background: url("images/booking_seat_page/bg_img_gradient_1200.jpg") top center no-repeat;
         background-size: contain;
         background-color: var(--bg-color);
     }
@@ -60,14 +29,16 @@
     }
 
     .movie-info-section .movie-info .img-wrap {
-        object-fit: cover;
-        object-position: 50% 50%;
-        box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.25);
+        display: flex;
+        border-radius: var(--border-radius-4);
+        box-shadow: var(--box-shadow-black);
     }
 
     .movie-info-section .movie-info .img-wrap img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
         border-radius: var(--border-radius-4);
     }
     
@@ -298,22 +269,22 @@
         justify-content: space-between;
     }
 
-    .seats-area .btn-area button {
+    .seats-area .btn-area a {
         border-radius: var(--border-radius-50);
-        padding: 8px 40px;
+        padding: 8px 36px;
         color: white;
     }
 
-    .seats-area .btn-area button:nth-child(2) {
+    .seats-area .btn-area a:nth-child(2) {
         background-color: var(--brand-color);
         box-shadow: var(--box-shadow-red);
     }
 </style>
 
 <body>
-    <section>
 
-    </section>
+    <!-- movinon-navbar -->
+    <?php require_once './tpl/movinon-navbar.php' ?>
 
     <main>
         <div class="movie-info-section">
@@ -361,7 +332,7 @@
             </div>
         </div>
 
-        <div class="booking-seat-section">
+        <div class="booking-seat-section g-section-mb">
             <div class="container">
                 <div class="row seat-dataviz">
                     <div class="col-9 d-flex justify-content-between">
@@ -971,12 +942,13 @@
                         </div>
 
                         <div class="btn-area">
-                            <button type="button" class="btn btn-outline-light">
+                            <a class="btn btn-outline-light" href="#">
                                 <span>重新選擇</span>
-                            </button>
-                            <button type="button" class="btn">
+                            </a>
+                            
+                            <a class="btn" href="./payment-page.php">
                                 <span>前往結帳</span>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -985,10 +957,11 @@
         
     </main>
 
+    <?php require_once './tpl/movinon-footer.php' ?>
+
     <?php require_once './tpl/foot.php' ?>
 
-    <script>
+    <script></script>
 
-    </script>
 </body>
 </html>

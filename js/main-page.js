@@ -124,20 +124,6 @@
         const nowX = nowIndex * -312 + 'px';
         $('.carousel-wrap').css('transform', `translateX(${nowX})`).css('transition', '.5s');
     });
-
-    // menu bar
-    const menuBar = document.querySelector('.menu-bar');
-    let menuBarOpen = false;
-    
-    menuBar.addEventListener("click", function() {
-        if (!menuBarOpen) {
-            menuBar.classList.add('open');
-            menuBarOpen = true;
-        } else {
-            menuBar.classList.remove('open');
-            menuBarOpen = false;
-        }
-    });
     
     
     // const dropDown = document.querySelector('.dropdown-menu');

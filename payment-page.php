@@ -1,40 +1,9 @@
+<!-- 這裡需要 require "./db.inc.php" -->
 <?php require_once './tpl/head.php' ?>
 
 <style>
 
     <?php require_once './tpl/global-style.css' ?>
-
-    :root {
-        /* ----------color---------- */
-        --brand-color: #F53D3D;
-        --bg-color: #121212;
-        --card-color: #202020;
-        --success-color: #6DF14B;
-
-        /* ----------line height---------- */
-        --line-height-140: 140%;
-        --line-height-160: 160%;
-
-        /* ----------border radius---------- */
-        --border-radius-4: .25rem;
-        --border-radius-8: .5rem;
-        --border-radius-50: 3.125rem;
-        --border-radius-50-percent: 50%;
-
-        /* ----------opacity---------- */
-        --opacity-90: .90;
-        --opacity-75: .75;
-        --opacity-50: .50;
-        --opacity-25: .25;
-        --opacity-10: .10;
-
-        /* ----------box shadow---------- */
-        --box-shadow-red: 0px 0px 16px 4px rgba(245,61,61,0.25);
-        --box-shadow-green: 0px 0px 12px 0px rgba(109,241,75,0.25);
-
-        /* ----------text shadow ---------- */
-        --text-shadow-green: 0px 0px 12px rgba(109,241,75,0.5);
-    }
 
     /* -----------------payment section----------------- */
     .payment-section {
@@ -63,6 +32,8 @@
     .payment-section-l .ticket-img-wrap {
         position: absolute;
         max-width: 322px;
+        border-radius: 50px;
+        box-shadow: var(--box-shadow-black);
     }
 
     .payment-section-l .ticket-img-wrap img {
@@ -193,6 +164,7 @@
     .payment-section-r-bottom {
         background-color: rgba(32,32,32,0.75);
         border-radius: var(--border-radius-8);
+        box-shadow: var(--box-shadow-card-lg);
     }
 
     .payment-section-r-top {
@@ -271,7 +243,9 @@
 </style>
 
 <body>
-    <section></section>
+
+    <!-- movinon-navbar -->
+    <?php require_once './tpl/movinon-navbar.php' ?>
 
     <main>
         <section class="payment-section">
@@ -381,7 +355,7 @@
                             </div>
                         </div>
                         
-                        <div class="payment-section-r-bottom">
+                        <div class="payment-section-r-bottom g-section-mb">
 
                             <!-- 信用卡付款 -->
                             <div>
@@ -476,10 +450,11 @@
         </section>
     </main>
 
+    <?php require_once './tpl/movinon-footer.php' ?>
+
     <?php require_once './tpl/foot.php' ?>
 
-    <script>
+    <script></script>
 
-    </script>
 </body>
 </html>

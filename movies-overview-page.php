@@ -7,9 +7,12 @@
         <?php require_once './tpl/global-style.css' ?>
 
         .content-section .mycard .img-wrap {
-            max-width: 198px;
+            max-width: 280px;
             margin-bottom: 12px;
             box-shadow: var(--box-shadow-black);
+            border-radius: var(--border-radius-4);
+            display: flex;
+            transition: .4s;
         }
 
         .content-section .mycard .img-wrap img{
@@ -17,6 +20,10 @@
             object-fit: cover;
             object-position: 50% 50%;
             border-radius: var(--border-radius-4);
+        }
+
+        .content-section .mycard .img-wrap:hover {
+            box-shadow: var(--box-shadow-white);
         }
 
         .content-section .mycard-info .rating .fa-star {
@@ -186,6 +193,7 @@
                         </li>
                     </ul>
 
+                    <!-- 修改這裡的 bug -->
                     <div class="tab-content" id="myTabContent">
 
                         <!-- 現正熱映 -->
@@ -193,11 +201,35 @@
                             <div class="content-section g-section-mb">
                                 <div class="container justify-content-between position-relative px-0">
                                     <div class="row mb-3">
+                                        <!-- 第一部電影 -->
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="./detail-page.php">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank1.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">永恆族</span></p>
+                                                            <p class="italic-16">Eternals</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>4.0</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
                                             <div class="mycard">
                                                 <a href="#">
                                                     <div class="img-wrap">
-                                                        <img src="images/movies_overview_page/8yokt1b1YUePcbyPmSeC-280 x 400.jpg" alt="" >
+                                                        <img src="images/movies_overview_page/rank2.jpg" alt="" >
                                                     </div>
                                                 </a>
                                                 
@@ -209,7 +241,191 @@
                                                         </div>
                                                         <div class="rating d-flex">
                                                             <i class="fas fa-star"></i>
-                                                            <span>4.5</span>
+                                                            <span>4.2</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank3.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">詭扯</span></p>
+                                                            <p class="italic-16">Treat or trick</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>4.1</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank4.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">我的英雄學院劇場版：世界英雄任務</span></p>
+                                                            <p class="italic-16">My Hero Academia The Movie : World Heores Mission</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>4.4</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank5.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">迷離夜蘇活</span></p>
+                                                            <p class="italic-16">Last Night in Soho</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>4.8</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank6.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">梅艷芳</span></p>
+                                                            <p class="italic-16">Anita Mui Yim Fong</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>5.0</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank7.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">瀑布</span></p>
+                                                            <p class="italic-16">The Falls</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>4.9</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank8.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">粉紅雲</span></p>
+                                                            <p class="italic-16">The Pink Cloud</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>4.9</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank9.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">脫稿玩家</span></p>
+                                                            <p class="italic-16">Free Guy</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>4.2</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank10.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">心靈遊戲</span></p>
+                                                            <p class="italic-16">Mind Game</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>3.5</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -227,12 +443,12 @@
                                                 <div class="mycard-info">
                                                     <div class="d-flex justify-content-between">
                                                         <div class="movie-title">
-                                                            <p><span class="sub-title-r">刀劍神域: Progressive</span></p>
-                                                            <p class="italic-16">Sword Art Online: Progressive</p>
+                                                            <p><span class="sub-title-r">是誰得手林布蘭？</span></p>
+                                                            <p class="italic-16">My Rembrandt</p>
                                                         </div>
                                                         <div class="rating d-flex">
                                                             <i class="fas fa-star"></i>
-                                                            <span>4.5</span>
+                                                            <span>3.9</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -243,222 +459,15 @@
                                             <div class="mycard">
                                                 <a href="#">
                                                     <div class="img-wrap">
-                                                        <img src="images/movies_overview_page/8yokt1b1YUePcbyPmSeC-280 x 400.jpg" alt="" >
+                                                        <img src="images/movies_overview_page/7dbaQctoROYyqluIZbgB-280 x 400.jpg" alt="" >
                                                     </div>
                                                 </a>
                                                 
                                                 <div class="mycard-info">
                                                     <div class="d-flex justify-content-between">
                                                         <div class="movie-title">
-                                                            <p><span class="sub-title-r">刀劍神域: Progressive</span></p>
-                                                            <p class="italic-16">Sword Art Online: Progressive</p>
-                                                        </div>
-                                                        <div class="rating d-flex">
-                                                            <i class="fas fa-star"></i>
-                                                            <span>4.5</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
-                                            <div class="mycard">
-                                                <a href="#">
-                                                    <div class="img-wrap">
-                                                        <img src="images/movies_overview_page/8yokt1b1YUePcbyPmSeC-280 x 400.jpg" alt="" >
-                                                    </div>
-                                                </a>
-                                                
-                                                <div class="mycard-info">
-                                                    <div class="d-flex justify-content-between">
-                                                        <div class="movie-title">
-                                                            <p><span class="sub-title-r">刀劍神域: Progressive</span></p>
-                                                            <p class="italic-16">Sword Art Online: Progressive</p>
-                                                        </div>
-                                                        <div class="rating d-flex">
-                                                            <i class="fas fa-star"></i>
-                                                            <span>4.5</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
-                                            <div class="mycard">
-                                                <a href="#">
-                                                    <div class="img-wrap">
-                                                        <img src="images/movies_overview_page/8yokt1b1YUePcbyPmSeC-280 x 400.jpg" alt="" >
-                                                    </div>
-                                                </a>
-                                                
-                                                <div class="mycard-info">
-                                                    <div class="d-flex justify-content-between">
-                                                        <div class="movie-title">
-                                                            <p><span class="sub-title-r">刀劍神域: Progressive</span></p>
-                                                            <p class="italic-16">Sword Art Online: Progressive</p>
-                                                        </div>
-                                                        <div class="rating d-flex">
-                                                            <i class="fas fa-star"></i>
-                                                            <span>4.5</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
-                                            <div class="mycard">
-                                                <a href="#">
-                                                    <div class="img-wrap">
-                                                        <img src="images/movies_overview_page/8yokt1b1YUePcbyPmSeC-280 x 400.jpg" alt="" >
-                                                    </div>
-                                                </a>
-                                                
-                                                <div class="mycard-info">
-                                                    <div class="d-flex justify-content-between">
-                                                        <div class="movie-title">
-                                                            <p><span class="sub-title-r">刀劍神域: Progressive</span></p>
-                                                            <p class="italic-16">Sword Art Online: Progressive</p>
-                                                        </div>
-                                                        <div class="rating d-flex">
-                                                            <i class="fas fa-star"></i>
-                                                            <span>4.5</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
-                                            <div class="mycard">
-                                                <a href="#">
-                                                    <div class="img-wrap">
-                                                        <img src="images/movies_overview_page/8yokt1b1YUePcbyPmSeC-280 x 400.jpg" alt="" >
-                                                    </div>
-                                                </a>
-                                                
-                                                <div class="mycard-info">
-                                                    <div class="d-flex justify-content-between">
-                                                        <div class="movie-title">
-                                                            <p><span class="sub-title-r">刀劍神域: Progressive</span></p>
-                                                            <p class="italic-16">Sword Art Online: Progressive</p>
-                                                        </div>
-                                                        <div class="rating d-flex">
-                                                            <i class="fas fa-star"></i>
-                                                            <span>4.5</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
-                                            <div class="mycard">
-                                                <a href="#">
-                                                    <div class="img-wrap">
-                                                        <img src="images/movies_overview_page/8yokt1b1YUePcbyPmSeC-280 x 400.jpg" alt="" >
-                                                    </div>
-                                                </a>
-                                                
-                                                <div class="mycard-info">
-                                                    <div class="d-flex justify-content-between">
-                                                        <div class="movie-title">
-                                                            <p><span class="sub-title-r">刀劍神域: Progressive</span></p>
-                                                            <p class="italic-16">Sword Art Online: Progressive</p>
-                                                        </div>
-                                                        <div class="rating d-flex">
-                                                            <i class="fas fa-star"></i>
-                                                            <span>4.5</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
-                                            <div class="mycard">
-                                                <a href="#">
-                                                    <div class="img-wrap">
-                                                        <img src="images/movies_overview_page/8yokt1b1YUePcbyPmSeC-280 x 400.jpg" alt="" >
-                                                    </div>
-                                                </a>
-                                                
-                                                <div class="mycard-info">
-                                                    <div class="d-flex justify-content-between">
-                                                        <div class="movie-title">
-                                                            <p><span class="sub-title-r">刀劍神域: Progressive</span></p>
-                                                            <p class="italic-16">Sword Art Online: Progressive</p>
-                                                        </div>
-                                                        <div class="rating d-flex">
-                                                            <i class="fas fa-star"></i>
-                                                            <span>4.5</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
-                                            <div class="mycard">
-                                                <a href="#">
-                                                    <div class="img-wrap">
-                                                        <img src="images/movies_overview_page/8yokt1b1YUePcbyPmSeC-280 x 400.jpg" alt="" >
-                                                    </div>
-                                                </a>
-                                                
-                                                <div class="mycard-info">
-                                                    <div class="d-flex justify-content-between">
-                                                        <div class="movie-title">
-                                                            <p><span class="sub-title-r">刀劍神域: Progressive</span></p>
-                                                            <p class="italic-16">Sword Art Online: Progressive</p>
-                                                        </div>
-                                                        <div class="rating d-flex">
-                                                            <i class="fas fa-star"></i>
-                                                            <span>4.5</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
-                                            <div class="mycard">
-                                                <a href="#">
-                                                    <div class="img-wrap">
-                                                        <img src="images/movies_overview_page/8yokt1b1YUePcbyPmSeC-280 x 400.jpg" alt="" >
-                                                    </div>
-                                                </a>
-                                                
-                                                <div class="mycard-info">
-                                                    <div class="d-flex justify-content-between">
-                                                        <div class="movie-title">
-                                                            <p><span class="sub-title-r">刀劍神域: Progressive</span></p>
-                                                            <p class="italic-16">Sword Art Online: Progressive</p>
-                                                        </div>
-                                                        <div class="rating d-flex">
-                                                            <i class="fas fa-star"></i>
-                                                            <span>4.5</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
-                                            <div class="mycard">
-                                                <a href="#">
-                                                    <div class="img-wrap">
-                                                        <img src="images/movies_overview_page/8yokt1b1YUePcbyPmSeC-280 x 400.jpg" alt="" >
-                                                    </div>
-                                                </a>
-                                                
-                                                <div class="mycard-info">
-                                                    <div class="d-flex justify-content-between">
-                                                        <div class="movie-title">
-                                                            <p><span class="sub-title-r">刀劍神域: Progressive</span></p>
-                                                            <p class="italic-16">Sword Art Online: Progressive</p>
+                                                            <p><span class="sub-title-r">老鷹之手</span></p>
+                                                            <p class="italic-16">Eagle Hand</p>
                                                         </div>
                                                         <div class="rating d-flex">
                                                             <i class="fas fa-star"></i>
@@ -471,6 +480,585 @@
 
                                        
                                         
+                                        <!-- ---------------------------End--------------------------- -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 本週上映 -->
+                        <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="home-tab">
+                            本週上映
+                            <div class="content-section g-section-mb">
+                                <div class="container justify-content-between position-relative px-0">
+                                    <div class="row mb-3">
+                                        <!-- 第一部電影 -->
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="./detail-page.php">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank1.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">永恆族</span></p>
+                                                            <p class="italic-16">Eternals</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>4.0</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank2.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">刀劍神域: Progressive</span></p>
+                                                            <p class="italic-16">Sword Art Online: Progressive</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>4.2</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank3.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">詭扯</span></p>
+                                                            <p class="italic-16">Treat or trick</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>4.1</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank4.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">我的英雄學院劇場版：世界英雄任務</span></p>
+                                                            <p class="italic-16">My Hero Academia The Movie : World Heores Mission</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>4.4</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank5.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">迷離夜蘇活</span></p>
+                                                            <p class="italic-16">Last Night in Soho</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>43.8</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank6.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">梅艷芳</span></p>
+                                                            <p class="italic-16">Anita Mui Yim Fong</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>5.0</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank7.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">瀑布</span></p>
+                                                            <p class="italic-16">The Falls</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>4.9</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank8.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">粉紅雲</span></p>
+                                                            <p class="italic-16">The Pink Cloud</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>4.9</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank9.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">脫稿玩家</span></p>
+                                                            <p class="italic-16">Free Guy</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>4.2</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank10.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">心靈遊戲</span></p>
+                                                            <p class="italic-16">Mind Game</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>3.5</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/8yokt1b1YUePcbyPmSeC-280 x 400.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">是誰得手林布蘭？</span></p>
+                                                            <p class="italic-16">My Rembrandt</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>3.9</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/7dbaQctoROYyqluIZbgB-280 x 400.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">老鷹之手</span></p>
+                                                            <p class="italic-16">Eagle Hand</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>4.5</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                       
+                                        
+                                        <!-- ---------------------------End--------------------------- -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 即將上映 -->
+                        <div class="tab-pane fade show active" id="contact" role="tabpanel" aria-labelledby="home-tab">
+                            即將上映
+                            <div class="content-section g-section-mb">
+                                <div class="container justify-content-between position-relative px-0">
+                                    <div class="row mb-3">
+                                        <!-- 第一部電影 -->
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank1.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">永恆族</span></p>
+                                                            <p class="italic-16">Eternals</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>4.0</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank2.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">刀劍神域: Progressive</span></p>
+                                                            <p class="italic-16">Sword Art Online: Progressive</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>4.2</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank3.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">詭扯</span></p>
+                                                            <p class="italic-16">Treat or trick</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>4.1</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank4.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">我的英雄學院劇場版：世界英雄任務</span></p>
+                                                            <p class="italic-16">My Hero Academia The Movie : World Heores Mission</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>4.4</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank5.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">迷離夜蘇活</span></p>
+                                                            <p class="italic-16">Last Night in Soho</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>43.8</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank6.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">梅艷芳</span></p>
+                                                            <p class="italic-16">Anita Mui Yim Fong</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>5.0</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank7.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">瀑布</span></p>
+                                                            <p class="italic-16">The Falls</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>4.9</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank8.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">粉紅雲</span></p>
+                                                            <p class="italic-16">The Pink Cloud</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>4.9</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank9.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">脫稿玩家</span></p>
+                                                            <p class="italic-16">Free Guy</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>4.2</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/rank10.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">心靈遊戲</span></p>
+                                                            <p class="italic-16">Mind Game</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>3.5</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/8yokt1b1YUePcbyPmSeC-280 x 400.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">是誰得手林布蘭？</span></p>
+                                                            <p class="italic-16">My Rembrandt</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>3.9</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard">
+                                                <a href="#">
+                                                    <div class="img-wrap">
+                                                        <img src="images/movies_overview_page/7dbaQctoROYyqluIZbgB-280 x 400.jpg" alt="" >
+                                                    </div>
+                                                </a>
+                                                
+                                                <div class="mycard-info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <div class="movie-title">
+                                                            <p><span class="sub-title-r">老鷹之手</span></p>
+                                                            <p class="italic-16">Eagle Hand</p>
+                                                        </div>
+                                                        <div class="rating d-flex">
+                                                            <i class="fas fa-star"></i>
+                                                            <span>4.5</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <!-- ---------------------------End--------------------------- -->
                                     </div>
                                 </div>

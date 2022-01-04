@@ -197,13 +197,13 @@
 
     /* 問題：如何不讓 .arrow-wrap 被擠壓到？ */
     .ranking-section .arrow-wrap {
-        height: 10%
+        height: 16%;
     }
 
     .ranking-section .arrow-wrap img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         object-position: center center;
     }
 
@@ -326,10 +326,6 @@
         border-radius: var(--border-radius-8);
         transition: .4s;
     }
-
-    /* .forum-cards-section .img-wrap:hover {
-        box-shadow: var(--box-shadow-black2);
-    } */
 
     .forum-cards-section .img-wrap img {
         width: 100%;
@@ -499,7 +495,7 @@
                         </div>
                     </div>
                     <div class="col-6 d-flex justify-content-end align-items-end">
-                        <a href="#">
+                        <a href="./movies-overview-page.php">
                             <div class="d-flex justify-content-end align-items-end">
                                 <div class="sub-title-r mt-2">電影總覽頁</div>
                                 <div class="ml-2"><i class="fas fa-chevron-right"></i></div>
@@ -520,7 +516,7 @@
                         <div class="carousel-wrap">
                             <!-- --------------------rank1 hover-------------------- -->
                             <div class="img-wrap rank1">
-                                <img src="images/main_page/rank1.jpeg" alt="">
+                                <img src="images/main_page/rank1.jpg" alt="">
                                 <div class="rank-hover-content1">
                                     <div class="d-flex">
                                         <div class="arrow-wrap">
@@ -563,7 +559,7 @@
                             </div>
 
                             <div class="img-wrap rank2">
-                                <img src="images/main_page/rank2.jpeg" alt="">
+                                <img src="images/main_page/rank2.jpg" alt="">
                                 <div class="rank-hover-content2">
                                     <div class="d-flex">
                                         <div class="arrow-wrap">
@@ -606,7 +602,7 @@
                             </div>
 
                             <div class="img-wrap rank3">
-                                <img src="images/main_page/rank3.jpeg" alt="">
+                                <img src="images/main_page/rank3.jpg" alt="">
                                 <div class="rank-hover-content3">
                                     <div class="d-flex">
                                         <div class="arrow-wrap">
@@ -649,7 +645,7 @@
                             </div>
 
                             <div class="img-wrap rank4">
-                                <img src="images/main_page/rank4.jpeg" alt="">
+                                <img src="images/main_page/rank4.jpg" alt="">
                                 <div class="rank-hover-content4">
                                     <div class="d-flex">
                                         <div class="arrow-wrap">
@@ -735,7 +731,7 @@
                             </div>
 
                             <div class="img-wrap rank6">
-                                <img src="images/main_page/rank6.jpeg" alt="">
+                                <img src="images/main_page/rank6.jpg" alt="">
                                 <div class="rank-hover-content6">
                                     <div class="d-flex">
                                         <div class="arrow-wrap">
@@ -778,16 +774,16 @@
                             </div>
 
                             <div class="img-wrap rank7">
-                                <img src="images/main_page/rank6.jpeg" alt="">
+                                <img src="images/main_page/rank7.jpg" alt="">
                                 <div class="rank-hover-content7">
                                     <div class="d-flex">
                                         <div class="arrow-wrap">
                                             <img src="images/rise_green.svg" alt="">
                                         </div>
-                                        <div class="rank-num">01</div>
+                                        <div class="rank-num">07</div>
                                         <div class="content-r">
-                                            <p class="section-header-b">永恆族</p>
-                                            <p class="en-title">Treat or trick</p>
+                                            <p class="section-header-b">瀑布</p>
+                                            <p class="en-title">The Falls</p>
                                             <div class="rating">
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
@@ -802,11 +798,11 @@
                                         <div class="img-wrap1">
                                             <img src="./images/Rotten_Tomatoes.svg" alt="">
                                         </div>
-                                        <span class="rate">53%</span>
+                                        <span class="rate">78%</span>
                                         <div class="img-wrap2">
                                             <img src="./images/IMDB_Logo.svg" alt="">
                                         </div>
-                                        <span class="rate">79%</span>
+                                        <span class="rate">90%</span>
                                     </div>
 
                                     <div class="d-flex">
@@ -821,16 +817,16 @@
                             </div>
 
                             <div class="img-wrap rank8">
-                                <img src="images/main_page/rank6.jpeg" alt="">
+                                <img src="images/main_page/rank8.jpg" alt="">
                                 <div class="rank-hover-content8">
                                     <div class="d-flex">
                                         <div class="arrow-wrap">
                                             <img src="images/rise_green.svg" alt="">
                                         </div>
-                                        <div class="rank-num">01</div>
+                                        <div class="rank-num">08</div>
                                         <div class="content-r">
-                                            <p class="section-header-b">永恆族</p>
-                                            <p class="en-title">Treat or trick</p>
+                                            <p class="section-header-b">粉紅雲</p>
+                                            <p class="en-title">The Pink Cloud</p>
                                             <div class="rating">
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
@@ -845,11 +841,11 @@
                                         <div class="img-wrap1">
                                             <img src="./images/Rotten_Tomatoes.svg" alt="">
                                         </div>
-                                        <span class="rate">53%</span>
+                                        <span class="rate">82%</span>
                                         <div class="img-wrap2">
                                             <img src="./images/IMDB_Logo.svg" alt="">
                                         </div>
-                                        <span class="rate">79%</span>
+                                        <span class="rate">85%</span>
                                     </div>
 
                                     <div class="d-flex">
@@ -864,16 +860,16 @@
                             </div>
 
                             <div class="img-wrap rank9">
-                                <img src="images/main_page/rank6.jpeg" alt="">
+                                <img src="images/main_page/rank9.jpg" alt="">
                                 <div class="rank-hover-content9">
                                     <div class="d-flex">
                                         <div class="arrow-wrap">
                                             <img src="images/rise_green.svg" alt="">
                                         </div>
-                                        <div class="rank-num">01</div>
+                                        <div class="rank-num">09</div>
                                         <div class="content-r">
-                                            <p class="section-header-b">永恆族</p>
-                                            <p class="en-title">Treat or trick</p>
+                                            <p class="section-header-b">脫稿玩家</p>
+                                            <p class="en-title">Free Guy</p>
                                             <div class="rating">
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
@@ -906,17 +902,18 @@
                                 </div>
                             </div>
 
+                            <!-- rank10  -->
                             <div class="img-wrap rank10">
-                                <img src="images/main_page/rank6.jpeg" alt="">
+                                <img src="images/main_page/rank10.jpg" alt="">
                                 <div class="rank-hover-content10">
                                     <div class="d-flex">
                                         <div class="arrow-wrap">
                                             <img src="images/rise_green.svg" alt="">
                                         </div>
-                                        <div class="rank-num">01</div>
+                                        <div class="rank-num">10</div>
                                         <div class="content-r">
-                                            <p class="section-header-b">永恆族</p>
-                                            <p class="en-title">Treat or trick</p>
+                                            <p class="section-header-b">心靈遊戲</p>
+                                            <p class="en-title">Mind Game</p>
                                             <div class="rating">
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
@@ -1052,7 +1049,7 @@
                         </div>
                     </div>
                     <div class="col-6 d-flex justify-content-end align-items-end">
-                        <a href="#">
+                        <a href="./forum-overview-page.php">
                             <div class="d-flex justify-content-end align-items-end">
                                 <div class="sub-title-r mt-2">前往討論區</div>
                                 <div class="ml-2"><i class="fas fa-chevron-right"></i></div>

@@ -1,34 +1,9 @@
+<!-- 這裡需要 require "./db.inc.php" -->
 <?php require_once './tpl/head.php' ?>
 
 <style>
+
     <?php require_once './tpl/global-style.css' ?>
-
-    :root{
-        /* ----------color---------- */
-        --brand-color: #F53D3D;
-        --bg-color: #121212;
-        --card-color: #202020;
-
-        /* ----------line height---------- */
-        --line-height-140: 140%;
-        --line-height-160: 160%;
-
-        /* ----------border radius---------- */
-        --border-radius-4: .25rem;
-        --border-radius-8: .5rem;
-        --border-radius-50: 3.125rem;
-        --border-radius-50-percent: 50%;
-
-        /* ----------opacity---------- */
-        --opacity-90: .90;
-        --opacity-75: .75;
-        --opacity-50: .50;
-        --opacity-25: .25;
-        --opacity-10: .10;
-
-        /* ----------box shadow red---------- */
-        --box-shadow-red: 0px 0px 16px 4px rgba(245,61,61,0.25);
-    }
     
     body {
         width: 100%;
@@ -38,35 +13,7 @@
     }
 
     /* -------section margin bottom------- */
-    .movie-selecting-section { margin-top: 96px; }
-
-    /* -----------------movinon navbar----------------- */
-    .movinon-navbar {
-        background-color: rgba(18, 18, 18, 0.5);
-        /* position: fixed; */
-        width: 100%;
-        z-index: 999;
-        height: 100px;
-    }
-
-    .movinon-navbar .movinon-logo {
-        max-width: 226px;
-    }
-
-    .movinon-logo img {
-        width: 100%;
-    }   
-
-    .movinon-navbar .container {
-        position: relative;
-    }
-
-    .movinon-navbar .row {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+    .movie-selecting-section { margin-top: 240px; }
 
     /* -----------------movie selecting section----------------- */
     .movie-selecting-section .movie-info,
@@ -88,9 +35,9 @@
     .movie-selecting-section
     .movie-info
     .img-wrap {
-        object-fit: cover;
-        object-position: 50% 50%;
-        box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.25);
+        display: flex;
+        box-shadow: var(--box-shadow-black);
+        border-radius: var(--border-radius-4);
     }
 
     .movie-selecting-section
@@ -100,6 +47,8 @@
         width: 100%;
         height: 100%;
         border-radius: var(--border-radius-4);
+        object-fit: cover;
+        object-position: 50% 50%;
     }
 
     .movie-selecting-section .rating {
@@ -532,54 +481,9 @@
 </style>
 
 <body>
-    <nav>
-        <div class="movinon-navbar">
-            <div class="container">
-                <div class="row">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="col-4">
-                            <div class="movinon-logo">
-                                <a class="d-flex align-items-center" href="#">
-                                    <img src="./images/LOGO.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-    
-                        <div class="col-4">
-                            <div class="d-flex justify-content-between">
-                                <a href="#">
-                                    <div class="pl-0">
-                                        <span>影迷討論區</span>
-                                        <i class="fas fa-chevron-down text-light body1-r"></i>
-                                    </div>
-                                </a>
-                                <a class="pr-3" href="#">
-                                    <div>電影排行榜</div>
-                                </a>
-                                <a class="pr-3" href="#">
-                                    <div>電影新聞</div>
-                                </a>
-                                <a href="#">
-                                    <div>快速購票</div>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="col-4 px-0">
-                            <div class="d-flex justify-content-end align-items-center">
-                                <a class="pr-4" href="#">
-                                    <div>客服 icon</div>
-                                </a>
-                                <a class="d-flex justify-content-center align-items-center" href="#">
-                                    <div>會員 icon</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+
+    <!-- movinon-navbar -->
+    <?php require_once './tpl/movinon-navbar.php' ?>
 
     <main>
         <!-- -----------movie selecting section----------- -->
@@ -737,7 +641,7 @@
                                     </div>
                                     <div class="options d-flex flex-wrap">
                                         <!-- 第一個場次 -->
-                                        <a href="#">
+                                        <a href="./booking-seat-page.php">
                                             <div class="showtime d-flex">
                                                 <div class="dot green-dot my-auto mr-2"></div>
                                                 <span class="body1-r">09:45</span>
@@ -1184,10 +1088,10 @@
         </section>
     </main>
 
+    <?php require_once './tpl/movinon-footer.php' ?>
+
     <?php require_once './tpl/foot.php' ?>
 
-    <script>
-        
-    </script>
+    <script></script>
 </body>
 </html>

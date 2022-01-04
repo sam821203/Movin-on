@@ -1,35 +1,8 @@
 <?php require_once './tpl/head.php' ?>
+
 <style>
-    <?php require_once './tpl/global-style.css' ?> 
 
-    :root {
-        /* ----------color---------- */
-        --brand-color: #F53D3D;
-        --bg-color: #121212;
-        --card-color: #202020;
-
-        /* ----------line height---------- */
-        --line-height-140: 140%;
-        --line-height-160: 160%;
-
-        /* ----------border radius---------- */
-        --border-radius-4: .25rem;
-        --border-radius-8: .5rem;
-        --border-radius-50: 3.125rem;
-        --border-radius-50-percent: 50%;
-
-        /* ----------opacity---------- */
-        --opacity-90: .90;
-        --opacity-75: .75;
-        --opacity-50: .50;
-        --opacity-25: .25;
-        --opacity-10: .10;
-
-        /* ----------box shadow red---------- */
-        --box-shadow-red: 0px 0px 16px 4px rgba(245, 61, 61, 0.25);
-        --box-shadow-black: 0px 0px 24px 0px rgba(0, 0, 0, 0.75);
-        --box-shadow-black2: 0px 0px 32px 0px rgba(0, 0, 0, 0.75);
-    }
+    <?php require_once './tpl/global-style.css' ?>
 
     body {
         background: url("images/member_center_page/bg_img.jpg") top center no-repeat;
@@ -43,15 +16,18 @@
     }
 
     /* -------------------------member l info------------------------- */
-    .member-l-info, .member-l-setting, .member-r {
-        background-color: rgba(18,18,18,0.9);
-        border-radius: var(--border-radius-8);
-    }
-    
     .member-l-info {
         padding: 16px 0 32px 0;
         margin-bottom: 32px;
         font-size: 14px;
+    }
+
+    .member-l-info, 
+    .member-l-setting, 
+    .member-r {
+        background-color: rgba(18,18,18,0.9);
+        border-radius: var(--border-radius-8);
+        box-shadow: var(--box-shadow-card-lg);
     }
 
     .member-l-info .img-wrap {
@@ -140,7 +116,8 @@
 </style>
 
 <body>
-    <!-- navbar -->
+    <!-- movinon-navbar -->
+    <?php require_once './tpl/movinon-navbar.php' ?>
     
     <main>
         <section>
@@ -264,12 +241,12 @@
                 </div>
             </div>
         </section>
-    </main>  
+    </main> 
 
-    <!-- -----------footer Start----------- -->
     <?php require_once './tpl/foot.php' ?>
+    
+    <script src=""></script>
 
-    <script>
-
-    </script>
 </body>
+
+</html>
