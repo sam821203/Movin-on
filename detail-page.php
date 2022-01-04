@@ -190,31 +190,6 @@
         margin-right: 12px;
     }
 
-    .related-articles-section .spoiler {
-        background-color: var(--brand-color);
-        box-shadow: var(--box-shadow-red);
-        color: var(--bg-color);
-        animation: .8s infinite beatHeart;
-    }
-
-    @keyframes beatHeart {
-        0% {
-            transform: scale(1);
-        }
-        25% {
-            transform: scale(1.1);
-        }
-        40% {
-            transform: scale(1);
-        }
-        60% {
-            transform: scale(1.1);
-        }
-        100% {
-            transform: scale(1);
-        }
-    }
-
     .related-articles-section .spoiler-free {
         background-color: rgba(255,255,255,0.1);
         color: rgba(255,255,255,0.1);
@@ -246,6 +221,32 @@
         background-color: rgba(255,255,255,0.02);
         border-radius: var(--border-radius-8);
         box-shadow: var(--box-shadow-card-sm);
+        animation: .8s infinite beatHeart;
+    }
+
+    .related-articles-section .spoiler {
+        background-color: var(--brand-color);
+        box-shadow: var(--box-shadow-red);
+        color: var(--bg-color);
+        animation: .8s infinite beatHeart;
+    }
+
+    @keyframes beatHeart {
+        0% {
+            transform: scale(1);
+        }
+        25% {
+            transform: scale(1.03);
+        }
+        40% {
+            transform: scale(1);
+        }
+        60% {
+            transform: scale(1.03);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
 
     .related-articles-section .time-stamp {
