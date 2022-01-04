@@ -28,9 +28,11 @@
         margin-bottom: 48px;
     }
 
-    .movie-selecting-section
+    /* 2021/1/4 修改： */
+    
+    /* .movie-selecting-section
     .movie-info
-    .movie-poster { width: 25%; }
+    .booking-time-poster { width: 25%; } */
 
     .movie-selecting-section
     .movie-info
@@ -306,7 +308,7 @@
 
         .movie-selecting-section
         .movie-info
-        .movie-poster { width: 33.33%; }
+        .booking-time-poster { width: 33.33%; }
         
         .movie-selecting-section .content {
             width: 66.66%;
@@ -351,7 +353,7 @@
     @media screen and (max-width: 768px) {
 
         /* movie selecting section */
-        .movie-selecting-section .movie-poster {
+        .movie-selecting-section .booking-time-poster {
             padding: 0;
         }
 
@@ -491,7 +493,7 @@
             <div class="container">
                 <div class="row movie-info">
                     <div class="d-flex">
-                        <div class="movie-poster">
+                        <div class="booking-time-poster">
                             <div class="img-wrap">
                                 <img src="images/poster_images/MSRbo2ocgQ6N9DdzBUk0-280 x 400.jpg" alt="">
                             </div>

@@ -150,6 +150,11 @@
         opacity: var(--opacity-90);
     }
 
+    .movie-detail-section .description p {
+        overflow: auto;
+        height: 152px;
+    }
+
     .movie-detail-section .booking-trailer button {
         border-radius: var(--border-radius-50);
         padding-left: 32px;
@@ -189,6 +194,25 @@
         background-color: var(--brand-color);
         box-shadow: var(--box-shadow-red);
         color: var(--bg-color);
+        animation: .8s infinite beatHeart;
+    }
+
+    @keyframes beatHeart {
+        0% {
+            transform: scale(1);
+        }
+        25% {
+            transform: scale(1.1);
+        }
+        40% {
+            transform: scale(1);
+        }
+        60% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
 
     .related-articles-section .spoiler-free {
@@ -678,7 +702,7 @@
                             <span class="section-header-b">劇情大綱</span>
                         </div>
                         <div class="description">
-                            <p>永恆族是超越繁星的神族，七千年前來到地球，誓言保護人類，各色各異的他們，擁有超凡智慧與能力，長生不老，每人具備迥然不同的絕頂神力。然而守護地球期間，各自強大的永恆族人並非和樂融融，內部紛爭不斷，最終整個族群分崩離析，直到一群古老的宿敵現身…</p>
+                            <p>永恆族是超越繁星的神族，七千年前來到地球，誓言保護人類，各色各異的他們，擁有超凡智慧與能力，長生不老，每人具備迥然不同的絕頂神力。然而守護地球期間，各自強大的永恆族人並非和樂融融，內部紛爭不斷，最終整個族群分崩離析，直到一群古老的宿敵現身永恆族是超越繁星的神族，七千年前來到地球，誓言保護人類，各色各異的他們，擁有超凡智慧與能力，長生不老，每人具備迥然不同的絕頂神力。然而守護地球期間，各自強大的永恆族人並非和樂融融，內部紛爭不斷，最終整個族群分崩離析，直到一群古老的宿敵現身……</p>
                         </div>
                         <div class="booking-trailer">
                             <button type="button" class="btn mr-3">
