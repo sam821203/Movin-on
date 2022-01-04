@@ -7,7 +7,6 @@ const send = document.getElementsByClassName("send")[0];
 let tag_txtcolor = $('#dropdownMenuButton').css("color");
 let tag_bgcolor = $('#dropdownMenuButton').css("background-color");
 
-
 let time = 3;
 let txt = '';
 let color = '';
@@ -80,14 +79,11 @@ $('.tag').click(function () {
         $(".send").attr("disabled", false);
         $(".inputbar").attr("placeholder", "說說你的想法吧~")
 
-
         // 改變按鈕文字
         $('#dropdownMenuButton').text(tag)
-        //  改變按鈕樣式
+        // 改變按鈕樣式
         $('#dropdownMenuButton').css('color', tag_txtcolor)
         $('#dropdownMenuButton').css('background-color', tag_bgcolor);
-
-
     }
 })
 

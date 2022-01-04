@@ -17,8 +17,11 @@
     <!-- Font awesome -->
     <script src="./js/fontawesome.all.min.js"></script>
     
-    <!-- Movinon navbar -->
+    <!-- Movinon navbar js -->
     <script src="./js/movinon-navbar.js"></script>
+
+    <!-- datepicker js -->
+    <script src="./js/datepicker.js"></script>
 
     
 
