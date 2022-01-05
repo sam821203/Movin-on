@@ -775,6 +775,6 @@
 
     <?php require_once './tpl/foot.php' ?>
 
-    <script src=""></script>
+    <script src="js/custom.js"></script>
 </body>
 </html>

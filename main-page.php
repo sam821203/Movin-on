@@ -1368,9 +1368,11 @@
     <script src='https://files.lovelong.cn/common/ui/bootstrap/bootstrap-switch/js/bootstrap-switch.min.js'></script>
 
     <!-- canvas js -->
-    <script src="./js/canvas.fin.js"></script>
+    <script src="js/canvas.fin.js"></script>
 
     <script src="js/main-page.js"></script>
+
+    <script src="js/custom.js"></script>
 </body>
 
 </html>

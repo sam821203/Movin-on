@@ -55,13 +55,13 @@
                         <div class="img-wrap2 d-flex align-items-center dropdown">
                             <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false"><img src="images/account.svg" alt=""></a>
 
-                            <!-- 問題：main-page 有辦法修改  bootstrap 的 element style 嘛？ -->
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="btn text-white mb-3" href="#" data-toggle="modal" data-target="#exampleModalLogin">
-                                    <div>登入</div>
+                                <a class="text-white mb-3" href="#" data-toggle="modal" data-target="#exampleModalLogin">
+                                    <div class="body1-m mb-3">登入</div>
                                 </a>
-                                <a type="button" class="btn text-white" href="#" data-toggle="modal" data-target="#exampleModal">
-                                    <div>註冊</div>    
+                                <div class="divide-line"></div>
+                                <a class="text-white" type="button" href="#" data-toggle="modal" data-target="#exampleModal">
+                                    <div class="body1-m mt-3">註冊</div>    
                                 </a>
                             </div>
                         </div>
