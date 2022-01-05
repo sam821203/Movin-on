@@ -295,11 +295,9 @@ p { line-height: var(--line-height-160); }
     opacity: 1;
 }
 
-
 .movinon-navbar .options li.options-spacing:hover a.hover-items {
     color: white;
 }
-
 
 .movinon-navbar .options li:hover:after {
     width: 100%;
