@@ -4,9 +4,9 @@
 <style>
 
     <?php require_once './tpl/global-style.css' ?>
+    
     <?php require_once './css/bootstrap-switch.css' ?>
 
-    
     /* 背景、彈幕 */
     .head {
         position: absolute;
@@ -264,8 +264,7 @@
                     <div class="dropup col-xs-2 col-xs-offset-1">
                         <!-- ==========修改 style="border: none;========== -->
                         <button class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border: none;">
-                        電影標籤
-                        <span class="caret"></span>
+                            電影標籤
                         </button>
                         <ul class="dropdown-menu tag-menu" aria-labelledby="dropdownMenu">
                             <li><a id=tag_immortal class=tag  href="#">永恆族</a></li>
@@ -310,25 +309,24 @@
     </main>
     
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
         crossorigin="anonymous"></script>
 
-    <!-- canvbootstrap switchas js -->
-    <script src='https://files.lovelong.cn/common/ui/bootstrap/bootstrap-switch/js/bootstrap-switch.min.js'></script>
-
+    <script src='https://files.lovelong.cn/common/ui/bootstrap/bootstrap-switch/js/bootstrap-switch.min.js'></script> -->
     
     <?php require_once './tpl/movinon-footer.php' ?>
 
     <?php require_once './tpl/foot.php' ?>
 
+    <!-- bootstrap switch js -->
+    <script src='https://files.lovelong.cn/common/ui/bootstrap/bootstrap-switch/js/bootstrap-switch.min.js'></script>
+
     <!-- canvas js -->
     <script src="./js/canvas.fin.js"></script>
     
-    <!-- bootstrap switch js -->
-    <script src='https://files.lovelong.cn/common/ui/bootstrap/bootstrap-switch/js/bootstrap-switch.min.js'></script>
 </body>
 
 </html>
