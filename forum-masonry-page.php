@@ -1,15 +1,25 @@
 <?php require_once 'db.inc.php' ?>
 <!doctype html>
 <html>
+<!-- 這裡需要 require "./db.inc.php" -->
+<?php require_once './tpl/head.php' ?>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="/fontawesome-free-5.15.4-web/css/all.css">
-</head>
+
+<!-- <link rel="stylesheet" href="css/forum-masonry-page.css"> -->
+<!-- <link rel="stylesheet" href="/fontawesome-free-5.15.4-web/css/all.css"> -->
+
+<style>
+  /* global style css */
+  <?php require_once './tpl/global-style.css' ?>
+  /* forum masonry page css */
+  <?php require_once './css/forum-masonry-page.css' ?>
+</style>
 
 <body>
+
+  <!-- movinon-navbar -->
+  <?php require_once './tpl/movinon-navbar.php' ?>
+
   <div class="masonry-wrapper">
     <div class="masonry">
       <?php $sql = "SELECT `title`, `article`, `article_photo`, `spoiler_tag` FROM `spider_forum_article`";
@@ -19,7 +29,7 @@
         <div class="masonry-item">
           <div class="masonry-content">
             <div class="article-tag">
-              <p class="article-cat ml-5 mr-2">分類</p>
+              <p class="article-cat mr-2">分類</p>
               <p class="spoiler-tag mt-1"><?= $obj['spoiler_tag'] ?></p>
             </div>
             <img src="<?= $obj['article_photo'] ?>" alt="Dummy Image" class="atcphoto">
@@ -46,13 +56,17 @@
           </div>
         </div>
       <?php } ?>
-
-
-
     </div>
+
+
+
+    <?php require_once './tpl/movinon-footer.php' ?>
+
+    <?php require_once './tpl/foot.php' ?>
+
     <script src="//unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-    <script src="masonry.js"></script>
-    <script src="https://kit.fontawesome.com/1392152695.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/1392152695.js" crossorigin="anonymous"></script> -->
+    <script src="js/forum-masonry-page.js"></script>
 </body>
 
 </html>

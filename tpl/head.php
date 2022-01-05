@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="tpl/global-style.css">
     <link rel="stylesheet" href="css/main-page.css">
+    <!-- <link rel="stylesheet" href="css/forum-masonry-page.css"> -->
     <!-- <link rel="stylesheet" href="./css/bootstrap-switch.css">
     <link rel="stylesheet" href="./css/canvas.css"> -->
     <!-- <link rel="stylesheet" href="css/style.css"> -->
