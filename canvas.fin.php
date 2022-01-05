@@ -222,10 +222,9 @@
         background-image: url(./images/main_page/hero-img1.jpg);
     }
 
-    .hero #colorDropdownMenu{
+    .hero #colorDropdownMenu {
         border-style: none;
     }
-
 </style>
 
 <body>
@@ -296,7 +295,6 @@
         </div>
     </main>
     
-
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
