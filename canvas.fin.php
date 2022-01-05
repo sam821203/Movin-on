@@ -297,8 +297,8 @@
                         <div class=preview></div>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="colorDropdownMenu">
-                        <li><a href="#"><img src="images/main_page/hero-img1.jpg"></a></li>
-                        <li><a href="#"><img src="images/main_page/eternals-bg-img-min.jpg"></a></li>
+                        <li><a class="canvas-preview" href="#"><img src="images/main_page/hero-img1.jpg"></a></li>
+                        <li><a class="canvas-preview" href="#"><img src="images/main_page/eternals-bg-img-min.jpg"></a></li>
                         
                         <li>
                             <p>點擊更換背景圖</p>
@@ -319,15 +319,16 @@
     <!-- canvbootstrap switchas js -->
     <script src='https://files.lovelong.cn/common/ui/bootstrap/bootstrap-switch/js/bootstrap-switch.min.js'></script>
 
-    <!-- canvas js -->
     
-
     <?php require_once './tpl/movinon-footer.php' ?>
 
     <?php require_once './tpl/foot.php' ?>
 
+    <!-- canvas js -->
     <script src="./js/canvas.fin.js"></script>
-
+    
+    <!-- bootstrap switch js -->
+    <script src='https://files.lovelong.cn/common/ui/bootstrap/bootstrap-switch/js/bootstrap-switch.min.js'></script>
 </body>
 
 </html>

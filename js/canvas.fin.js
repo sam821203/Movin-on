@@ -16,7 +16,15 @@ let f_texts = []
 canvas.width = 1920;
 canvas.height = 1080;
 
-$('a').click(function (event) {
+// $('a').click(function (event) {
+//     event.preventDefault();
+// })
+
+$('.tag').click(function (event) {
+    event.preventDefault();
+})
+
+$('.canvas-preview').click(function (event) {
     event.preventDefault();
 })
 
@@ -50,8 +58,9 @@ window.onload = function () {
 
 // 彈幕開關
 $(document).ready(function () {
-    $(".inputgroup input[type=checkbox]").bootstrapSwitch({
 
+    $(".inputgroup input[type=checkbox]").bootstrapSwitch({
+        
         onColor: "movieon",
 
         offColor: "movieoff",
@@ -65,8 +74,11 @@ $(document).ready(function () {
             }
         }
     })
-
 });
+
+// $('button').click (function () {
+//     console.log('hi');
+// });
 
 
 // 選擇電影標籤
@@ -85,7 +97,7 @@ $('.tag').click(function () {
         $('#dropdownMenuButton').css('color', tag_txtcolor)
         $('#dropdownMenuButton').css('background-color', tag_bgcolor);
     }
-})
+});
 
 send.addEventListener('click', () => {
     let message = $("input[name=txt]").val();
@@ -155,8 +167,6 @@ function update() {
         }
         ctx.fill()
 
-
-
         ctx.beginPath();
         // 字體、顏色
         ctx.font = "20px Arial";
@@ -197,8 +207,6 @@ $(".clear").click(function () {
     texts.splice(0, texts.length);
 
 })
-
-
 
 // fake part
 function f_update() {
@@ -254,7 +262,3 @@ function f_update() {
     })
     window.requestAnimationFrame(f_update);
 }
-
-
-
-
