@@ -94,12 +94,12 @@
     let nowIndex = $(this).index() + 1;
 
     $('.next-btn').click(function() {
-
+        
         nowIndex += 1
         if (nowIndex > 4) {
             nowIndex = 4
         }
-
+        
         const nowX = nowIndex * -312 + 'px';
         $('.carousel-wrap').css('transform', `translateX(${nowX})`).css('transition', '.5s');
 
@@ -140,6 +140,5 @@
     // });
 
     $('.dropdown-toggle').click( function () {
-        console.log('test');
         $('.dropdown-menu.show').css({ top: '30px' });
     });

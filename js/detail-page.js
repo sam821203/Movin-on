@@ -1,39 +1,86 @@
-// $('.carousel-wrap li').hover(function () {
-        //     $(this).children().eq(1).css('opacity', '1');
-        // }, function () {
-        //     $(this).children().eq(1).css('opacity', '0');
-        // });
         
-        // ----------carousel----------
-        let nowIndex = $(this).index() + 1;
+        
+        // ----------actors list carousel----------
+        // let nowIndex = $(this).index() + 1;
 
-        $('.actors-list-section .fa-chevron-left').click(function () {
+        // $('.actors-list-section .prev-btn').click(function () {
+        //     console.log('hi');
+        //     nowIndex -= 1
+        //     if (nowIndex < 0) {
+        //         nowIndex = 0
+        //     }
 
-            nowIndex -= 1
-            if (nowIndex < 0) {
-                nowIndex = 0
-            }
+        //     let nowX = nowIndex * -266 + 'px';
+        //     $('.actors-list-section .carousel-wrap').css('transform',`translateX(${nowX})`).css('transition','.8s');
+        // });
 
-            let nowX = nowIndex * -266 + 'px';
-            $('.actors-list-section .carousel-wrap').css('transform',`translateX(${nowX})`).css('transition','.8s');
-        });
-
-        $('.actors-list-section .fa-chevron-right').click(function () {
-            console.log('hit', nowIndex)
-            nowIndex += 1
-            if (nowIndex > 4) {
-                nowIndex = 4
-            }
+        // $('.actors-list-section .next-btn').click(function () {
+        //     console.log('hit', nowIndex)
+        //     nowIndex += 1
+        //     if (nowIndex > 4) {
+        //         nowIndex = 4
+        //     }
             
-            let nowX = nowIndex * -266 + 'px';
-            $('.actors-list-section .carousel-wrap').css('transform',`translateX(${nowX})`).css('transition','.8s');
-        });
+        //     let nowX = nowIndex * -266 + 'px';
+        //     $('.actors-list-section .carousel-wrap').css('transform',`translateX(${nowX})`).css('transition','.8s');
+        // });
 
-        // ----------image demo----------
-        $('.movie-stills-carousel .img-wrap > img').click(function () {
-            const imgSrc = $(this).attr('src');
-            $('.img-demo img').attr('src', imgSrc);
-        })
+
+
+
+        // -------------------- hall screen --------------------
+        // ---------- test1 ----------
+        // $('.movie-poster img').click(function () {
+        //     console.log('hi');
+        //     const imgSrc = $(this).attr('src');
+        //     $('.hall-screen img').attr('src', imgSrc);
+        // });
+
+
+
+        // ---------- test2 ----------
+        // let screenImg = $('.hall-screen img'),
+        // const imgSrc = screenImg.attr('src');
+
+        // $('.movie-stills-carousel .img-wrap img').click(function () {
+        //     console.log('hi');
+        //     let $this = $(this);
+        //     imgSrc = $this.attr('src');
+        //     $('.movie-stills-carousel .carousel-wrap li').removeClass('current');
+        //     $this.addClass('current');
+
+        // })
+
+       
+
+        // ---------- test3 ----------
+        // $(document).ready(function() {
+
+        //     // Change image on selection
+        //     $(".movie-stills-carousel .carousel-wrap li >").click(function() {
+
+        //         console.log('hi');
+        //         // Get current image source
+        //         var image = $(this).attr("src");
+                
+        //         // Apply grayscale to thumbnails except selected
+        //         $(".movie-stills-carousel .carousel-wrap")
+        //             .find("img")
+        //             .css("filter", "grayscale(1)");
+        //         $(this).css("filter", "none");
+
+        //         // Change image
+        //         const imgSrc = $(this).attr('src');
+        //         $('.hall-screen img').attr('src', imgSrc);
+                
+                
+        //         // Apply link to image
+        //         // $("#gallery-link").attr("href", image);
+        //         // Use id for count
+        //         // $("#count").text($(this).attr("id"));
+        //     });
+        // });
+
 
         // 問題：如何能讓 text 的轉場更自然？
         // ----------image change actor text 1----------

@@ -321,7 +321,6 @@
         width: 1862px;
         display: flex;
         justify-content: space-between;
-        /* transform: translateX(0px); */
         transition: .4s;
     }
 
@@ -419,10 +418,8 @@
         margin-bottom: 144px;
     }
 
-    .movie-stills-section .movie-stills .imgs-demo {
-        max-width: 1344px;
-        max-height: 588px;
-        margin-bottom: 32px;
+    .movie-stills-section .movie-stills {
+        margin: 48px 0 72px 0;
     }
 
     .movie-stills-section .imgs-demo img {
@@ -434,16 +431,40 @@
     }
 
     .movie-stills-section .hall-screen {
+        position: relative;
         margin: 0 auto;
-        height: 150px;
-        width: 450px;
-        margin-bottom: -15px;
+        height: 304px;
+        width: 872px;
         background-image: url(images/detail_page/movie-stills/large-img.jpg);
-        background-size: cover;
-        background-position: center;
         transform: perspective(1000px) rotateX(-30deg);
         overflow: hidden;
+        /* border-radius: var(--border-radius-4); */
+        /* border-top-left-radius: 320% 120px;
+        border-top-right-radius: 320% 120px; */
         box-shadow: 0 40px 55px -17px rgb(255 255 255 / 20%);
+    }
+
+    .movie-stills-section .hall-screen img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .movie-stills-section .hall-screen .screen-gradient-top {
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: linear-gradient(to top, rgba(18,18,18,0), rgba(18,18,18,1));
+        /* background-image: linear-gradient(to top, rgba(18,18,18,0), rgba(18,18,18,1));
+        /* background-color: #121212; */
+        width: 100%;
+        height: 50px;
+        /* border-top-left-radius: 240% 80px;
+        border-top-right-radius: 240% 80px; */
+        /* border-bottom-left-radius: 240% 80px;
+        border-bottom-right-radius: 240% 80px; */
     }
 
     .movie-stills-carousel .img-wrap {
@@ -473,6 +494,10 @@
         transition: .4s;
     }
 
+    .movie-stills-carousel .carousel-wrap img {
+        filter: grayscale(1);
+    }
+    
     /* .articles-xl .col-xl-6 {
         display: flex;
         margin-bottom: auto;
@@ -1274,11 +1299,14 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="row movie-stills">
-                    <div class="imgs-demo">
+                    <div class="hall-screen">
+                        <div class="screen-gradient-top"></div>
                         <img src="images/detail_page/movie-stills/large-img.jpg" alt="">
                     </div>
                 </div>
+
                 <div class="row movie-stills-carousel">
                     <div class="col-1">
                         <button class="bg-transparent border-0">
@@ -1312,23 +1340,44 @@
                                     <img src="images/detail_page/movie-stills/eternals-tv-spot-e1633354006519.jpeg" alt="">
                                 </div>
                             </li>
-                            <li>
-                                <div class="img-wrap pb-2">
-                                    <img src="images/detail_page/movie-stills/small-img.jpg" alt="">
-                                </div>
-                            </li>
-                            <li>
-                                <div class="img-wrap pb-2">
-                                    <img src="images/detail_page/movie-stills/small-img.jpg" alt="">
-                                </div>
-                            </li>
-                            <li>
-                                <div class="img-wrap pb-2">
-                                    <img src="images/detail_page/movie-stills/small-img.jpg" alt="">
-                                </div>
-                            </li>
                         </div>
                     </div>
+
+                    <!-- <div id="gallery-box">
+                        <div id="gallery-count"><span id="count">1</span> of <span id="total"></span></div>
+                        <a id="gallery-link" href="images/detail_page/movie-stills/large-img.jpg" target="_blank">
+                            <div id="gallery-img">
+                            </div>
+                        </a>
+                    </div> -->
+
+                    <!-- <div class="hall-screen">
+                        <div id="gallery-count"><span id="count">1</span> of <span id="total"></span></div>
+                        <div class="img-demo">
+                            <img class="gallery-link" src="images/detail_page/movie-stills/large-img.jpg" alt="">
+                        </div>
+                    </div>     
+
+                    <div class="movie-stills-carousel">
+                        <div class="carousel-wrap d-flex list-unstyled flex-nowrap">
+                            <div class="img-wrap pb-2">
+                                <img id="1" src="images/detail_page/movie-stills/79b7e7ceaf8de1f.jpeg" alt="">
+                            </div>
+                            <div class="img-wrap pb-2">
+                                <img id="2" src="images/detail_page/movie-stills/cba30f7a-b679-4d67-aad5-f0ea0b6686b9-1349502133.jpeg" alt="">
+                            </div>
+                            <div class="img-wrap pb-2">
+                                <img id="3" src="images/detail_page/movie-stills/large-img.jpg" alt="">
+                            </div>
+                            <div class="img-wrap pb-2">
+                                <img id="4" src="images/detail_page/movie-stills/Eternals-1517204.jpeg" alt="">
+                            </div>
+                            <div class="img-wrap pb-2">
+                                <img id="5" src="images/detail_page/movie-stills/79b7e7ceaf8de1f.jpeg" alt="">
+                            </div>
+                        </div>
+                    </div> -->
+
                     <div class="col-1">
                         <button class="bg-transparent border-0">
                             <i class="fas fa-chevron-right"></i>
@@ -1342,7 +1391,55 @@
     <?php require_once './tpl/movinon-footer.php' ?>
 
     <?php require_once './tpl/foot.php' ?>
+    
+    <script>
+        // ----------actors list carousel----------
+        let nowIndex = $(this).index() + 1;
 
-    <script src="js/detail-page.js"></script>
+        $('.actors-list-section .prev-btn').click(function () {
+            console.log('hi');
+            nowIndex -= 1
+            if (nowIndex < 0) {
+                nowIndex = 0
+            }
+
+            let nowX = nowIndex * -266 + 'px';
+            $('.actors-list-section .carousel-wrap').css('transform',`translateX(${nowX})`).css('transition','.8s');
+        });
+
+        $('.actors-list-section .next-btn').click(function () {
+            console.log('hit', nowIndex)
+            nowIndex += 1
+            if (nowIndex > 4) {
+                nowIndex = 4
+            }
+            
+            let nowX = nowIndex * -266 + 'px';
+            $('.actors-list-section .carousel-wrap').css('transform',`translateX(${nowX})`).css('transition','.8s');
+        });
+
+        // -------------------- hall screen --------------------
+        $(document).ready(function() {
+
+            // Change image on selection
+            $(".movie-stills-carousel .carousel-wrap li img").click(function() {
+
+                // Get current image source
+                const imgSrc = $(this).attr("src");
+                console.log(imgSrc);
+
+                // Apply grayscale to thumbnails except selected
+                $(".movie-stills-carousel .carousel-wrap")
+                    .find("img")
+                    .css("filter", "grayscale(1)");
+                $(this).css("filter", "none");
+
+                // Change image
+                $('.movie-stills .hall-screen img').attr('src', imgSrc);
+            });
+        });
+    </script>
+
+    <!-- <script src="js/detail-page.js"></script> -->
 </body>
 </html>
