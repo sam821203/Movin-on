@@ -167,8 +167,7 @@ h4 {
 }
 
 .masonry-item {
-  color: #111111;
-  background-color: #f9f9f9;
+    background-color: var(--card-color);
 }
 
 .actphoto{
@@ -255,24 +254,26 @@ h4 {
   margin-left: 8px;
 }
 
+.masonry-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem;
+    color: rgba(255,255,255,0.9);
+  }
+  
+
 .masonry-title, .masonry-description {
-  margin: 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+    margin: 0;
+    padding: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    border-top: 1px solid rgba(0, 0, 0, .05);
 }
 
 .masonry-title {
-  font-weight: 700;
-  font-size: 1.1rem;
-  padding: 1rem 1.5rem;
-}
-
-.masonry-description {
-  padding: 1.5rem;
-  font-size: .75rem;
-  border-top: 1px solid rgba(0, 0, 0, .05);
+    color: rgba(255,255,255,0.9);
 }
 
 .masonry-footer {
