@@ -105,7 +105,7 @@
                                 <div class="modal-body">
                                     <form class="row g-3" id="myForm">
                                         <div class="col-md-6">
-                                            <label for="inputEmail4" class="form-label">Email</label>
+                                            <label for="inputEmail4" class="form-label">信箱</label>
                                             <input type="email" class="form-control" id="email" placeholder="請填寫 E-mail">
                                         </div>
                                         <div class="col-md-6">

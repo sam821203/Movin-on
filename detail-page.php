@@ -221,7 +221,6 @@
         background-color: rgba(255,255,255,0.02);
         border-radius: var(--border-radius-8);
         box-shadow: var(--box-shadow-card-sm);
-        animation: .8s infinite beatHeart;
     }
 
     .related-articles-section .spoiler {
@@ -236,13 +235,13 @@
             transform: scale(1);
         }
         25% {
-            transform: scale(1.03);
+            transform: scale(1.1);
         }
         40% {
             transform: scale(1);
         }
         60% {
-            transform: scale(1.03);
+            transform: scale(1.1);
         }
         100% {
             transform: scale(1);
@@ -259,6 +258,11 @@
         white-space: nowrap;
         text-overflow: ellipsis;
     }
+
+    .related-articles-section .articles-xl ul,
+    .related-articles-section .articles-md ul {
+        width: 100%;
+    } 
 
     /* -----------------actors list section----------------- */
     .actors-list-section {
@@ -377,7 +381,6 @@
         top: 0;
         left: 0;
         opacity: 0;
-        /* transition: opacity 0.5s ease-out; */
     }
 
     .actors-list-section li:hover img {
@@ -389,17 +392,6 @@
     .actors-list-section li:hover .image-hover {
         opacity: 1;
     }
-
-    /* .actors-list-section .actor-hover-char1,
-    .actors-list-section .actor-hover-char2,
-    .actors-list-section .actor-hover-char3,
-    .actors-list-section .actor-hover-char4,
-    .actors-list-section .actor-hover-char5,
-    .actors-list-section .actor-hover-char6,
-    .actors-list-section .actor-hover-char7,
-    .actors-list-section .actor-hover-char8 {
-        transition: .6s;
-    } */
 
     .actors-list-section li:hover .actor-name-tc1, 
     .actors-list-section li:hover .actor-name-en1,
@@ -420,7 +412,6 @@
         top: 40px;
         transform: translateY(60%);
         opacity: 1;
-        /* transition: .8s; */
     }
 
     /* -----------------movie stills section----------------- */
@@ -440,6 +431,19 @@
         object-fit: cover;
         object-position: 50% 50%;
         border-radius: var(--border-radius-4); 
+    }
+
+    .movie-stills-section .hall-screen {
+        margin: 0 auto;
+        height: 150px;
+        width: 450px;
+        margin-bottom: -15px;
+        background-image: url(images/detail_page/movie-stills/large-img.jpg);
+        background-size: cover;
+        background-position: center;
+        transform: perspective(1000px) rotateX(-30deg);
+        overflow: hidden;
+        box-shadow: 0 40px 55px -17px rgb(255 255 255 / 20%);
     }
 
     .movie-stills-carousel .img-wrap {
@@ -469,10 +473,10 @@
         transition: .4s;
     }
 
-    .articles-xl .col-xl-6 {
+    /* .articles-xl .col-xl-6 {
         display: flex;
         margin-bottom: auto;
-    }
+    } */
     
     /* =================================== @media =================================== */
     /* ============================================================================== */
@@ -839,7 +843,6 @@
                         </a>
                     </div>
                 </div>
-
 
                 <div class="row articles-xl d-none d-md-flex d-lg-flex d-xl-none">
                     <ul>
