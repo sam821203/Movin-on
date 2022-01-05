@@ -7,23 +7,7 @@
     
     <?php require_once './css/bootstrap-switch.css' ?>
 
-    /* 背景、彈幕 */
-    .hero {
-        padding: 0px;
-        position: relative;
-        display:flex;
-        justify-content:center;
-    }
-
-    .hero .bg {
-        position: relative;
-        width: 100%;
-        height: 1080px;
-        background-image: url("images/main_page/hero-img1.jpg") ;
-        background-repeat: no-repeat;
-        background-size:cover ;
-    }
-
+    /* --------------- canvas --------------- */
     canvas {
         pointer-events: none;
         position: absolute;
@@ -33,8 +17,25 @@
         left: 0;
     }
 
+    /* 背景、彈幕 */
+    .canvas-bg-img {
+        position: relative;
+        width: 100%;
+        height: 1080px;
+        background-image: url("images/main_page/hero-img1.jpg") ;
+        background-repeat: no-repeat;
+        background-size: cover ;
+    }
+
+    .hero-section {
+        padding: 0px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
     /* 輸入、功能 */
-    .inputgroup {
+    .hero-section .inputgroup {
         position: absolute;
         width: 100%;
         bottom: 96px;
@@ -75,14 +76,14 @@
     }
 
     #tag_soho{
-        letter-spacing: 0.05em;
-        color:#FF6FBD;
-        background-color: rgb(255,111,189,0.25);
+    letter-spacing: 0.05em;
+    color:#FF6FBD;
+    background-color: rgb(255,111,189,0.25);
     }
 
 
     /* =================修改上啦式選單的背景圖片================= */
-    .hero #dropdownMenuButton {
+    #dropdownMenuButton {
         text-decoration: none;
         background: rgb(255, 255, 255, 0.1);
         color: rgb(255, 255, 255);
@@ -91,20 +92,20 @@
         margin-right: 16px;
     }
     
-    .hero .tag-menu {
+    .tag-menu {
         text-align:center ;
         background: rgb(255, 255, 255, 0.1);
         padding: 10px;
     }
     
-    .hero a {  
+    a {  
         padding-bottom: 5px;
         line-height: 30px;
         color:white;
         /* border-bottom: 1px solid #deedee; */
     }
 
-    .hero .middle-bg {
+    .middle-bg {
         background-color: rgba(18,18,18,0.9);
         border-radius: var(--border-radius-50);
         display: flex;
@@ -114,7 +115,7 @@
 
     /* 訊息欄 */
     /* ==========修改 padding========== */
-    .hero .inputbar{
+    .inputbar{
         width: 327px;
         height: 39px;
         color: white;
@@ -127,7 +128,7 @@
         margin-right: 16px;
     }
 
-    .hero .inputgroup > button{
+    .hero-section > button{
         border: none;
         cursor: pointer;
         color:white;
@@ -138,13 +139,13 @@
         background-color: rgb(0, 0, 0);
     }
 
-    .hero .inputgroup > button:hover{
+    .hero-section .inputgroup > button:hover{
         background-color: #F53D3D;
         box-shadow: 0px 0px 24px 4px rgba(245, 61, 61, 0.5);
         outline: none;
     } 
 
-    .hero .send {
+    .send {
         margin-right: 8px;
         background-color: #F53D3D;
         border-radius: 50px;
@@ -153,7 +154,7 @@
         padding: 0 24px;
     }
 
-    .hero .clear {
+    .clear {
         margin-right: 32px;
         border-radius: 50px;
         color: white;
@@ -164,15 +165,15 @@
 
     /* 修改 placeholder 的字體顏色 */
     ::-webkit-input-placeholder { /* Edge */
-        color: rgba(255,255,255,0.25)
+    color: rgba(255,255,255,0.25)
     }
 
     :-ms-input-placeholder { /* Internet Explorer 10-11 */
-        color: rgba(255,255,255,0.25)
+    color: rgba(255,255,255,0.25)
     }
 
     ::placeholder {
-        color: rgba(255,255,255,0.25)
+    color: rgba(255,255,255,0.25)
     }
 
     /* 背景更換 */
@@ -180,12 +181,12 @@
         display: flex;
     }
 
-    .hero .inputgroup .colorDiv img{
+    .hero-section .inputgroup .colorDiv img{
         width: 80px;
         height: 40px;
     }
 
-    .hero .colorDiv .dropdown-menu{
+    .colorDiv .dropdown-menu{
         right: 0;
         left: auto;
         padding: 5px;
@@ -194,25 +195,25 @@
         background: rgba(0, 0, 0, 0.5);
     }
 
-    .hero .colorDiv .dropdown-menu li {
+    .colorDiv .dropdown-menu li {
         display: inline-block;
     }
 
-    .hero .colorDiv .dropdown-menu li p{
+    .colorDiv .dropdown-menu li p{
         line-height: 35px;
         margin:0px 5px;
     }
 
-    .hero .colorDiv .dropdown-menu li a{
+    .colorDiv .dropdown-menu li a{
         padding: 3px !important;
     }
 
-    .hero .colorDiv .dropdown-menu li a image{
+    .colorDiv .dropdown-menu li a image{
         width: 34px;
         height: 34px;
     }
 
-    .hero .preview {
+    .preview {
         width: 34px;
         height: 34px;
         border-radius: 17px;
@@ -222,7 +223,7 @@
         background-image: url(./images/main_page/hero-img1.jpg);
     }
 
-    .hero #colorDropdownMenu{
+    #colorDropdownMenu{
         border-style: none;
     }
 
@@ -234,9 +235,9 @@
     <?php require_once './tpl/movinon-navbar.php' ?>
 
     <main>
-        <div class="hero container-fluid">
+        <div class="hero-section container-fluid">
             <!-- ---------------background-img--------------- -->
-            <div class="bg"></div>
+            <div class="canvas-bg-img"></div>
 
             <!-- ---------------canvas--------------- -->
             <canvas class="dm"></canvas>
@@ -295,15 +296,6 @@
             </div>
         </div>
     </main>
-    
-
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
-        crossorigin="anonymous"></script>
-
-    <script src='https://files.lovelong.cn/common/ui/bootstrap/bootstrap-switch/js/bootstrap-switch.min.js'></script> -->
     
     <?php require_once './tpl/movinon-footer.php' ?>
 
