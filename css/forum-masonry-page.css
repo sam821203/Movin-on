@@ -16,23 +16,18 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 main, menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, main, menu, nav, section {
   display: block;
 }
-
-/* body {
-  line-height: 1.618;
-  font-family: Arial, Helvetica, sans-serif;
-} */
 
 ol, ul {
   list-style: none;
@@ -152,13 +147,13 @@ body {
     padding: 0;
 }
 
-.masonry-articles-section .masonry-content .masonry-content-bottom {
-    padding: 0px 32px 32px 32px;
+.masonry-articles-section .masonry-content .masonry-content-text {
+    padding: 20px 32px;
+    margin-bottom: 40px;
 }
 
 /* original CSS */
 .masonry-wrapper {
-    /* padding: 1.5em; */
     max-width: 1920px;
     width: 100%;
     margin-right: auto;
@@ -255,35 +250,37 @@ body {
 
 }
 
-/* span{
-  padding: 1rem 1.5rem;
-} */
-
-.article-like {
+.masonry-item .article-like {
     position: absolute;
     bottom: 0;
+    padding: 20px 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 32px;
     background-color: rgba(255, 255, 255, 0.04);
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 8px 8px;   
 }
 
-.like-btn {
+.masonry-item .article-like .like-btn {
+    padding-left: 32px;
     display: flex;
+    align-items: center;
+}
+
+.masonry-item .article-like .comment {
+    display: flex;
+    align-items: center;
+    padding-right: 32px;
 }
 
 .like-btn>p {
     margin-left: 8px;
 }
 
-.comment-img {
-    display: flex;
-}
 
-.comment-img>p {
+
+.comment>p {
     margin-left: 8px;
 }
 
@@ -292,7 +289,6 @@ body {
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    margin-bottom: 40px;
 }
 
 .masonry-title {
@@ -303,6 +299,7 @@ body {
 .masonry-description {
     color: rgba(255,255,255,0.5);
     line-height: 150%;
+    height: 72px;
 }
 
 .masonry-footer {

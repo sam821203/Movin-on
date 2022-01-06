@@ -62,7 +62,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="masonry-content-bottom">
+                                    <div class="masonry-content-text">
                                         <div>2021-12-20</span>by<span>aaa</span></div>
                                         <h3 class="masonry-title sub-title-b"><?= $obj['title'] ?></h3>
                                         <p class="masonry-description">
@@ -74,7 +74,7 @@
                                             <i class="fas fa-thumbs-up"></i>
                                             <p>20</p>
                                         </div>
-                                        <div class="comment-img">
+                                        <div class="comment">
                                             <i class="far fa-comment"></i>
                                             <p>10</p>
                                         </div>
