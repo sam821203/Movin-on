@@ -12,7 +12,7 @@
     }
 
     .container {
-        margin-top: 200px;
+        margin-top: 144px;
     }
 
     /* -------------------------member l info------------------------- */
@@ -24,7 +24,7 @@
 
     .member-l-info, 
     .member-l-setting, 
-    .member-r {
+    .member-r-board {
         background-color: rgba(18,18,18,0.9);
         border-radius: var(--border-radius-8);
         box-shadow: var(--box-shadow-card-lg);
@@ -112,6 +112,11 @@
     .member-l-setting .setting-row .fa-chevron-right {
         opacity: var(--opacity-75);
         margin-top: auto 0;
+    }
+
+    /* -------------------------member r board------------------------- */
+    .member-r-board {
+        background-color: rgba(18,18,18,0.9);
     }
 </style>
 
@@ -234,8 +239,8 @@
                     </div>
 
                     <div class="col-9">
-                        <div class="member-r">
-
+                        <div class="member-r-board">
+                            
                         </div>
                     </div>
                 </div>
