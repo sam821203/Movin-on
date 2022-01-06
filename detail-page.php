@@ -444,23 +444,79 @@
     }
 
     .movie-stills-carousel .carousel-wrap .img-wrap {
-        width: 1114px;
+        width: 200px;
+        height: 70px;
+        margin-left: 16px;
+        margin-right: 16px;
         display: flex;
         justify-content: space-between;
         transform: translateX(0px);
         transition: .4s;
+        margin-top: 30px;
     }
 
     .movie-stills-carousel .carousel-wrap .img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        border-radius: var(--border-radius-4); 
         filter: grayscale(1);
     }
 
 
-    
-    /* .articles-xl .col-xl-6 {
+
+    .strip {
         display: flex;
-        margin-bottom: auto;
-    } */
+        margin-top: 1rem;
+    }
+        
+    .movie {
+    aspect-ratio: 16 / 9;
+    background: #000;
+    background-image: linear-gradient(to right, #fff, #fff),
+        linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
+        linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
+        linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
+        linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
+        linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
+        linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
+        linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
+        linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
+        linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
+        linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
+        linear-gradient(to right, #fff, #fff);
+
+    background-repeat: no-repeat;
+    background-position: 
+        8% 5%, 18.5% 5%, 29% 5%, 39.5% 5%, 50% 5%, 60.5% 5%, 71% 5%,
+        81.5% 5%, 92% 5%, 
+        
+        8% 5%, 18.5% 5%, 29% 5%, 39.5% 5%, 50% 5%, 60.5% 5%, 71% 5%,
+        81.5% 5%, 92% 5%,
+        
+        5% 95%, 15% 95%, 25% 95%, 35% 95%, 45% 95%, 55% 95%,
+        65% 95%, 75% 95%, 85% 95%, 95% 95%;
+
+    background-size: 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%,
+
+        5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%,
+        5% 8%, 5% 8%;
+    }
+
+    .movie-frame {
+        /* padding: 13% 5%; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .movie-frame img {
+        max-width: 100%;
+        border-radius: 2px;
+    }
+
+
     
     /* =================================== @media =================================== */
     /* ============================================================================== */
@@ -1262,39 +1318,70 @@
                 <div class="row movie-stills">
                     <div class="hall-screen">
                         <div class="screen-gradient-top"></div>
-                        <img src="images/detail_page/movie-stills/large-img.jpg" alt="">
+                        <img src="images/detail_page/movie_stills/movie_still_img2.jpg" alt="">
                     </div>
                 </div>
 
                 <div class="row movie-stills-carousel">
-                    <div class="col-12">
-                        <div class="carousel-wrap d-flex justify-content-between list-unstyled flex-nowrap">
-                            <li>
-                                <div class="img-wrap pb-2">
-                                    <img src="images/detail_page/movie-stills/79b7e7ceaf8de1f.jpeg" alt="">
-                                </div>
-                            </li>
-                            <li>
-                                <div class="img-wrap pb-2">
-                                    <img src="images/detail_page/movie-stills/cba30f7a-b679-4d67-aad5-f0ea0b6686b9-1349502133.jpeg" alt="">
-                                </div>
-                            </li>
-                            <li>
-                                <div class="img-wrap pb-2">
-                                    <img src="images/detail_page/movie-stills/large-img.jpg" alt="">
-                                </div>
-                            </li>
-                            <li>
-                                <div class="img-wrap pb-2">
-                                    <img src="images/detail_page/movie-stills/Eternals-1517204.jpeg" alt="">
-                                </div>
-                            </li>
-                            <li>
-                                <div class="img-wrap pb-2">
-                                    <img src="images/detail_page/movie-stills/eternals-tv-spot-e1633354006519.jpeg" alt="">
-                                </div>
-                            </li>
-                        </div>
+                    <div class="col-1">
+                        <button class="bg-transparent border-0">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+
+                    <div class="strip col-10 carousel-wrap d-flex justify-content-between list-unstyled flex-nowrap">
+                        <li class="movie">
+                            <div class="movie-frame"><img src="images/detail_page/movie_stills/movie_still_img1.jpg"></div>
+                        </li>
+                        <li class="movie">
+                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img2.jpg"></div>
+                        </li>
+                        <li class="movie">
+                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img3.jpg"></div>
+                        </li>
+                        <li class="movie">
+                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img4.jpg"></div>
+                        </li>
+                        <li class="movie">
+                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img5.jpg"></div>
+                        </li>
+                        <li class="movie">
+                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img1.jpg"></div>
+                        </li>
+                    </div>
+
+                    <!-- <div class="col-10 carousel-wrap d-flex justify-content-between list-unstyled flex-nowrap">
+                        <li>
+                            <div class="img-wrap pb-2">
+                                <img src="images/detail_page/movie_stills/movie_still_img1.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-wrap pb-2">
+                                <img src="images/detail_page/movie_stills/movie_still_img2.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-wrap pb-2">
+                                <img src="images/detail_page/movie_stills/movie_still_img3.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-wrap pb-2">
+                                <img src="images/detail_page/movie_stills/movie_still_img4.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-wrap pb-2">
+                                <img src="images/detail_page/movie_stills/movie_still_img5.jpg" alt="">
+                            </div>
+                        </li>
+                    </div> -->
+
+                    <div class="col-1">
+                        <button class="bg-transparent border-0">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>

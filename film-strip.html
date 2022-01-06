@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .strip {
+            display: flex;
+            margin-top: 1rem;
+        }
+            
+        .movie {
+        aspect-ratio: 16 / 9;
+        background: #000;
+        background-image: linear-gradient(to right, #fff, #fff),
+            linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
+            linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
+            linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
+            linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
+            linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
+            linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
+            linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
+            linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
+            linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
+            linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
+            linear-gradient(to right, #fff, #fff);
+
+        background-repeat: no-repeat;
+        background-position: 5% 5%, 15% 5%, 25% 5%, 35% 5%, 45% 5%, 55% 5%, 65% 5%,
+            75% 5%, 85% 5%, 95% 5%, 5% 95%, 15% 95%, 25% 95%, 35% 95%, 45% 95%, 55% 95%,
+            65% 95%, 75% 95%, 85% 95%, 95% 95%;
+
+        background-size: 5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%,
+            5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%,
+            5% 8%, 5% 8%;
+        }
+
+        .movie-frame {
+            padding: 13% 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .movie-frame img {
+            max-width: 100%;
+            border-radius: 2px;
+        }
+
+        /* For aesthetics only ------------------------------------------------------------------*/
+
+        body {
+            background: #121212; 
+            margin: 2rem auto;
+            min-height: 100vh;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+      <section>
+          <div class="container">
+              <div class="row">
+                <div class="strip">
+                    <div class="movie">
+                        <div class="movie-frame"><img src="images/detail_page/movie_stills/movie_still_img1.jpg"></div>
+                    </div>
+                    <div class="movie">
+                        <div class="movie-frame"><img src="images/detail_page/movie_stills/movie_still_img2.jpg"></div>
+                    </div>
+                    <div class="movie">
+                        <div class="movie-frame"><img src="images/detail_page/movie_stills/movie_still_img3.jpg"></div>
+                    </div>
+                    <div class="movie">
+                        <div class="movie-frame"><img src="images/detail_page/movie_stills/movie_still_img4.jpg"></div>
+                    </div>
+                    <div class="movie">
+                        <div class="movie-frame"><img src="images/detail_page/movie_stills/movie_still_img5.jpg"></div>
+                    </div>
+                    <div class="movie">
+                        <div class="movie-frame"><img src="images/detail_page/movie_stills/movie_still_img1.jpg"></div>
+                    </div>
+                    <div class="movie">
+                        <div class="movie-frame"><img src="images/detail_page/movie_stills/movie_still_img1.jpg"></div>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </section>
+</body>
+</html>
