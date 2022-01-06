@@ -61,12 +61,14 @@
                                             <img src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
                                         </div>
                                     </div>
-                                    <!-- <span>2021-12-20</span>by<span>aaa</span><br> -->
-                                    <div>2021-12-20</span>by<span>aaa</span></div>
-                                    <h3 class="masonry-title sub-title-b"><?= $obj['title'] ?></h3>
-                                    <p class="masonry-description">
-                                        <?= $obj['article'] ?>
-                                    </p>
+
+                                    <div class="masonry-content-bottom">
+                                        <div>2021-12-20</span>by<span>aaa</span></div>
+                                        <h3 class="masonry-title sub-title-b"><?= $obj['title'] ?></h3>
+                                        <p class="masonry-description">
+                                            <?= $obj['article'] ?>
+                                        </p>
+                                    </div>
                                     <div class="article-like">
                                         <div class="like-btn">
                                             <i class="fas fa-thumbs-up"></i>

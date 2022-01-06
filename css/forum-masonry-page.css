@@ -152,6 +152,10 @@ body {
     padding: 0;
 }
 
+.masonry-articles-section .masonry-content .masonry-content-bottom {
+    padding: 0px 32px 32px 32px;
+}
+
 /* original CSS */
 .masonry-wrapper {
     /* padding: 1.5em; */
@@ -194,25 +198,20 @@ body {
   filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, .3));
 }
 
-.masonry-content {
-  /* overflow: hidden; */
-  position: relative;
-}
-
 .masonry-item {
     background-color: var(--card-color);
+    position: relative;
 }
 
 .actphoto{
-  width: 100%;
+    width: 100%;
 }
+
 .article-tag {
-  position: absolute;
-  top:30px;
-  left: 30px;
-  display: flex;
-  /* padding-top: 24px; */
-  /* margin-top: -150px; */
+    position: absolute;
+    top:30px;
+    left: 30px;
+    display: flex;
 }
 
 .article-cat {
@@ -261,52 +260,49 @@ body {
 } */
 
 .article-like {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1.5rem;
-
-  background-color: rgba(255, 255, 255, 0.04);
-  border-radius: 0 0 8px 8px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 32px;
+    background-color: rgba(255, 255, 255, 0.04);
+    border-radius: 0 0 8px 8px;
 }
 
 .like-btn {
-  display: flex;
+    display: flex;
 }
 
 .like-btn>p {
-  margin-left: 8px;
+    margin-left: 8px;
 }
 
 .comment-img {
-  display: flex;
+    display: flex;
 }
 
 .comment-img>p {
-  margin-left: 8px;
+    margin-left: 8px;
 }
 
-.masonry-title {
-    font-weight: 700;
-    font-size: 1.1rem;
-    padding: 1rem 1.5rem;
-    color: rgba(255,255,255,0.9);
-  }
-  
-
 .masonry-title, .masonry-description {
-    margin: 0;
-    padding: 1.5rem;
     display: -webkit-box;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    border-top: 1px solid rgba(0, 0, 0, .05);
+    margin-bottom: 40px;
 }
 
 .masonry-title {
+    padding: 8px 0 12px 0;
     color: rgba(255,255,255,0.9);
+}
+
+.masonry-description {
+    color: rgba(255,255,255,0.5);
+    line-height: 150%;
 }
 
 .masonry-footer {
