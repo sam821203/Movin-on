@@ -688,13 +688,13 @@ footer p {
     .g-section-mb { margin-bottom: 96px; }
 
     /* -------movinon navbar-------*/
-    .movinon-navbar .movinon-logotype-wrap {
-        width: 160px;
-    }
-
     .movinon-navbar {
         padding-top: 12px;
         padding-bottom: 12px;
+    }
+
+    .movinon-navbar .movinon-logotype-wrap {
+        width: 160px;
     }
 
     .movinon-navbar .sub-title-r {
@@ -723,11 +723,11 @@ footer p {
     .g-subtitle-mb { margin-bottom: 24px; }
 
     /* -------movinon navbar-------*/
+    .movinon-navbar { padding: 16px 32px; }
     .movinon-navbar .movinon-logo-wrap { width: 48px; }
-    .movinon-navbar .container-fluid { padding: 4px 32px; }
     .red-line { display: none; }
 
-    .movinon-navbar .row { margin: 0; }
+    /* .movinon-navbar .row { margin: 0; } */
 
     .movinon-navbar .menu-items {
         right: 32px;

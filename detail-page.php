@@ -17,13 +17,18 @@
     }
 
     /* -----------------movie detail section----------------- */
-    .movie-detail-section { margin-top: 144px; }
+    .movie-detail-section { margin-top: 160px; }
 
     .movie-detail-section .social-media {
         margin-bottom: 32px;
     }
 
-    .movie-detail-section .social-media i {
+    /* .movie-detail-section .social-media i {
+        font-size: 2.125rem;
+        opacity: var(--opacity-75);
+    } */
+
+    .movie-detail-section .social-media svg {
         font-size: 2.125rem;
         opacity: var(--opacity-75);
     }
@@ -544,9 +549,6 @@
     /* ------------------------  小於 1200px  ------------------------*/
     @media screen and (max-width: 1200px) {
 
-        /* section margin bottom */
-        .movie-detail-section { margin-top: 96px; }
-
         .related-articles-section .subtitle,
         .actors-list-section .subtitle,
         .movie-stills-section .subtitle {
@@ -693,7 +695,7 @@
         <!-- -----------movie detail section----------- -->
         <section class="movie-detail-section g-section-mb">
             <div class="container">
-                <div class="row social-media d-none d-xl-flex">
+                <div class="row social-media d-none d-xl-flex flex-column">
                     <div class="d-flex justify-content-end mb-2">
                         <a href="#">
                             <i class="fab fa-facebook-square"></i>

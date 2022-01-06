@@ -285,7 +285,8 @@
      @media screen and (max-width: 1200px) {
         
         /* section margin bottom */
-       .movie-selecting-section { margin-top: 96px; }
+       /* .movie-selecting-section { margin-top: 96px; } */
+       .movie-selecting-section { margin-top: 144px; }
 
        .movie-selecting-section .movie-info,
        .movie-selecting-section .movie-date,
@@ -303,8 +304,6 @@
             background-size: contain;
             background-color: var(--bg-color);
         }
-
-        .movie-selecting-section { margin-top: 48px; }
 
         .movie-selecting-section
         .movie-info
