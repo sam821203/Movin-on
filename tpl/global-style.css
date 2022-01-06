@@ -216,6 +216,13 @@ p { line-height: var(--line-height-160); }
     line-height: 160%;
 }
 
+.sub-title-l {
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 0.25px;
+    line-height: 160%;
+}
+
 /* ----------16px---------- */
 .body1-b {
     font-size: 1rem;
@@ -618,7 +625,7 @@ footer p {
     font-size: 1rem;
     font-weight: 300;
     letter-spacing: 0.5px;
-    line-height: 200%;
+    line-height: 210%;
     opacity: var(--opacity-90);
 }
 
@@ -628,7 +635,7 @@ footer p {
 
 .movinon-footer .img-wrap {
     width: 50%;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
 }
 
 .movinon-footer .img-wrap img {

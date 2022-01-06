@@ -148,6 +148,7 @@
         margin-bottom: 40px;
         font-size: 20px;
         opacity: var(--opacity-90);
+        font-weight: 300;
     }
 
     .movie-detail-section .description p {
@@ -809,7 +810,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-free-tag">雷</div>
                                     <div class="arti-cat-tag mr-3">選片</div>
-                                    <div class="sub-title-r">永恆族 vs 惡靈 首部曲</div>
+                                    <div class="sub-title-l">永恆族 vs 惡靈 首部曲</div>
                                 </div>
                                 <div class="time-stamp d-flex align-items-center">1天前</div>
                             </div>
@@ -821,7 +822,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-tag">雷</div>
                                     <div class="arti-cat-tag mr-3">討論</div>
-                                    <div class="sub-title-r">永恆族 – 大型斯卡羅現場</div>
+                                    <div class="sub-title-l">永恆族 – 大型斯卡羅現場</div>
                                 </div>
                                 <div class="time-stamp d-flex align-items-center">2天前</div>
                             </div>
@@ -833,7 +834,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-tag">雷</div>
                                     <div class="arti-cat-tag mr-3">討論</div>
-                                    <div class="sub-title-r">永恆族-篇幅不足的半成品</div>
+                                    <div class="sub-title-l">永恆族-篇幅不足的半成品</div>
                                 </div>
                                 <div class="time-stamp d-flex align-items-center">3天前</div>
                             </div>
@@ -845,7 +846,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-free-tag">雷</div>
                                     <div class="arti-cat-tag mr-3">討論</div>
-                                    <div class="sub-title-r">所以永恆族算成功了嗎</div>
+                                    <div class="sub-title-l">所以永恆族算成功了嗎</div>
                                 </div>
                                 <div class="time-stamp d-flex align-items-center">1週前</div>
                             </div>
@@ -857,7 +858,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-free-tag">雷</div>
                                     <div class="arti-cat-tag mr-3">討論</div>
-                                    <div class="sub-title-r">永恆族有一段關鍵台詞這樣改應該更好</div>
+                                    <div class="sub-title-l">永恆族有一段關鍵台詞這樣改應該更好</div>
                                 </div>
                                 <div class="time-stamp d-flex align-items-center">1月前</div>
                             </div>
@@ -869,7 +870,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-free-tag">雷</div>
                                     <div class="arti-cat-tag mr-3">討論</div>
-                                    <div class="sub-title-r">永恆族有一段關鍵台詞這樣改應該更好</div>
+                                    <div class="sub-title-l">永恆族有一段關鍵台詞這樣改應該更好</div>
                                 </div>
                                 <div class="time-stamp d-flex align-items-center">1月前</div>
                             </div>
@@ -881,7 +882,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-tag">雷</div>
                                     <div class="arti-cat-tag mr-3">討論</div>
-                                    <div class="sub-title-r">永恆族有一段關鍵台詞</div>
+                                    <div class="sub-title-l">永恆族有一段關鍵台詞</div>
                                 </div>
                                 <div class="time-stamp d-flex align-items-center">1月前</div>
                             </div>
@@ -893,7 +894,7 @@
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-free-tag">雷</div>
                                     <div class="arti-cat-tag mr-3">討論</div>
-                                    <div class="sub-title-r">永恆族有一段關鍵台詞這樣不好</div>
+                                    <div class="sub-title-l">永恆族有一段關鍵台詞這樣不好</div>
                                 </div>
                                 <div class="time-stamp d-flex align-items-center">1月前</div>
                             </div>
@@ -910,7 +911,7 @@
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-tag">雷</div>
                                             <div class="arti-cat-tag mr-3">討論</div>
-                                            <div class="sub-title-r">《永恆族》可惜不能是獨立電影</div>
+                                            <div class="sub-title-l">《永恆族》可惜不能是獨立電影</div>
                                         </div>
                                         <div class="time-stamp d-flex align-items-center">12小時前</div>
                                     </div>
@@ -925,7 +926,7 @@
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-tag">雷</div>
                                             <div class="arti-cat-tag mr-3">討論</div>
-                                            <div class="sub-title-r">《永恆族》可惜不能是獨立電影</div>
+                                            <div class="sub-title-l">《永恆族》可惜不能是獨立電影</div>
                                         </div>
                                         <div class="time-stamp d-flex align-items-center">12小時前</div>
                                     </div>
@@ -940,7 +941,7 @@
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-free-tag">雷</div>
                                             <div class="arti-cat-tag mr-3">新聞</div>
-                                            <div class="sub-title-r">《作家我就爛》逼退《永恆族》榮登...</div>
+                                            <div class="sub-title-l">《作家我就爛》逼退《永恆族》榮登...</div>
                                         </div>
                                         <div class="time-stamp d-flex align-items-center">18小時前</div>
                                     </div>
@@ -955,7 +956,7 @@
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-free-tag">雷</div>
                                             <div class="arti-cat-tag mr-3">選片</div>
-                                            <div class="sub-title-r">月老 vs. 永恆族</div>
+                                            <div class="sub-title-l">月老 vs. 永恆族</div>
                                         </div>
                                         <div class="time-stamp d-flex align-items-center">1天前</div>
                                     </div>
@@ -970,7 +971,7 @@
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-tag">雷</div>
                                             <div class="arti-cat-tag mr-3">討論</div>
-                                            <div class="sub-title-r">《永恆族》可惜不能是獨立電影</div>
+                                            <div class="sub-title-l">《永恆族》可惜不能是獨立電影</div>
                                         </div>
                                         <div class="time-stamp d-flex align-items-center">12小時前</div>
                                     </div>
@@ -985,7 +986,7 @@
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-tag">雷</div>
                                             <div class="arti-cat-tag mr-3">討論</div>
-                                            <div class="sub-title-r">《永恆族》可惜不能是獨立電影</div>
+                                            <div class="sub-title-l">《永恆族》可惜不能是獨立電影</div>
                                         </div>
                                         <div class="time-stamp d-flex align-items-center">12小時前</div>
                                     </div>
@@ -1000,7 +1001,7 @@
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-free-tag">雷</div>
                                             <div class="arti-cat-tag mr-3">新聞</div>
-                                            <div class="sub-title-r">《作家我就爛》逼退《永恆族》榮登...</div>
+                                            <div class="sub-title-l">《作家我就爛》逼退《永恆族》榮登...</div>
                                         </div>
                                         <div class="time-stamp d-flex align-items-center">18小時前</div>
                                     </div>
@@ -1015,7 +1016,7 @@
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-free-tag">雷</div>
                                             <div class="arti-cat-tag mr-3">選片</div>
-                                            <div class="sub-title-r">月老 vs. 永恆族</div>
+                                            <div class="sub-title-l">月老 vs. 永恆族</div>
                                         </div>
                                         <div class="time-stamp d-flex align-items-center">1天前</div>
                                     </div>
@@ -1040,7 +1041,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="sub-title-r">《永恆族》可惜不能是獨立電影</div>
+                                        <div class="sub-title-l">《永恆族》可惜不能是獨立電影</div>
                                     </div>
                                 </a>
                             </div>
@@ -1059,7 +1060,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="sub-title-r">月老 vs. 永恆族</div>
+                                        <div class="sub-title-l">月老 vs. 永恆族</div>
                                     </div>
                                 </a>
                             </div>
@@ -1078,7 +1079,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="sub-title-r">《永恆族》可惜不能是獨立電影</div>
+                                        <div class="sub-title-l">《永恆族》可惜不能是獨立電影</div>
                                     </div>
                                 </a>
                             </div>
@@ -1097,7 +1098,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="sub-title-r">月老 vs. 永恆族</div>
+                                        <div class="sub-title-l">月老 vs. 永恆族</div>
                                     </div>
                                 </a>
                             </div>
@@ -1116,7 +1117,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="sub-title-r">月老 vs. 永恆族</div>
+                                        <div class="sub-title-l">月老 vs. 永恆族</div>
                                     </div>
                                 </a>
                             </div>
@@ -1135,7 +1136,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="sub-title-r">月老 vs. 永恆族</div>
+                                        <div class="sub-title-l">月老 vs. 永恆族</div>
                                     </div>
                                 </a>
                             </div>
@@ -1154,7 +1155,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="sub-title-r">月老 vs. 永恆族</div>
+                                        <div class="sub-title-l">月老 vs. 永恆族</div>
                                     </div>
                                 </a>
                             </div>
@@ -1173,7 +1174,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="sub-title-r">月老 vs. 永恆族</div>
+                                        <div class="sub-title-l">月老 vs. 永恆族</div>
                                     </div>
                                 </a>
                             </div>

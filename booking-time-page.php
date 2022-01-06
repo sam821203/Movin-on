@@ -254,6 +254,10 @@
         margin-bottom: 16px;
         line-height: 100%;
     }
+
+    .movie-showtime-section .showtime .body1-r {
+        opacity: var(--opacity-90);
+    }
     
     .movie-showtime-section .options .dot {
         width: 8px;

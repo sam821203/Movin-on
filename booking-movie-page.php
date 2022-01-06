@@ -69,7 +69,7 @@
        background-color: rgba(32,32,32,0.75);
        padding: 24px 0px;
        text-align: center;
-       border-radius: var(--border-radius-8);
+       border-radius: var(--border-radius-4);
        box-shadow: var(--box-shadow-card-sm);
     }
 
@@ -93,7 +93,7 @@
     }
 
     .other-movies-section .pg-rate { 
-        border-radius: 0 8px 0 8px;
+        border-radius: 0 4px 0 4px;
         padding: 4px 8px 6px 8px;
         position: absolute;
         top: 0px;
