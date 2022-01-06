@@ -11,14 +11,9 @@
         background-color: var(--bg-color);
     }
 
-    .container-fluid {
-        padding-left: 72px;
-        padding-right: 72px;
-    }
-
     .related-articles-section .fa-chevron-right {
         opacity: var(--opacity-90);
-        font-size: 14px;
+        font-size: 16px;
     }
 
     /* -----------------movie detail section----------------- */
@@ -174,27 +169,6 @@
         padding: 0 16px;
     }
 
-    .related-articles-section .subtitle .sub-title-r {
-        line-height: 100%;
-        opacity: var(--opacity-90);
-    }
-
-    .related-articles-section .spoiler,
-    .related-articles-section .spoiler-free {
-        border-radius: var(--border-radius-50-percent);
-        width: 30px;
-        height: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 12px;
-    }
-
-    .related-articles-section .spoiler-free {
-        background-color: rgba(255,255,255,0.1);
-        color: rgba(255,255,255,0.1);
-    }
-
     .related-articles-section .arti-cat-tag {
         padding: 4px 20px;
         border: 1px solid rgba(255,255,255,0.5);
@@ -221,31 +195,6 @@
         background-color: rgba(255,255,255,0.02);
         border-radius: var(--border-radius-8);
         box-shadow: var(--box-shadow-card-sm);
-    }
-
-    .related-articles-section .spoiler {
-        background-color: var(--brand-color);
-        box-shadow: var(--box-shadow-red);
-        color: var(--bg-color);
-        animation: .8s infinite beatHeart;
-    }
-
-    @keyframes beatHeart {
-        0% {
-            transform: scale(1);
-        }
-        25% {
-            transform: scale(1.1);
-        }
-        40% {
-            transform: scale(1);
-        }
-        60% {
-            transform: scale(1.1);
-        }
-        100% {
-            transform: scale(1);
-        }
     }
 
     .related-articles-section .time-stamp {
@@ -638,8 +587,8 @@
 
         .movie-detail-section { margin-top: 32px; }
 
-        .spoiler,
-        .spoiler-free,
+        .spoiler-tag,
+        .spoiler-free-tag,
         .arti-cat-tag,
         .time-stamp { font-size: 14px; }
 
@@ -785,7 +734,7 @@
                         <a href="#">
                             <div class="article-light d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
-                                    <div class="spoiler-free">雷</div>
+                                    <div class="spoiler-free-tag">雷</div>
                                     <div class="arti-cat-tag mr-3">選片</div>
                                     <div class="sub-title-r">永恆族 vs 惡靈 首部曲</div>
                                 </div>
@@ -797,7 +746,7 @@
                         <a href="#">
                             <div class="article-light d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
-                                    <div class="spoiler">雷</div>
+                                    <div class="spoiler-tag">雷</div>
                                     <div class="arti-cat-tag mr-3">討論</div>
                                     <div class="sub-title-r">永恆族 – 大型斯卡羅現場</div>
                                 </div>
@@ -809,7 +758,7 @@
                         <a href="#">
                             <div class="article-dark d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
-                                    <div class="spoiler">雷</div>
+                                    <div class="spoiler-tag">雷</div>
                                     <div class="arti-cat-tag mr-3">討論</div>
                                     <div class="sub-title-r">永恆族-篇幅不足的半成品</div>
                                 </div>
@@ -821,7 +770,7 @@
                         <a href="#">
                             <div class="article-dark d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
-                                    <div class="spoiler-free">雷</div>
+                                    <div class="spoiler-free-tag">雷</div>
                                     <div class="arti-cat-tag mr-3">討論</div>
                                     <div class="sub-title-r">所以永恆族算成功了嗎</div>
                                 </div>
@@ -833,7 +782,7 @@
                         <a href="#">
                             <div class="article-light d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
-                                    <div class="spoiler-free">雷</div>
+                                    <div class="spoiler-free-tag">雷</div>
                                     <div class="arti-cat-tag mr-3">討論</div>
                                     <div class="sub-title-r">永恆族有一段關鍵台詞這樣改應該更好</div>
                                 </div>
@@ -845,7 +794,7 @@
                         <a href="#">
                             <div class="article-light d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
-                                    <div class="spoiler-free">雷</div>
+                                    <div class="spoiler-free-tag">雷</div>
                                     <div class="arti-cat-tag mr-3">討論</div>
                                     <div class="sub-title-r">永恆族有一段關鍵台詞這樣改應該更好</div>
                                 </div>
@@ -857,7 +806,7 @@
                         <a href="#">
                             <div class="article-dark d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
-                                    <div class="spoiler-free">雷</div>
+                                    <div class="spoiler-tag">雷</div>
                                     <div class="arti-cat-tag mr-3">討論</div>
                                     <div class="sub-title-r">永恆族有一段關鍵台詞</div>
                                 </div>
@@ -869,7 +818,7 @@
                         <a href="#">
                             <div class="article-dark d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
-                                    <div class="spoiler-free">雷</div>
+                                    <div class="spoiler-free-tag">雷</div>
                                     <div class="arti-cat-tag mr-3">討論</div>
                                     <div class="sub-title-r">永恆族有一段關鍵台詞這樣不好</div>
                                 </div>
@@ -886,7 +835,7 @@
                                 <a href="#">
                                     <div class="d-flex justify-content-between">
                                         <div class="d-flex align-items-center">
-                                            <div class="spoiler">雷</div>
+                                            <div class="spoiler-tag">雷</div>
                                             <div class="arti-cat-tag mr-3">討論</div>
                                             <div class="sub-title-r">《永恆族》可惜不能是獨立電影</div>
                                         </div>
@@ -901,7 +850,7 @@
                                 <a href="#">
                                     <div class="article-dark d-flex justify-content-between">
                                         <div class="d-flex align-items-center">
-                                            <div class="spoiler">雷</div>
+                                            <div class="spoiler-tag">雷</div>
                                             <div class="arti-cat-tag mr-3">討論</div>
                                             <div class="sub-title-r">《永恆族》可惜不能是獨立電影</div>
                                         </div>
@@ -916,7 +865,7 @@
                                 <a href="#">
                                     <div class="article-dark d-flex justify-content-between">
                                         <div class="d-flex align-items-center">
-                                            <div class="spoiler-free">雷</div>
+                                            <div class="spoiler-free-tag">雷</div>
                                             <div class="arti-cat-tag mr-3">新聞</div>
                                             <div class="sub-title-r">《作家我就爛》逼退《永恆族》榮登...</div>
                                         </div>
@@ -931,7 +880,7 @@
                                 <a href="#">
                                     <div class="article-light d-flex justify-content-between">
                                         <div class="d-flex align-items-center">
-                                            <div class="spoiler-free">雷</div>
+                                            <div class="spoiler-free-tag">雷</div>
                                             <div class="arti-cat-tag mr-3">選片</div>
                                             <div class="sub-title-r">月老 vs. 永恆族</div>
                                         </div>
@@ -946,7 +895,7 @@
                                 <a href="#">
                                     <div class="d-flex justify-content-between">
                                         <div class="d-flex align-items-center">
-                                            <div class="spoiler">雷</div>
+                                            <div class="spoiler-tag">雷</div>
                                             <div class="arti-cat-tag mr-3">討論</div>
                                             <div class="sub-title-r">《永恆族》可惜不能是獨立電影</div>
                                         </div>
@@ -961,7 +910,7 @@
                                 <a href="#">
                                     <div class="article-dark d-flex justify-content-between">
                                         <div class="d-flex align-items-center">
-                                            <div class="spoiler">雷</div>
+                                            <div class="spoiler-tag">雷</div>
                                             <div class="arti-cat-tag mr-3">討論</div>
                                             <div class="sub-title-r">《永恆族》可惜不能是獨立電影</div>
                                         </div>
@@ -976,7 +925,7 @@
                                 <a href="#">
                                     <div class="article-dark d-flex justify-content-between">
                                         <div class="d-flex align-items-center">
-                                            <div class="spoiler-free">雷</div>
+                                            <div class="spoiler-free-tag">雷</div>
                                             <div class="arti-cat-tag mr-3">新聞</div>
                                             <div class="sub-title-r">《作家我就爛》逼退《永恆族》榮登...</div>
                                         </div>
@@ -991,7 +940,7 @@
                                 <a href="#">
                                     <div class="article-light d-flex justify-content-between">
                                         <div class="d-flex align-items-center">
-                                            <div class="spoiler-free">雷</div>
+                                            <div class="spoiler-free-tag">雷</div>
                                             <div class="arti-cat-tag mr-3">選片</div>
                                             <div class="sub-title-r">月老 vs. 永恆族</div>
                                         </div>
@@ -1011,7 +960,7 @@
                                     <div class="col-12">
                                         <div class="d-flex justify-content-between mb-2">
                                             <div class="d-flex">
-                                                <div class="spoiler">雷</div>
+                                                <div class="spoiler-tag">雷</div>
                                                 <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
                                             <div class="time-stamp d-flex align-items-center">12小時前</div>
@@ -1030,7 +979,7 @@
                                     <div class="col-12">
                                         <div class="d-flex justify-content-between mb-2">
                                             <div class="d-flex">
-                                                <div class="spoiler">雷</div>
+                                                <div class="spoiler-tag">雷</div>
                                                 <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
                                             <div class="time-stamp d-flex align-items-center">12小時前</div>
@@ -1049,7 +998,7 @@
                                     <div class="col-12">
                                         <div class="d-flex justify-content-between mb-2">
                                             <div class="d-flex">
-                                                <div class="spoiler-free">雷</div>
+                                                <div class="spoiler-free-tag">雷</div>
                                                 <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
                                             <div class="time-stamp d-flex align-items-center">12小時前</div>
@@ -1068,7 +1017,7 @@
                                     <div class="col-12">
                                         <div class="d-flex justify-content-between mb-2">
                                             <div class="d-flex">
-                                                <div class="spoiler">雷</div>
+                                                <div class="spoiler-tag">雷</div>
                                                 <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
                                             <div class="time-stamp d-flex align-items-center">12小時前</div>
@@ -1087,7 +1036,7 @@
                                     <div class="col-12">
                                         <div class="d-flex justify-content-between mb-2">
                                             <div class="d-flex">
-                                                <div class="spoiler-free">雷</div>
+                                                <div class="spoiler-free-tag">雷</div>
                                                 <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
                                             <div class="time-stamp d-flex align-items-center">12小時前</div>
@@ -1106,7 +1055,7 @@
                                     <div class="col-12">
                                         <div class="d-flex justify-content-between mb-2">
                                             <div class="d-flex">
-                                                <div class="spoiler-free">雷</div>
+                                                <div class="spoiler-free-tag">雷</div>
                                                 <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
                                             <div class="time-stamp d-flex align-items-center">12小時前</div>
@@ -1125,7 +1074,7 @@
                                     <div class="col-12">
                                         <div class="d-flex justify-content-between mb-2">
                                             <div class="d-flex">
-                                                <div class="spoiler-free">雷</div>
+                                                <div class="spoiler-free-tag">雷</div>
                                                 <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
                                             <div class="time-stamp d-flex align-items-center">12小時前</div>
@@ -1144,7 +1093,7 @@
                                     <div class="col-12">
                                         <div class="d-flex justify-content-between mb-2">
                                             <div class="d-flex">
-                                                <div class="spoiler">雷</div>
+                                                <div class="spoiler-tag">雷</div>
                                                 <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
                                             <div class="time-stamp d-flex align-items-center">12小時前</div>
