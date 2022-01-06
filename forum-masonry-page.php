@@ -20,69 +20,67 @@
     <?php require_once './tpl/movinon-navbar.php' ?>
 
     <section class="masonry-articles-section">
-        <div class="container-fluid">
-            <div class="row subtitle">
-                <div class="col-6">
-                    <div class="movie-type-wrap">
-                        <span class="body1-m type">新聞</span>
-                        <span class="body1-m type">問片</span>
-                        <span class="body1-m type">片單</span>
-                        <span class="body1-m type">討論</span>
-                        <span class="body1-m type">請益</span>
-                        <span class="body1-m type">選片</span>
-                    </div>
-                </div>
-                <div class="col-6 d-flex justify-content-end align-items-end">
-                    <a href="./forum-masonry-page.php">
-                        <div class="d-flex justify-content-end align-items-end">
-                            <div class="sub-title-r">前往討論區</div>
-                            <div class="ml-2"><i class="fas fa-chevron-right"></i></div>
-                        </div>
-                    </a>
+        <div class="subtitle">
+            <div class="col-6">
+                <div class="movie-type-wrap">
+                    <span class="body1-m type">新聞</span>
+                    <span class="body1-m type">問片</span>
+                    <span class="body1-m type">片單</span>
+                    <span class="body1-m type">討論</span>
+                    <span class="body1-m type">請益</span>
+                    <span class="body1-m type">選片</span>
                 </div>
             </div>
+            <div class="col-6 d-flex justify-content-end align-items-end">
+                <a href="./forum-masonry-page.php">
+                    <div class="d-flex justify-content-end align-items-end">
+                        <div class="sub-title-r">前往討論區</div>
+                        <div class="ml-2"><i class="fas fa-chevron-right"></i></div>
+                    </div>
+                </a>
+            </div>
+        </div>
 
-            <div class="row">
-                <div class="masonry-wrapper">
-                    <div class="masonry">
-                        <?php $sql = "SELECT `title`, `article`, `article_photo`, `spoiler_tag` FROM `spider_forum_article`";
-                        $arr = $pdo->query($sql)->fetchAll();
-                        foreach ($arr as $obj) {
-                        ?>
-                            <div class="masonry-item">
-                                <div class="masonry-content">
-                                    <div class="article-tag">
-                                        <p class="article-cat mr-2">分類</p>
-                                        <p class="spoiler-tag"><?= $obj['spoiler_tag'] ?></p>
+        <div>
+            <div class="masonry-wrapper">
+                <div class="masonry">
+                    <?php $sql = "SELECT `title`, `article`, `article_photo`, `spoiler_tag` FROM `spider_forum_article`";
+                    $arr = $pdo->query($sql)->fetchAll();
+                    foreach ($arr as $obj) {
+                    ?>
+                        <div class="masonry-item">
+                            <div class="masonry-content">
+                                <div class="article-tag">
+                                    <p class="article-cat mr-2">分類</p>
+                                    <p class="spoiler-tag"><?= $obj['spoiler_tag'] ?></p>
+                                </div>
+                                <img src="<?= $obj['article_photo'] ?>" alt="Dummy Image" class="atcphoto">
+                                <div class="article-avatar">
+                                    <div class="avatar">
+                                        <img src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
                                     </div>
-                                    <img src="<?= $obj['article_photo'] ?>" alt="Dummy Image" class="atcphoto">
-                                    <div class="article-avatar">
-                                        <div class="avatar">
-                                            <img src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-                                        </div>
-                                    </div>
+                                </div>
 
-                                    <div class="masonry-content-text">
-                                        <div>2021-12-20</span>by<span>aaa</span></div>
-                                        <h3 class="masonry-title sub-title-b"><?= $obj['title'] ?></h3>
-                                        <p class="masonry-description">
-                                            <?= $obj['article'] ?>
-                                        </p>
+                                <div class="masonry-content-text">
+                                    <div>2021-12-20</span>by<span>aaa</span></div>
+                                    <h3 class="masonry-title sub-title-b"><?= $obj['title'] ?></h3>
+                                    <p class="masonry-description">
+                                        <?= $obj['article'] ?>
+                                    </p>
+                                </div>
+                                <div class="article-like">
+                                    <div class="like-btn">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        <p>20</p>
                                     </div>
-                                    <div class="article-like">
-                                        <div class="like-btn">
-                                            <i class="fas fa-thumbs-up"></i>
-                                            <p>20</p>
-                                        </div>
-                                        <div class="comment">
-                                            <i class="far fa-comment"></i>
-                                            <p>10</p>
-                                        </div>
+                                    <div class="comment">
+                                        <i class="far fa-comment"></i>
+                                        <p>10</p>
                                     </div>
                                 </div>
                             </div>
-                        <?php } ?>
-                    </div>
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>

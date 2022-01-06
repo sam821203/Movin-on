@@ -254,7 +254,7 @@
     .actors-list-section .next-btn {
         right: 0px;
         justify-content: flex-end;
-        padding-left: 80px;
+        padding-left: 160px;
         padding-right: 40px;
         background-image: linear-gradient(to right, rgba(18, 18, 18, 0), rgba(18, 18, 18, 1));
     }
@@ -262,7 +262,7 @@
     .actors-list-section .prev-btn {
         left: 0px;
         padding-left: 40px;
-        padding-right: 80px;
+        padding-right: 160px;
         background-image: linear-gradient(to right, rgba(18, 18, 18, 1), rgba(18, 18, 18, 0));
     }
 
@@ -416,6 +416,11 @@
         border-bottom-right-radius: 240% 80px; */
     }
 
+    .movie-stills-carousel {
+        position: relative;
+        overflow: hidden;
+    }
+
     .movie-stills-carousel .img-wrap {
         width: 196px;
         height: 88px;
@@ -430,11 +435,7 @@
         object-position: 50% 50%;
         border-radius: var(--border-radius-4); 
     }
-
-    .movie-stills-carousel .col-10 {
-        overflow: hidden;
-    }
-
+    
     .movie-stills-carousel .carousel-wrap {
         width: 1114px;
         display: flex;
@@ -452,7 +453,7 @@
         justify-content: space-between;
         transform: translateX(0px);
         transition: .4s;
-        margin-top: 30px;
+        margin-top: 28px;
     }
 
     .movie-stills-carousel .carousel-wrap .img-wrap img {
@@ -464,58 +465,70 @@
         filter: grayscale(1);
     }
 
+    .movie-stills-section .movie {
+        aspect-ratio: 16 / 9;
+        background: var(--bg-color);
+        background-image: linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
+            linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)), linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
+            linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)), linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
+            linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)), linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
+            linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)), linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
+            linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)), linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
+            linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)), linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
+            linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)), linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
+            linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)), linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
+            linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1));
 
+        background-repeat: no-repeat;
+        background-position: 
+            8% 5%, 18.5% 5%, 29% 5%, 39.5% 5%, 50% 5%, 60.5% 5%, 71% 5%, 81.5% 5%, 92% 5%,
+            8% 92%, 18.5% 92%, 29% 92%, 39.5% 92%, 50% 92%, 60.5% 92%, 71% 92%, 81.5% 92%, 92% 92%; 
 
-    .strip {
-        display: flex;
-        margin-top: 1rem;
-    }
-        
-    .movie {
-    aspect-ratio: 16 / 9;
-    background: #000;
-    background-image: linear-gradient(to right, #fff, #fff),
-        linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
-        linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
-        linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
-        linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
-        linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
-        linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
-        linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
-        linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
-        linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
-        linear-gradient(to right, #fff, #fff), linear-gradient(to right, #fff, #fff),
-        linear-gradient(to right, #fff, #fff);
-
-    background-repeat: no-repeat;
-    background-position: 
-        8% 5%, 18.5% 5%, 29% 5%, 39.5% 5%, 50% 5%, 60.5% 5%, 71% 5%,
-        81.5% 5%, 92% 5%, 
-        
-        8% 5%, 18.5% 5%, 29% 5%, 39.5% 5%, 50% 5%, 60.5% 5%, 71% 5%,
-        81.5% 5%, 92% 5%,
-        
-        5% 95%, 15% 95%, 25% 95%, 35% 95%, 45% 95%, 55% 95%,
-        65% 95%, 75% 95%, 85% 95%, 95% 95%;
-
-    background-size: 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%,
-
-        5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%, 5% 8%,
-        5% 8%, 5% 8%;
+        background-size: 
+            6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%,
+            6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%;
     }
 
-    .movie-frame {
-        /* padding: 13% 5%; */
+    .movie-stills-section .movie-frame {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
-    .movie-frame img {
+    .movie-stills-section .movie-frame img {
         max-width: 100%;
         border-radius: 2px;
     }
 
+    .movie-stills-section .next-btn,
+    .movie-stills-section .prev-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 3999;
+        color: white;
+        text-align: center;
+        font-size: 24px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .movie-stills-section .next-btn {
+        right: 0px;
+        justify-content: flex-end;
+        padding-left: 120px;
+        padding-right: 40px;
+        background-image: linear-gradient(to right, rgba(18, 18, 18, 0), rgba(18, 18, 18, 1), rgba(18, 18, 18, 1));
+    }
+
+    .movie-stills-section .prev-btn {
+        left: 0px;
+        padding-left: 40px;
+        padding-right: 120px;
+        background-image: linear-gradient(to right, rgba(18, 18, 18, 1), rgba(18, 18, 18, 0));
+    }
 
     
     /* =================================== @media =================================== */
@@ -1193,7 +1206,7 @@
                             <!-- 第一張圖片 img-1 -->
                             <li class="list-unstyled">
                                 <div class="img-wrap actor1">
-                                    <img src="images/detail_page/actors_list_section/actor-1-dark.jpg" alt="">
+                                    <img src="images/detail_page/actors_list_section/actor-5.jpg" alt="">
                                     <div>
                                         <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
                                     </div>
@@ -1206,7 +1219,7 @@
 
                             <li class="list-unstyled">
                                 <div class="img-wrap actor2">
-                                    <img src="images/detail_page/actors_list_section/actor-2-dark.jpg" alt="">
+                                    <img src="images/detail_page/actors_list_section/actor-2.jpg" alt="">
                                     <div class="actor-hover-char2">
                                         <img class="image-hover" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
                                     </div>
@@ -1219,7 +1232,7 @@
 
                             <li class="list-unstyled">
                                 <div class="img-wrap actor3">
-                                    <img src="images/detail_page/actors_list_section/actor-3-dark.jpg" alt="">
+                                    <img src="images/detail_page/actors_list_section/actor-3.jpg" alt="">
                                     <div class="actor-hover-char3">
                                         <img class="image-hover" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
                                     </div>
@@ -1232,7 +1245,7 @@
 
                             <li class="list-unstyled">
                                 <div class="img-wrap actor4">
-                                    <img src="images/detail_page/actors_list_section/actor-4-dark.jpg" alt="">
+                                    <img src="images/detail_page/actors_list_section/actor-4.jpg" alt="">
                                     <div class="actor-hover-char4">
                                         <img class="image-hover" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
                                     </div>
@@ -1245,7 +1258,7 @@
 
                             <li class="list-unstyled">
                                 <div class="img-wrap actor5">
-                                    <img src="images/detail_page/actors_list_section/actor-5-dark.jpg" alt="">
+                                    <img src="images/detail_page/actors_list_section/actor-5.jpg" alt="">
                                     <div class="actor-hover-char5">
                                         <img class="image-hover" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
                                     </div>
@@ -1258,7 +1271,7 @@
 
                             <li class="list-unstyled">
                                 <div class="img-wrap actor6">
-                                    <img src="images/detail_page/actors_list_section/actor-6-dark.jpg" alt="">
+                                    <img src="images/detail_page/actors_list_section/actor-6.jpg" alt="">
                                     <div class="actor-hover-char6">
                                         <img class="image-hover" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
                                     </div>
@@ -1271,7 +1284,7 @@
 
                             <li class="list-unstyled">
                                 <div class="img-wrap actor7">
-                                    <img src="images/detail_page/actors_list_section/actor-7-dark.jpg" alt="">
+                                    <img src="images/detail_page/actors_list_section/actor-7.jpg" alt="">
                                     <div class="actor-hover-char7">
                                         <img class="image-hover" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
                                     </div>
@@ -1284,7 +1297,7 @@
 
                             <li class="list-unstyled">
                                 <div class="img-wrap actor1">
-                                    <img src="images/detail_page/actors_list_section/actor-8-dark.jpg" alt="">
+                                    <img src="images/detail_page/actors_list_section/actor-8.jpg" alt="">
                                     <div class="actor-hover-char8">
                                         <img class="image-hover" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
                                     </div>
@@ -1323,15 +1336,17 @@
                 </div>
 
                 <div class="row movie-stills-carousel">
-                    <div class="col-1">
-                        <button class="bg-transparent border-0">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
+
+                    <div class="next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="prev-btn">
+                        <i class="fas fa-chevron-left"></i>
                     </div>
 
-                    <div class="strip col-10 carousel-wrap d-flex justify-content-between list-unstyled flex-nowrap">
+                    <div class="carousel-wrap d-flex justify-content-between list-unstyled flex-nowrap">
                         <li class="movie">
-                            <div class="movie-frame"><img src="images/detail_page/movie_stills/movie_still_img1.jpg"></div>
+                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img1.jpg"></div>
                         </li>
                         <li class="movie">
                             <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img2.jpg"></div>
@@ -1344,6 +1359,9 @@
                         </li>
                         <li class="movie">
                             <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img5.jpg"></div>
+                        </li>
+                        <li class="movie">
+                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img1.jpg"></div>
                         </li>
                         <li class="movie">
                             <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img1.jpg"></div>
@@ -1378,11 +1396,7 @@
                         </li>
                     </div> -->
 
-                    <div class="col-1">
-                        <button class="bg-transparent border-0">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
+                    
                 </div>
             </div>
         </section>
