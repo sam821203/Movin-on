@@ -162,7 +162,6 @@
     }
 
     /* -----------------related articles section----------------- */
-
     .related-articles-section .subtitle,
     .actors-list-section .subtitle,
     .movie-stills-section .subtitle {
@@ -254,7 +253,7 @@
     .actors-list-section .next-btn {
         right: 0px;
         justify-content: flex-end;
-        padding-left: 160px;
+        padding-left: 240px;
         padding-right: 40px;
         background-image: linear-gradient(to right, rgba(18, 18, 18, 0), rgba(18, 18, 18, 1));
     }
@@ -262,14 +261,15 @@
     .actors-list-section .prev-btn {
         left: 0px;
         padding-left: 40px;
-        padding-right: 160px;
+        padding-right: 240px;
         background-image: linear-gradient(to right, rgba(18, 18, 18, 1), rgba(18, 18, 18, 0));
     }
 
     .actors-list-section .carousel-wrap {
-        width: 1862px;
+        width: 2660px;
         display: flex;
         justify-content: space-between;
+        transform: translateX(-266px);
         transition: .4s;
     }
 
@@ -278,6 +278,7 @@
     }
 
     .actors-list-section .img-wrap {
+        display: flex;
         width: 234px;
         height: 546px;
         overflow: hidden;
@@ -288,6 +289,7 @@
     }
 
     .actors-list-section .img-wrap img {
+        display: flex;
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -368,7 +370,7 @@
     }
 
     .movie-stills-section .movie-stills {
-        margin: 48px 0 72px 0;
+        margin: 96px 0 72px 0;
     }
 
     .movie-stills-section .imgs-demo img {
@@ -1203,10 +1205,69 @@
                             <i class="fas fa-chevron-left"></i>
                         </div>
                         <div class="carousel-wrap">
+
+                            <!-- 空照片 -->
+                            <li class="list-unstyled">
+                                <div class="img-wrap actor1">
+                                    <div></div>
+                                </div>
+                            </li>
                             <!-- 第一張圖片 img-1 -->
                             <li class="list-unstyled">
                                 <div class="img-wrap actor1">
-                                    <img src="images/detail_page/actors_list_section/actor-5.jpg" alt="">
+                                    <img src="images/detail_page/actors_list_section/actor-1-25.jpg" alt="">
+                                    <div>
+                                        <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
+                                    <span class="actor-name-en1 italic-16">English</span>
+                                </div>
+                            </li>
+
+                            <li class="list-unstyled">
+                                <div class="img-wrap actor2">
+                                    <img src="images/detail_page/actors_list_section/actor-2-25.jpg" alt="">
+                                    <div>
+                                        <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
+                                    <span class="actor-name-en1 italic-16">English</span>
+                                </div>
+                            </li>
+
+                            <li class="list-unstyled">
+                                <div class="img-wrap actor3">
+                                    <img src="images/detail_page/actors_list_section/actor-3-25.jpg" alt="">
+                                    <div>
+                                        <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
+                                    <span class="actor-name-en1 italic-16">English</span>
+                                </div>
+                            </li>
+
+                            <li class="list-unstyled">
+                                <div class="img-wrap actor4">
+                                    <img src="images/detail_page/actors_list_section/actor-4-25.jpg" alt="">
+                                    <div>
+                                        <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
+                                    <span class="actor-name-en1 italic-16">English</span>
+                                </div>
+                            </li>
+
+                            <li class="list-unstyled">
+                                <div class="img-wrap actor5">
+                                    <img src="images/detail_page/actors_list_section/actor-5-25.jpg" alt="">
                                     <div>
                                         <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
                                     </div>
@@ -1218,96 +1279,69 @@
                             </li>
 
                             <li class="list-unstyled">
-                                <div class="img-wrap actor2">
-                                    <img src="images/detail_page/actors_list_section/actor-2.jpg" alt="">
-                                    <div class="actor-hover-char2">
-                                        <img class="image-hover" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="text-center">
-                                    <span class="actor-name-tc2 sub-title-b mb-1">中文姓名</span>
-                                    <span class="actor-name-en2 italic-16">English</span>
-                                </div>
-                            </li>
-
-                            <li class="list-unstyled">
-                                <div class="img-wrap actor3">
-                                    <img src="images/detail_page/actors_list_section/actor-3.jpg" alt="">
-                                    <div class="actor-hover-char3">
-                                        <img class="image-hover" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="text-center">
-                                    <span class="actor-name-tc3 sub-title-b mb-1">中文姓名</span>
-                                    <span class="actor-name-en3 italic-16">English</span>
-                                </div>
-                            </li>
-
-                            <li class="list-unstyled">
-                                <div class="img-wrap actor4">
-                                    <img src="images/detail_page/actors_list_section/actor-4.jpg" alt="">
-                                    <div class="actor-hover-char4">
-                                        <img class="image-hover" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="text-center">
-                                    <span class="actor-name-tc4 sub-title-b mb-1">中文姓名</span>
-                                    <span class="actor-name-en4 italic-16">English</span>
-                                </div>
-                            </li>
-
-                            <li class="list-unstyled">
-                                <div class="img-wrap actor5">
-                                    <img src="images/detail_page/actors_list_section/actor-5.jpg" alt="">
-                                    <div class="actor-hover-char5">
-                                        <img class="image-hover" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="text-center">
-                                    <span class="actor-name-tc5 sub-title-b mb-1">中文姓名</span>
-                                    <span class="actor-name-en5 italic-16">English</span>
-                                </div>
-                            </li>
-
-                            <li class="list-unstyled">
                                 <div class="img-wrap actor6">
-                                    <img src="images/detail_page/actors_list_section/actor-6.jpg" alt="">
-                                    <div class="actor-hover-char6">
-                                        <img class="image-hover" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
+                                    <img src="images/detail_page/actors_list_section/actor-6-25.jpg" alt="">
+                                    <div>
+                                        <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                    <span class="actor-name-tc6 sub-title-b mb-1">中文姓名</span>
-                                    <span class="actor-name-en6 italic-16">English</span>
+                                    <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
+                                    <span class="actor-name-en1 italic-16">English</span>
                                 </div>
                             </li>
 
                             <li class="list-unstyled">
                                 <div class="img-wrap actor7">
-                                    <img src="images/detail_page/actors_list_section/actor-7.jpg" alt="">
-                                    <div class="actor-hover-char7">
-                                        <img class="image-hover" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
+                                    <img src="images/detail_page/actors_list_section/actor-7-25.jpg" alt="">
+                                    <div>
+                                        <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                    <span class="actor-name-tc7 sub-title-b mb-1">中文姓名</span>
-                                    <span class="actor-name-en7 italic-16">English</span>
+                                    <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
+                                    <span class="actor-name-en1 italic-16">English</span>
                                 </div>
                             </li>
 
                             <li class="list-unstyled">
-                                <div class="img-wrap actor1">
-                                    <img src="images/detail_page/actors_list_section/actor-8.jpg" alt="">
-                                    <div class="actor-hover-char8">
-                                        <img class="image-hover" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
+                                <div class="img-wrap actor8">
+                                    <img src="images/detail_page/actors_list_section/actor-8-25.jpg" alt="">
+                                    <div>
+                                        <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                    <span class="actor-name-tc8 sub-title-b mb-1">中文姓名</span>
-                                    <span class="actor-name-en8 italic-16">English</span>
+                                    <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
+                                    <span class="actor-name-en1 italic-16">English</span>
                                 </div>
                             </li>
-            
+
+                            <li class="list-unstyled">
+                                <div class="img-wrap actor9">
+                                    <img src="images/detail_page/actors_list_section/actor-9-25.jpg" alt="">
+                                    <div>
+                                        <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
+                                    <span class="actor-name-en1 italic-16">English</span>
+                                </div>
+                            </li>
+
+                            <li class="list-unstyled">
+                                <div class="img-wrap actor10">
+                                    <img src="images/detail_page/actors_list_section/actor-10-25.jpg" alt="">
+                                    <div>
+                                        <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
+                                    <span class="actor-name-en1 italic-16">English</span>
+                                </div>
+                            </li>
                         </div>
                     </div>
                 </div>
@@ -1361,40 +1395,21 @@
                             <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img5.jpg"></div>
                         </li>
                         <li class="movie">
-                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img1.jpg"></div>
+                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img6.jpg"></div>
                         </li>
                         <li class="movie">
-                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img1.jpg"></div>
+                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img7.jpg"></div>
+                        </li>
+                        <li class="movie">
+                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img8.jpg"></div>
+                        </li>
+                        <li class="movie">
+                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img9.jpg"></div>
+                        </li>
+                        <li class="movie">
+                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img10.jpg"></div>
                         </li>
                     </div>
-
-                    <!-- <div class="col-10 carousel-wrap d-flex justify-content-between list-unstyled flex-nowrap">
-                        <li>
-                            <div class="img-wrap pb-2">
-                                <img src="images/detail_page/movie_stills/movie_still_img1.jpg" alt="">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img-wrap pb-2">
-                                <img src="images/detail_page/movie_stills/movie_still_img2.jpg" alt="">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img-wrap pb-2">
-                                <img src="images/detail_page/movie_stills/movie_still_img3.jpg" alt="">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img-wrap pb-2">
-                                <img src="images/detail_page/movie_stills/movie_still_img4.jpg" alt="">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img-wrap pb-2">
-                                <img src="images/detail_page/movie_stills/movie_still_img5.jpg" alt="">
-                            </div>
-                        </li>
-                    </div> -->
 
                     
                 </div>
@@ -1411,25 +1426,25 @@
         let nowIndex = $(this).index() + 1;
 
         $('.actors-list-section .prev-btn').click(function () {
-            console.log('hi');
+
             nowIndex -= 1
             if (nowIndex < 0) {
                 nowIndex = 0
             }
 
             let nowX = nowIndex * -266 + 'px';
-            $('.actors-list-section .carousel-wrap').css('transform',`translateX(${nowX})`).css('transition','.8s');
+            $('.actors-list-section .carousel-wrap').css('transform',`translateX(${nowX})`).css('transition','.6s');
         });
 
         $('.actors-list-section .next-btn').click(function () {
-            console.log('hit', nowIndex)
+
             nowIndex += 1
-            if (nowIndex > 4) {
-                nowIndex = 4
+            if (nowIndex > 6) {
+                nowIndex = 6
             }
             
             let nowX = nowIndex * -266 + 'px';
-            $('.actors-list-section .carousel-wrap').css('transform',`translateX(${nowX})`).css('transition','.8s');
+            $('.actors-list-section .carousel-wrap').css('transform',`translateX(${nowX})`).css('transition','.6s');
         });
 
         // -------------------- hall screen --------------------
@@ -1440,18 +1455,47 @@
 
                 // Get current image source
                 const imgSrc = $(this).attr("src");
-                console.log(imgSrc);
 
                 // Apply grayscale to thumbnails except selected
                 $(".movie-stills-carousel .carousel-wrap")
                     .find("img")
-                    .css("filter", "grayscale(1)");
+                    .css("filter", "grayscale(1)").css('transition', '.4s');
                 $(this).css("filter", "none");
 
                 // Change image
                 $('.movie-stills .hall-screen img').attr('src', imgSrc);
             });
+
+            $(".movie-stills-carousel .carousel-wrap li img").hover (function() {
+                $(this).css("filter", "none").css('transition', '.4s');
+            }, function () {
+                $(this).css("filter", "grayscale(1)").css('transition', '.4s');
+            });
         });
+
+        // -------------------- hall screen carousel --------------------
+        $('.movie-stills-carousel .prev-btn').click(function () {
+
+            nowIndex -= 1
+            if (nowIndex < 0) {
+                nowIndex = 0
+            }
+
+            let nowX = nowIndex * -232 + 'px';
+            $('.movie-stills-carousel .movie').css('transform',`translateX(${nowX})`).css('transition','.6s');
+        });
+
+        $('.movie-stills-carousel .next-btn').click(function () {
+
+            nowIndex += 1
+            if (nowIndex > 5) {
+                nowIndex = 5
+            }
+            
+            let nowX = nowIndex * -232 + 'px';
+            $('.movie-stills-carousel .movie').css('transform',`translateX(${nowX})`).css('transition','.6s');
+        });
+
     </script>
 
     <!-- <script src="js/detail-page.js"></script> -->

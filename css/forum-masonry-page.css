@@ -29,7 +29,7 @@ footer, header, hgroup, main, menu, nav, section {
   display: block;
 } */
 
-ol, ul {
+/* ol, ul {
   list-style: none;
 }
 
@@ -46,21 +46,22 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
+} */
 
 /* a {
   text-decoration: none;
 } */
 
-code, pre, samp {
+/* code, pre, samp {
   font-family: monospace;
-}
+} */
 
 /**
  * BASIC TYPE
  */
 
-img, video {
+.masonry-articles-section img, 
+.masonry-articles-section video {
   max-width: 100%;
   vertical-align: middle;
 }
@@ -69,11 +70,11 @@ p:not(:last-child) {
   margin: 0 0 1em;
 }
 
-*,
+/* *,
 *:before,
 *:after {
   box-sizing: inherit;
-}
+} */
 
 .wrapper { 
     max-width: 1280px;
@@ -86,6 +87,7 @@ body {
     background: url("images/forum_masonry_page/masonry_bg_img.jpg") top center no-repeat;
     background-size: contain;
     background-color: var(--bg-color);
+    width: 100%;
 }
 
 .masonry-articles-section { 
