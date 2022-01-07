@@ -1,4 +1,5 @@
 <?php require_once './tpl/head.php' ?>
+<?php require_once 'db.inc.php' ?>
 
 <style>
 
@@ -799,12 +800,33 @@
                                     </div>
 
                                     <div class="d-flex">
-                                        <a href="#">
-                                            <div class="btn-booking">立即購票</div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="btn-description">電影介紹</div>
-                                        </a>
+                                        <!-- 1/5更改: 新增php購票路徑 -->
+                                        <?php
+                                        $sql = "SELECT `movie_id`, `poster`, `division_id`, `date_id` FROM `movie` INNER JOIN `division` INNER JOIN `date`
+                                        WHERE `movie_id` = 1
+                                        AND `division_id` = 'DV1'
+                                        AND `date_id` = 'D1'";
+                                        $arr = $pdo->query($sql)->fetchAll();
+                                        foreach ($arr as $obj) {
+                                        ?>
+                                            <a href="booking-time-page.php?movie_id=<?= $obj['movie_id'] ?>&sub_date_id=<?= $obj['date_id'] ?>&sub_division_id=<?= $obj['division_id'] ?>">
+                                                <div class="btn-booking">立即購票</div>
+                                            </a>
+                                        <?php } ?>
+
+
+                                        <!-- 1/4更改: 電影介紹a連結加資料庫路徑 -->
+                                        <?php
+                                        $sql = "SELECT `movie_id`, `poster` FROM `movie` WHERE `movie_id` = 1";
+                                        $arr = $pdo->query($sql)->fetchAll();
+                                        foreach ($arr as $obj) {
+                                        ?>
+                                            <a href="detail-page.php?movie_id=<?= $obj['movie_id'] ?>">
+                                                <div class="btn-description">電影介紹</div>
+                                            </a>
+                                        <?php
+                                        }
+                                        ?>
                                     </div>
                                 </div>
                             </div>
