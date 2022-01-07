@@ -24,6 +24,7 @@
     /* -----------------forum info section----------------- */
     .forum-info-section {
         margin-top: 368px;
+        width: 100%;
     }
 
     .forum-info-section .main-header-b {
@@ -35,10 +36,12 @@
     }
 
     .forum-info-section .forum-info-title {
+        width: 100%;
         margin-bottom: 32px;
     }
     
     .forum-info-section .forum-info-board {
+        width: 100%;
         background-color: var(--bg-color);
         padding: 88px 48px 32px 48px;
         opacity: var(--opacity-75);
@@ -48,6 +51,9 @@
         overflow: auto;
         box-shadow: var(--box-shadow-black-25);
     }
+
+    .board-title,
+    .board-content { width: 100%; }
 
     .board-title .sub-title-m {
         width: 100%;
@@ -151,6 +157,7 @@
 
     /* -------------------forum cat section-------------------- */
     .forum-cat-section {
+        width: 100%;
         margin-bottom: 144px;
     }
 

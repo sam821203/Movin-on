@@ -76,10 +76,20 @@ a:hover {
 
 p { line-height: var(--line-height-160); }
 
+/* 將全部的 row 調為寬 100% */
+.row {
+    width: 100%;
+}
+
 /* .container-fluid {
     padding-left: 72px;
     padding-right: 72px;
 } */
+
+.subtitle { 
+    display: flex;
+    justify-content: space-between;
+}
 
 .subtitle .section-header-b { margin: auto 0; }
 
@@ -160,6 +170,14 @@ p { line-height: var(--line-height-160); }
 ::-webkit-scrollbar-track {
     background: rgba(18,18,18,0.75);
 }
+
+/* global width percent */
+.mycol-12 { max-width: 100%; }
+.mycol-9 { max-width: 75%; }
+.mycol-8 { max-width: 66.666667%; }
+.mycol-6 { max-width: 50%; } 
+.mycol-4 { max-width: 33.333333%; }
+.mycol-3 { max-width: 25%; }
 
 /* ----------48px---------- */
 .main-header-b {

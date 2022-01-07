@@ -247,6 +247,7 @@
     /* ----------------------------ranking section---------------------------- */
     .ranking-section {
         margin-bottom: 64px;
+        width: 100%;
     }
 
     .ranking-section .subtitle {
@@ -260,7 +261,8 @@
     }
 
     .ranking-section .wrap {
-        max-width: 1920px;
+        /* max-width: 1920px; */
+        width: 100%;
         height: 560px;
         display: flex;
         align-items: center;
@@ -511,6 +513,10 @@
     }
 
     /* ----------------------------forum cards section---------------------------- */
+    .forum-cards-section {
+        width: 100%;
+    }
+
     .forum-cards-section .row1,
     .forum-cards-section .row2 {
         margin-bottom: 32px;
@@ -732,12 +738,12 @@
         <section class="ranking-section">
             <div class="container">
                 <div class="row subtitle g-subtitle-mb">
-                    <div class="col-6">
-                        <div class="d-flex">
-                            <div class="red-line my-auto"></div>
-                            <span class="section-header-b">電影排行榜</span>
-                        </div>
+
+                    <div class="col-6 d-flex">
+                        <div class="red-line my-auto"></div>
+                        <span class="section-header-b">電影排行榜</span>
                     </div>
+
                     <div class="col-6 d-flex justify-content-end align-items-end">
                         <a href="./movies-overview-page.php">
                             <div class="d-flex justify-content-end align-items-end">
@@ -746,6 +752,7 @@
                             </div>
                         </a>
                     </div>
+
                 </div>
             </div>
             <div class="container-fluid">
@@ -1199,11 +1206,9 @@
         <section class="forum-cards-section g-section-mb">
             <div class="container d-none d-xl-block">
                 <div class="row subtitle g-subtitle-mb">
-                    <div class="col-6">
-                        <div class="d-flex">
-                            <div class="red-line my-auto"></div>
-                            <span class="section-header-b">精選討論區</span>
-                        </div>
+                    <div class="col-6 d-flex">
+                        <div class="red-line my-auto"></div>
+                        <span class="section-header-b">精選討論區</span>
                     </div>
                     <div class="col-6 d-flex justify-content-end align-items-end">
                         <a href="#">
@@ -1242,6 +1247,7 @@
                             </a>
                         </div>
                     </div>
+
                     <div class="col-8">
                         <a href="#">
                             <div class="img-wrap card-3">

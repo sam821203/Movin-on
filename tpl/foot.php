@@ -13,20 +13,26 @@
     <!-- bootstrap 4.6.1 Link -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script> -->
     
-    <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
-
-    <!-- <script type="text/javascript">
-        window.FontAwesomeConfig = { autoReplaceSvg: false }
-    </script> -->
-
+    <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>   
+    
     <!-- Font awesome -->
-    <script src="./js/awesome.all.min.js"></script>
+    <!-- <script src="./js/awesome.all.min.js"></script> -->
+    <script src="./js/new-font.js"></script>
 
-    <!-- Font awesome link -->
+
+    <!-- Font awesome link --> 
     <!-- <script src="https://kit.fontawesome.com/1392152695.js" crossorigin="anonymous"></script> -->
+
     
     <!-- Movinon navbar js -->
     <script src="./js/movinon-navbar.js"></script>
 
     <!-- datepicker js -->
     <script src="./js/datepicker.js"></script>  
+
+    <!--  js -->
+    <script src="./js/booking-ratingcolor.js"></script> 
+
+    <script type="text/javascript">
+        window.FontAwesomeConfig = { autoReplaceSvg: false }
+    </script>
