@@ -15,10 +15,15 @@
     
     <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
 
-    <!-- <script src="./js/popper.js"></script> -->
-    
+    <!-- <script type="text/javascript">
+        window.FontAwesomeConfig = { autoReplaceSvg: false }
+    </script> -->
+
     <!-- Font awesome -->
-    <script src="./js/fontawesome.all.min.js"></script>
+    <script src="./js/awesome.all.min.js"></script>
+
+    <!-- Font awesome link -->
+    <!-- <script src="https://kit.fontawesome.com/1392152695.js" crossorigin="anonymous"></script> -->
     
     <!-- Movinon navbar js -->
     <script src="./js/movinon-navbar.js"></script>

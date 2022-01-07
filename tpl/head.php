@@ -16,24 +16,15 @@
     <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
 
     <!-- Font awesome -->
-    <link rel="stylesheet" href="./css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="./css/awesome.all.min.css">
     
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=BenchNine:wght@300;400&family=Noto+Sans+TC:wght@100;300;400;500;700&family=Roboto+Condensed&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
-
-    <!-- font-family: 'BenchNine', sans-serif;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Roboto Condensed', sans-serif; -->
     
     <!-- reset & style -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="tpl/global-style.css">
     <link rel="stylesheet" href="css/main-page.css">
-    <!-- <link rel="stylesheet" href="css/forum-masonry-page.css"> -->
-    <!-- <link rel="stylesheet" href="./css/bootstrap-switch.css">
-    <link rel="stylesheet" href="./css/canvas.css"> -->
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
 </head>

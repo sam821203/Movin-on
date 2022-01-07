@@ -24,7 +24,11 @@
         padding: 0px;
         position: relative;
         display:flex;
-        justify-content:center;
+        justify-content: center;
+
+        /* 嘗試調整 @media 的固定寬 */
+        overflow: hidden;
+        max-width: 1920px;
     }
 
     .hero .bg {
@@ -39,7 +43,7 @@
     canvas {
         pointer-events: none;
         position: absolute;
-        width: 100%;
+        /* width: 100%; */
         height:100%;
         top: 0;
         left: 0;

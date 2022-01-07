@@ -33,6 +33,11 @@
         opacity: var(--opacity-75);
     }
 
+    .movie-detail-section .movie-poster {
+        width: 25%;
+    }
+
+
     .movie-detail-section
     .movie-poster
     .img-wrap {
@@ -557,7 +562,52 @@
         }
 
         .movie-detail-section .movie-info { padding: 0; }
+        .movie-detail-section .content { padding-left: 16px; }
+        .movie-detail-section .title-tc { font-size: 34px; }
+        .movie-detail-section .title-en { font-size: 16px; }
 
+        .movie-detail-section .content { padding-left: 32px; }
+
+        .movie-detail-section .content .date-data,
+        .movie-detail-section .content .length-data,
+        .movie-detail-section .content .director-data {  
+            font-size: 16px;
+            margin-right: 12px;
+        }
+
+        .movie-detail-section .content .fa-calendar-check,
+        .movie-detail-section .content .fa-clock,
+        .movie-detail-section .content .fa-video {  
+            opacity: var(--opacity-90);
+        }
+
+        .movie-detail-section .cat-tags .cat-tag {
+            font-size: 16px;
+            background-color: var(--card-color);
+            border: none;
+            border-radius: var(--border-radius-50);
+            padding: 4px 20px 6px 20px;
+            box-shadow: var(--box-shadow-card-sm);
+            margin-right: 12px;
+            opacity: var(--opacity-75);
+        }
+
+        .movie-detail-section .reputation {
+            margin-bottom: 0;
+        }
+
+        .movie-detail-section .description {
+            border-top: none;
+            font-size: 16px;
+            padding-top: 0;
+        }
+
+        .movie-detail-section .description p {
+            overflow: auto;
+            height: 100%;
+        }
+
+        /* related articles section */
         .articles-xl li:nth-child(even){
             padding: 16px 32px;
             background-color: rgba(255,255,255,0.02);
@@ -581,9 +631,11 @@
         }
 
         /* section margin bottom */
-        .movie-detail-section { margin-top: 48px; }
+        .movie-detail-section { margin-top: 288px; }
         .movie-detail-section .cat-tags .cat-tag { margin-top: 32px; }
-
+        
+        .movie-detail-section .content { padding-left: 16px; }
+    
         .movie-detail-section .description-title {
             margin-bottom: 16px;
         }
@@ -696,6 +748,8 @@
         <!-- -----------movie detail section----------- -->
         <section class="movie-detail-section g-section-mb">
             <div class="container">
+
+                <!-- social media display > 1200 -->
                 <div class="row social-media d-none d-xl-flex flex-column">
                     <div class="d-flex justify-content-end mb-2">
                         <a href="#">
@@ -708,14 +762,17 @@
                         </a>
                     </div>
                 </div>
-                <div class="row movie-info">
-                    <div class="col-md-12 col-lg-6 d-flex">
-                        <div class="col-sm-4 col-lg-6 movie-poster">
+
+                <!-- movie info display > 1200 -->
+                <div class="row movie-info d-none d-lg-none d-xl-flex">
+                    <div class="col-xl-6 d-flex">
+                        <div class="col-sm-3 col-lg-6 movie-poster">
                             <div class="img-wrap">
                                 <img src="images/poster_images/MSRbo2ocgQ6N9DdzBUk0-280 x 400.jpg" alt="">
                             </div>
                         </div>
-                        <div class="col-sm-8 col-lg-6 content">
+
+                        <div class="col-sm-9 col-lg-6 content">
                             <div>
                                 <span class="pg-rate body2-r">輔導級</span>
                             </div>
@@ -742,18 +799,12 @@
                                 </div>
                                 <span>79%</span>
                             </div>
-
-                            <!-- 在 1920 螢幕上做測試 -->
-                            <!-- <p>日期：<span class="data">2021/11/03</span></p>
-                            <p>片長：<span class="data">156分鐘</span></p>
-                            <p>導演：<span class="data">趙婷</span></p> -->
-
                             <p><span class="release-date"></span>日期：<span class="date-data">2021/11/03</span></p>
                             <p><span class="movie-length"></span>片長：<span class="length-data">156分鐘</span></p>
                             <p><span class="movie-director"></span>導演：<span class="director-data">趙婷</span></p>
-
                         </div>
                     </div>
+
                     <div class="col-md-12 col-lg-6">
                         <div class="cat-tags">
                             <div class="cat-tag">奇幻</div>
@@ -781,6 +832,71 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- movie info display > 992 -->
+                <div class="row movie-info d-flex d-lg-flex d-xl-none">
+                    <div class="d-flex">
+                        <div class="movie-poster">
+                            <div class="img-wrap">
+                                <img src="images/poster_images/MSRbo2ocgQ6N9DdzBUk0-280 x 400.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div>
+                                <span class="pg-rate body2-r">輔導級</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <div class="title-tc">永恆族</div>
+                                    <div class="title-en">Eternals</div>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+
+                            <div class="d-flex">
+                                <p class="release-date"><i class="far fa-calendar-check"></i><span class="date-data">2021/11/03</span></p>
+                                <p class="movie-length"><i class="far fa-clock"></i><span class="length-data">156分鐘</span></p>
+                                <p class="movie-director"><i class="fas fa-video"></i><span class="director-data">趙婷</span></p>
+                            </div>
+                            <div class="cat-tags">
+                                <div class="cat-tag">奇幻</div>
+                                <div class="cat-tag">冒險</div>
+                                <div class="cat-tag">英雄</div>
+                                <div class="cat-tag">劇情</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="description-title">
+                        <span class="section-header-b">劇情大綱</span>
+                    </div>
+                    <div class="description">
+                        <p>永恆族是超越繁星的神族，七千年前來到地球，誓言保護人類，各色各異的他們，擁有超凡智慧與能力，長生不老，每人具備迥然不同的絕頂神力。然而守護地球期間，各自強大的永恆族人並非和樂融融，內部紛爭不斷，最終整個族群分崩離析，直到一群古老的宿敵現身永恆族是超越繁星的神族，七千年前來到地球，誓言保護人類，各色各異的他們，擁有超凡智慧與能力，長生不老，每人具備迥然不同的絕頂神力。然而守護地球期間，各自強大的永恆族人並非和樂融融，內部紛爭不斷，最終整個族群分崩離析，直到一群古老的宿敵現身……</p>
+                    </div>
+                    <div class="booking-trailer">
+                        <button type="button" class="btn mr-3">
+                            <a href="./booking-movie-page.php">
+                                <i class="fas fa-ticket-alt mr-2"></i>
+                                <span>立即購票</span>
+                            </a>
+                        </button>
+                        <button type="button" class="btn btn-outline-light">
+                            <i class="fab fa-youtube mr-2"></i>
+                            <span>預告片</span>
+                        </button>
+                    </div>
+                </div>
+
             </div>
         </section>
 
