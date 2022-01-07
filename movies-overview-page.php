@@ -134,6 +134,7 @@
             border: none;
             border-bottom: 2px solid var(--brand-color);
             font-size: 1.125rem;
+            box-shadow: 0 10px 10px -10px var(--brand-color);
         }
 
         .movies-tab-bar .nav-link {
@@ -182,7 +183,7 @@
     <main>
         <div class="movies-tab-bar g-section-mb">
             <div class="container">
-                <div class="row">
+                <div class="row justify-content-center">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">現正熱映</a>

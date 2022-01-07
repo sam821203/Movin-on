@@ -23,10 +23,10 @@
         margin-bottom: 32px;
     }
 
-    /* .movie-detail-section .social-media i {
+    .movie-detail-section .social-media i {
         font-size: 2.125rem;
         opacity: var(--opacity-75);
-    } */
+    }
 
     .movie-detail-section .social-media svg {
         font-size: 2.125rem;
@@ -70,6 +70,10 @@
 
     .movie-detail-section .rating {
         margin-bottom: 32px;
+    }
+
+    .movie-detail-section .rating i {
+        font-size: 0.875rem;
     }
 
     .movie-detail-section .title-tc { 
@@ -561,7 +565,33 @@
             padding: 0;
         }
 
-        .movie-detail-section .movie-info { padding: 0; }
+        .movie-detail-section .movie-info { 
+            margin-bottom: 32px;
+            padding: 0; 
+        }
+
+        .movie-detail-section .movie-info .release-date i,
+        .movie-detail-section .movie-info .movie-length i,
+        .movie-detail-section .movie-info .movie-director i { 
+            margin-right: 8px;
+        }
+
+        .movie-detail-section .movie-poster {
+            width: 20%;
+        }
+
+        .movie-detail-section .description {
+            margin-bottom: 20px;
+        }
+
+        .movie-detail-section .description-title {
+            margin-bottom: 16px;
+        }
+
+        .movie-detail-section .description-title .section-header-b {
+            font-size: 1.25rem;
+        }
+
         .movie-detail-section .content { padding-left: 16px; }
         .movie-detail-section .title-tc { font-size: 34px; }
         .movie-detail-section .title-en { font-size: 16px; }
@@ -579,6 +609,10 @@
         .movie-detail-section .content .fa-clock,
         .movie-detail-section .content .fa-video {  
             opacity: var(--opacity-90);
+        }
+
+        .movie-detail-section .cat-tags {
+            margin-bottom: 0;
         }
 
         .movie-detail-section .cat-tags .cat-tag {
@@ -835,43 +869,41 @@
 
                 <!-- movie info display > 992 -->
                 <div class="row movie-info d-flex d-lg-flex d-xl-none">
-                    <div class="d-flex">
-                        <div class="movie-poster">
-                            <div class="img-wrap">
-                                <img src="images/poster_images/MSRbo2ocgQ6N9DdzBUk0-280 x 400.jpg" alt="">
-                            </div>
+                    <div class="movie-poster">
+                        <div class="img-wrap">
+                            <img src="images/poster_images/MSRbo2ocgQ6N9DdzBUk0-280 x 400.jpg" alt="">
                         </div>
-                        <div class="content">
+                    </div>
+                    <div class="content">
+                        <div>
+                            <span class="pg-rate body2-r">輔導級</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
                             <div>
-                                <span class="pg-rate body2-r">輔導級</span>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <div>
-                                    <div class="title-tc">永恆族</div>
-                                    <div class="title-en">Eternals</div>
-                                    <div class="rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                    </div>
+                                <div class="title-tc">永恆族</div>
+                                <div class="title-en">Eternals</div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
                                 </div>
                             </div>
-                            
-                            
+                        </div>
+                        
+                        
 
-                            <div class="d-flex">
-                                <p class="release-date"><i class="far fa-calendar-check"></i><span class="date-data">2021/11/03</span></p>
-                                <p class="movie-length"><i class="far fa-clock"></i><span class="length-data">156分鐘</span></p>
-                                <p class="movie-director"><i class="fas fa-video"></i><span class="director-data">趙婷</span></p>
-                            </div>
-                            <div class="cat-tags">
-                                <div class="cat-tag">奇幻</div>
-                                <div class="cat-tag">冒險</div>
-                                <div class="cat-tag">英雄</div>
-                                <div class="cat-tag">劇情</div>
-                            </div>
+                        <div class="d-flex">
+                            <p class="release-date"><i class="far fa-calendar-check"></i><span class="date-data">2021/11/03</span></p>
+                            <p class="movie-length"><i class="far fa-clock"></i><span class="length-data">156分鐘</span></p>
+                            <p class="movie-director"><i class="fas fa-video"></i><span class="director-data">趙婷</span></p>
+                        </div>
+                        <div class="cat-tags">
+                            <div class="cat-tag">奇幻</div>
+                            <div class="cat-tag">冒險</div>
+                            <div class="cat-tag">英雄</div>
+                            <div class="cat-tag">劇情</div>
                         </div>
                     </div>
                 </div>

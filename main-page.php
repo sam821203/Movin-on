@@ -679,7 +679,7 @@
             <div class="bg"></div>
 
             <!-- ---------------canvas--------------- -->
-            <canvas class="dm"></canvas>
+            <!-- <canvas class="dm"></canvas> -->
             
             <!-- ---------------inputgroup--------------- -->
             <div class="inputgroup row">
