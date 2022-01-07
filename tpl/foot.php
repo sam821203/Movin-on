@@ -15,5 +15,4 @@
     <!-- datepicker js -->
     <script src="./js/datepicker.js"></script>  
 
-    <!-- booking-ratingcolor js -->
-    <script src="./js/booking-ratingcolor.js"></script> 
+   
