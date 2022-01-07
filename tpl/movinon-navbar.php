@@ -54,6 +54,9 @@
                     <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false"><img src="images/account.svg" alt=""></a>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+
+                    <?php if ( !isset($_SESSION['name'])) { ?>
+
                         <a class="text-white mb-3" href="#" data-toggle="modal" data-target="#exampleModalLogin">
                             <div class="body1-m mb-3">登入</div>
                         </a>
@@ -61,11 +64,14 @@
                         <a class="text-white" type="button" href="#" data-toggle="modal" data-target="#exampleModal">
                             <div class="body1-m mt-3">註冊</div>    
                         </a>
+                        <?php } ?>
+
                         <!-- <div class="divide-line"></div> -->
                         <?php if (isset($_SESSION['name'])) { ?>
+                            <a href="">會員中心</a>
                             <a type="button" class="btn btn-outline-light" href="#" id="logout">登出</a>
                         <?php } ?>
-                        
+
                     </div>
                 </div>
             </div>
