@@ -61,6 +61,10 @@
                         <a class="text-white" type="button" href="#" data-toggle="modal" data-target="#exampleModal">
                             <div class="body1-m mt-3">註冊</div>    
                         </a>
+                        <!-- <div class="divide-line"></div> -->
+                        <?php if (isset($_SESSION['name'])) { ?>
+                            <a type="button" class="btn btn-outline-light" href="#" id="logout">登出</a>
+                        <?php } ?>
                     </div>
                 </div>
             </div>

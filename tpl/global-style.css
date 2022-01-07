@@ -306,7 +306,7 @@ p { line-height: var(--line-height-160); }
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 4999;
+    z-index: 1999;
 }
 
 /* 因為這裡套 .container-fluid，所以需要先將 row 的 margin 預設先拿掉 */
@@ -333,6 +333,15 @@ p { line-height: var(--line-height-160); }
 }
 
 /* -----------------options----------------- */
+.movinon-navbar .modal {
+    z-index: 9999;
+}
+
+.movinon-navbar .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba(255, 38, 0, 0.25);
+  }
+  
+
 .movinon-navbar .options li.options-spacing {
     display: block;
     padding: 28px 16px 32px 16px;

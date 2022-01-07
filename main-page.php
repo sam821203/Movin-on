@@ -1,5 +1,6 @@
 <?php require_once './tpl/head.php' ?>
 <?php require_once 'db.inc.php' ?>
+<?php session_start() ?>
 
 <style>
 
@@ -809,7 +810,7 @@
                                         $arr = $pdo->query($sql)->fetchAll();
                                         foreach ($arr as $obj) {
                                         ?>
-                                            <a href="booking-time-page.php?movie_id=<?= $obj['movie_id'] ?>&sub_date_id=<?= $obj['date_id'] ?>&sub_division_id=<?= $obj['division_id'] ?>">
+                                            <a href="new-booking-time-page.php?movie_id=<?= $obj['movie_id'] ?>&sub_date_id=<?= $obj['date_id'] ?>&sub_division_id=<?= $obj['division_id'] ?>">
                                                 <div class="btn-booking">立即購票</div>
                                             </a>
                                         <?php } ?>
