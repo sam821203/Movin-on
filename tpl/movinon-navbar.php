@@ -65,6 +65,7 @@
                         <?php if (isset($_SESSION['name'])) { ?>
                             <a type="button" class="btn btn-outline-light" href="#" id="logout">登出</a>
                         <?php } ?>
+                        
                     </div>
                 </div>
             </div>
