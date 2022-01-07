@@ -255,7 +255,6 @@
 
                         <!-- 本週上映 -->
                         <div class="tab-pane fade " id="profile" role="tabpanel" aria-labelledby="home-tab">
-                            本週上映
                             <div class="content-section g-section-mb">
                                 <!-- 1/5 class增加container -->
                                 <div class="container justify-content-between position-relative px-0">
@@ -310,7 +309,6 @@
 
                         <!-- 即將上映 -->
                         <div class="tab-pane fade " id="contact" role="tabpanel" aria-labelledby="home-tab">
-                            即將上映
                             <div class="content-section g-section-mb">
                                 <div class="container justify-content-between position-relative px-0">
                                     <div class="row mb-3">
