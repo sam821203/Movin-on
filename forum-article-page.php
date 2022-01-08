@@ -100,6 +100,10 @@
             border-top: 1px solid rgba(255,255,255,0.25)
         }
 
+        .left-side-article .comment .content i {
+            font-size: 18px;
+        }
+
         .left-side-article .article-content {
             margin-bottom: 88px;
         }
@@ -116,7 +120,7 @@
 
         .left-side-article .comment-data i {
             margin-right: 8px;
-            font-size: 20px;
+            font-size: 18px;
         }
 
         /* left side comment */
@@ -221,10 +225,6 @@
             display: block;
         }
 
-        .left-side-comment .fa-thumbs-up {
-            font-size: 20px;
-        }
-
         .left-side-comment .like-count {
             padding-left: 8px;
         }
@@ -262,13 +262,6 @@
             border-radius: var(--border-radius-4);
         }
 
-        .btn-brand {
-            color: #fff;
-            background-color: var(--brand-color);
-            transition: .2s;
-            padding: 4px 24px;
-        }
-
         .btn-brand:hover {
             color: #fff;
             font-weight: 700;
@@ -290,6 +283,20 @@
             background-color: var(--card-color);
             border-radius: var(--border-radius-8);
             box-shadow: var(--box-shadow-card-lg);
+        }
+
+        .aside-ads .img-wrap {
+            width: 310px;
+            height: 256px;
+            display: flex;
+        }
+
+        .aside-ads .img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            border-radius: var(--border-radius-8);
         }
 
         /* aside member info */
@@ -889,7 +896,7 @@
                                     </div>
 
                                     <div class="d-flex justify-content-end align-items-end">
-                                        <button type="submit" class="btn btn-brand">送出</button>
+                                        <button type="submit" class="btn-brand-left-comment mr-0">送出</button>
                                     </div>
                                 </div>
                             </div>
@@ -900,7 +907,7 @@
                         <div class="d-none d-lg-none d-xl-block col-xl-12 aside-ads">
                             <a href="#">
                                 <div class="img-wrap">
-                                    <img src="" alt="------放廣告------">
+                                    <img src="images/forum_article_page/ads_img.jpeg" alt="">
                                 </div>
                             </a>
                         </div>

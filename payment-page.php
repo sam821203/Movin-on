@@ -233,10 +233,8 @@
     /* -----------------btn area----------------- */
     .payment-section-r .btn-area .btn {
         border-radius: var(--border-radius-50);
-        padding: 4px 64px;
-        background-color: var(--brand-color);
-        box-shadow: var(--box-shadow-red);
-        color: white;
+        width: 160px;
+        padding: 10px 0 8px 0;
     }
 </style>
 
@@ -436,8 +434,8 @@
                                 </form>
 
                                 <a class="btn-area" href="#">
-                                    <div class="btn">
-                                        <span class="sub-title-b">結帳</span>
+                                    <div class="btn btn-brand">
+                                        <span>結帳</span>
                                     </div>
                                 </a>
                             </div>

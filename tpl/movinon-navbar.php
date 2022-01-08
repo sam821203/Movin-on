@@ -45,13 +45,13 @@
             <div class="navbar-icons d-flex justify-content-end my-auto">
                 <a class="d-flex justify-content-center" href="#">
                     <div class="img-wrap1 d-flex align-items-center">
-                        <img src="images/help.svg" alt="">
+                        <img src="images/icon_help.svg" alt="">
                     </div>
                 </a>
 
                 <!-- 登入視窗連結 -->
                 <div class="img-wrap2 d-flex align-items-center dropdown">
-                    <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false"><img src="images/account.svg" alt=""></a>
+                    <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false"><img src="images/icon_account.svg" alt=""></a>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 

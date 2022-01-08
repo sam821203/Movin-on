@@ -175,25 +175,16 @@
     } 
 
     .hero .send {
-        background-color: var(--brand-color);
-        color: white;
-        font-weight: 500;
-        border-radius: var(--border-radius-50);
         vertical-align: middle;
         border: 1px solid transparent;
         display: flex;
         justify-content: center;
         align-items: center;
         margin-right: 12px;
-        box-shadow: var(--box-shadow-red);
     }
 
     .hero .clear {
         border-radius: var(--border-radius-50);
-        color: white;
-        font-weight: 500;
-        background-color: transparent;
-        border: 1px solid white;
     }
 
     /* 修改 placeholder 的字體顏色 */
@@ -279,13 +270,27 @@
     }
 
     .ranking-section .wrap {
-        /* max-width: 1920px; */
         width: 100%;
         height: 560px;
         display: flex;
         align-items: center;
         overflow: hidden;
         position: relative;
+    }
+
+    .ranking-section .next-btn .img-wrap,
+    .ranking-section .prev-btn .img-wrap {
+        width: 48px;
+        height: 36px;
+    }
+
+    .ranking-section .next-btn .img-wrap img,
+    .ranking-section .prev-btn .img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        opacity: var(--opacity-90);
     }
 
     .ranking-section .next-btn,
@@ -306,15 +311,15 @@
     .ranking-section .next-btn {
         right: 0px;
         justify-content: flex-end;
-        padding-left: 80px;
-        padding-right: 40px;
+        padding-left: 40px;
+        padding-right: 32px;
         background-image: linear-gradient(to right, rgba(18, 18, 18, 0), rgba(18, 18, 18, 1));
     }
 
     .ranking-section .prev-btn {
         left: 0px;
-        padding-left: 40px;
-        padding-right: 80px;
+        padding-left: 32px;
+        padding-right: 40px;
         background-image: linear-gradient(to right, rgba(18, 18, 18, 1), rgba(18, 18, 18, 0));
     }
 
@@ -323,12 +328,15 @@
         display: flex;
     }
 
+    .ranking-section .carousel-wrap .img-wrap {
+        box-shadow: var(--box-shadow-black);
+    }
+
     .ranking-section .img-wrap {
         width: 280px;
         height: 400px;
         margin: 0 16px;
         position: relative;
-        box-shadow: var(--box-shadow-black);
     }
 
     .ranking-section .img-wrap img {
@@ -731,8 +739,8 @@
                         maxlength="20"  
                         placeholder="選擇電影標籤後才能發言喔 !">
                     </div>
-                    <button class="send" disabled >送出</button>
-                    <button class="clear">清除</button>
+                    <button class="send btn-brand" disabled >送出</button>
+                    <button class="clear btn-white-outline">清除</button>
                 </div>
 
                 <!-- 背景設定 -->
@@ -777,10 +785,14 @@
                 <div class="row">
                     <div class="wrap">
                         <div class="next-btn">
-                            <i class="fas fa-chevron-right"></i>
+                            <div class="img-wrap">
+                                <img src="images/icon_arrow_right.svg" alt="">
+                            </div>
                         </div>
                         <div class="prev-btn">
-                            <i class="fas fa-chevron-left"></i>
+                            <div class="img-wrap">
+                                <img src="images/icon_arrow_left.svg" alt="">
+                            </div>
                         </div>
                         <div class="carousel-wrap">
                             <!-- --------------------rank1 hover-------------------- -->

@@ -3,8 +3,6 @@
 
 <style>
 
-    <?php require_once './tpl/global-style.css' ?>
-
     body {
         background: url("images/detail_page/bg_img/bg_img_gradient_1200.jpg") top center no-repeat;
         background-size: contain;
@@ -25,7 +23,7 @@
 
     .movie-detail-section .social-media i {
         font-size: 2.125rem;
-        opacity: var(--opacity-75);
+        opacity: var(--opacity-90);
     }
 
     .movie-detail-section .social-media svg {
@@ -181,16 +179,6 @@
         display: flex;
     }
 
-    .movie-detail-section .booking-trailer button:nth-child(1) {
-        background-color: var(--brand-color);
-        box-shadow: var(--box-shadow-red);
-    }
-
-    .movie-detail-section .booking-trailer button:nth-child(2) {
-        background-color: transparent;
-        border: 1px solid white;
-    }
-
     .movie-detail-section .booking-trailer .img-wrap img {
         object-fit: cover;
         object-position: center center;
@@ -304,6 +292,21 @@
         padding-left: 40px;
         padding-right: 240px;
         background-image: linear-gradient(to right, rgba(18, 18, 18, 1), rgba(18, 18, 18, 0));
+    }
+
+    .actors-list-section .next-btn .img-wrap,
+    .actors-list-section .prev-btn .img-wrap {
+        width: 48px;
+        height: 36px;
+    }
+
+    .actors-list-section .next-btn .img-wrap img,
+    .actors-list-section .prev-btn .img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        opacity: var(--opacity-90);
     }
 
     .actors-list-section .carousel-wrap {
@@ -571,6 +574,21 @@
         padding-left: 40px;
         padding-right: 120px;
         background-image: linear-gradient(to right, rgba(18, 18, 18, 1), rgba(18, 18, 18, 0));
+    }
+
+    .movie-stills-section .next-btn .img-wrap,
+    .movie-stills-section .prev-btn .img-wrap {
+        width: 48px;
+        height: 36px;
+    }
+
+    .movie-stills-section .next-btn .img-wrap img,
+    .movie-stills-section .prev-btn .img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        opacity: var(--opacity-90);
     }
 
     
@@ -893,7 +911,7 @@
                             <p>永恆族是超越繁星的神族，七千年前來到地球，誓言保護人類，各色各異的他們，擁有超凡智慧與能力，長生不老，每人具備迥然不同的絕頂神力。然而守護地球期間，各自強大的永恆族人並非和樂融融，內部紛爭不斷，最終整個族群分崩離析，直到一群古老的宿敵現身永恆族是超越繁星的神族，七千年前來到地球，誓言保護人類，各色各異的他們，擁有超凡智慧與能力，長生不老，每人具備迥然不同的絕頂神力。然而守護地球期間，各自強大的永恆族人並非和樂融融，內部紛爭不斷，最終整個族群分崩離析，直到一群古老的宿敵現身……</p>
                         </div>
                         <div class="booking-trailer">
-                            <button type="button">
+                            <button type="button" class="btn-brand">
                                 <a href="./booking-movie-page.php">
                                     <div class="d-flex">
                                         <div class="img-wrap">
@@ -903,7 +921,7 @@
                                     </div>
                                 </a>
                             </button>
-                            <button type="button">
+                            <button type="button" class="btn-white-outline">
                                 <div class="d-flex">
                                     <div class="img-wrap">
                                             <img src="images/icon_play_fill.svg" alt="">
@@ -1399,10 +1417,14 @@
                 <div class="row mb-4">
                     <div class="wrap">
                         <div class="next-btn">
-                            <i class="fas fa-chevron-right"></i>
+                            <div class="img-wrap">
+                                <img src="images/icon_arrow_right.svg" alt="">
+                            </div>
                         </div>
                         <div class="prev-btn">
-                            <i class="fas fa-chevron-left"></i>
+                            <div class="img-wrap">
+                                <img src="images/icon_arrow_left.svg" alt="">
+                            </div>
                         </div>
                         <div class="carousel-wrap">
 
@@ -1572,10 +1594,14 @@
                 <div class="row movie-stills-carousel">
 
                     <div class="next-btn">
-                        <i class="fas fa-chevron-right"></i>
+                        <div class="img-wrap">
+                            <img src="images/icon_arrow_right.svg" alt="">
+                        </div>
                     </div>
                     <div class="prev-btn">
-                        <i class="fas fa-chevron-left"></i>
+                        <div class="img-wrap">
+                            <img src="images/icon_arrow_left.svg" alt="">
+                        </div>
                     </div>
 
                     <div class="carousel-wrap d-flex justify-content-between list-unstyled flex-nowrap">

@@ -224,8 +224,9 @@
         margin-right: 12px;
     } */
 
-    .booking-seat-section .ticket-detail i {
-        margin-right: 12px;
+    .booking-seat-section .ticket-detail i,
+    .booking-seat-section .ticket-detail .img-wrap {
+        margin-right: 8px;
     } 
 
     .booking-seat-section .seat-column {
@@ -236,8 +237,7 @@
     }
 
     .booking-seat-section .ticket-detail .detail-title { 
-        opacity: var(--opacity-90); 
-        margin-left: 12px;
+        opacity: var(--opacity-90);
     }
 
     .booking-seat-section .ticket-detail .devision,
@@ -280,12 +280,6 @@
         color: white;
         padding: 8px 32px;
         margin-right: 16px;
-    }
-
-    .seats-area .btn-area a:nth-child(2) {
-        background-color: var(--brand-color);
-        box-shadow: var(--box-shadow-red);
-        padding: 8px 32px;
     }
 </style>
 
@@ -950,11 +944,11 @@
                         </div>
 
                         <div class="btn-area">
-                            <a class="btn btn-outline-light" href="#">
+                            <a class="btn btn-white-outline" href="#">
                                 <span>重新選擇</span>
                             </a>
                             
-                            <a class="btn" href="./payment-page.php">
+                            <a class="btn btn-brand" href="./payment-page.php">
                                 <span>前往結帳</span>
                             </a>
                         </div>
