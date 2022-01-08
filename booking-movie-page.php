@@ -59,7 +59,6 @@
         color: rgb(145, 145, 145);
     }
 
-
     /* ----------------------------other movies section---------------------------- */
     .other-movies-section .mov-card {
        position: relative;
@@ -333,6 +332,20 @@
     <?php require_once './tpl/movinon-footer.php' ?>
 
     <?php require_once './tpl/foot.php' ?>
+    
+    <script>
+
+        // 判斷英文標題字數
+        const len = 42;
+        const ellipsisTopFive = document.querySelectorAll('.top-five-card .movie-title .italic-16');
+
+        ellipsisTopFive.forEach((item) => {
+            if(item.innerHTML.length > len) {
+                let txt = item.innerHTML.substring(0, len) + '...';
+                item.innerHTML = txt;
+            }
+        })
+    </script>
 
     <!-- booking-ratingcolor js -->
     <script src="./js/booking-ratingcolor.js"></script> 

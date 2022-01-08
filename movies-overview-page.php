@@ -28,17 +28,13 @@
             margin-right: 6px;
         }
 
-        /* .content-section .mycard-info {
-            
-        } */
-
         .content-section .movie-title {
             overflow: hidden;
             width: 65%;
         }
 
         .content-section .movie-title p span {
-            font-size: 1.125rem;
+            font-size: 1.25rem;
             font-weight: 400;
             width: 200px;
             margin: 0 auto;
@@ -101,15 +97,14 @@
         }
 
         .content-section .mycard {
-            margin-bottom: 32px;
+            margin-bottom: 64px;
         }
 
         .content-section p.italic-16 {
+            width: 85%;
             color: rgb(145, 145, 145);
             line-height: 140%;
             font-size: 14px;
-            /* white-space: nowrap; */
-            /* space */
         }
 
         .content-section .rating span {
@@ -224,20 +219,20 @@
                                                     <div class="mycard-info">
                                                         <div class="d-flex justify-content-between">
                                                             <div class="movie-title">
-
                                                                 <!-- 1/5更改 中文名資料輸出 -->
                                                                 <p><span class="sub-title-r"><?= $obj['name_c'] ?></span></p>
-
-                                                                <!-- 1/5更改 英文名資料輸出 -->
-                                                                <p class="italic-16"><?= $obj['name_e'] ?></p>
                                                             </div>
+
                                                             <div class="rating d-flex">
                                                                 <i class="fas fa-star"></i>
 
-                                                                 <!-- 1/5更改 評分資料輸出 -->
+                                                                <!-- 1/5更改 評分資料輸出 -->
                                                                 <span><?= $obj['score'] ?></span>
                                                             </div>
                                                         </div>
+                                                        
+                                                        <!-- 1/5更改 英文名資料輸出 -->
+                                                        <p class="italic-16"><?= $obj['name_e'] ?></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -358,13 +353,6 @@
                         </div>
                     </div>
                 </div>
-                
-
-                <!-- <div class="row typesBorder">
-                    <a href="" class="playName">現正熱映</a>
-                    <a href="" class="playName">本週上映</a>
-                    <a href="" class="playName" >即將上映</a>                        
-                </div> -->
             </div>
         </div>
     </main>
@@ -372,5 +360,16 @@
     <?php require_once './tpl/movinon-footer.php' ?>
 
     <?php require_once './tpl/foot.php' ?>
+
+    <script>
+        const len = 42;
+        const ellipsis = document.querySelectorAll('.mycard-info p.italic-16');
+        ellipsis.forEach((item) => {
+            if(item.innerHTML.length > len) {
+                let txt = item.innerHTML.substring(0, len) + '...';
+                item.innerHTML = txt;
+            }
+        })
+    </script>
 </body>
 </html>
