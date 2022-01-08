@@ -104,7 +104,7 @@
         color: rgb(255, 255, 255);
         padding: 8px 24px;
         border-radius: var(--border-radius-50);
-        margin-right: 16px;
+        margin-right: 12px;
     }
     
     .hero .tag-menu {
@@ -128,9 +128,17 @@
         margin: 0 24px;
     }
 
+    /* .hero .middle-bg button {
+        background-color: rgba(18,18,18,0.9);
+        border-radius: var(--border-radius-50);
+        display: flex;
+        padding: 12px 40px 12px 48px;
+        margin: 0 24px;
+    } */
+
     /* 訊息欄 */
     /* ==========修改 padding========== */
-    .hero .inputbar{
+    .hero .inputbar {
         width: 327px;
         height: 39px;
         color: white;
@@ -140,7 +148,13 @@
         border: none;
         box-shadow: 0px 0px 24px #000000;
         border-radius: 50px;
-        margin-right: 16px;
+        margin-right: 12px;
+    }
+
+    .hero .inputgroup button.send,
+    .hero .inputgroup button.clear {
+        width: auto;
+        padding: 3px 19px 4px 20px;
     }
 
     .hero .inputgroup > button{
@@ -161,21 +175,25 @@
     } 
 
     .hero .send {
-        margin-right: 8px;
-        background-color: #F53D3D;
-        border-radius: 50px;
+        background-color: var(--brand-color);
         color: white;
-        font-weight: 700;
-        padding: 0 24px;
+        font-weight: 500;
+        border-radius: var(--border-radius-50);
+        vertical-align: middle;
+        border: 1px solid transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 12px;
+        box-shadow: var(--box-shadow-red);
     }
 
     .hero .clear {
-        margin-right: 32px;
-        border-radius: 50px;
+        border-radius: var(--border-radius-50);
         color: white;
+        font-weight: 500;
         background-color: transparent;
         border: 1px solid white;
-        padding: 0 24px;
     }
 
     /* 修改 placeholder 的字體顏色 */
@@ -704,7 +722,7 @@
                     </div>
                     
                     <!-- 留言訊息欄 -->
-                    <div >
+                    <div>
                         <input 
                         class="inputbar " 
                         name=txt 
@@ -713,8 +731,8 @@
                         maxlength="20"  
                         placeholder="選擇電影標籤後才能發言喔 !">
                     </div>
-                    <button class="btn send" disabled >送出</button>
-                    <button class="btn clear">清除</button>
+                    <button class="send" disabled >送出</button>
+                    <button class="clear">清除</button>
                 </div>
 
                 <!-- 背景設定 -->

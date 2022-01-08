@@ -272,18 +272,20 @@
     .seats-area .btn-area {
         margin-top: 48px;
         display: flex;
-        justify-content: space-between;
     }
 
     .seats-area .btn-area a {
         border-radius: var(--border-radius-50);
-        padding: 8px 36px;
+        /* padding: 8px 36px; */
         color: white;
+        padding: 8px 32px;
+        margin-right: 16px;
     }
 
     .seats-area .btn-area a:nth-child(2) {
         background-color: var(--brand-color);
         box-shadow: var(--box-shadow-red);
+        padding: 8px 32px;
     }
 </style>
 
