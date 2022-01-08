@@ -4,8 +4,6 @@
 
     <style>
 
-        <?php require_once './tpl/global-style.css' ?>
-
         .content-section .mycard .img-wrap {
             max-width: 280px;
             margin-bottom: 12px;

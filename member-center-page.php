@@ -2,8 +2,6 @@
 
 <style>
 
-    <?php require_once './tpl/global-style.css' ?>
-
     body {
         background: url("images/member_center_page/bg_img.jpg") top center no-repeat;
         background-size: cover;

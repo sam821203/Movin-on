@@ -2,8 +2,6 @@
 
 <style>
 
-    <?php require_once './tpl/global-style.css' ?>
-
         body {
             background: url("images/forum_overview_page/bg-img-min.jpg") top center no-repeat;
             background-size: contain;
@@ -49,11 +47,9 @@
         }
 
         .left-side-article .arti-cat-tag {
-            padding: 4px 20px;
             border: 1px solid rgba(255,255,255,0.5);
             border-radius: var(--border-radius-50);
             background-color: var(--bg-color);
-            margin-right: 12px;
         }
 
         .left-side-article .spoiler,
@@ -432,10 +428,9 @@
         }
 
         .aside-related-articles .arti-cat-tag {
-            padding: 2px 16px;
             border: 1px solid rgba(255,255,255,0.5);
             border-radius: var(--border-radius-50);
-            background-color: var(--bg-color);
+            background-color: var(18,18,18,0.5);
         }
 
         .aside-related-articles .content .tags {
@@ -690,7 +685,7 @@
                             <p class="body1-r"><span class="date body1-m">2021-11-23</span>by<span class="author-name"><a href="">Y'shtola Rhul</a></span></p>
                             <p class="section-header-b">蜘蛛人確定有三代同堂，可以看爆了吧</p>
                             <div class="article-extra-info d-flex align-items-center">
-                                <span class="arti-cat-tag">情報</span><span class="spoiler">雷</span>
+                                <span class="arti-cat-tag g-tag g-tag">情報</span><span class="spoiler">雷</span>
                             </div>
 
                             <div class="article-content">
@@ -1001,7 +996,7 @@
                                     <div class="content">
                                         <div class="d-flex tags">
                                             <div class="spoiler body2-r">雷</div>
-                                            <div class="arti-cat-tag body2-r">新聞</div>
+                                            <div class="arti-cat-tag g-tag body2-r">新聞</div>
                                         </div>
                                         <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
                                     </div>
@@ -1015,7 +1010,7 @@
                                     <div class="content">
                                         <div class="d-flex tags">
                                             <div class="spoiler body2-r">雷</div>
-                                            <div class="arti-cat-tag body2-r">新聞</div>
+                                            <div class="arti-cat-tag g-tag body2-r">新聞</div>
                                         </div>
                                         <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
                                     </div>
@@ -1029,7 +1024,7 @@
                                     <div class="content">
                                         <div class="d-flex tags">
                                             <div class="spoiler body2-r">雷</div>
-                                            <div class="arti-cat-tag body2-r">新聞</div>
+                                            <div class="arti-cat-tag g-tag body2-r">新聞</div>
                                         </div>
                                         <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
                                     </div>
@@ -1043,7 +1038,7 @@
                                     <div class="content">
                                         <div class="d-flex tags">
                                             <div class="spoiler body2-r">雷</div>
-                                            <div class="arti-cat-tag body2-r">新聞</div>
+                                            <div class="arti-cat-tag g-tag body2-r">新聞</div>
                                         </div>
                                         <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
                                     </div>
@@ -1057,7 +1052,7 @@
                                     <div class="content">
                                         <div class="d-flex tags">
                                             <div class="spoiler body2-r">雷</div>
-                                            <div class="arti-cat-tag body2-r">新聞</div>
+                                            <div class="arti-cat-tag g-tag body2-r">新聞</div>
                                         </div>
                                         <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
                                     </div>
@@ -1084,7 +1079,7 @@
                                         <div class="content">
                                             <div class="d-flex tags">
                                                 <div class="spoiler body2-r">雷</div>
-                                                <div class="arti-cat-tag body2-r">新聞</div>
+                                                <div class="arti-cat-tag g-tag body2-r">新聞</div>
                                             </div>
                                             <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
                                         </div>
@@ -1099,7 +1094,7 @@
                                         <div class="content">
                                             <div class="d-flex tags">
                                                 <div class="spoiler body2-r">雷</div>
-                                                <div class="arti-cat-tag body2-r">新聞</div>
+                                                <div class="arti-cat-tag g-tag body2-r">新聞</div>
                                             </div>
                                             <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
                                         </div>
@@ -1114,7 +1109,7 @@
                                         <div class="content">
                                             <div class="d-flex tags">
                                                 <div class="spoiler body2-r">雷</div>
-                                                <div class="arti-cat-tag body2-r">新聞</div>
+                                                <div class="arti-cat-tag g-tag body2-r">新聞</div>
                                             </div>
                                             <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
                                         </div>
@@ -1129,7 +1124,7 @@
                                         <div class="content">
                                             <div class="d-flex tags">
                                                 <div class="spoiler body2-r">雷</div>
-                                                <div class="arti-cat-tag body2-r">新聞</div>
+                                                <div class="arti-cat-tag g-tag body2-r">新聞</div>
                                             </div>
                                             <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
                                         </div>
@@ -1144,7 +1139,7 @@
                                         <div class="content">
                                             <div class="d-flex tags">
                                                 <div class="spoiler body2-r">雷</div>
-                                                <div class="arti-cat-tag body2-r">新聞</div>
+                                                <div class="arti-cat-tag g-tag body2-r">新聞</div>
                                             </div>
                                             <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
                                         </div>
@@ -1159,7 +1154,7 @@
                                         <div class="content">
                                             <div class="d-flex tags">
                                                 <div class="spoiler body2-r">雷</div>
-                                                <div class="arti-cat-tag body2-r">新聞</div>
+                                                <div class="arti-cat-tag g-tag body2-r">新聞</div>
                                             </div>
                                             <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
                                         </div>

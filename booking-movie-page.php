@@ -3,8 +3,6 @@
 
 <style>
 
-    <?php require_once './tpl/global-style.css' ?>
-
     body {
         background-color: var(--bg-color);
         width: 100%;

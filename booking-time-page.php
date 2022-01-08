@@ -3,8 +3,6 @@
 
 <style>
 
-    <?php require_once './tpl/global-style.css' ?>
-    
     body {
         width: 100%;
         background: url("images/booking_time_page/bg_img/bg_img_gradient_1200.jpg") top center no-repeat;

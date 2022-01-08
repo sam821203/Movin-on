@@ -3,8 +3,6 @@
 
 <style>
 
-    <?php require_once './tpl/global-style.css' ?>
-
     body {
         background: url("images/forum_overview_page/bg_img.jpg") top center no-repeat;
         background-size: contain;

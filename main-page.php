@@ -4,8 +4,6 @@
 
 <style>
 
-    <?php require_once './tpl/global-style.css' ?>
-
     <?php require_once './css/bootstrap-switch.css' ?>
 
     body {

@@ -2,9 +2,7 @@
 <?php require_once './tpl/head.php' ?>
 
 <style>
-
-    <?php require_once './tpl/global-style.css' ?>
-
+    
     /* -----------------payment section----------------- */
     .payment-section {
         margin-top: 280px;

@@ -145,7 +145,7 @@
     .movie-detail-section .cat-tags .cat-tag {
         border: 1px solid rgba(255,255,255,0.75);
         border-radius: var(--border-radius-50);
-        margin-right: 16px;
+        margin-right: 12px;
         margin-bottom: 32px;
     }
 
@@ -203,7 +203,7 @@
         padding: 0 16px;
     } */
 
-    .related-articles-section .forum-cat-name {
+    .related-articles-section .arti-cat-tag {
         padding: 3px 20px 4px 20px;
         border: 1px solid rgba(255,255,255,0.5);
         border-radius: var(--border-radius-50);
@@ -782,7 +782,7 @@
         /* 修改 arti- 的 class name */
         .spoiler-tag,
         .spoiler-free-tag,
-        .forum-cat-name,
+        .arti-cat-tag,
         .time-stamp { font-size: 14px; }
 
         .movie-detail-section .reputation {
@@ -881,10 +881,10 @@
 
                     <div class="col-md-12 col-lg-6">
                         <div class="cat-tags">
-                            <div class="cat-tag g-tag-p">奇幻</div>
-                            <div class="cat-tag g-tag-p">冒險</div>
-                            <div class="cat-tag g-tag-p">英雄</div>
-                            <div class="cat-tag g-tag-p">劇情</div>
+                            <div class="cat-tag g-tag">奇幻</div>
+                            <div class="cat-tag g-tag">冒險</div>
+                            <div class="cat-tag g-tag">英雄</div>
+                            <div class="cat-tag g-tag">劇情</div>
                         </div>
                         <div class="description-title">
                             <span class="section-header-b">劇情大綱</span>
@@ -949,10 +949,10 @@
                             <p class="movie-director"><i class="fas fa-video"></i><span class="director-data">趙婷</span></p>
                         </div>
                         <div class="cat-tags">
-                            <div class="cat-tag g-tag-p">奇幻</div>
-                            <div class="cat-tag g-tag-p">冒險</div>
-                            <div class="cat-tag g-tag-p">英雄</div>
-                            <div class="cat-tag g-tag-p">劇情</div>
+                            <div class="cat-tag g-tag">奇幻</div>
+                            <div class="cat-tag g-tag">冒險</div>
+                            <div class="cat-tag g-tag">英雄</div>
+                            <div class="cat-tag g-tag">劇情</div>
                         </div>
                     </div>
                 </div>
@@ -1006,7 +1006,7 @@
                             <div class="article-light d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-free-tag">雷</div>
-                                    <div class="forum-cat-name g-tag-p">選片</div>
+                                    <div class="arti-cat-tag g-tag">選片</div>
                                     <div class="sub-title-r">永恆族 vs 惡靈 首部曲</div>
                                 </div>
                                 <div class="time-stamp d-flex align-items-center">1天前</div>
@@ -1018,7 +1018,7 @@
                             <div class="article-light d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-tag">雷</div>
-                                    <div class="forum-cat-name g-tag-p">討論</div>
+                                    <div class="arti-cat-tag g-tag">討論</div>
                                     <div class="sub-title-r">永恆族 – 大型斯卡羅現場</div>
                                 </div>
                                 <div class="time-stamp d-flex align-items-center">2天前</div>
@@ -1030,7 +1030,7 @@
                             <div class="article-dark d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-tag">雷</div>
-                                    <div class="forum-cat-name g-tag-p">討論</div>
+                                    <div class="arti-cat-tag g-tag">討論</div>
                                     <div class="sub-title-r">永恆族-篇幅不足的半成品</div>
                                 </div>
                                 <div class="time-stamp d-flex align-items-center">3天前</div>
@@ -1042,7 +1042,7 @@
                             <div class="article-dark d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-free-tag">雷</div>
-                                    <div class="forum-cat-name g-tag-p">討論</div>
+                                    <div class="arti-cat-tag g-tag">討論</div>
                                     <div class="sub-title-r">所以永恆族算成功了嗎</div>
                                 </div>
                                 <div class="time-stamp d-flex align-items-center">1週前</div>
@@ -1054,7 +1054,7 @@
                             <div class="article-light d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-free-tag">雷</div>
-                                    <div class="forum-cat-name g-tag-p">討論</div>
+                                    <div class="arti-cat-tag g-tag">討論</div>
                                     <div class="sub-title-r">永恆族有一段關鍵台詞這樣改應該更好</div>
                                 </div>
                                 <div class="time-stamp d-flex align-items-center">1月前</div>
@@ -1066,7 +1066,7 @@
                             <div class="article-light d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-free-tag">雷</div>
-                                    <div class="forum-cat-name g-tag-p">討論</div>
+                                    <div class="arti-cat-tag g-tag">討論</div>
                                     <div class="sub-title-r">永恆族有一段關鍵台詞這樣改應該更好</div>
                                 </div>
                                 <div class="time-stamp d-flex align-items-center">1月前</div>
@@ -1078,7 +1078,7 @@
                             <div class="article-dark d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-tag">雷</div>
-                                    <div class="forum-cat-name g-tag-p">討論</div>
+                                    <div class="arti-cat-tag g-tag">討論</div>
                                     <div class="sub-title-r">永恆族有一段關鍵台詞</div>
                                 </div>
                                 <div class="time-stamp d-flex align-items-center">1月前</div>
@@ -1090,7 +1090,7 @@
                             <div class="article-dark d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-free-tag">雷</div>
-                                    <div class="forum-cat-name g-tag-p">討論</div>
+                                    <div class="arti-cat-tag g-tag">討論</div>
                                     <div class="sub-title-r">永恆族有一段關鍵台詞這樣不好</div>
                                 </div>
                                 <div class="time-stamp d-flex align-items-center">1月前</div>
@@ -1107,7 +1107,7 @@
                                     <div class="d-flex justify-content-between">
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-tag">雷</div>
-                                            <div class="forum-cat-name g-tag-p">討論</div>
+                                            <div class="arti-cat-tag g-tag">討論</div>
                                             <div class="sub-title-r">《永恆族》可惜不能是獨立電影</div>
                                         </div>
                                         <div class="time-stamp d-flex align-items-center">12小時前</div>
@@ -1122,7 +1122,7 @@
                                     <div class="article-dark d-flex justify-content-between">
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-tag">雷</div>
-                                            <div class="forum-cat-name g-tag-p">討論</div>
+                                            <div class="arti-cat-tag g-tag">討論</div>
                                             <div class="sub-title-r">《永恆族》可惜不能是獨立電影</div>
                                         </div>
                                         <div class="time-stamp d-flex align-items-center">12小時前</div>
@@ -1137,7 +1137,7 @@
                                     <div class="article-dark d-flex justify-content-between">
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-free-tag">雷</div>
-                                            <div class="forum-cat-name g-tag-p">新聞</div>
+                                            <div class="arti-cat-tag g-tag">新聞</div>
                                             <div class="sub-title-r">《作家我就爛》逼退《永恆族》榮登...</div>
                                         </div>
                                         <div class="time-stamp d-flex align-items-center">18小時前</div>
@@ -1152,7 +1152,7 @@
                                     <div class="article-light d-flex justify-content-between">
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-free-tag">雷</div>
-                                            <div class="forum-cat-name g-tag-p">選片</div>
+                                            <div class="arti-cat-tag g-tag">選片</div>
                                             <div class="sub-title-r">月老 vs. 永恆族</div>
                                         </div>
                                         <div class="time-stamp d-flex align-items-center">1天前</div>
@@ -1167,7 +1167,7 @@
                                     <div class="d-flex justify-content-between">
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-tag">雷</div>
-                                            <div class="forum-cat-name g-tag-p">討論</div>
+                                            <div class="arti-cat-tag g-tag">討論</div>
                                             <div class="sub-title-r">《永恆族》可惜不能是獨立電影</div>
                                         </div>
                                         <div class="time-stamp d-flex align-items-center">12小時前</div>
@@ -1182,7 +1182,7 @@
                                     <div class="article-dark d-flex justify-content-between">
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-tag">雷</div>
-                                            <div class="forum-cat-name g-tag-p">討論</div>
+                                            <div class="arti-cat-tag g-tag">討論</div>
                                             <div class="sub-title-r">《永恆族》可惜不能是獨立電影</div>
                                         </div>
                                         <div class="time-stamp d-flex align-items-center">12小時前</div>
@@ -1197,7 +1197,7 @@
                                     <div class="article-dark d-flex justify-content-between">
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-free-tag">雷</div>
-                                            <div class="forum-cat-name g-tag-p">新聞</div>
+                                            <div class="arti-cat-tag g-tag">新聞</div>
                                             <div class="sub-title-r">《作家我就爛》逼退《永恆族》榮登...</div>
                                         </div>
                                         <div class="time-stamp d-flex align-items-center">18小時前</div>
@@ -1212,7 +1212,7 @@
                                     <div class="article-light d-flex justify-content-between">
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-free-tag">雷</div>
-                                            <div class="forum-cat-name g-tag-p">選片</div>
+                                            <div class="arti-cat-tag g-tag">選片</div>
                                             <div class="sub-title-r">月老 vs. 永恆族</div>
                                         </div>
                                         <div class="time-stamp d-flex align-items-center">1天前</div>
@@ -1232,7 +1232,7 @@
                                         <div class="d-flex justify-content-between mb-2">
                                             <div class="d-flex">
                                                 <div class="spoiler-tag">雷</div>
-                                                <div class="forum-cat-name mr-2">討論</div>
+                                                <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
                                             <div class="time-stamp d-flex align-items-center">12小時前</div>
                                         </div>
@@ -1251,7 +1251,7 @@
                                         <div class="d-flex justify-content-between mb-2">
                                             <div class="d-flex">
                                                 <div class="spoiler-tag">雷</div>
-                                                <div class="forum-cat-name mr-2">討論</div>
+                                                <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
                                             <div class="time-stamp d-flex align-items-center">12小時前</div>
                                         </div>
@@ -1270,7 +1270,7 @@
                                         <div class="d-flex justify-content-between mb-2">
                                             <div class="d-flex">
                                                 <div class="spoiler-free-tag">雷</div>
-                                                <div class="forum-cat-name mr-2">討論</div>
+                                                <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
                                             <div class="time-stamp d-flex align-items-center">12小時前</div>
                                         </div>
@@ -1289,7 +1289,7 @@
                                         <div class="d-flex justify-content-between mb-2">
                                             <div class="d-flex">
                                                 <div class="spoiler-tag">雷</div>
-                                                <div class="forum-cat-name mr-2">討論</div>
+                                                <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
                                             <div class="time-stamp d-flex align-items-center">12小時前</div>
                                         </div>
@@ -1308,7 +1308,7 @@
                                         <div class="d-flex justify-content-between mb-2">
                                             <div class="d-flex">
                                                 <div class="spoiler-free-tag">雷</div>
-                                                <div class="forum-cat-name mr-2">討論</div>
+                                                <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
                                             <div class="time-stamp d-flex align-items-center">12小時前</div>
                                         </div>
@@ -1327,7 +1327,7 @@
                                         <div class="d-flex justify-content-between mb-2">
                                             <div class="d-flex">
                                                 <div class="spoiler-free-tag">雷</div>
-                                                <div class="forum-cat-name mr-2">討論</div>
+                                                <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
                                             <div class="time-stamp d-flex align-items-center">12小時前</div>
                                         </div>
@@ -1346,7 +1346,7 @@
                                         <div class="d-flex justify-content-between mb-2">
                                             <div class="d-flex">
                                                 <div class="spoiler-free-tag">雷</div>
-                                                <div class="forum-cat-name mr-2">討論</div>
+                                                <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
                                             <div class="time-stamp d-flex align-items-center">12小時前</div>
                                         </div>
@@ -1365,7 +1365,7 @@
                                         <div class="d-flex justify-content-between mb-2">
                                             <div class="d-flex">
                                                 <div class="spoiler-tag">雷</div>
-                                                <div class="forum-cat-name mr-2">討論</div>
+                                                <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
                                             <div class="time-stamp d-flex align-items-center">12小時前</div>
                                         </div>

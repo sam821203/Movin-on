@@ -23,12 +23,12 @@
         <div class="subtitle">
             <div class="col-6">
                 <div class="movie-type-wrap">
-                    <span class="body1-m type">新聞</span>
-                    <span class="body1-m type">問片</span>
-                    <span class="body1-m type">片單</span>
-                    <span class="body1-m type">討論</span>
-                    <span class="body1-m type">請益</span>
-                    <span class="body1-m type">選片</span>
+                    <span class="body1-m type g-tag">新聞</span>
+                    <span class="body1-m type g-tag">問片</span>
+                    <span class="body1-m type g-tag">片單</span>
+                    <span class="body1-m type g-tag">討論</span>
+                    <span class="body1-m type g-tag">請益</span>
+                    <span class="body1-m type g-tag">選片</span>
                 </div>
             </div>
             <div class="col-6 d-flex justify-content-end align-items-end">
@@ -51,7 +51,7 @@
                         <div class="masonry-item">
                             <div class="masonry-content">
                                 <div class="article-tag">
-                                    <p class="article-cat mr-2">分類</p>
+                                    <p class="article-cat body1-m">分類</p>
                                     <p class="spoiler-tag"><?= $obj['spoiler_tag'] ?></p>
                                 </div>
                                 <img src="<?= $obj['article_photo'] ?>" alt="Dummy Image" class="atcphoto">

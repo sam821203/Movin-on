@@ -146,9 +146,10 @@ button .img-wrap img {
     height: 90%;
 }
 
-/* global tag padding */
-.g-tag-p {
+/* global tag padding & margin */
+.g-tag {
     padding: 3px 20px 4px 20px;
+    margin-right: 12px;
 }
 
 /* spoiler tag */

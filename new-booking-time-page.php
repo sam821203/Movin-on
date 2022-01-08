@@ -4,8 +4,6 @@
 <?php require_once 'db.inc.php' ?>
 
 <style>
-    
-    <?php require_once './tpl/global-style.css' ?>
 
     body {
         width: 100%;
