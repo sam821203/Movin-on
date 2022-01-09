@@ -866,7 +866,6 @@ footer p {
 @media screen and (max-width: 576px) {
 
     /* global padding-x */
-    main { padding: 0 16px; }
 
     /* margin bottom */
     .g-section-mb { margin-bottom: 40px; }

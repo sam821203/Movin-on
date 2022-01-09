@@ -124,21 +124,18 @@
         const nowX = nowIndex * -312 + 'px';
         $('.carousel-wrap').css('transform', `translateX(${nowX})`).css('transition', '.5s');
     });
-    
-    
-    // const dropDown = document.querySelector('.dropdown-menu');
-    // let dropDownShow = false;
-    
-    // dropDown.addEventListener("click", function() {
-    //     if (!dropDownShow) {
-    //         dropDown.classList.add('open');
-    //         menuBarOpen = true;
-    //     } else {
-    //         menuBar.classList.remove('open');
-    //         menuBarOpen = false;
-    //     }
-    // });
 
     $('.dropdown-toggle').click( function () {
         $('.dropdown-menu.show').css({ top: '30px' });
     });
+
+    // -------------------- word limits --------------------
+    // const len = 6;
+    // const ellipsis = document.querySelectorAll('.hero .dropdown-menu li a');
+
+    // ellipsisLight.forEach((item) => {
+    //     if(item.innerHTML.length > len) {
+    //         let txt = item.innerHTML.substring(0, len) + '...';
+    //         item.innerHTML = txt;
+    //     }
+    // })

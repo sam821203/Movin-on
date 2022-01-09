@@ -22,7 +22,7 @@
 /* =====================修改開關的顏色===================== */
 /* ----------------當打開開關時---------------- */
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-movieon {
-    background-color: #000000;
+    background-color: rgba(18,18,18,0.75);
     color: #fff;
 }
 
@@ -34,24 +34,24 @@
 
 /* 其他預設 */
 .bootstrap-switch {
-  display: inline-block;
-  direction: ltr;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  position: relative;
-  text-align: left;
-  overflow: hidden;
-  line-height: 8px;
-  z-index: 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  vertical-align: middle;
-  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    display: inline-block;
+    direction: ltr;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.5);
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+    line-height: 8px;
+    z-index: 0;
+    -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    vertical-align: middle;
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
 }
 
 .bootstrap-switch .bootstrap-switch-container {
@@ -159,21 +159,20 @@
 .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-label {
   padding: 1px 5px;
   font-size: 12px;
-  line-height: 1.5;
 }
 
 .bootstrap-switch.bootstrap-switch-small .bootstrap-switch-handle-on,
 .bootstrap-switch.bootstrap-switch-small .bootstrap-switch-handle-off,
 .bootstrap-switch.bootstrap-switch-small .bootstrap-switch-label {
-  padding: 5px 10px;
+  /* padding: 5px 10px; */
+  padding: 8px 16px;
   font-size: 12px;
-  line-height: 1.5;
 }
 
 .bootstrap-switch.bootstrap-switch-large .bootstrap-switch-handle-on,
 .bootstrap-switch.bootstrap-switch-large .bootstrap-switch-handle-off,
 .bootstrap-switch.bootstrap-switch-large .bootstrap-switch-label {
-  padding: 6px 16px;
+  padding: 8px 16px;
   font-size: 18px;
   line-height: 1.3333333;
 }

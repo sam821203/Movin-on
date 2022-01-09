@@ -21,6 +21,7 @@
 
     /* ----------------------------hero & canvas---------------------------- */
     .hero {
+        width: 100%;
         padding: 0px;
         position: relative;
         display:flex;
@@ -53,6 +54,7 @@
     .inputgroup {
         position: absolute;
         width: 100%;
+        margin: 0 auto;
         bottom: 96px;
         display: flex;   
         justify-content: center;
@@ -60,10 +62,9 @@
     }
     
     /* 標籤選擇 */
-    .tag {
-        margin: 8px;
-        padding: 0px 10px 3px 10px;
-        border-radius:50px ;
+    .hero .tag {
+        padding: 8px 16px;
+        border-radius:50px;
     }
 
     #tag_immortal{
@@ -99,33 +100,31 @@
 
     /* =================修改上啦式選單的背景圖片================= */
     .hero #dropdownMenuButton {
+        width: 140px;
         text-decoration: none;
         background: rgb(255, 255, 255, 0.1);
         color: rgb(255, 255, 255);
-        padding: 8px 24px;
+        padding: 8px 16px;
+        text-align: center;
         border-radius: var(--border-radius-50);
         margin-right: 12px;
-    }
-    
-    .hero .tag-menu {
-        text-align:center ;
-        background: rgb(255, 255, 255, 0.1);
-        padding: 10px;
+        justify-content: space-between;
     }
     
     .hero a {  
         padding-bottom: 5px;
         line-height: 30px;
         color:white;
-        /* border-bottom: 1px solid #deedee; */
     }
 
     .hero .middle-bg {
+        /* width: 100%; */
         background-color: rgba(18,18,18,0.9);
         border-radius: var(--border-radius-50);
         display: flex;
         padding: 12px 40px 12px 48px;
         margin: 0 24px;
+        box-shadow: var(--box-shadow-black);
     }
 
     /* .hero .middle-bg button {
@@ -140,7 +139,7 @@
     /* ==========修改 padding========== */
     .hero .inputbar {
         width: 327px;
-        height: 39px;
+        height: 40px;
         color: white;
         outline: none;
         padding: 8px 24px;
@@ -219,6 +218,14 @@
         background: rgba(0, 0, 0, 0.5);
     }
 
+    .hero .dropdown-menu.show {
+        width: 176px;
+        height: 256px;
+        background-color: rgba(18,18,18,0.75);
+        margin-bottom: 24px;
+        padding: 20px;
+    }
+
     .hero .colorDiv .dropdown-menu li {
         display: inline-block;
     }
@@ -238,20 +245,19 @@
     }
 
     .hero .preview {
-        width: 34px;
-        height: 34px;
-        border-radius: 17px;
+        width: 52px;
+        height: 52px;
+        border-radius: var(--border-radius-50-percent);
         background-size: cover;
-        background-position:center center;
-        background-repeat: no-repeat;  
+        background-position: center center;
+        background-repeat: no-repeat; 
         background-image: url(./images/main_page/hero-img1.jpg);
+        box-shadow: var(--box-shadow-black);
     }
 
     .hero #colorDropdownMenu {
         border-style: none;
     }
-
-
 
     /* ----------------------------ranking section---------------------------- */
     .ranking-section {
@@ -614,6 +620,12 @@
     /* =================================== @media =================================== */
     /* ============================================================================== */
 
+    /* ------------------------  小於 1920px  ------------------------*/
+    @media screen and (max-width: 1920px) {
+        .row-d-1920 { display: flex; }
+        .row-d-418 { display: none; }
+    }
+
     /* ------------------------  小於 1200px  ------------------------*/
     @media screen and (max-width: 1200px) {
 
@@ -654,6 +666,80 @@
 
     /* ------------------------  小於 418px  ------------------------*/
     @media screen and (max-width: 418px) {
+        
+        canvas {
+            top: -144px;
+        }
+
+        .row-d-1920 { display: none; }
+        .row-d-418 { display: flex; }
+
+        .hero .inputgroup {
+            bottom: 24px;
+            justify-content: start;
+            padding: 0 20px;
+        }
+
+        .hero .middle-bg {
+            width: 100%;
+            background-color: transparent;
+            border-radius: none;
+            display: block;
+            padding: 0;
+            margin: 0;
+            box-shadow: none;
+        }
+        
+        .hero .inputbar {
+            width: 100%;
+            height: 48px;
+            margin-right: 0;
+        }
+
+        .hero .preview {
+            width: 40px;
+            height: 40px;
+        }
+
+        .hero .d-418-row2 {
+            margin-bottom: 24px;
+        }
+
+        .hero .d-418-row1,
+        .hero .d-418-row3 {
+            margin-bottom: 12px;
+        }
+
+        .hero {
+            padding: 0px;
+            position: relative;
+            display:flex;
+            justify-content: center;
+
+            /* 嘗試調整 @media 的固定寬 */
+            overflow: hidden;
+            max-width: 418px;
+        }
+
+        .hero .bg {
+            position: relative;
+            width: 100%;
+            /* max-height: 812px; */
+            max-height: 552px;
+            background-image: url("images/main_page/hero-img1_418_2.jpg") ;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .hero .inputgroup .middle-bg button {
+            margin-right: 0;
+        }
+
+        .hero .inputgroup .middle-bg button.send {
+            width: 100%;
+            margin-right: 0;
+            padding: 12px 0 10px 0;
+        }
 
         .forum-cards-section .card-md .section-header-r { 
             font-weight: 400;
@@ -708,7 +794,7 @@
             <!-- <canvas class="dm"></canvas> -->
             
             <!-- ---------------inputgroup--------------- -->
-            <div class="inputgroup row">
+            <div class="inputgroup row row-d-1920">
     
                 <!-- 彈幕開關 -->
                 <input type="checkbox" name="my-checkbox" checked>
@@ -721,11 +807,11 @@
                             電影標籤
                         </button>
                         <ul class="dropdown-menu tag-menu" aria-labelledby="dropdownMenu">
-                            <li><a id=tag_immortal class="tag"  href="#">永恆族</a></li>
-                            <li><a id=tag_sao class="tag" href="#">刀劍神域</a></li>
-                            <li><a id=tag_trick class="tag"  href="#">詭扯</a></li>
-                            <li><a id=tag_mha class="tag" href="#">我的英雄學院</a></li>
-                            <li><a id=tag_soho class="tag"  href="#">逃離夜蘇活</a></li>
+                            <li class="mb-3"><a id=tag_immortal class="tag"  href="#">永恆族</a></li>
+                            <li class="mb-3"><a id=tag_sao class="tag" href="#">刀劍神域</a></li>
+                            <li class="mb-3"><a id=tag_trick class="tag"  href="#">詭扯</a></li>
+                            <li class="mb-3"><a id=tag_mha class="tag" href="#">我的英雄學院</a></li>
+                            <li class="mb-3"><a id=tag_soho class="tag"  href="#">逃離夜蘇活</a></li>
                         </ul>
                     </div>
                     
@@ -757,6 +843,64 @@
                             <p>點擊更換背景圖</p>
                         </li>
                     </ul>
+                </div>
+            </div>
+
+            <!-- ---------------inputgroup--------------- -->
+            <div class="inputgroup row row-d-418">
+    
+                <!-- 彈幕開關 -->
+                <!-- <input type="checkbox" name="my-checkbox" checked> -->
+                 
+                <div class="middle-bg">
+                   
+                    <!-- 背景設定 -->
+                    <div class="colorDiv dropup d-418-row1 d-flex justify-content-end">
+                        <a id="colorDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        href="javascript:;">
+                            <div class=preview></div>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="colorDropdownMenu">
+                            <li><a class="canvas-preview" href="#"><img src="images/main_page/hero-img1.jpg"></a></li>
+                            <li><a class="canvas-preview" href="#"><img src="images/main_page/eternals-bg-img-min.jpg"></a></li>
+                            
+                            <li>
+                                <p>點擊更換背景圖</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="d-418-row2 w-100">
+                         <!-- 標籤選單 -->
+                        <div class="dropup">
+                            <!-- ==========修改 style="border: none;========== -->
+                            <button class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border: none;">
+                                電影標籤
+                            </button>
+                            <ul class="dropdown-menu tag-menu" aria-labelledby="dropdownMenu">
+                                <li class="mb-3"><a id=tag_immortal class="tag"  href="#">永恆族</a></li>
+                                <li class="mb-3"><a id=tag_sao class="tag" href="#">刀劍神域</a></li>
+                                <li class="mb-3"><a id=tag_trick class="tag"  href="#">詭扯</a></li>
+                                <li class="mb-3"><a id=tag_mha class="tag" href="#">我的英雄學院</a></li>
+                                <li class="mb-3"><a id=tag_soho class="tag"  href="#">逃離夜蘇活</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 留言訊息欄 -->
+                    <div class="d-418-row3">
+                        <input 
+                        class="inputbar " 
+                        name=txt 
+                        type="text" 
+                        value="" 
+                        maxlength="20"  
+                        placeholder="選擇電影標籤後才能發言喔 !">
+                    </div>
+                        
+                    <div class="d-flex w-100">
+                        <button class="send btn-brand" disabled >送出</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -819,11 +963,11 @@
 
                                     <div class="reputation d-flex align-items-center">
                                         <div class="img-wrap1">
-                                            <img src="./images/Rotten_Tomatoes.svg" alt="">
+                                            <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
                                         </div>
                                         <span class="rate">53%</span>
                                         <div class="img-wrap2">
-                                            <img src="./images/IMDB_Logo.svg" alt="">
+                                            <img src="./images/icon_IMDB_Logo.svg" alt="">
                                         </div>
                                         <span class="rate">79%</span>
                                     </div>
@@ -883,11 +1027,11 @@
 
                                     <div class="reputation d-flex align-items-center">
                                         <div class="img-wrap1">
-                                            <img src="./images/Rotten_Tomatoes.svg" alt="">
+                                            <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
                                         </div>
                                         <span class="rate">53%</span>
                                         <div class="img-wrap2">
-                                            <img src="./images/IMDB_Logo.svg" alt="">
+                                            <img src="./images/icon_IMDB_Logo.svg" alt="">
                                         </div>
                                         <span class="rate">79%</span>
                                     </div>
@@ -926,11 +1070,11 @@
 
                                     <div class="reputation d-flex align-items-center">
                                         <div class="img-wrap1">
-                                            <img src="./images/Rotten_Tomatoes.svg" alt="">
+                                            <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
                                         </div>
                                         <span class="rate">53%</span>
                                         <div class="img-wrap2">
-                                            <img src="./images/IMDB_Logo.svg" alt="">
+                                            <img src="./images/icon_IMDB_Logo.svg" alt="">
                                         </div>
                                         <span class="rate">79%</span>
                                     </div>
@@ -969,11 +1113,11 @@
 
                                     <div class="reputation d-flex align-items-center">
                                         <div class="img-wrap1">
-                                            <img src="./images/Rotten_Tomatoes.svg" alt="">
+                                            <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
                                         </div>
                                         <span class="rate">53%</span>
                                         <div class="img-wrap2">
-                                            <img src="./images/IMDB_Logo.svg" alt="">
+                                            <img src="./images/icon_IMDB_Logo.svg" alt="">
                                         </div>
                                         <span class="rate">79%</span>
                                     </div>
@@ -1012,11 +1156,11 @@
 
                                     <div class="reputation d-flex align-items-center">
                                         <div class="img-wrap1">
-                                            <img src="./images/Rotten_Tomatoes.svg" alt="">
+                                            <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
                                         </div>
                                         <span class="rate">53%</span>
                                         <div class="img-wrap2">
-                                            <img src="./images/IMDB_Logo.svg" alt="">
+                                            <img src="./images/icon_IMDB_Logo.svg" alt="">
                                         </div>
                                         <span class="rate">79%</span>
                                     </div>
@@ -1055,11 +1199,11 @@
 
                                     <div class="reputation d-flex align-items-center">
                                         <div class="img-wrap1">
-                                            <img src="./images/Rotten_Tomatoes.svg" alt="">
+                                            <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
                                         </div>
                                         <span class="rate">53%</span>
                                         <div class="img-wrap2">
-                                            <img src="./images/IMDB_Logo.svg" alt="">
+                                            <img src="./images/icon_IMDB_Logo.svg" alt="">
                                         </div>
                                         <span class="rate">79%</span>
                                     </div>
@@ -1098,11 +1242,11 @@
 
                                     <div class="reputation d-flex align-items-center">
                                         <div class="img-wrap1">
-                                            <img src="./images/Rotten_Tomatoes.svg" alt="">
+                                            <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
                                         </div>
                                         <span class="rate">78%</span>
                                         <div class="img-wrap2">
-                                            <img src="./images/IMDB_Logo.svg" alt="">
+                                            <img src="./images/icon_IMDB_Logo.svg" alt="">
                                         </div>
                                         <span class="rate">90%</span>
                                     </div>
@@ -1141,11 +1285,11 @@
 
                                     <div class="reputation d-flex align-items-center">
                                         <div class="img-wrap1">
-                                            <img src="./images/Rotten_Tomatoes.svg" alt="">
+                                            <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
                                         </div>
                                         <span class="rate">82%</span>
                                         <div class="img-wrap2">
-                                            <img src="./images/IMDB_Logo.svg" alt="">
+                                            <img src="./images/icon_IMDB_Logo.svg" alt="">
                                         </div>
                                         <span class="rate">85%</span>
                                     </div>
@@ -1184,11 +1328,11 @@
 
                                     <div class="reputation d-flex align-items-center">
                                         <div class="img-wrap1">
-                                            <img src="./images/Rotten_Tomatoes.svg" alt="">
+                                            <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
                                         </div>
                                         <span class="rate">53%</span>
                                         <div class="img-wrap2">
-                                            <img src="./images/IMDB_Logo.svg" alt="">
+                                            <img src="./images/icon_IMDB_Logo.svg" alt="">
                                         </div>
                                         <span class="rate">79%</span>
                                     </div>
@@ -1228,11 +1372,11 @@
 
                                     <div class="reputation d-flex align-items-center">
                                         <div class="img-wrap1">
-                                            <img src="./images/Rotten_Tomatoes.svg" alt="">
+                                            <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
                                         </div>
                                         <span class="rate">53%</span>
                                         <div class="img-wrap2">
-                                            <img src="./images/IMDB_Logo.svg" alt="">
+                                            <img src="./images/icon_IMDB_Logo.svg" alt="">
                                         </div>
                                         <span class="rate">79%</span>
                                     </div>
