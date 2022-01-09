@@ -62,6 +62,7 @@
 
         .movies-tab-bar {
             margin-top: 200px;
+            width: 100%;
         }
 
         .movies-tab-bar .playName {
@@ -112,6 +113,7 @@
         }
 
         .movies-tab-bar #myTab {
+            width: 100%;
             display: flex;
             justify-content: center;
             margin-bottom: 96px;
@@ -161,6 +163,7 @@
         }
 
         .movies-tab-bar .tab-content {
+            width: 100%;
             justify-content: space-between;
         }
     </style>
@@ -197,7 +200,7 @@
                         <!-- 現正熱映 -->
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                             <div class="content-section g-section-mb">
-                                <div class="justify-content-between position-relative px-0">
+                                <div class="d-flex justify-content-between position-relative px-0">
                                     <div class="row mb-3">
 
                                         <!-- 1/5更改 電影資料提取與輸出 -->
@@ -248,10 +251,10 @@
                         </div>
 
                         <!-- 本週上映 -->
-                        <div class="tab-pane fade " id="profile" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="home-tab">
                             <div class="content-section g-section-mb">
                                 <!-- 1/5 class增加container -->
-                                <div class="container justify-content-between position-relative px-0">
+                                <div class="d-flex justify-content-between position-relative px-0">
                                     <div class="d-flex flex-wrap mb-3">
 
                                         <!-- 1/5更改 電影資料提取與輸出 -->
@@ -273,13 +276,10 @@
                                                     <div class="mycard-info">
                                                         <div class="d-flex justify-content-between">
                                                             <div class="movie-title">
-
                                                                 <!-- 1/5更改 中文名資料輸出 -->
                                                                 <p><span class="sub-title-r"><?= $obj['name_c'] ?></span></p>
-
-                                                                <!-- 1/5更改 英文名資料輸出 -->
-                                                                <p class="italic-16"><?= $obj['name_e'] ?></p>
                                                             </div>
+
                                                             <div class="rating d-flex">
                                                                 <i class="fas fa-star"></i>
 
@@ -287,6 +287,9 @@
                                                                 <span><?= $obj['score'] ?></span>
                                                             </div>
                                                         </div>
+                                                        
+                                                        <!-- 1/5更改 英文名資料輸出 -->
+                                                        <p class="italic-16"><?= $obj['name_e'] ?></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -302,9 +305,9 @@
                         </div>
 
                         <!-- 即將上映 -->
-                        <div class="tab-pane fade " id="contact" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="home-tab">
                             <div class="content-section g-section-mb">
-                                <div class="container justify-content-between position-relative px-0">
+                                <div class="d-flex justify-content-between position-relative px-0">
                                     <div class="row mb-3">
                                          <!-- 1/5更改 電影資料提取與輸出 -->
                                          <?php
@@ -325,13 +328,10 @@
                                                     <div class="mycard-info">
                                                         <div class="d-flex justify-content-between">
                                                             <div class="movie-title">
-
                                                                 <!-- 1/5更改 中文名資料輸出 -->
                                                                 <p><span class="sub-title-r"><?= $obj['name_c'] ?></span></p>
-
-                                                                <!-- 1/5更改 英文名資料輸出 -->
-                                                                <p class="italic-16"><?= $obj['name_e'] ?></p>
                                                             </div>
+
                                                             <div class="rating d-flex">
                                                                 <i class="fas fa-star"></i>
 
@@ -339,6 +339,9 @@
                                                                 <span><?= $obj['score'] ?></span>
                                                             </div>
                                                         </div>
+                                                        
+                                                        <!-- 1/5更改 英文名資料輸出 -->
+                                                        <p class="italic-16"><?= $obj['name_e'] ?></p>
                                                     </div>
                                                 </div>
                                             </div>
