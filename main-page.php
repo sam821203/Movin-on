@@ -260,15 +260,6 @@
     }
 
     /* ----------------------------ranking section---------------------------- */
-    .ranking-section {
-        margin-bottom: 64px;
-        width: 100%;
-    }
-
-    .ranking-section .subtitle {
-        margin-bottom: 0px;
-    }
-
     .ranking-section .subtitle .sub-title-r,
     .forum-cards-section .subtitle .sub-title-r {
         line-height: 100%;
@@ -701,6 +692,21 @@
             height: 40px;
         }
 
+        .ranking-section .wrap {
+            height: 216px;
+            overflow: auto;
+        }
+
+        .ranking-section .carousel-wrap {
+            width: 1440px;
+        }
+
+        .ranking-section .img-wrap {
+            width: 128px;
+            height: 182px;
+            margin: 0 8px;
+        }
+
         .hero .d-418-row2 {
             margin-bottom: 24px;
         }
@@ -741,6 +747,45 @@
             padding: 12px 0 10px 0;
         }
 
+        /* ranking section */
+        .ranking-section .subtitle .sub-title-r,
+        .ranking-section .wrap .next-btn,
+        .ranking-section .wrap .prev-btn,
+        .ranking-section .rank-hover-content1,
+        .ranking-section .rank-hover-content2,
+        .ranking-section .rank-hover-content3,
+        .ranking-section .rank-hover-content4,
+        .ranking-section .rank-hover-content5,
+        .ranking-section .rank-hover-content6,
+        .ranking-section .rank-hover-content7,
+        .ranking-section .rank-hover-content8,
+        .ranking-section .rank-hover-content9,
+        .ranking-section .rank-hover-content10 {
+            display: none;
+        }
+
+        .ranking-section .subtitle {
+            margin-bottom: 16px;
+        }
+
+        .ranking-section .wrap::-webkit-scrollbar {
+            display: none;
+        }
+
+        .ranking-section .rank-num-418 .roboto-condensed {
+            font-size: 14px;
+        }
+
+        .ranking-section .rank-num-418 {
+            margin-left: 8px;
+            margin-bottom: 8px;
+        }
+
+        /* forum card section */
+        .forum-cards-section .subtitle .sub-title-r {
+            display: none;
+        }
+
         .forum-cards-section .card-md .section-header-r { 
             font-weight: 400;
             margin-bottom: 4px;
@@ -775,6 +820,10 @@
             border-radius: var(--border-radius-50);
             padding: 2px 6px;
             margin-left: 8px;
+        }
+
+        .forum-cards-section .content .body1-b {
+            font-weight: 500;
         }
     }
 </style>
@@ -905,15 +954,13 @@
             </div>
         </div>
 
-        <section class="ranking-section">
+        <section class="ranking-section g-section-mb">
             <div class="container">
-                <div class="row subtitle g-subtitle-mb">
-
+                <!-- <div class="row subtitle g-subtitle-mb">
                     <div class="col-6 d-flex">
                         <div class="red-line my-auto"></div>
                         <span class="section-header-b">電影排行榜</span>
                     </div>
-
                     <div class="col-6 d-flex justify-content-end align-items-end">
                         <a href="./movies-overview-page.php">
                             <div class="d-flex justify-content-end align-items-end">
@@ -922,7 +969,23 @@
                             </div>
                         </a>
                     </div>
+                </div> -->
 
+                <div class="row subtitle g-subtitle-mb">
+                    <div class="col-6">
+                        <div class="d-flex">
+                            <div class="red-line my-auto"></div>
+                            <span class="section-header-b">電影排行榜</span>
+                        </div>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end align-items-end">
+                        <a href="./forum-overview-page.php">
+                            <div class="d-flex justify-content-end align-items-end">
+                                <div class="sub-title-r mt-2">電影總覽頁</div>
+                                <div class="ml-2"><i class="fas fa-chevron-right"></i></div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="container-fluid">
@@ -940,454 +1003,484 @@
                         </div>
                         <div class="carousel-wrap">
                             <!-- --------------------rank1 hover-------------------- -->
-                            <div class="img-wrap rank1">
-                                <img src="images/main_page/rank1.jpg" alt="">
-                                <div class="rank-hover-content1">
-                                    <div class="d-flex">
-                                        <div class="arrow-wrap">
-                                            <img src="images/rise_green.svg" alt="">
-                                        </div>
-                                        <div class="rank-num">01</div>
-                                        <div class="content-r">
-                                            <p class="section-header-b"><span>永恆族</span></p>
-                                            <p class="en-title">Treat or trick</p>
-                                            <div class="rating">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
+                            <div>
+                                <div class="rank-num-418"><span class="roboto-condensed">01</span></div>
+                                <div class="img-wrap rank1">
+                                    <img src="images/main_page/rank1.jpg" alt="">
+                                    <div class="rank-hover-content1">
+                                        <div class="d-flex">
+                                            <div class="arrow-wrap">
+                                                <img src="images/rise_green.svg" alt="">
+                                            </div>
+                                            <div class="rank-num">01</div>
+                                            <div class="content-r">
+                                                <p class="section-header-b"><span>永恆族</span></p>
+                                                <p class="en-title">Treat or trick</p>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="reputation d-flex align-items-center">
-                                        <div class="img-wrap1">
-                                            <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
-                                        </div>
-                                        <span class="rate">53%</span>
-                                        <div class="img-wrap2">
-                                            <img src="./images/icon_IMDB_Logo.svg" alt="">
-                                        </div>
-                                        <span class="rate">79%</span>
-                                    </div>
-
-                                    <div class="d-flex">
-                                        <!-- 1/5更改: 新增php購票路徑 -->
-                                        <?php
-                                        $sql = "SELECT `movie_id`, `poster`, `division_id`, `date_id` FROM `movie` INNER JOIN `division` INNER JOIN `date`
-                                        WHERE `movie_id` = 1
-                                        AND `division_id` = 'DV1'
-                                        AND `date_id` = 'D1'";
-                                        $arr = $pdo->query($sql)->fetchAll();
-                                        foreach ($arr as $obj) {
-                                        ?>
-                                            <a href="new-booking-time-page.php?movie_id=<?= $obj['movie_id'] ?>&sub_date_id=<?= $obj['date_id'] ?>&sub_division_id=<?= $obj['division_id'] ?>">
-                                                <div class="btn-booking">立即購票</div>
-                                            </a>
-                                        <?php } ?>
-
-
-                                        <!-- 1/4更改: 電影介紹a連結加資料庫路徑 -->
-                                        <?php
-                                        $sql = "SELECT `movie_id`, `poster` FROM `movie` WHERE `movie_id` = 1";
-                                        $arr = $pdo->query($sql)->fetchAll();
-                                        foreach ($arr as $obj) {
-                                        ?>
-                                            <a href="detail-page.php?movie_id=<?= $obj['movie_id'] ?>">
-                                                <div class="btn-description">電影介紹</div>
-                                            </a>
-                                        <?php
-                                        }
-                                        ?>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="img-wrap rank2">
-                                <img src="images/main_page/rank2.jpg" alt="">
-                                <div class="rank-hover-content2">
-                                    <div class="d-flex">
-                                        <div class="arrow-wrap">
-                                            <img src="images/rise_green.svg" alt="">
-                                        </div>
-                                        <div class="rank-num">02</div>
-                                        <div class="content-r">
-                                            <p class="section-header-b"><span>刀劍神域 –Progressive- 無星夜的詠嘆調</span></p>
-                                            <p class="en-title">Sword Art Online: Progressive</p>
-                                            <div class="rating">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
+                                        <div class="reputation d-flex align-items-center">
+                                            <div class="img-wrap1">
+                                                <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
                                             </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="reputation d-flex align-items-center">
-                                        <div class="img-wrap1">
-                                            <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
-                                        </div>
-                                        <span class="rate">53%</span>
-                                        <div class="img-wrap2">
-                                            <img src="./images/icon_IMDB_Logo.svg" alt="">
-                                        </div>
-                                        <span class="rate">79%</span>
-                                    </div>
-
-                                    <div class="d-flex">
-                                        <a href="#">
-                                            <div class="btn-booking">立即購票</div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="btn-description">電影介紹</div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="img-wrap rank3">
-                                <img src="images/main_page/rank3.jpg" alt="">
-                                <div class="rank-hover-content3">
-                                    <div class="d-flex">
-                                        <div class="arrow-wrap">
-                                            <img src="images/rise_green.svg" alt="">
-                                        </div>
-                                        <div class="rank-num">03</div>
-                                        <div class="content-r">
-                                            <p class="section-header-b"><span>詭扯</span></p>
-                                            <p class="en-title">Treat or trick</p>
-                                            <div class="rating">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
+                                            <span class="rate">53%</span>
+                                            <div class="img-wrap2">
+                                                <img src="./images/icon_IMDB_Logo.svg" alt="">
                                             </div>
+                                            <span class="rate">79%</span>
                                         </div>
-                                    </div>
 
-                                    <div class="reputation d-flex align-items-center">
-                                        <div class="img-wrap1">
-                                            <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
-                                        </div>
-                                        <span class="rate">53%</span>
-                                        <div class="img-wrap2">
-                                            <img src="./images/icon_IMDB_Logo.svg" alt="">
-                                        </div>
-                                        <span class="rate">79%</span>
-                                    </div>
+                                        <div class="d-flex">
+                                            <!-- 1/5更改: 新增php購票路徑 -->
+                                            <?php
+                                            $sql = "SELECT `movie_id`, `poster`, `division_id`, `date_id` FROM `movie` INNER JOIN `division` INNER JOIN `date`
+                                            WHERE `movie_id` = 1
+                                            AND `division_id` = 'DV1'
+                                            AND `date_id` = 'D1'";
+                                            $arr = $pdo->query($sql)->fetchAll();
+                                            foreach ($arr as $obj) {
+                                            ?>
+                                                <a href="new-booking-time-page.php?movie_id=<?= $obj['movie_id'] ?>&sub_date_id=<?= $obj['date_id'] ?>&sub_division_id=<?= $obj['division_id'] ?>">
+                                                    <div class="btn-booking">立即購票</div>
+                                                </a>
+                                            <?php } ?>
 
-                                    <div class="d-flex justify-content-between">
-                                        <a href="#">
-                                            <div class="btn-booking">立即購票</div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="btn-description">電影介紹</div>
-                                        </a>
+
+                                            <!-- 1/4更改: 電影介紹a連結加資料庫路徑 -->
+                                            <?php
+                                            $sql = "SELECT `movie_id`, `poster` FROM `movie` WHERE `movie_id` = 1";
+                                            $arr = $pdo->query($sql)->fetchAll();
+                                            foreach ($arr as $obj) {
+                                            ?>
+                                                <a href="detail-page.php?movie_id=<?= $obj['movie_id'] ?>">
+                                                    <div class="btn-description">電影介紹</div>
+                                                </a>
+                                            <?php
+                                            }
+                                            ?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="img-wrap rank4">
-                                <img src="images/main_page/rank4.jpg" alt="">
-                                <div class="rank-hover-content4">
-                                    <div class="d-flex">
-                                        <div class="arrow-wrap">
-                                            <img src="images/rise_green.svg" alt="">
-                                        </div>
-                                        <div class="rank-num">04</div>
-                                        <div class="content-r">
-                                            <p class="section-header-b"><span>我的英雄學院劇場版：世界英雄任務</span></p>
-                                            <p class="en-title">My Hero Academia The Movie : World Heores Mission</p>
-                                            <div class="rating">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
+                            <div>
+                                <div class="rank-num-418"><span class="roboto-condensed">02</span></div>
+                                <div class="img-wrap rank2">
+                                    <img src="images/main_page/rank2.jpg" alt="">
+                                    <div class="rank-hover-content2">
+                                        <div class="d-flex">
+                                            <div class="arrow-wrap">
+                                                <img src="images/rise_green.svg" alt="">
+                                            </div>
+                                            <div class="rank-num">02</div>
+                                            <div class="content-r">
+                                                <p class="section-header-b"><span>刀劍神域 –Progressive- 無星夜的詠嘆調</span></p>
+                                                <p class="en-title">Sword Art Online: Progressive</p>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="reputation d-flex align-items-center">
-                                        <div class="img-wrap1">
-                                            <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
+                                        <div class="reputation d-flex align-items-center">
+                                            <div class="img-wrap1">
+                                                <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
+                                            </div>
+                                            <span class="rate">53%</span>
+                                            <div class="img-wrap2">
+                                                <img src="./images/icon_IMDB_Logo.svg" alt="">
+                                            </div>
+                                            <span class="rate">79%</span>
                                         </div>
-                                        <span class="rate">53%</span>
-                                        <div class="img-wrap2">
-                                            <img src="./images/icon_IMDB_Logo.svg" alt="">
-                                        </div>
-                                        <span class="rate">79%</span>
-                                    </div>
 
-                                    <div class="d-flex">
-                                        <a href="#">
-                                            <div class="btn-booking">立即購票</div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="btn-description">電影介紹</div>
-                                        </a>
+                                        <div class="d-flex">
+                                            <a href="#">
+                                                <div class="btn-booking">立即購票</div>
+                                            </a>
+                                            <a href="#">
+                                                <div class="btn-description">電影介紹</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="rank-num-418"><span class="roboto-condensed">03</span></div>
+                                <div class="img-wrap rank3">
+                                    <img src="images/main_page/rank3.jpg" alt="">
+                                    <div class="rank-hover-content3">
+                                        <div class="d-flex">
+                                            <div class="arrow-wrap">
+                                                <img src="images/rise_green.svg" alt="">
+                                            </div>
+                                            <div class="rank-num">03</div>
+                                            <div class="content-r">
+                                                <p class="section-header-b"><span>詭扯</span></p>
+                                                <p class="en-title">Treat or trick</p>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="reputation d-flex align-items-center">
+                                            <div class="img-wrap1">
+                                                <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
+                                            </div>
+                                            <span class="rate">53%</span>
+                                            <div class="img-wrap2">
+                                                <img src="./images/icon_IMDB_Logo.svg" alt="">
+                                            </div>
+                                            <span class="rate">79%</span>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between">
+                                            <a href="#">
+                                                <div class="btn-booking">立即購票</div>
+                                            </a>
+                                            <a href="#">
+                                                <div class="btn-description">電影介紹</div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="img-wrap rank5">
-                                <img src="images/main_page/rank5.jpg" alt="">
-                                <div class="rank-hover-content5">
-                                    <div class="d-flex">
-                                        <div class="arrow-wrap">
-                                            <img src="images/rise_green.svg" alt="">
-                                        </div>
-                                        <div class="rank-num">05</div>
-                                        <div class="content-r">
-                                            <p class="section-header-b"><span>迷離夜蘇活</span></p>
-                                            <p class="en-title">Last Night in Soho</p>
-                                            <div class="rating">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
+                            <div>
+                                <div class="rank-num-418"><span class="roboto-condensed">04</span></div>
+                                <div class="img-wrap rank4">
+                                    <img src="images/main_page/rank4.jpg" alt="">
+                                    <div class="rank-hover-content4">
+                                        <div class="d-flex">
+                                            <div class="arrow-wrap">
+                                                <img src="images/rise_green.svg" alt="">
+                                            </div>
+                                            <div class="rank-num">04</div>
+                                            <div class="content-r">
+                                                <p class="section-header-b"><span>我的英雄學院劇場版：世界英雄任務</span></p>
+                                                <p class="en-title">My Hero Academia The Movie : World Heores Mission</p>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="reputation d-flex align-items-center">
-                                        <div class="img-wrap1">
-                                            <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
+                                        <div class="reputation d-flex align-items-center">
+                                            <div class="img-wrap1">
+                                                <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
+                                            </div>
+                                            <span class="rate">53%</span>
+                                            <div class="img-wrap2">
+                                                <img src="./images/icon_IMDB_Logo.svg" alt="">
+                                            </div>
+                                            <span class="rate">79%</span>
                                         </div>
-                                        <span class="rate">53%</span>
-                                        <div class="img-wrap2">
-                                            <img src="./images/icon_IMDB_Logo.svg" alt="">
-                                        </div>
-                                        <span class="rate">79%</span>
-                                    </div>
 
-                                    <div class="d-flex">
-                                        <a href="#">
-                                            <div class="btn-booking">立即購票</div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="btn-description">電影介紹</div>
-                                        </a>
+                                        <div class="d-flex">
+                                            <a href="#">
+                                                <div class="btn-booking">立即購票</div>
+                                            </a>
+                                            <a href="#">
+                                                <div class="btn-description">電影介紹</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="rank-num-418"><span class="roboto-condensed">05</span></div>
+                                <div class="img-wrap rank5">
+                                    <img src="images/main_page/rank5.jpg" alt="">
+                                    <div class="rank-hover-content5">
+                                        <div class="d-flex">
+                                            <div class="arrow-wrap">
+                                                <img src="images/rise_green.svg" alt="">
+                                            </div>
+                                            <div class="rank-num">05</div>
+                                            <div class="content-r">
+                                                <p class="section-header-b"><span>迷離夜蘇活</span></p>
+                                                <p class="en-title">Last Night in Soho</p>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="reputation d-flex align-items-center">
+                                            <div class="img-wrap1">
+                                                <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
+                                            </div>
+                                            <span class="rate">53%</span>
+                                            <div class="img-wrap2">
+                                                <img src="./images/icon_IMDB_Logo.svg" alt="">
+                                            </div>
+                                            <span class="rate">79%</span>
+                                        </div>
+
+                                        <div class="d-flex">
+                                            <a href="#">
+                                                <div class="btn-booking">立即購票</div>
+                                            </a>
+                                            <a href="#">
+                                                <div class="btn-description">電影介紹</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="rank-num-418"><span class="roboto-condensed">06</span></div>
+                                <div class="img-wrap rank6">
+                                    <img src="images/main_page/rank6.jpg" alt="">
+                                    <div class="rank-hover-content6">
+                                        <div class="d-flex">
+                                            <div class="arrow-wrap">
+                                                <img src="images/rise_green.svg" alt="">
+                                            </div>
+                                            <div class="rank-num">06</div>
+                                            <div class="content-r">
+                                                <p class="section-header-b">梅艷芳</p>
+                                                <p class="en-title">Anita Mui Yim Fong</p>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="reputation d-flex align-items-center">
+                                            <div class="img-wrap1">
+                                                <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
+                                            </div>
+                                            <span class="rate">53%</span>
+                                            <div class="img-wrap2">
+                                                <img src="./images/icon_IMDB_Logo.svg" alt="">
+                                            </div>
+                                            <span class="rate">79%</span>
+                                        </div>
+
+                                        <div class="d-flex">
+                                            <a href="#">
+                                                <div class="btn-booking">立即購票</div>
+                                            </a>
+                                            <a href="#">
+                                                <div class="btn-description">電影介紹</div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="img-wrap rank6">
-                                <img src="images/main_page/rank6.jpg" alt="">
-                                <div class="rank-hover-content6">
-                                    <div class="d-flex">
-                                        <div class="arrow-wrap">
-                                            <img src="images/rise_green.svg" alt="">
-                                        </div>
-                                        <div class="rank-num">06</div>
-                                        <div class="content-r">
-                                            <p class="section-header-b">梅艷芳</p>
-                                            <p class="en-title">Anita Mui Yim Fong</p>
-                                            <div class="rating">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
+                            <div>
+                                <div class="rank-num-418"><span class="roboto-condensed">07</span></div>
+                                <div class="img-wrap rank7">
+                                    <img src="images/main_page/rank7.jpg" alt="">
+                                    <div class="rank-hover-content7">
+                                        <div class="d-flex">
+                                            <div class="arrow-wrap">
+                                                <img src="images/rise_green.svg" alt="">
+                                            </div>
+                                            <div class="rank-num">07</div>
+                                            <div class="content-r">
+                                                <p class="section-header-b">瀑布</p>
+                                                <p class="en-title">The Falls</p>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="reputation d-flex align-items-center">
-                                        <div class="img-wrap1">
-                                            <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
+                                        <div class="reputation d-flex align-items-center">
+                                            <div class="img-wrap1">
+                                                <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
+                                            </div>
+                                            <span class="rate">78%</span>
+                                            <div class="img-wrap2">
+                                                <img src="./images/icon_IMDB_Logo.svg" alt="">
+                                            </div>
+                                            <span class="rate">90%</span>
                                         </div>
-                                        <span class="rate">53%</span>
-                                        <div class="img-wrap2">
-                                            <img src="./images/icon_IMDB_Logo.svg" alt="">
-                                        </div>
-                                        <span class="rate">79%</span>
-                                    </div>
 
-                                    <div class="d-flex">
-                                        <a href="#">
-                                            <div class="btn-booking">立即購票</div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="btn-description">電影介紹</div>
-                                        </a>
+                                        <div class="d-flex">
+                                            <a href="#">
+                                                <div class="btn-booking">立即購票</div>
+                                            </a>
+                                            <a href="#">
+                                                <div class="btn-description">電影介紹</div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="img-wrap rank7">
-                                <img src="images/main_page/rank7.jpg" alt="">
-                                <div class="rank-hover-content7">
-                                    <div class="d-flex">
-                                        <div class="arrow-wrap">
-                                            <img src="images/rise_green.svg" alt="">
-                                        </div>
-                                        <div class="rank-num">07</div>
-                                        <div class="content-r">
-                                            <p class="section-header-b">瀑布</p>
-                                            <p class="en-title">The Falls</p>
-                                            <div class="rating">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
+                           
+                            <div>
+                                <div class="rank-num-418"><span class="roboto-condensed">08</span></div>
+                                <div class="img-wrap rank8">
+                                    <img src="images/main_page/rank8.jpg" alt="">
+                                    <div class="rank-hover-content8">
+                                        <div class="d-flex">
+                                            <div class="arrow-wrap">
+                                                <img src="images/rise_green.svg" alt="">
+                                            </div>
+                                            <div class="rank-num">08</div>
+                                            <div class="content-r">
+                                                <p class="section-header-b">粉紅雲</p>
+                                                <p class="en-title">The Pink Cloud</p>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="reputation d-flex align-items-center">
-                                        <div class="img-wrap1">
-                                            <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
+                                        <div class="reputation d-flex align-items-center">
+                                            <div class="img-wrap1">
+                                                <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
+                                            </div>
+                                            <span class="rate">82%</span>
+                                            <div class="img-wrap2">
+                                                <img src="./images/icon_IMDB_Logo.svg" alt="">
+                                            </div>
+                                            <span class="rate">85%</span>
                                         </div>
-                                        <span class="rate">78%</span>
-                                        <div class="img-wrap2">
-                                            <img src="./images/icon_IMDB_Logo.svg" alt="">
-                                        </div>
-                                        <span class="rate">90%</span>
-                                    </div>
 
-                                    <div class="d-flex">
-                                        <a href="#">
-                                            <div class="btn-booking">立即購票</div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="btn-description">電影介紹</div>
-                                        </a>
+                                        <div class="d-flex">
+                                            <a href="#">
+                                                <div class="btn-booking">立即購票</div>
+                                            </a>
+                                            <a href="#">
+                                                <div class="btn-description">電影介紹</div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="img-wrap rank8">
-                                <img src="images/main_page/rank8.jpg" alt="">
-                                <div class="rank-hover-content8">
-                                    <div class="d-flex">
-                                        <div class="arrow-wrap">
-                                            <img src="images/rise_green.svg" alt="">
-                                        </div>
-                                        <div class="rank-num">08</div>
-                                        <div class="content-r">
-                                            <p class="section-header-b">粉紅雲</p>
-                                            <p class="en-title">The Pink Cloud</p>
-                                            <div class="rating">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
+                            
+                            <div>
+                                <div class="rank-num-418"><span class="roboto-condensed">09</span></div>
+                                <div class="img-wrap rank9">
+                                    <img src="images/main_page/rank9.jpg" alt="">
+                                    <div class="rank-hover-content9">
+                                        <div class="d-flex">
+                                            <div class="arrow-wrap">
+                                                <img src="images/rise_green.svg" alt="">
+                                            </div>
+                                            <div class="rank-num">09</div>
+                                            <div class="content-r">
+                                                <p class="section-header-b">脫稿玩家</p>
+                                                <p class="en-title">Free Guy</p>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="reputation d-flex align-items-center">
-                                        <div class="img-wrap1">
-                                            <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
+                                        <div class="reputation d-flex align-items-center">
+                                            <div class="img-wrap1">
+                                                <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
+                                            </div>
+                                            <span class="rate">53%</span>
+                                            <div class="img-wrap2">
+                                                <img src="./images/icon_IMDB_Logo.svg" alt="">
+                                            </div>
+                                            <span class="rate">79%</span>
                                         </div>
-                                        <span class="rate">82%</span>
-                                        <div class="img-wrap2">
-                                            <img src="./images/icon_IMDB_Logo.svg" alt="">
-                                        </div>
-                                        <span class="rate">85%</span>
-                                    </div>
 
-                                    <div class="d-flex">
-                                        <a href="#">
-                                            <div class="btn-booking">立即購票</div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="btn-description">電影介紹</div>
-                                        </a>
+                                        <div class="d-flex">
+                                            <a href="#">
+                                                <div class="btn-booking">立即購票</div>
+                                            </a>
+                                            <a href="#">
+                                                <div class="btn-description">電影介紹</div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="img-wrap rank9">
-                                <img src="images/main_page/rank9.jpg" alt="">
-                                <div class="rank-hover-content9">
-                                    <div class="d-flex">
-                                        <div class="arrow-wrap">
-                                            <img src="images/rise_green.svg" alt="">
-                                        </div>
-                                        <div class="rank-num">09</div>
-                                        <div class="content-r">
-                                            <p class="section-header-b">脫稿玩家</p>
-                                            <p class="en-title">Free Guy</p>
-                                            <div class="rating">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
+                            
+                            <div>
+                                <!-- rank10  -->
+                                <div class="rank-num-418"><span class="roboto-condensed">10</span></div>
+                                <div class="img-wrap rank10">
+                                    <img src="images/main_page/rank10.jpg" alt="">
+                                    <div class="rank-hover-content10">
+                                        <div class="d-flex">
+                                            <div class="arrow-wrap">
+                                                <img src="images/rise_green.svg" alt="">
+                                            </div>
+                                            <div class="rank-num">10</div>
+                                            <div class="content-r">
+                                                <p class="section-header-b">心靈遊戲</p>
+                                                <p class="en-title">Mind Game</p>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="reputation d-flex align-items-center">
-                                        <div class="img-wrap1">
-                                            <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
-                                        </div>
-                                        <span class="rate">53%</span>
-                                        <div class="img-wrap2">
-                                            <img src="./images/icon_IMDB_Logo.svg" alt="">
-                                        </div>
-                                        <span class="rate">79%</span>
-                                    </div>
-
-                                    <div class="d-flex">
-                                        <a href="#">
-                                            <div class="btn-booking">立即購票</div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="btn-description">電影介紹</div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- rank10  -->
-                            <div class="img-wrap rank10">
-                                <img src="images/main_page/rank10.jpg" alt="">
-                                <div class="rank-hover-content10">
-                                    <div class="d-flex">
-                                        <div class="arrow-wrap">
-                                            <img src="images/rise_green.svg" alt="">
-                                        </div>
-                                        <div class="rank-num">10</div>
-                                        <div class="content-r">
-                                            <p class="section-header-b">心靈遊戲</p>
-                                            <p class="en-title">Mind Game</p>
-                                            <div class="rating">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
+                                        <div class="reputation d-flex align-items-center">
+                                            <div class="img-wrap1">
+                                                <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
                                             </div>
+                                            <span class="rate">53%</span>
+                                            <div class="img-wrap2">
+                                                <img src="./images/icon_IMDB_Logo.svg" alt="">
+                                            </div>
+                                            <span class="rate">79%</span>
                                         </div>
-                                    </div>
 
-                                    <div class="reputation d-flex align-items-center">
-                                        <div class="img-wrap1">
-                                            <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
+                                        <div class="d-flex">
+                                            <a href="#">
+                                                <div class="btn-booking">立即購票</div>
+                                            </a>
+                                            <a href="#">
+                                                <div class="btn-description">電影介紹</div>
+                                            </a>
                                         </div>
-                                        <span class="rate">53%</span>
-                                        <div class="img-wrap2">
-                                            <img src="./images/icon_IMDB_Logo.svg" alt="">
-                                        </div>
-                                        <span class="rate">79%</span>
-                                    </div>
-
-                                    <div class="d-flex">
-                                        <a href="#">
-                                            <div class="btn-booking">立即購票</div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="btn-description">電影介紹</div>
-                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -1490,19 +1583,20 @@
                     <div class="col-6">
                         <div class="d-flex">
                             <div class="red-line my-auto"></div>
-                            <span class="section-header-b">精選討論區</span>
+                            <span class="section-header-b">電影排行榜</span>
                         </div>
                     </div>
                     <div class="col-6 d-flex justify-content-end align-items-end">
                         <a href="./forum-overview-page.php">
                             <div class="d-flex justify-content-end align-items-end">
-                                <div class="sub-title-r mt-2">前往討論區</div>
+                                <div class="sub-title-r mt-2">電影總覽頁</div>
                                 <div class="ml-2"><i class="fas fa-chevron-right"></i></div>
                             </div>
                         </a>
                     </div>
                 </div>
-
+                
+                <!-- forum cards section -->
                 <div class="row">
                     <div class="col-6 card-md">
                         <a href="#">
@@ -1555,6 +1649,16 @@
                                 <div class="content">
                                     <div class="section-header-r">梅艷芳</div>
                                     <span class="body1-b">Today</span><span class="caption-12 com-count com-5-count">+<span class="count">134</span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 card-md">
+                        <a href="#">
+                            <div class="img-wrap">
+                                <img src="images/forum_overview_page/card_6_1200_more.jpg" alt="">
+                                <div class="content">
+                                    <div class="section-header-r">更多...</div>
                                 </div>
                             </div>
                         </a>
