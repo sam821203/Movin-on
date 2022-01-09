@@ -17,6 +17,10 @@
     } 
 
     /* ----------------------------top five section---------------------------- */
+    .top-five-section {
+        margin-bottom: 96px;
+    }
+
     .top-five-section .subtitle {
         margin-top: 200px;
     }
@@ -27,7 +31,34 @@
     }
 
     .top-five-section .top-five-card {
+        width: 100%;
         margin-bottom: 32px;
+    }
+
+    .top-five-section .movie-title p.title-tc {
+        width: 160px;
+        margin: 0 auto;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .top-five-section .movie-title span.sub-title-r {
+        width: 100%;
+        display: inline-block;
+        padding-left: 0;
+        transition: .6s;
+        line-height: 100%;
+    }
+
+    .top-five-section .movie-title span.sub-title-r:hover {
+        -webkit-animation: marquee 6s linear infinite;    
+        animation: marquee 6s linear infinite;
+    }
+
+    /* Make it move */
+    @keyframes marquee {
+        0%   { transform: translate(0, 0); }
+        100% { transform: translate(-100%, 0); }
     }
 
     .top-five-section .img-wrap {
@@ -57,6 +88,7 @@
 
     .top-five-section p.italic-16 {
         color: rgb(145, 145, 145);
+        width: 160px
     }
 
     /* ----------------------------other movies section---------------------------- */
@@ -82,7 +114,7 @@
         height: 100%;
         object-fit: cover;
         object-position: center center;
-        opacity: var(--opacity-75);
+        opacity: var(--opacity-90);
     }
 
     .other-movies-section .img-wrap:hover img {
@@ -242,7 +274,7 @@
 
     <main>
         <!-- -----------top five section----------- -->
-        <section class="top-five-section g-section-mb">
+        <section class="top-five-section">
             <div class="container">
                 <div class="row subtitle g-subtitle-mb">
                     <div class="col-12">
@@ -271,7 +303,9 @@
                                 <div class="card-info">
                                     <div class="d-flex justify-content-between">
                                         <div class="movie-title">
-                                            <span class="sub-title-r"><?= $obj['name_c'] ?></span>
+                                            <p class="title-tc">
+                                                <span class="sub-title-r"><?= $obj['name_c'] ?></span>
+                                            </p>
                                             <p class="italic-16"><?= $obj['name_e'] ?></p>
                                         </div>
                                         <div class="rating d-flex">

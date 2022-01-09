@@ -217,7 +217,7 @@ button .img-wrap img {
     animation: .8s infinite beatHeart;
 }
 
-/* @keyframes beatHeart {
+@keyframes beatHeart {
     0% {
         transform: scale(1);
     }
@@ -233,7 +233,7 @@ button .img-wrap img {
     100% {
         transform: scale(1);
     }
-} */
+}
 
 .roboto-condensed {
     font-family: 'Roboto Condensed', sans-serif;

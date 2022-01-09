@@ -9,8 +9,6 @@
 <!-- <link rel="stylesheet" href="/fontawesome-free-5.15.4-web/css/all.css"> -->
 
 <style>
-    /* global style css */
-    <?php require_once './tpl/global-style.css' ?>
     /* forum masonry page css */
     <?php require_once './css/forum-masonry-page.css' ?>
 </style>
