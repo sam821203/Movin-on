@@ -46,19 +46,13 @@
         width: 100%;
         display: inline-block;
         padding-left: 0;
-        transition: .6s;
+        transition: .4s;
         line-height: 100%;
     }
 
     .top-five-section .movie-title span.sub-title-r:hover {
-        -webkit-animation: marquee 6s linear infinite;    
-        animation: marquee 6s linear infinite;
-    }
-
-    /* Make it move */
-    @keyframes marquee {
-        0%   { transform: translate(0, 0); }
-        100% { transform: translate(-100%, 0); }
+        -webkit-animation: marquee 4s linear infinite;    
+        animation: marquee 4s linear infinite;
     }
 
     .top-five-section .img-wrap {
@@ -105,7 +99,7 @@
     .other-movies-section .img-wrap {
         width: 120px;
         height: 120px;
-        margin: 0 auto 12px auto;
+        margin: 0 auto 24px auto;
     }
 
     .other-movies-section .img-wrap img {
@@ -123,7 +117,13 @@
 
     .other-movies-section .pg-rate { 
         border-radius: 0 4px 0 4px;
-        padding: 4px 8px 6px 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        letter-spacing: -0.6px;
+        width: 28px;
+        height: 28px;
         position: absolute;
         top: 0px;
         right: 0px;
@@ -135,8 +135,34 @@
     .other-movies-section .age15 { background-color: rgba(236,119,32,0.5); }
     .other-movies-section .age18 { background-color: rgba(227,11,32,0.5); }
 
-
     .other-movies-section .italic-16 { opacity: var(--opacity-50); }
+
+    /* animation */
+    .other-movies-section .mov-card p {
+        width: 128px;
+        margin: 0 auto;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .other-movies-section .mov-card p span {
+        width: 100%;
+        display: inline-block;
+        padding-left: 0;
+        transition: .4s;
+        line-height: 100%;
+    }
+
+    .other-movies-section .mov-card span.sub-title-r:hover {
+        -webkit-animation: marquee 4s linear infinite;    
+        animation: marquee 4s linear infinite;
+    }
+
+    /* Make it move */
+    @keyframes marquee {
+        0%   { transform: translate(0, 0); }
+        100% { transform: translate(-100%, 0); }
+    }
 
     /* =================================== @media =================================== */
     /* ============================================================================== */
@@ -347,7 +373,9 @@
                                     <div class="img-wrap">
                                         <img src=".\images\movies_overview_page\<?= $obj['poster'] ?> ">
                                     </div>
-                                    <p class="sub-title-r"><?= $obj['name_c'] ?></p>
+                                    <p>
+                                        <span class="sub-title-r"><?= $obj['name_c'] ?></span>
+                                    </p>
                                     <p class="italic-16"><?= $obj['name_e'] ?></p>
                                     <div class="pg-rate "><?= $obj['rating'] ?></div>
                                 </div>
