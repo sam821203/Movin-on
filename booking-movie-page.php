@@ -312,17 +312,22 @@
                 </div>
 
                 <div class="row d-none d-md-flex d-flex">
+                    
+                
+ 
+                
 
+                
                     <!-- 1/6更改 電影資料提取與輸出 -->
                     <?php
-                    $sql = "SELECT `poster`, `name_c`,  `name_e`, `score` FROM `movie_list` WHERE `parents_ID`='1' LIMIT 5 ";
+                    $sql = "SELECT `poster`, `mName_TC`,  `mName_EN`, `movinon_rate` FROM `movie`WHERE `ov_id`='1' LIMIT 5 ";
                     $arr = $pdo->query($sql)->fetchAll();
                     foreach ($arr as $obj) {
                     ?>
                         <div class="top-five-card col-md-4 col-lg-4 col-xl">
                             <a href="./booking-time-page.php">
                                 <div class="img-wrap">
-                                    <img src=".\images\movies_overview_page\<?= $obj['poster'] ?> ">
+                                    <img src=".\images\movies_overview_page\現正熱映\<?= $obj['poster'] ?>.jpg ">
                                 </div>
                             </a>
                             <a href="./booking-time-page.php">
@@ -330,13 +335,13 @@
                                     <div class="d-flex justify-content-between">
                                         <div class="movie-title">
                                             <p class="title-tc">
-                                                <span class="sub-title-r"><?= $obj['name_c'] ?></span>
+                                                <span class="sub-title-r"><?= $obj['mName_TC'] ?></span>
                                             </p>
-                                            <p class="italic-16"><?= $obj['name_e'] ?></p>
+                                            <p class="italic-16"><?= $obj['mName_EN'] ?></p>
                                         </div>
                                         <div class="rating d-flex">
                                             <i class="fas fa-star"></i>
-                                            <span><?= $obj['score'] ?></span>
+                                            <span><?= $obj['movinon_rate'] ?></span>
                                         </div>
                                     </div>
                                 </div>
@@ -361,9 +366,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <!-- --------------第 1 ~ 6 部電影-------------- -->
                     <?php
-                    $sql = "SELECT `poster`, `name_c`,  `name_e`, `rating` FROM `movie_list` ";
+                    $sql = "SELECT `poster`, `mName_TC`,  `mName_EN`, `pg_rate` FROM `movie`WHERE `ov_id`='1' ";
                     $arr = $pdo->query($sql)->fetchAll();
                     foreach ($arr as $obj) {
                     ?>
@@ -371,13 +375,13 @@
                             <a href="#">
                                 <div class="mov-card">
                                     <div class="img-wrap">
-                                        <img src=".\images\movies_overview_page\<?= $obj['poster'] ?> ">
+                                        <img src=".\images\movies_overview_page\現正熱映\<?= $obj['poster'] ?>.jpg">
                                     </div>
                                     <p>
-                                        <span class="sub-title-r"><?= $obj['name_c'] ?></span>
+                                        <span class="sub-title-r"><?= $obj['mName_TC'] ?></span>
                                     </p>
-                                    <p class="italic-16"><?= $obj['name_e'] ?></p>
-                                    <div class="pg-rate "><?= $obj['rating'] ?></div>
+                                    <p class="italic-16"><?= $obj['mName_EN'] ?></p>
+                                    <div class="pg-rate "><?= $obj['pg_rate'] ?></div>
                                 </div>
                             </a>
                         </div>

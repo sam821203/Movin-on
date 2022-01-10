@@ -320,6 +320,10 @@ body {
         padding: 0 16px;
     }
 
+    .masonry-articles-section .cat-tag-selector {
+        display: block;
+    }
+
     .masonry-articles-section .movie-type-wrap {
         width: 100%;
         padding: 0;
