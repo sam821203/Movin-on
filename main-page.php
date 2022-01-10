@@ -270,7 +270,6 @@
         width: 100%;
         height: 560px;
         display: flex;
-        align-items: center;
         overflow: hidden;
         position: relative;
     }

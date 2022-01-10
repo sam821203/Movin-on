@@ -247,7 +247,6 @@
         max-width: 1920px;
         height: 640px;
         display: flex;
-        align-items: center;
         overflow: hidden;
         position: relative;
     }
@@ -317,7 +316,7 @@
         position: relative;
         border-radius: var(--border-radius-4); 
         margin-bottom: 32px;
-        margin: 0 16px;
+        margin: 0 16px 8px 16px;
     }
 
     .actors-list-section .img-wrap img {
@@ -333,6 +332,10 @@
     
     .actors-list-section li {
         position: relative;
+    }
+
+    .actors-list-section .actor-name {
+        text-align: center;
     }
 
     .actors-list-section .actor-name-tc1, 
@@ -861,8 +864,7 @@
         /* 修改 arti- 的 class name */
         .spoiler-tag,
         .spoiler-free-tag,
-        .arti-cat-tag { font-size: 14px; }
-
+        .arti-cat-tag,
         .time-stamp { font-size: 12px; }
 
         .related-articles-section .spoiler-free-tag,
@@ -884,6 +886,77 @@
         .related-articles-section .subtitle .sub-title-r {
             display: none;
         }
+
+        /* actors list section */
+        .actors-list-section .prev-btn,
+        .actors-list-section .next-btn {
+            display: none;
+        }
+
+        .actors-list-section .wrap {
+            max-width: 375px;
+            height: 278px;
+            overflow: auto;
+        }
+
+        .actors-list-section .wrap::-webkit-scrollbar {
+            display: none;
+        }
+
+        .actors-list-section .wrap .carousel-wrap {
+            width: 1120px;
+            transform: translateX(0px);
+        }
+
+        .actors-list-section .wrap .img-wrap {
+            width: 96px;
+            height: 224px;
+            margin: 0 0 8px 0;
+        }
+
+        .actors-list-section .carousel-wrap li.list-unstyled {
+            margin: 0 8px;
+        }
+
+        .actors-list-section .carousel-wrap li.list-unstyled:nth-child(1) { margin: 0; }
+
+        .actors-list-section .carousel-wrap li.list-unstyled:nth-child(2) { margin-left: 0; }
+
+        .actors-list-section .carousel-wrap .empty {
+            display: none;
+        }
+
+        .actors-list-section .actor-name {
+            text-align: left;
+        }
+
+        .actors-list-section .actor-name-tc1, 
+        .actors-list-section .actor-name-en1,
+        .actors-list-section .actor-name-tc2, 
+        .actors-list-section .actor-name-en2,
+        .actors-list-section .actor-name-tc3, 
+        .actors-list-section .actor-name-en3,
+        .actors-list-section .actor-name-tc4, 
+        .actors-list-section .actor-name-en4,
+        .actors-list-section .actor-name-tc5, 
+        .actors-list-section .actor-name-en5,
+        .actors-list-section .actor-name-tc6, 
+        .actors-list-section .actor-name-en6,
+        .actors-list-section .actor-name-tc7, 
+        .actors-list-section .actor-name-en7,
+        .actors-list-section .actor-name-tc8, 
+        .actors-list-section .actor-name-en8 {
+            opacity: var(--opacity-90);
+        }
+
+/* 
+        .actors-list-section .carousel-wrap {
+            width: 2660px;
+            display: flex;
+            justify-content: space-between;
+            transform: translateX(-266px);
+            transition: .4s;
+        } */
     }
 </style>
 
@@ -1511,7 +1584,7 @@
         <section class="actors-list-section g-section-mb">
             <div class="container">
                 <div class="row subtitle g-subtitle-mb">
-                    <div class="col-12">
+                    <div class="mycol-12">
                         <div class="d-flex">
                             <div class="red-line my-auto"></div>
                             <span class="section-header-b mr-3">主要演員列表</span>
@@ -1538,10 +1611,11 @@
 
                             <!-- 空照片 -->
                             <li class="list-unstyled">
-                                <div class="img-wrap actor1">
+                                <div class="img-wrap empty">
                                     <div></div>
                                 </div>
                             </li>
+
                             <!-- 第一張圖片 img-1 -->
                             <li class="list-unstyled">
                                 <div class="img-wrap actor1">
@@ -1550,7 +1624,7 @@
                                         <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
                                     </div>
                                 </div>
-                                <div class="text-center">
+                                <div class="actor-name">
                                     <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
                                     <span class="actor-name-en1 italic-16">English</span>
                                 </div>
@@ -1563,7 +1637,7 @@
                                         <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
                                     </div>
                                 </div>
-                                <div class="text-center">
+                                <div class="actor-name">
                                     <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
                                     <span class="actor-name-en1 italic-16">English</span>
                                 </div>
@@ -1576,7 +1650,7 @@
                                         <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
                                     </div>
                                 </div>
-                                <div class="text-center">
+                                <div class="actor-name">
                                     <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
                                     <span class="actor-name-en1 italic-16">English</span>
                                 </div>
@@ -1589,7 +1663,7 @@
                                         <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
                                     </div>
                                 </div>
-                                <div class="text-center">
+                                <div class="actor-name">
                                     <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
                                     <span class="actor-name-en1 italic-16">English</span>
                                 </div>
@@ -1602,7 +1676,7 @@
                                         <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
                                     </div>
                                 </div>
-                                <div class="text-center">
+                                <div class="actor-name">
                                     <span class="actor-name-tc1  sub-title-b mb-1">中文姓名</span>
                                     <span class="actor-name-en1 italic-16">English</span>
                                 </div>
@@ -1615,7 +1689,7 @@
                                         <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
                                     </div>
                                 </div>
-                                <div class="text-center">
+                                <div class="actor-name">
                                     <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
                                     <span class="actor-name-en1 italic-16">English</span>
                                 </div>
@@ -1628,7 +1702,7 @@
                                         <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
                                     </div>
                                 </div>
-                                <div class="text-center">
+                                <div class="actor-name">
                                     <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
                                     <span class="actor-name-en1 italic-16">English</span>
                                 </div>
@@ -1641,7 +1715,7 @@
                                         <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
                                     </div>
                                 </div>
-                                <div class="text-center">
+                                <div class="actor-name">
                                     <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
                                     <span class="actor-name-en1 italic-16">English</span>
                                 </div>
@@ -1654,7 +1728,7 @@
                                         <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
                                     </div>
                                 </div>
-                                <div class="text-center">
+                                <div class="actor-name">
                                     <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
                                     <span class="actor-name-en1 italic-16">English</span>
                                 </div>
@@ -1667,7 +1741,7 @@
                                         <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
                                     </div>
                                 </div>
-                                <div class="text-center">
+                                <div class="actor-name">
                                     <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
                                     <span class="actor-name-en1 italic-16">English</span>
                                 </div>
