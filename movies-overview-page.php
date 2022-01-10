@@ -81,7 +81,7 @@
         }
 
         .typesBorder{
-            justify-content:center;
+            justify-content: center;
         }
 
         .movies-tab-bar .playName {
@@ -98,7 +98,7 @@
         }
 
         .content-section .mycard {
-            margin-bottom: 64px;
+            margin-bottom: 48px;
         }
 
         .content-section p.italic-16 {
