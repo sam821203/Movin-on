@@ -278,16 +278,17 @@
 
         /* aside ads */
         .aside-ads {
+            width: 100%;
             margin-bottom: 32px;
-            height: 256px;
+            max-height: 256px;
             background-color: var(--card-color);
             border-radius: var(--border-radius-8);
             box-shadow: var(--box-shadow-card-lg);
         }
 
         .aside-ads .img-wrap {
-            width: 310px;
-            height: 256px;
+            max-width: 310px;
+            max-height: 256px;
             display: flex;
         }
 
@@ -370,6 +371,11 @@
             display: flex;
             border-top: 1px solid rgba(255,255,255,0.25);
         }
+
+        /* .aside-member-info.col-lg-12,
+        .aside-member-info.col-xl-3 {
+            padding: 0;
+        } */
 
         .aside-member-info .ticket,
         .aside-member-info .post {
@@ -993,8 +999,10 @@
 
                         <div class="d-none d-lg-none d-xl-block aside-related-articles">
                             <div class="d-flex subtitle g-subtitle-mb">
-                                <div class="red-line my-auto"></div>
-                                <span class="section-header-b">相關看板文章</span>
+                                <div class="d-flex">
+                                    <div class="red-line my-auto"></div>
+                                    <span class="section-header-b">相關看板文章</span>
+                                </div>
                             </div>
 
                             <!-- ------------第一篇相關文章------------ -->

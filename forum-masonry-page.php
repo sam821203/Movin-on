@@ -18,26 +18,38 @@
     <?php require_once './tpl/movinon-navbar.php' ?>
 
     <section class="masonry-articles-section">
-        <div class="subtitle">
-            <div class="col-6">
-                <div class="movie-type-wrap">
+        <div>
+            <div class="cat-tag-selector"><i class="fas fa-grip-vertical"></i>依類別分類</div>
+
+            <div class="movie-type-wrap d-flex flex-wrap">
+                <a href="" class="d-flex">
                     <span class="body1-m type g-tag">新聞</span>
+                </a>
+                <a href="" class="d-flex">
                     <span class="body1-m type g-tag">問片</span>
+                </a>
+                <a href="" class="d-flex">
                     <span class="body1-m type g-tag">片單</span>
+                </a>
+                <a href="" class="d-flex">
                     <span class="body1-m type g-tag">討論</span>
+                </a>
+                <a href="" class="d-flex">
                     <span class="body1-m type g-tag">請益</span>
+                </a>
+                <a href="" class="d-flex">
                     <span class="body1-m type g-tag">選片</span>
-                </div>
-            </div>
-            <div class="col-6 d-flex justify-content-end align-items-end">
-                <a href="./forum-masonry-page.php">
-                    <div class="d-flex justify-content-end align-items-end">
-                        <div class="sub-title-r">前往討論區</div>
-                        <div class="ml-2"><i class="fas fa-chevron-right"></i></div>
-                    </div>
                 </a>
             </div>
         </div>
+
+        <a href="./forum-masonry-page.php">
+            <div class="filter d-flex justify-content-end align-items-end">
+                <!-- <div class="sub-title-r">熱門文章</div>
+                <div class="ml-2"><i class="fas fa-chevron-right"></i></div> -->
+                <i class="fas fa-sort-amount-down"></i>
+            </div>
+        </a>
 
         <div>
             <div class="masonry-wrapper">
@@ -57,13 +69,13 @@
                                     <div class="avatar">
                                         <img src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
                                     </div>
-                                </div>week1_eternals
+                                </div>
 
                                 <div class="masonry-content-text">
                                     <div>2021-12-20</span>by<span>aaa</span></div>
                                     <h3 class="masonry-title sub-title-b"><?= $obj['title'] ?></h3>
                                     <p class="masonry-description">
-                                        <?= mb_substr($obj['article'],0,40) ?>...
+                                        <?= mb_substr($obj['article'],0,55) ?>...
                                     </p>
                                 </div>
                                 <div class="article-like">
@@ -91,6 +103,7 @@
 
     <script src="//unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <!-- <script src="https://kit.fontawesome.com/1392152695.js" crossorigin="anonymous"></script> -->
+
     <script src="js/forum-masonry-page.js"></script>
 </body>
 

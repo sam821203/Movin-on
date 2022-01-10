@@ -176,7 +176,7 @@ button .img-wrap img {
     justify-content: center;
     align-items: center;
     margin-right: 12px;
-    line-height: 100%;
+    line-height: 110%;
 }
 
 .spoiler-free-tag {
@@ -946,6 +946,17 @@ footer p {
     .body1-m,
     .body1-b,
     .italic-16 { font-size: 0.75rem; }
+
+    .spoiler-tag,
+    .spoiler-free-tag,
+    .arti-cat-tag,
+    .time-stamp { font-size: 12px; }
+
+    .spoiler-free-tag,
+    .spoiler-tag {
+        width: 26px;
+        height: 26px;
+    }
 
     /* -------movinon navbar-------*/
     .movinon-navbar .movinon-logo-wrap { width: 42px; }

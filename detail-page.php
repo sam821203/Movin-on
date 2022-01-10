@@ -180,7 +180,6 @@
 
     /* -----------------related articles section----------------- */
     .related-articles-section .arti-cat-tag {
-        padding: 3px 20px 4px 20px;
         border: 1px solid rgba(255,255,255,0.5);
         border-radius: var(--border-radius-50);
         background-color: var(--bg-color);
@@ -859,18 +858,6 @@
 
         .movie-detail-section .description {
             margin-bottom: 24px;
-        }
-
-        /* 修改 arti- 的 class name */
-        .spoiler-tag,
-        .spoiler-free-tag,
-        .arti-cat-tag,
-        .time-stamp { font-size: 12px; }
-
-        .related-articles-section .spoiler-free-tag,
-        .related-articles-section .spoiler-tag {
-            width: 26px;
-            height: 26px;
         }
 
         .related-articles-section .arti-cat-tag {

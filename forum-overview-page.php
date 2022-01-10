@@ -273,17 +273,28 @@
         
         .forum-info-section { margin-top: 96px; }
 
+        .forum-info-section .forum-info-board {
+            background-color: var(--bg-color);
+            padding: 72px 24px 24px 24px;
+            opacity: var(--opacity-75);
+            border-radius: 8px;
+            position: relative;
+            height: 326px;
+            overflow: auto;
+            box-shadow: var(--box-shadow-black-25);
+        }
+
         .forum-cards-section .card-md .section-header-r { 
             font-weight: 400;
             margin-bottom: 4px;
-            font-size: 16px;
+            font-size: 14px;
         }
 
         /* 將預設的 .body1-b 改為 .body2-m  */
         .forum-cards-section .card-md .body1-b { 
-            font-weight: 700;
+            font-weight: 500;
             margin-bottom: 4px;
-            font-size: 14px;
+            font-size: 12px;
         }
 
         .forum-cards-section .img-wrap .content {
@@ -296,20 +307,24 @@
             margin-bottom: 16px;
         }
 
-        .forum-cards-section .col-6.card-md:nth-child(even),
-        .forum-cat-section .col-6.card-md:nth-child(even) {
-            padding: 0 16px 0 8px;
+        .forum-cards-section .mycol-6.card-md:nth-child(even),
+        .forum-cat-section .mycol-6.card-md:nth-child(even) {
+            padding: 0 0 0 8px;
         }
 
-        .forum-cards-section .col-6.card-md:nth-child(odd),
-        .forum-cat-section .col-6.card-md:nth-child(odd) {
-            padding: 0 8px 0 16px;
+        .forum-cards-section .mycol-6.card-md:nth-child(odd),
+        .forum-cat-section .mycol-6.card-md:nth-child(odd) {
+            padding: 0 8px 0 0;
         }
 
         .forum-cards-section .com-count {
             border-radius: var(--border-radius-50);
             padding: 2px 6px;
             margin-left: 8px;
+        }
+
+        .forum-cards-section .content .caption-12 {
+            font-size: 11px;
         }
     }
 </style>
@@ -353,13 +368,13 @@
                 
                 <!-- --------------------display 小於 1200-------------------- -->
                 <div class="row d-block d-xl-none">
-                    <div class="col-12">
+                    <div class="mycol-12">
                         <div class="forum-info-title">
                             <div class="main-header-b">影迷討論區</div>
                             <p class="sub-title-r">本討論區提供電影影評、心得或上映情報之相關分享，或國內外影展、電影獎項、推薦片單等話題討論。</p>
                         </div>
                     </div>
-                    <div class="col-12">
+                    <div class="mycol-12">
                         <div class="forum-info-board">
                             <div class="board-title">
                                 <div class="sub-title-m">討論區規定</div>
@@ -385,7 +400,7 @@
         <section class="forum-cards-section g-section-mb">
             <div class="container d-none d-xl-block">
                 <div class="row subtitle g-subtitle-mb">
-                    <div class="col-12">
+                    <div class="mycol-12">
                         <div class="d-flex">
                             <div class="red-line"></div>
                             <span class="section-header-b">精選討論區</span>
@@ -531,7 +546,7 @@
             <!-- --------------------display 小於 1200-------------------- -->
             <div class="container d-sm-block d-xl-none">
                 <div class="row subtitle g-subtitle-mb">
-                    <div class="col-12">
+                    <div class="mycol-12">
                         <div class="d-flex">
                             <div class="red-line"></div>
                             <span class="section-header-b">精選討論區</span>
@@ -540,7 +555,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-6 card-md">
+                    <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/card_1_1200.jpg" alt="">
@@ -551,7 +566,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-6 card-md">
+                    <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/card_2_1200.jpg" alt="">
@@ -562,7 +577,7 @@
                             </div>
                         </a>
                     </div> 
-                    <div class="col-6 card-md">
+                    <div class="mycol-6 card-md">
                         <a href="./forum-masonry-page.php">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/card_3_1200.jpg" alt="">
@@ -573,7 +588,7 @@
                             </div>
                         </a>
                     </div> 
-                    <div class="col-6 card-md">
+                    <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/card_4_1200.jpg" alt="">
@@ -584,7 +599,7 @@
                             </div>
                         </a>
                     </div> 
-                    <div class="col-6 card-md">
+                    <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/card_5_1200.jpg" alt="">
@@ -595,7 +610,7 @@
                             </div>
                         </a>
                     </div> 
-                    <div class="col-6 card-md">
+                    <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/card_6_1200.jpg" alt="">
@@ -606,7 +621,7 @@
                             </div>
                         </a>
                     </div> 
-                    <div class="col-6 card-md">
+                    <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/card_7_1200.jpg" alt="">
@@ -617,7 +632,7 @@
                             </div>
                         </a>
                     </div> 
-                    <div class="col-6 card-md">
+                    <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/card_8_1200.jpg" alt="">
@@ -628,7 +643,7 @@
                             </div>
                         </a>
                     </div> 
-                    <div class="col-6 card-md">
+                    <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/card_9_1200.jpg" alt="">
@@ -639,7 +654,7 @@
                             </div>
                         </a>
                     </div> 
-                    <div class="col-6 card-md">
+                    <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/card_10_1200.jpg" alt="">
@@ -658,7 +673,7 @@
         <section class="forum-cat-section g-section-mb">
             <div class="container">
                 <div class="row subtitle g-subtitle-mb">
-                    <div class="col-12">
+                    <div class="mycol-12">
                         <div class="d-flex">
                             <div class="red-line"></div>
                             <span class="section-header-b my-auto">分類討論區</span>
@@ -667,7 +682,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-6 col-md-6 col-lg-4 col-xl-3 card-md">
+                    <div class="mycol-6 col-md-6 col-lg-4 col-xl-3 card-md">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/forum_cat_1.jpg" alt="">
@@ -680,7 +695,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-6 col-md-6 col-lg-4 col-xl-3 card-md">
+                    <div class="mycol-6 col-md-6 col-lg-4 col-xl-3 card-md">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/forum_cat_2.jpg" alt="">
@@ -693,7 +708,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-6 col-md-6 col-lg-4 col-xl-3 card-md">
+                    <div class="mycol-6 col-md-6 col-lg-4 col-xl-3 card-md">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/forum_cat_3.jpg" alt="">
@@ -706,7 +721,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-6 col-md-6 col-lg-4 col-xl-3 card-md">
+                    <div class="mycol-6 col-md-6 col-lg-4 col-xl-3 card-md">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/forum_cat_4.jpg" alt="">
@@ -719,7 +734,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-6 col-md-6 col-lg-4 col-xl-3 card-md">
+                    <div class="mycol-6 col-md-6 col-lg-4 col-xl-3 card-md">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/forum_cat_5.jpg" alt="">
@@ -732,7 +747,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-6 col-md-6 col-lg-4 col-xl-3 card-md">
+                    <div class="mycol-6 col-md-6 col-lg-4 col-xl-3 card-md">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/forum_cat_6.jpg" alt="">
@@ -745,7 +760,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-6 col-md-6 col-lg-4 col-xl-3 card-md">
+                    <div class="mycol-6 col-md-6 col-lg-4 col-xl-3 card-md">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/forum_cat_7.jpg" alt="">
@@ -758,7 +773,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-6 col-md-6 col-lg-4 col-xl-3 card-md">
+                    <div class="mycol-6 col-md-6 col-lg-4 col-xl-3 card-md">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/forum_cat_8.jpg" alt="">

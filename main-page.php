@@ -266,10 +266,15 @@
         opacity: var(--opacity-90);
     }
 
+    .ranking-section .rank-num-418 {
+        display: none;
+    }
+
     .ranking-section .wrap {
         width: 100%;
         height: 560px;
         display: flex;
+        align-items: center;
         overflow: hidden;
         position: relative;
     }
@@ -706,6 +711,10 @@
             margin: 0 8px;
         }
 
+        .ranking-section .carousel-wrap .img-wrap.rank1 {
+            margin-left: 0;
+        }
+
         .hero .d-418-row2 {
             margin-bottom: 24px;
         }
@@ -730,8 +739,8 @@
             position: relative;
             width: 100%;
             /* max-height: 812px; */
-            max-height: 552px;
-            background-image: url("images/main_page/hero-img1_418_2.jpg") ;
+            max-height: 650px;
+            background-image: url("images/main_page/hero-img1_418.jpg") ;
             background-repeat: no-repeat;
             background-size: contain;
         }
@@ -776,6 +785,7 @@
         }
 
         .ranking-section .rank-num-418 {
+            display: block;
             margin-left: 8px;
             margin-bottom: 8px;
         }
@@ -807,12 +817,12 @@
             margin-bottom: 16px;
         }
 
-        .forum-cards-section .col-6.card-md:nth-child(even) {
-            padding: 0 16px 0 8px;
+        .forum-cards-section .mycol-6.card-md:nth-child(even) {
+            padding: 0 0 0 8px;
         }
 
-        .forum-cards-section .col-6.card-md:nth-child(odd) {
-            padding: 0 8px 0 16px;
+        .forum-cards-section .mycol-6.card-md:nth-child(odd) {
+            padding: 0 8px 0 0;
         }
 
         .forum-cards-section .com-count {
@@ -839,7 +849,7 @@
             <div class="bg"></div>
 
             <!-- ---------------canvas--------------- -->
-            <!-- <canvas class="dm"></canvas> -->
+            <canvas class="dm"></canvas>
             
             <!-- ---------------inputgroup--------------- -->
             <div class="inputgroup row row-d-1920">
@@ -885,7 +895,10 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="colorDropdownMenu">
                         <li><a class="canvas-preview" href="#"><img src="images/main_page/hero-img1.jpg"></a></li>
-                        <li><a class="canvas-preview" href="#"><img src="images/main_page/eternals-bg-img-min.jpg"></a></li>
+                        <li><a class="canvas-preview" href="#"><img src="images/main_page/hero-img2.jpg"></a></li>
+                        <li><a class="canvas-preview" href="#"><img src="images/main_page/hero-img3.jpg"></a></li>
+                        <li><a class="canvas-preview" href="#"><img src="images/main_page/hero-img4.jpg"></a></li>
+                        <li><a class="canvas-preview" href="#"><img src="images/main_page/hero-img5.jpg"></a></li>
                         
                         <li>
                             <p>點擊更換背景圖</p>
@@ -955,29 +968,15 @@
 
         <section class="ranking-section g-section-mb">
             <div class="container">
-                <!-- <div class="row subtitle g-subtitle-mb">
-                    <div class="col-6 d-flex">
-                        <div class="red-line my-auto"></div>
-                        <span class="section-header-b">電影排行榜</span>
-                    </div>
-                    <div class="col-6 d-flex justify-content-end align-items-end">
-                        <a href="./movies-overview-page.php">
-                            <div class="d-flex justify-content-end align-items-end">
-                                <div class="sub-title-r mt-2">電影總覽頁</div>
-                                <div class="ml-2"><i class="fas fa-chevron-right"></i></div>
-                            </div>
-                        </a>
-                    </div>
-                </div> -->
 
                 <div class="row subtitle g-subtitle-mb">
-                    <div class="col-6">
+                    <div class="mycol-6">
                         <div class="d-flex">
                             <div class="red-line my-auto"></div>
                             <span class="section-header-b">電影排行榜</span>
                         </div>
                     </div>
-                    <div class="col-6 d-flex justify-content-end align-items-end">
+                    <div class="mycol-6 d-flex justify-content-end align-items-end">
                         <a href="./forum-overview-page.php">
                             <div class="d-flex justify-content-end align-items-end">
                                 <div class="sub-title-r mt-2">電影總覽頁</div>
@@ -987,6 +986,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="container-fluid">
                 <div class="row">
                     <div class="wrap">
@@ -1493,11 +1493,11 @@
         <section class="forum-cards-section g-section-mb">
             <div class="container d-none d-xl-block">
                 <div class="row subtitle g-subtitle-mb">
-                    <div class="col-6 d-flex">
+                    <div class="mycol-6 d-flex">
                         <div class="red-line my-auto"></div>
                         <span class="section-header-b">精選討論區</span>
                     </div>
-                    <div class="col-6 d-flex justify-content-end align-items-end">
+                    <div class="mycol-6 d-flex justify-content-end align-items-end">
                         <a href="#">
                             <div class="d-flex justify-content-end align-items-end">
                                 <div class="sub-title-r mt-2">前往討論區</div>
@@ -1579,13 +1579,13 @@
             <!-- --------------------display 小於 1200-------------------- -->
             <div class="container d-sm-block d-xl-none">
                 <div class="row subtitle g-subtitle-mb">
-                    <div class="col-6">
+                    <div class="mycol-6">
                         <div class="d-flex">
                             <div class="red-line my-auto"></div>
                             <span class="section-header-b">電影排行榜</span>
                         </div>
                     </div>
-                    <div class="col-6 d-flex justify-content-end align-items-end">
+                    <div class="mycol-6 d-flex justify-content-end align-items-end">
                         <a href="./forum-overview-page.php">
                             <div class="d-flex justify-content-end align-items-end">
                                 <div class="sub-title-r mt-2">電影總覽頁</div>
@@ -1597,7 +1597,7 @@
                 
                 <!-- forum cards section -->
                 <div class="row">
-                    <div class="col-6 card-md">
+                    <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/card_1_1200.jpg" alt="">
@@ -1608,7 +1608,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-6 card-md">
+                    <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/card_2_1200.jpg" alt="">
@@ -1619,7 +1619,7 @@
                             </div>
                         </a>
                     </div> 
-                    <div class="col-6 card-md">
+                    <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/card_3_1200.jpg" alt="">
@@ -1630,7 +1630,7 @@
                             </div>
                         </a>
                     </div> 
-                    <div class="col-6 card-md">
+                    <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/card_4_1200.jpg" alt="">
@@ -1641,7 +1641,7 @@
                             </div>
                         </a>
                     </div> 
-                    <div class="col-6 card-md">
+                    <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/card_5_1200.jpg" alt="">
@@ -1652,7 +1652,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-6 card-md">
+                    <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
                                 <img src="images/forum_overview_page/card_6_1200_more.jpg" alt="">
