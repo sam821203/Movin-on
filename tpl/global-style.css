@@ -851,7 +851,13 @@ footer p {
     .g-subtitle-mb { margin-bottom: 24px; }
 
     /* -------movinon navbar-------*/
-    .movinon-navbar { padding: 16px 32px; }
+    .movinon-navbar { 
+        padding: 0 16px; 
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+
     .movinon-navbar .movinon-logo-wrap { width: 48px; }
     .red-line { display: none; }
 

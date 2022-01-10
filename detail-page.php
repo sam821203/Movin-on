@@ -185,12 +185,6 @@
     }
 
     /* -----------------related articles section----------------- */
-    /* .related-articles-section .subtitle,
-    .actors-list-section .subtitle,
-    .movie-stills-section .subtitle {
-        padding: 0 16px;
-    } */
-
     .related-articles-section .arti-cat-tag {
         padding: 3px 20px 4px 20px;
         border: 1px solid rgba(255,255,255,0.5);
@@ -431,7 +425,7 @@
         height: 304px;
         width: 872px;
         background-image: url(images/detail_page/movie-stills/large-img.jpg);
-        transform: perspective(1000px) rotateX(-30deg);
+        /* transform: perspective(1000px) rotateX(-30deg); */
         overflow: hidden;
         /* border-radius: var(--border-radius-4); */
         /* border-top-left-radius: 320% 120px;
@@ -444,22 +438,6 @@
         height: 100%;
         object-fit: cover;
         object-position: center center;
-    }
-
-    .movie-stills-section .hall-screen .screen-gradient-top {
-        position: absolute;
-        top: -30px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-image: linear-gradient(to top, rgba(18,18,18,0), rgba(18,18,18,1));
-        /* background-image: linear-gradient(to top, rgba(18,18,18,0), rgba(18,18,18,1));
-        /* background-color: #121212; */
-        width: 100%;
-        height: 50px;
-        /* border-top-left-radius: 240% 80px;
-        border-top-right-radius: 240% 80px; */
-        /* border-bottom-left-radius: 240% 80px;
-        border-bottom-right-radius: 240% 80px; */
     }
 
     .movie-stills-carousel {
@@ -767,6 +745,7 @@
         }
 
         .articles-md li:nth-child(even){
+            width: 100%;
             padding: 16px 0;
             background-color: rgba(255,255,255,0.02);
             border-radius: var(--border-radius-8);
@@ -774,6 +753,7 @@
         }
 
         .articles-md li:nth-child(odd) {
+            width: 100%;
             padding: 16px 0;
             background-color: rgba(255,255,255,0.08);
             border-radius: var(--border-radius-8);
@@ -800,8 +780,19 @@
         /* 修改 arti- 的 class name */
         .spoiler-tag,
         .spoiler-free-tag,
-        .arti-cat-tag,
-        .time-stamp { font-size: 14px; }
+        .arti-cat-tag { font-size: 14px; }
+
+        .time-stamp { font-size: 12px; }
+
+        .related-articles-section .spoiler-free-tag,
+        .related-articles-section .spoiler-tag {
+            width: 26px;
+            height: 26px;
+        }
+
+        .related-articles-section .arti-cat-tag {
+            padding: 4px 16px;
+        }
 
         .movie-detail-section .reputation {
             display: none;
@@ -822,6 +813,10 @@
             margin-right: 12px;
             font-size: 14px;
         }
+
+        .related-articles-section .subtitle .sub-title-r {
+            display: none;
+        }
     }
 </style>
 
@@ -835,7 +830,7 @@
             <div class="container">
 
                 <!-- social media display > 1200 -->
-                <div class="row social-media flex-column">
+                <div class="row social-media flex-column d-lg-none d-xl-flex">
                     <div class="d-flex justify-content-end mb-2">
                         <a href="#">
                             <i class="fab fa-facebook-square"></i>
@@ -1003,14 +998,12 @@
         <section class="related-articles-section g-section-mb">
             <div class="container">
                 <div class="row subtitle g-subtitle-mb">
-                    <div class="col-6">
-                        <div class="d-flex">
-                            <div class="red-line my-auto"></div>
-                            <span class="section-header-b">討論區文章</span>
-                        </div>
+                    <div class="mycol-6 d-flex">
+                        <div class="red-line my-auto"></div>
+                        <span class="section-header-b">討論區文章</span>
                     </div>
-                    <div class="col-6 d-flex justify-content-end align-items-end">
-                        <a href="./forum-masonry-page.php">
+                    <div class="mycol-6 d-flex justify-content-end align-items-end">
+                        <a href="#">
                             <div class="d-flex justify-content-end align-items-end">
                                 <div class="sub-title-r mt-2">前往討論區</div>
                                 <div class="ml-2"><i class="fas fa-chevron-right"></i></div>
@@ -1018,6 +1011,8 @@
                         </a>
                     </div>
                 </div>
+
+
                 <div class="row articles-1920 d-none d-xl-flex">
                     <div class="col-xl-6">
                         <a href="#">
@@ -1246,17 +1241,17 @@
                         <li> 
                             <div class="col-12">
                                 <a href="#">
-                                    <div class="col-12">
+                                    <div class="extra-info">
                                         <div class="d-flex justify-content-between mb-2">
-                                            <div class="d-flex">
+                                            <div class="d-flex align-items-center align-items-center">
                                                 <div class="spoiler-tag">雷</div>
                                                 <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
                                             <div class="time-stamp d-flex align-items-center">12小時前</div>
                                         </div>
                                     </div>
-                                    <div class="col-12">
-                                        <div class="sub-title-r title-marquee-16">《永恆族》可惜不能是獨立電影</div>
+                                    <div class="article-title">
+                                        <div class="sub-title-r title-marquee-16">永恆族可惜不能是獨立電影</div>
                                     </div>
                                 </a>
                             </div>
@@ -1265,17 +1260,17 @@
                         <li> 
                             <div class="col-12">
                                 <a href="#">
-                                    <div class="col-12">
+                                    <div class="extra-info">
                                         <div class="d-flex justify-content-between mb-2">
-                                            <div class="d-flex">
-                                                <div class="spoiler-tag">雷</div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="spoiler-free-tag">雷</div>
                                                 <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
                                             <div class="time-stamp d-flex align-items-center">12小時前</div>
                                         </div>
                                     </div>
-                                    <div class="col-12">
-                                        <div class="sub-title-r title-marquee-16">月老 vs. 永恆族</div>
+                                    <div class="article-title">
+                                        <div class="sub-title-r title-marquee-16">《永恆族》可惜不能是獨立電影</div>
                                     </div>
                                 </a>
                             </div>
@@ -1284,17 +1279,55 @@
                         <li> 
                             <div class="col-12">
                                 <a href="#">
-                                    <div class="col-12">
+                                    <div class="extra-info">
                                         <div class="d-flex justify-content-between mb-2">
-                                            <div class="d-flex">
+                                            <div class="d-flex align-items-center">
                                                 <div class="spoiler-free-tag">雷</div>
                                                 <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
                                             <div class="time-stamp d-flex align-items-center">12小時前</div>
                                         </div>
                                     </div>
-                                    <div class="col-12">
-                                        <div class="sub-title-r title-marquee-16">《永恆族》可惜不能是獨立電影</div>
+                                    <div class="article-title">
+                                        <div class="sub-title-r title-marquee-16">趙婷透露《永恆族》本來可能是黑暗結局</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li> 
+                            <div class="col-12">
+                                <a href="#">
+                                    <div class="extra-info">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <div class="d-flex align-items-center">
+                                                <div class="spoiler-tag">雷</div>
+                                                <div class="arti-cat-tag mr-2">討論</div>
+                                            </div>
+                                            <div class="time-stamp d-flex align-items-center">12小時前</div>
+                                        </div>
+                                    </div>
+                                    <div class="article-title">
+                                        <div class="sub-title-r title-marquee-16">所以永恆族算成功了嗎</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li> 
+                            <div class="col-12">
+                                <a href="#">
+                                    <div class="extra-info">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <div class="d-flex align-items-center">
+                                                <div class="spoiler-tag">雷</div>
+                                                <div class="arti-cat-tag mr-2">討論</div>
+                                            </div>
+                                            <div class="time-stamp d-flex align-items-center">12小時前</div>
+                                        </div>
+                                    </div>
+                                    <div class="article-title">
+                                        <div class="sub-title-r title-marquee-16">永恆族可惜不能是獨立電影</div>
                                     </div>
                                 </a>
                             </div>
@@ -1303,93 +1336,74 @@
                         <li> 
                             <div class="col-12">
                                 <a href="#">
-                                    <div class="col-12">
+                                    <div class="extra-info">
                                         <div class="d-flex justify-content-between mb-2">
-                                            <div class="d-flex">
+                                            <div class="d-flex align-items-center">
+                                                <div class="spoiler-free-tag">雷</div>
+                                                <div class="arti-cat-tag mr-2">討論</div>
+                                            </div>
+                                            <div class="time-stamp d-flex align-items-center">12小時前</div>
+                                        </div>
+                                    </div>
+                                    <div class="article-title">
+                                        <div class="sub-title-r title-marquee-16">《永恆族》可惜不能是獨立電影</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li> 
+                            <div class="col-12">
+                                <a href="#">
+                                    <div class="extra-info">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <div class="d-flex align-items-center">
+                                                <div class="spoiler-free-tag">雷</div>
+                                                <div class="arti-cat-tag mr-2">討論</div>
+                                            </div>
+                                            <div class="time-stamp d-flex align-items-center">12小時前</div>
+                                        </div>
+                                    </div>
+                                    <div class="article-title">
+                                        <div class="sub-title-r title-marquee-16">趙婷透露《永恆族》本來可能是黑暗結局</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li> 
+                            <div class="col-12">
+                                <a href="#">
+                                    <div class="extra-info">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <div class="d-flex align-items-center">
+                                                <div class="spoiler-free-tag">雷</div>
+                                                <div class="arti-cat-tag mr-2">討論</div>
+                                            </div>
+                                            <div class="time-stamp d-flex align-items-center">12小時前</div>
+                                        </div>
+                                    </div>
+                                    <div class="article-title">
+                                        <div class="sub-title-r title-marquee-16">所以永恆族算成功了嗎</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li> 
+                            <div class="col-12">
+                                <a href="#">
+                                    <div class="extra-info">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <div class="d-flex align-items-center">
                                                 <div class="spoiler-tag">雷</div>
                                                 <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
                                             <div class="time-stamp d-flex align-items-center">12小時前</div>
                                         </div>
                                     </div>
-                                    <div class="col-12">
-                                        <div class="sub-title-r title-marquee-16">月老 vs. 永恆族</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li> 
-                            <div class="col-12">
-                                <a href="#">
-                                    <div class="col-12">
-                                        <div class="d-flex justify-content-between mb-2">
-                                            <div class="d-flex">
-                                                <div class="spoiler-free-tag">雷</div>
-                                                <div class="arti-cat-tag mr-2">討論</div>
-                                            </div>
-                                            <div class="time-stamp d-flex align-items-center">12小時前</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="sub-title-r title-marquee-16">月老 vs. 永恆族</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li> 
-                            <div class="col-12">
-                                <a href="#">
-                                    <div class="col-12">
-                                        <div class="d-flex justify-content-between mb-2">
-                                            <div class="d-flex">
-                                                <div class="spoiler-free-tag">雷</div>
-                                                <div class="arti-cat-tag mr-2">討論</div>
-                                            </div>
-                                            <div class="time-stamp d-flex align-items-center">12小時前</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="sub-title-r title-marquee-16">月老 vs. 永恆族</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li> 
-                            <div class="col-12">
-                                <a href="#">
-                                    <div class="col-12">
-                                        <div class="d-flex justify-content-between mb-2">
-                                            <div class="d-flex">
-                                                <div class="spoiler-free-tag">雷</div>
-                                                <div class="arti-cat-tag mr-2">討論</div>
-                                            </div>
-                                            <div class="time-stamp d-flex align-items-center">12小時前</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="sub-title-r title-marquee-16">月老 vs. 永恆族</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li> 
-                            <div class="col-12">
-                                <a href="#">
-                                    <div class="col-12">
-                                        <div class="d-flex justify-content-between mb-2">
-                                            <div class="d-flex">
-                                                <div class="spoiler-tag">雷</div>
-                                                <div class="arti-cat-tag mr-2">討論</div>
-                                            </div>
-                                            <div class="time-stamp d-flex align-items-center">12小時前</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="sub-title-r title-marquee-16">月老 vs. 永恆族</div>
+                                    <div class="article-title">
+                                        <div class="sub-title-r title-marquee-16">所以永恆族算成功了嗎</div>
                                     </div>
                                 </a>
                             </div>
@@ -1586,7 +1600,6 @@
 
                 <div class="row movie-stills">
                     <div class="hall-screen">
-                        <div class="screen-gradient-top"></div>
                         <img src="images/detail_page/movie_stills/movie_still_img2.jpg" alt="">
                     </div>
                 </div>
