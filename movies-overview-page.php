@@ -205,7 +205,7 @@
 
                                         <!-- 1/5更改 電影資料提取與輸出 -->
                                         <?php
-                                        $sql = "SELECT `poster`, `name_c`,  `name_e`, `score` FROM `movie_list` WHERE `parents_ID`='1' ";
+                                        $sql = "SELECT `poster`, `mName_TC`,  `mName_EN`, `movinon_rate` FROM `movie`WHERE `ov_id`='1' ";
                                         $arr = $pdo->query($sql)->fetchAll();
                                         foreach ($arr as $obj) {
                                         ?>
@@ -215,7 +215,7 @@
                                                         <div class="img-wrap">
 
                                                             <!-- 1/5更改 海報資料輸出 -->
-                                                            <img src=".\images\movies_overview_page\<?= $obj['poster'] ?> ">
+                                                            <img src=".\images\movies_overview_page\現正熱映\<?= $obj['poster'] ?>.jpg ">
                                                         </div>
                                                     </a>
 
@@ -223,19 +223,19 @@
                                                         <div class="d-flex justify-content-between">
                                                             <div class="movie-title">
                                                                 <!-- 1/5更改 中文名資料輸出 -->
-                                                                <p><span class="sub-title-r"><?= $obj['name_c'] ?></span></p>
+                                                                <p><span class="sub-title-r"><?= $obj['mName_TC'] ?></span></p>
                                                             </div>
 
                                                             <div class="rating d-flex">
                                                                 <i class="fas fa-star"></i>
 
                                                                 <!-- 1/5更改 評分資料輸出 -->
-                                                                <span><?= $obj['score'] ?></span>
+                                                                <span><?= $obj['movinon_rate'] ?></span>
                                                             </div>
                                                         </div>
                                                         
                                                         <!-- 1/5更改 英文名資料輸出 -->
-                                                        <p class="italic-16"><?= $obj['name_e'] ?></p>
+                                                        <p class="italic-16"><?= $obj['mName_EN'] ?></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -259,7 +259,7 @@
 
                                         <!-- 1/5更改 電影資料提取與輸出 -->
                                         <?php
-                                        $sql = "SELECT `poster`, `name_c`,  `name_e`, `score` FROM `movie_list` WHERE `parents_ID`='2'  ";
+                                        $sql = "SELECT `poster`, `mName_TC`,  `mName_EN`, `movinon_rate` FROM `movie`WHERE `ov_id`='2' ";
                                         $arr = $pdo->query($sql)->fetchAll();
                                         foreach ($arr as $obj) {
                                         ?>
@@ -269,7 +269,7 @@
                                                         <div class="img-wrap">
 
                                                             <!-- 1/5更改 海報資料輸出 -->
-                                                            <img src=".\images\movies_overview_page\<?= $obj['poster'] ?> ">
+                                                            <img src=".\images\movies_overview_page\本週新片\<?= $obj['poster'] ?>.jpg">
                                                         </div>
                                                     </a>
 
@@ -277,19 +277,19 @@
                                                         <div class="d-flex justify-content-between">
                                                             <div class="movie-title">
                                                                 <!-- 1/5更改 中文名資料輸出 -->
-                                                                <p><span class="sub-title-r"><?= $obj['name_c'] ?></span></p>
+                                                                <p><span class="sub-title-r"><?= $obj['mName_TC'] ?></span></p>
                                                             </div>
 
                                                             <div class="rating d-flex">
                                                                 <i class="fas fa-star"></i>
 
                                                                 <!-- 1/5更改 評分資料輸出 -->
-                                                                <span><?= $obj['score'] ?></span>
+                                                                <span><?= $obj['movinon_rate'] ?></span>
                                                             </div>
                                                         </div>
                                                         
                                                         <!-- 1/5更改 英文名資料輸出 -->
-                                                        <p class="italic-16"><?= $obj['name_e'] ?></p>
+                                                        <p class="italic-16"><?= $obj['mName_EN'] ?></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -309,9 +309,9 @@
                             <div class="content-section g-section-mb">
                                 <div class="d-flex justify-content-between position-relative px-0">
                                     <div class="row mb-3">
-                                         <!-- 1/5更改 電影資料提取與輸出 -->
-                                         <?php
-                                        $sql = "SELECT `poster`, `name_c`,  `name_e`, `score` FROM `movie_list` WHERE `parents_ID`='3' ";
+                                        <!-- 1/5更改 電影資料提取與輸出 -->
+                                        <?php
+                                        $sql = "SELECT `poster`, `mName_TC`,  `mName_EN`, `movinon_rate` FROM `movie`WHERE `ov_id`='3' ";
                                         $arr = $pdo->query($sql)->fetchAll();
                                         foreach ($arr as $obj) {
                                         ?>
@@ -321,7 +321,7 @@
                                                         <div class="img-wrap">
 
                                                             <!-- 1/5更改 海報資料輸出 -->
-                                                            <img src=".\images\movies_overview_page\<?= $obj['poster'] ?> ">
+                                                            <img src=".\images\movies_overview_page\即將上映\<?= $obj['poster'] ?>.jpg ">
                                                         </div>
                                                     </a>
 
@@ -329,19 +329,19 @@
                                                         <div class="d-flex justify-content-between">
                                                             <div class="movie-title">
                                                                 <!-- 1/5更改 中文名資料輸出 -->
-                                                                <p><span class="sub-title-r"><?= $obj['name_c'] ?></span></p>
+                                                                <p><span class="sub-title-r"><?= $obj['mName_TC'] ?></span></p>
                                                             </div>
 
                                                             <div class="rating d-flex">
                                                                 <i class="fas fa-star"></i>
 
                                                                 <!-- 1/5更改 評分資料輸出 -->
-                                                                <span><?= $obj['score'] ?></span>
+                                                                <span><?= $obj['movinon_rate'] ?></span>
                                                             </div>
                                                         </div>
                                                         
                                                         <!-- 1/5更改 英文名資料輸出 -->
-                                                        <p class="italic-16"><?= $obj['name_e'] ?></p>
+                                                        <p class="italic-16"><?= $obj['mName_EN'] ?></p>
                                                     </div>
                                                 </div>
                                             </div>
