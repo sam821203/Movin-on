@@ -31,11 +31,6 @@
         opacity: var(--opacity-75);
     }
 
-    .movie-detail-section .movie-poster {
-        width: 25%;
-    }
-
-
     .movie-detail-section
     .movie-poster
     .img-wrap {
@@ -130,7 +125,6 @@
     .movie-detail-section .content .date-data,
     .movie-detail-section .content .length-data,
     .movie-detail-section .content .director-data {  
-        margin-left: 8px;
         opacity: var(--opacity-75); 
     }
 
@@ -598,10 +592,6 @@
             margin-right: 8px;
         }
 
-        .movie-detail-section .movie-poster {
-            width: 20%;
-        }
-
         .movie-detail-section .description {
             margin-bottom: 20px;
         }
@@ -660,7 +650,6 @@
 
         .movie-detail-section .description p {
             overflow: auto;
-            height: 100%;
         }
 
         /* related articles section */
@@ -690,7 +679,10 @@
         .movie-detail-section { margin-top: 288px; }
         .movie-detail-section .cat-tags .cat-tag { margin-top: 32px; }
         
-        .movie-detail-section .content { padding-left: 16px; }
+        .movie-detail-section .content { 
+            width: 100%;
+            padding-left: 16px; 
+        }
     
         .movie-detail-section .description-title {
             margin-bottom: 16px;
@@ -764,6 +756,12 @@
     /* ------------------------  小於 418px  ------------------------*/
     @media screen and (max-width: 418px) {
 
+        body {
+            background: url("images/detail_page/bg_img/gradient.jpg") top center no-repeat;
+            background-size: contain;
+            background-color: var(--bg-color);
+        }
+
         .movie-detail-section .cat-tags .cat-tag {
             font-size: 16px;
             background-color: var(--card-color);
@@ -775,23 +773,32 @@
             opacity: var(--opacity-75);
         }
 
-        .movie-detail-section { margin-top: 32px; }
+        .movie-detail-section { margin-top: 200px; }
 
-        /* 修改 arti- 的 class name */
-        .spoiler-tag,
-        .spoiler-free-tag,
-        .arti-cat-tag { font-size: 14px; }
-
-        .time-stamp { font-size: 12px; }
-
-        .related-articles-section .spoiler-free-tag,
-        .related-articles-section .spoiler-tag {
-            width: 26px;
-            height: 26px;
+        .movie-detail-section .movie-poster .img-wrap img {
+            width: 110px;
+            height: 156px;
         }
 
-        .related-articles-section .arti-cat-tag {
-            padding: 4px 16px;
+        .movie-detail-section .pg-rate {
+            border: none;
+            background-color: var(--age12);
+            border-radius: var(--border-radius-50-percent);
+            padding: 6px;
+            margin-bottom: 0;
+            font-size: 12px;
+        }
+
+        .movie-detail-section .title-tc {
+            line-height: 100%;
+        }
+
+        .movie-detail-section .rating {
+            margin-bottom: 16px;
+        }
+
+        .movie-detail-section .rating i {
+            font-size: 0.75rem;
         }
 
         .movie-detail-section .reputation {
@@ -814,6 +821,66 @@
             font-size: 14px;
         }
 
+        .movie-detail-section .content p {
+            margin-bottom: 2px;
+            font-size: 14px;
+        }
+
+        .movie-detail-section .title-en {
+            margin-bottom: 8px;
+        }
+
+        .movie-detail-section .movie-info p i {
+            font-size: 14px;
+        }
+
+        .movie-detail-section .movie-info p i.fa-clock {
+            font-size: 15px;
+        }
+
+        .movie-detail-section .movie-info p i.fa-calendar-check {
+            font-size: 16px;
+        }
+
+        .movie-detail-section .description p {
+            overflow: auto;
+            height: 72;
+            opacity: var(--opacity-90);
+        }
+
+        .movie-detail-section .content .date-data,
+        .movie-detail-section .content .length-data,
+        .movie-detail-section .content .director-data {
+            font-size: 14px;
+        }
+
+        .movie-detail-section .description {
+            margin-bottom: 24px;
+        }
+
+        /* 修改 arti- 的 class name */
+        .spoiler-tag,
+        .spoiler-free-tag,
+        .arti-cat-tag { font-size: 14px; }
+
+        .time-stamp { font-size: 12px; }
+
+        .related-articles-section .spoiler-free-tag,
+        .related-articles-section .spoiler-tag {
+            width: 26px;
+            height: 26px;
+        }
+
+        .related-articles-section .arti-cat-tag {
+            padding: 4px 16px;
+        }
+
+        .related-articles-section .articles-md li:nth-child(even),
+        .related-articles-section .articles-md li:nth-child(odd) {
+            padding: 8px 0;
+            border-radius: var(--border-radius-4);
+        }
+
         .related-articles-section .subtitle .sub-title-r {
             display: none;
         }
@@ -830,7 +897,7 @@
             <div class="container">
 
                 <!-- social media display > 1200 -->
-                <div class="row social-media flex-column d-lg-none d-xl-flex">
+                <div class="row social-media flex-column d-none d-lg-none d-xl-flex">
                     <div class="d-flex justify-content-end mb-2">
                         <a href="#">
                             <i class="fab fa-facebook-square"></i>
@@ -844,7 +911,7 @@
                 </div>
 
                 <!-- movie info display > 1200 -->
-                <div class="row movie-info d-none d-lg-none d-xl-flex">
+                <div class="row movie-info d-none d-sm-none d-lg-flex">
                     <div class="col-xl-6 d-flex">
                         <div class="col-sm-3 col-lg-6 movie-poster">
                             <div class="img-wrap">
@@ -929,67 +996,94 @@
                     </div>
                 </div>
 
-                <!-- movie info display > 992 -->
-                <!-- <div class="row movie-info">
-                    <div class="movie-poster">
+                <!-- movie info display < 418 -->
+                <div class="row movie-info d-flex d-xs-flex d-sm-none d-none">
+                    <div class="mycol-4 movie-poster">
                         <div class="img-wrap">
                             <img src="images/poster_images/MSRbo2ocgQ6N9DdzBUk0-280 x 400.jpg" alt="">
                         </div>
                     </div>
-                    <div class="content">
-                        <div>
-                            <span class="pg-rate body2-r">輔導級</span>
-                        </div>
+
+                    <div class="mycol-8 content">
                         <div class="d-flex justify-content-between">
                             <div>
-                                <div class="title-tc">永恆族</div>
-                                <div class="title-en">Eternals</div>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
+                                <div>
+                                    <span class="title-tc">永恆族</span>
                                 </div>
+                                <div>
+                                    <span class="title-en">Eternals</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="pg-rate body2-r">12</span>
                             </div>
                         </div>
                         
                         
-
-                        <div class="d-flex">
-                            <p class="release-date"><i class="far fa-calendar-check"></i><span class="date-data">2021/11/03</span></p>
-                            <p class="movie-length"><i class="far fa-clock"></i><span class="length-data">156分鐘</span></p>
-                            <p class="movie-director"><i class="fas fa-video"></i><span class="director-data">趙婷</span></p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
                         </div>
+                        <div class="reputation">
+                            <div class="img-wrap1">
+                                <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
+                            </div>
+                            <span class="mr-3">53%</span>
+                            <div class="img-wrap2">
+                                <img src="./images/icon_IMDB_Logo.svg" alt="">
+                            </div>
+                            <span>79%</span>
+                        </div>
+
+                        <p class="release-date"><i class="far fa-calendar-check"></i><span class="date-data">2021/11/03</span></p>
+                        <p class="movie-length"><i class="far fa-clock"></i><span class="length-data">156分鐘</span></p>
+                        <p class="movie-director"><i class="fas fa-video"></i><span class="director-data">趙婷</span></p>
+                            
+                        <!-- <p class="release-date">日期：<span class="date-data">2021/11/03</span></p>
+                        <p class="movie-length">片長：<span class="length-data">156分鐘</span></p>
+                        <p class="movie-director">導演：<span class="director-data">趙婷</span></p> -->
+                    </div>
+
+                    <div class="mycol-12">
                         <div class="cat-tags">
                             <div class="cat-tag g-tag">奇幻</div>
                             <div class="cat-tag g-tag">冒險</div>
                             <div class="cat-tag g-tag">英雄</div>
                             <div class="cat-tag g-tag">劇情</div>
                         </div>
+                        <div class="description-title">
+                            <span class="section-header-b">劇情大綱</span>
+                        </div>
+                        <div class="description">
+                            <p>永恆族是超越繁星的神族，七千年前來到地球，誓言保護人類，各色各異的他們，擁有超凡智慧與能力，長生不老，每人具備迥然不同的絕頂神力。然而守護地球期間，各自強大的永恆族人並非和樂融融，內部紛爭不斷，最終整個族群分崩離析，直到一群古老的宿敵現身永恆族是超越繁星的神族，七千年前來到地球，誓言保護人類，各色各異的他們，擁有超凡智慧與能力，長生不老，每人具備迥然不同的絕頂神力。然而守護地球期間，各自強大的永恆族人並非和樂融融，內部紛爭不斷，最終整個族群分崩離析，直到一群古老的宿敵現身……</p>
+                        </div>
+                        <div class="booking-trailer">
+                            <button type="button" class="btn-brand">
+                                <a href="./booking-movie-page.php">
+                                    <div class="d-flex">
+                                        <div class="img-wrap">
+                                            <img src="images/icon_ticket_fill.svg" alt="">
+                                        </div>
+                                        <span>立即購票</span>
+                                    </div>
+                                </a>
+                            </button>
+                            <button type="button" class="btn-white-outline">
+                                <div class="d-flex">
+                                    <div class="img-wrap">
+                                            <img src="images/icon_play_fill.svg" alt="">
+                                        </div>
+                                    <span>預告片</span>
+                                </div>
+                                    
+                            </button>
+                        </div>
                     </div>
                 </div>
-
-                <div>
-                    <div class="description-title">
-                        <span class="section-header-b">劇情大綱</span>
-                    </div>
-                    <div class="description">
-                        <p>永恆族是超越繁星的神族，七千年前來到地球，誓言保護人類，各色各異的他們，擁有超凡智慧與能力，長生不老，每人具備迥然不同的絕頂神力。然而守護地球期間，各自強大的永恆族人並非和樂融融，內部紛爭不斷，最終整個族群分崩離析，直到一群古老的宿敵現身永恆族是超越繁星的神族，七千年前來到地球，誓言保護人類，各色各異的他們，擁有超凡智慧與能力，長生不老，每人具備迥然不同的絕頂神力。然而守護地球期間，各自強大的永恆族人並非和樂融融，內部紛爭不斷，最終整個族群分崩離析，直到一群古老的宿敵現身……</p>
-                    </div>
-                    <div class="booking-trailer">
-                        <button type="button" class="mr-3">
-                            <a href="./booking-movie-page.php">
-                                <i class="fas fa-ticket-alt mr-2"></i>
-                                <span>立即購票</span>
-                            </a>
-                        </button>
-                        <button type="button">
-                            <i class="fab fa-youtube mr-2"></i>
-                            <span>預告片</span>
-                        </button>
-                    </div>
-                </div> -->
 
             </div>
         </section>
@@ -1020,9 +1114,9 @@
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-free-tag">雷</div>
                                     <div class="arti-cat-tag g-tag">選片</div>
-                                    <div class="sub-title-r title-marquee-16">永恆族 vs 惡靈 首部曲</div>
+                                    <div class="sub-title-r">永恆族 vs 惡靈 首部曲</div>
                                 </div>
-                                <div class="time-stamp d-flex align-items-center">1天前</div>
+                                <div class="time-stamp d-flex">1天前</div>
                             </div>
                         </a>
                     </div>
@@ -1032,9 +1126,9 @@
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-tag">雷</div>
                                     <div class="arti-cat-tag g-tag">討論</div>
-                                    <div class="sub-title-r title-marquee-16">永恆族 – 大型斯卡羅現場</div>
+                                    <div class="sub-title-r">永恆族 – 大型斯卡羅現場</div>
                                 </div>
-                                <div class="time-stamp d-flex align-items-center">2天前</div>
+                                <div class="time-stamp d-flex">2天前</div>
                             </div>
                         </a>
                     </div>
@@ -1044,9 +1138,9 @@
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-tag">雷</div>
                                     <div class="arti-cat-tag g-tag">討論</div>
-                                    <div class="sub-title-r title-marquee-16">永恆族-篇幅不足的半成品</div>
+                                    <div class="sub-title-r">永恆族-篇幅不足的半成品</div>
                                 </div>
-                                <div class="time-stamp d-flex align-items-center">3天前</div>
+                                <div class="time-stamp d-flex">3天前</div>
                             </div>
                         </a>
                     </div>
@@ -1056,9 +1150,9 @@
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-free-tag">雷</div>
                                     <div class="arti-cat-tag g-tag">討論</div>
-                                    <div class="sub-title-r title-marquee-16">所以永恆族算成功了嗎</div>
+                                    <div class="sub-title-r">所以永恆族算成功了嗎</div>
                                 </div>
-                                <div class="time-stamp d-flex align-items-center">1週前</div>
+                                <div class="time-stamp d-flex">1週前</div>
                             </div>
                         </a>
                     </div>
@@ -1068,9 +1162,9 @@
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-free-tag">雷</div>
                                     <div class="arti-cat-tag g-tag">討論</div>
-                                    <div class="sub-title-r title-marquee-16">永恆族有一段關鍵台詞這樣改應該更好，你覺得呢？</div>
+                                    <div class="sub-title-r">永恆族有一段關鍵台詞這樣改應該更好，你覺得呢？</div>
                                 </div>
-                                <div class="time-stamp d-flex align-items-center">1月前</div>
+                                <div class="time-stamp d-flex">1月前</div>
                             </div>
                         </a>
                     </div>
@@ -1080,9 +1174,9 @@
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-free-tag">雷</div>
                                     <div class="arti-cat-tag g-tag">討論</div>
-                                    <div class="sub-title-r title-marquee-16">永恆族有一段關鍵台詞這樣改應該更好有一段關鍵台詞</div>
+                                    <div class="sub-title-r">永恆族有一段關鍵台詞這樣改應該更好有一段關鍵台詞</div>
                                 </div>
-                                <div class="time-stamp d-flex align-items-center">1月前</div>
+                                <div class="time-stamp d-flex">1月前</div>
                             </div>
                         </a>
                     </div>
@@ -1092,9 +1186,9 @@
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-tag">雷</div>
                                     <div class="arti-cat-tag g-tag">討論</div>
-                                    <div class="sub-title-r title-marquee-16">永恆族有一段關鍵台詞有一段關鍵台詞有一段關鍵台詞</div>
+                                    <div class="sub-title-r">永恆族有一段關鍵台詞有一段關鍵台詞有一段關鍵台詞</div>
                                 </div>
-                                <div class="time-stamp d-flex align-items-center">1月前</div>
+                                <div class="time-stamp d-flex">1月前</div>
                             </div>
                         </a>
                     </div>
@@ -1104,9 +1198,9 @@
                                 <div class="d-flex align-items-center">
                                     <div class="spoiler-free-tag">雷</div>
                                     <div class="arti-cat-tag g-tag">討論</div>
-                                    <div class="sub-title-r title-marquee-16">永恆族有一段關鍵台詞這樣不好有一段關鍵台詞</div>
+                                    <div class="sub-title-r">永恆族有一段關鍵台詞這樣不好有一段關鍵台詞</div>
                                 </div>
-                                <div class="time-stamp d-flex align-items-center">1月前</div>
+                                <div class="time-stamp d-flex">1月前</div>
                             </div>
                         </a>
                     </div>
@@ -1121,9 +1215,9 @@
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-tag">雷</div>
                                             <div class="arti-cat-tag g-tag">討論</div>
-                                            <div class="sub-title-r title-marquee-16">《永恆族》可惜不能是獨立電影</div>
+                                            <div class="sub-title-r">《永恆族》可惜不能是獨立電影</div>
                                         </div>
-                                        <div class="time-stamp d-flex align-items-center">12小時前</div>
+                                        <div class="time-stamp d-flex">12小時前</div>
                                     </div>
                                 </a>
                             </div>
@@ -1136,9 +1230,9 @@
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-tag">雷</div>
                                             <div class="arti-cat-tag g-tag">討論</div>
-                                            <div class="sub-title-r title-marquee-16">《永恆族》可惜不能是獨立電影</div>
+                                            <div class="sub-title-r">《永恆族》可惜不能是獨立電影</div>
                                         </div>
-                                        <div class="time-stamp d-flex align-items-center">12小時前</div>
+                                        <div class="time-stamp d-flex">12小時前</div>
                                     </div>
                                 </a>
                             </div>
@@ -1151,9 +1245,9 @@
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-free-tag">雷</div>
                                             <div class="arti-cat-tag g-tag">新聞</div>
-                                            <div class="sub-title-r title-marquee-16">《作家我就爛》逼退《永恆族》榮登...</div>
+                                            <div class="sub-title-r">《作家我就爛》逼退《永恆族》榮登...</div>
                                         </div>
-                                        <div class="time-stamp d-flex align-items-center">18小時前</div>
+                                        <div class="time-stamp d-flex">18小時前</div>
                                     </div>
                                 </a>
                             </div>
@@ -1166,9 +1260,9 @@
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-free-tag">雷</div>
                                             <div class="arti-cat-tag g-tag">選片</div>
-                                            <div class="sub-title-r title-marquee-16">月老 vs. 永恆族</div>
+                                            <div class="sub-title-r">月老 vs. 永恆族</div>
                                         </div>
-                                        <div class="time-stamp d-flex align-items-center">1天前</div>
+                                        <div class="time-stamp d-flex">1天前</div>
                                     </div>
                                 </a>
                             </div>
@@ -1181,9 +1275,9 @@
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-tag">雷</div>
                                             <div class="arti-cat-tag g-tag">討論</div>
-                                            <div class="sub-title-r title-marquee-16">《永恆族》可惜不能是獨立電影</div>
+                                            <div class="sub-title-r">《永恆族》可惜不能是獨立電影</div>
                                         </div>
-                                        <div class="time-stamp d-flex align-items-center">12小時前</div>
+                                        <div class="time-stamp d-flex">12小時前</div>
                                     </div>
                                 </a>
                             </div>
@@ -1196,9 +1290,9 @@
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-tag">雷</div>
                                             <div class="arti-cat-tag g-tag">討論</div>
-                                            <div class="sub-title-r title-marquee-16">《永恆族》可惜不能是獨立電影</div>
+                                            <div class="sub-title-r">《永恆族》可惜不能是獨立電影</div>
                                         </div>
-                                        <div class="time-stamp d-flex align-items-center">12小時前</div>
+                                        <div class="time-stamp d-flex">12小時前</div>
                                     </div>
                                 </a>
                             </div>
@@ -1211,9 +1305,9 @@
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-free-tag">雷</div>
                                             <div class="arti-cat-tag g-tag">新聞</div>
-                                            <div class="sub-title-r title-marquee-16">《作家我就爛》逼退《永恆族》榮登...</div>
+                                            <div class="sub-title-r">《作家我就爛》逼退《永恆族》榮登...</div>
                                         </div>
-                                        <div class="time-stamp d-flex align-items-center">18小時前</div>
+                                        <div class="time-stamp d-flex">18小時前</div>
                                     </div>
                                 </a>
                             </div>
@@ -1226,9 +1320,9 @@
                                         <div class="d-flex align-items-center">
                                             <div class="spoiler-free-tag">雷</div>
                                             <div class="arti-cat-tag g-tag">選片</div>
-                                            <div class="sub-title-r title-marquee-16">月老 vs. 永恆族</div>
+                                            <div class="sub-title-r">月老 vs. 永恆族</div>
                                         </div>
-                                        <div class="time-stamp d-flex align-items-center">1天前</div>
+                                        <div class="time-stamp d-flex">1天前</div>
                                     </div>
                                 </a>
                             </div>
@@ -1247,11 +1341,11 @@
                                                 <div class="spoiler-tag">雷</div>
                                                 <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
-                                            <div class="time-stamp d-flex align-items-center">12小時前</div>
+                                            <div class="time-stamp d-flex">12小時前</div>
                                         </div>
                                     </div>
                                     <div class="article-title">
-                                        <div class="sub-title-r title-marquee-16">永恆族可惜不能是獨立電影</div>
+                                        <div class="sub-title-r">永恆族可惜不能是獨立電影</div>
                                     </div>
                                 </a>
                             </div>
@@ -1266,11 +1360,11 @@
                                                 <div class="spoiler-free-tag">雷</div>
                                                 <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
-                                            <div class="time-stamp d-flex align-items-center">12小時前</div>
+                                            <div class="time-stamp d-flex">12小時前</div>
                                         </div>
                                     </div>
                                     <div class="article-title">
-                                        <div class="sub-title-r title-marquee-16">《永恆族》可惜不能是獨立電影</div>
+                                        <div class="sub-title-r">《永恆族》可惜不能是獨立電影</div>
                                     </div>
                                 </a>
                             </div>
@@ -1285,11 +1379,11 @@
                                                 <div class="spoiler-free-tag">雷</div>
                                                 <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
-                                            <div class="time-stamp d-flex align-items-center">12小時前</div>
+                                            <div class="time-stamp d-flex">12小時前</div>
                                         </div>
                                     </div>
                                     <div class="article-title">
-                                        <div class="sub-title-r title-marquee-16">趙婷透露《永恆族》本來可能是黑暗結局</div>
+                                        <div class="sub-title-r">趙婷透露《永恆族》本來可能是黑暗結局</div>
                                     </div>
                                 </a>
                             </div>
@@ -1304,11 +1398,11 @@
                                                 <div class="spoiler-tag">雷</div>
                                                 <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
-                                            <div class="time-stamp d-flex align-items-center">12小時前</div>
+                                            <div class="time-stamp d-flex">12小時前</div>
                                         </div>
                                     </div>
                                     <div class="article-title">
-                                        <div class="sub-title-r title-marquee-16">所以永恆族算成功了嗎</div>
+                                        <div class="sub-title-r">所以永恆族算成功了嗎</div>
                                     </div>
                                 </a>
                             </div>
@@ -1323,11 +1417,11 @@
                                                 <div class="spoiler-tag">雷</div>
                                                 <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
-                                            <div class="time-stamp d-flex align-items-center">12小時前</div>
+                                            <div class="time-stamp d-flex">12小時前</div>
                                         </div>
                                     </div>
                                     <div class="article-title">
-                                        <div class="sub-title-r title-marquee-16">永恆族可惜不能是獨立電影</div>
+                                        <div class="sub-title-r">永恆族可惜不能是獨立電影</div>
                                     </div>
                                 </a>
                             </div>
@@ -1342,11 +1436,11 @@
                                                 <div class="spoiler-free-tag">雷</div>
                                                 <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
-                                            <div class="time-stamp d-flex align-items-center">12小時前</div>
+                                            <div class="time-stamp d-flex">12小時前</div>
                                         </div>
                                     </div>
                                     <div class="article-title">
-                                        <div class="sub-title-r title-marquee-16">《永恆族》可惜不能是獨立電影</div>
+                                        <div class="sub-title-r">《永恆族》可惜不能是獨立電影</div>
                                     </div>
                                 </a>
                             </div>
@@ -1361,11 +1455,11 @@
                                                 <div class="spoiler-free-tag">雷</div>
                                                 <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
-                                            <div class="time-stamp d-flex align-items-center">12小時前</div>
+                                            <div class="time-stamp d-flex">12小時前</div>
                                         </div>
                                     </div>
                                     <div class="article-title">
-                                        <div class="sub-title-r title-marquee-16">趙婷透露《永恆族》本來可能是黑暗結局</div>
+                                        <div class="sub-title-r">趙婷透露《永恆族》本來可能是黑暗結局</div>
                                     </div>
                                 </a>
                             </div>
@@ -1380,11 +1474,11 @@
                                                 <div class="spoiler-free-tag">雷</div>
                                                 <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
-                                            <div class="time-stamp d-flex align-items-center">12小時前</div>
+                                            <div class="time-stamp d-flex">12小時前</div>
                                         </div>
                                     </div>
                                     <div class="article-title">
-                                        <div class="sub-title-r title-marquee-16">所以永恆族算成功了嗎</div>
+                                        <div class="sub-title-r">所以永恆族算成功了嗎</div>
                                     </div>
                                 </a>
                             </div>
@@ -1399,11 +1493,11 @@
                                                 <div class="spoiler-tag">雷</div>
                                                 <div class="arti-cat-tag mr-2">討論</div>
                                             </div>
-                                            <div class="time-stamp d-flex align-items-center">12小時前</div>
+                                            <div class="time-stamp d-flex">12小時前</div>
                                         </div>
                                     </div>
                                     <div class="article-title">
-                                        <div class="sub-title-r title-marquee-16">所以永恆族算成功了嗎</div>
+                                        <div class="sub-title-r">所以永恆族算成功了嗎</div>
                                     </div>
                                 </a>
                             </div>
@@ -1421,7 +1515,7 @@
                         <div class="d-flex">
                             <div class="red-line my-auto"></div>
                             <span class="section-header-b mr-3">主要演員列表</span>
-                            <span class="sub-title-r title-marquee-16 my-auto">共12人</span>
+                            <span class="sub-title-r  my-auto">共12人</span>
                         </div>
                     </div>
                 </div>

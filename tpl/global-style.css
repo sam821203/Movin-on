@@ -88,32 +88,6 @@ p { line-height: var(--line-height-160); }
     color: white;
 }
 
-button {
-    width: 160px;
-    padding: 12px 0 10px 0;
-    border-radius: var(--border-radius-50);
-    vertical-align: middle;
-    border: 1px solid transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 16px;
-}
-
-button span {
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    line-height: 110%;
-    color: white;
-}
-
-button .img-wrap {
-    max-width: 24px;
-    max-height: 20px;
-    margin-right: 8px;
-}
-
 .btn-brand {
     color: #fff;
     transition: .4s ease-in-out;
@@ -792,6 +766,32 @@ footer p {
 /* ------------------------  小於 1920px  ------------------------*/
 @media screen and (max-width: 1920px) {
     
+    button {
+        width: 160px;
+        padding: 12px 0 10px 0;
+        border-radius: var(--border-radius-50);
+        vertical-align: middle;
+        border: 1px solid transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 16px;
+    }
+    
+    button span {
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        line-height: 110%;
+        color: white;
+    }
+    
+    button .img-wrap {
+        max-width: 24px;
+        max-height: 20px;
+        margin-right: 8px;
+    }
+
     /* margin bottom */
     .g-section-mb { margin-bottom: 144px; }
     .g-subtitle-mb { margin-bottom: 32px; }
@@ -806,6 +806,32 @@ footer p {
 /* 問題：container 有自己預設 1320 嘛？ */
 /* ------------------------  小於 1400px  ------------------------*/
 @media screen and (max-width: 1400px) {
+    
+    button {
+        width: 160px;
+        padding: 12px 0 10px 0;
+        border-radius: var(--border-radius-50);
+        vertical-align: middle;
+        border: 1px solid transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 16px;
+    }
+    
+    button span {
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        line-height: 110%;
+        color: white;
+    }
+    
+    button .img-wrap {
+        max-width: 24px;
+        max-height: 20px;
+        margin-right: 8px;
+    }
     
     /* margin bottom */
     .g-section-mb { margin-bottom: 144px; }
@@ -889,6 +915,21 @@ footer p {
     /* margin top */
     /* .g-section-mt { margin-top: 96px; } */
 
+    button {
+        width: 128px;
+        padding: 10px 0 8px 0;
+    }
+    
+    button span {
+        font-size: 14px;
+    }
+    
+    button .img-wrap {
+        max-width: 24px;
+        max-height: 20px;
+        margin-right: 8px;
+    }
+
     /* margin bottom */
     .g-section-mb { margin-bottom: 40px; }
     .g-subtitle-mb { margin-bottom: 16px; }
@@ -899,12 +940,12 @@ footer p {
     .sub-title-r, 
     .sub-title-m,
     .sub-title-b,
-    .italic-20 { font-size: 1rem;}
+    .italic-20 { font-size: 0.875rem;}
 
     .body1-r,
     .body1-m,
     .body1-b,
-    .italic-16 { font-size: 0.875rem; }
+    .italic-16 { font-size: 0.75rem; }
 
     /* -------movinon navbar-------*/
     .movinon-navbar .movinon-logo-wrap { width: 42px; }
