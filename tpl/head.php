@@ -30,4 +30,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="tpl/global-style.css">
     <link rel="stylesheet" href="css/main-page.css">
+
+    <!-- seat jq-->
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.seat-charts.css">
 </head>

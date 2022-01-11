@@ -1,0 +1,97 @@
+<?php require_once './db.inc.php' ?>
+<?php session_start() ?>
+<?php require_once './tpl/head.php' ?>
+<?php require_once 'phpqrcode.php' ?>
+
+
+
+<?php require_once './tpl/movinon-navbar.php' ?>
+
+<?php
+
+//如果這個階段沒有購物車，就將頁面轉到商品確認頁
+if (!isset($_SESSION['seat'])) {
+    header("Location: new-booking-time-page.php");
+    exit();
+}
+
+//將表單資訊寫入 session，之後建立訂單時，一起變成訂單資訊
+foreach ($_SESSION['seat'] as $key => $obj) {
+    $_SESSION['form'] = [];
+    $_SESSION['form']['count'] = $obj['seatTotal'];
+    $_SESSION['form']['total'] = $obj['payTotal'] + 20;
+};
+$_SESSION['form']['payment_type'] = $_POST['payment_type'];
+$_SESSION['form']['payment_name'] = $_POST['payment_name'];
+
+
+
+$card_number = $_POST['card_number_1'] . $_POST['card_number_2'] . $_POST['card_number_3'] . $_POST['card_number_4'];
+$card_valid_date = $_POST['expire-date'];
+$card_ccv = $_POST['ccv-code'];
+$card_holder = $_POST['holder_name'];
+
+
+$sql = "INSERT INTO `orders_pay`( `email`,`invoice_type`, `invoice_name`, `card_number`, `card_valid_date`, `card_ccv`, `card_holder`, `count`, `total`) 
+VALUES ('{$_SESSION['email']}','{$_POST['payment_type']}','{$_POST['payment_name']}','$card_number','$card_valid_date','$card_ccv','$card_holder',
+'{$_SESSION['form']['count']}','{$_SESSION['form']['total']}')";
+$stmt = $pdo->query($sql);
+if ($stmt->rowCount() > 0) {
+    //取得新增資料時的自動編號
+    $lastInsertId = $pdo->lastInsertId();
+
+    //建立訂單編號
+    $order_id = date("Ymd") . sprintf("%05d", $lastInsertId);
+
+    //將訂單編號更新回 orders 資料表
+    $sqlUpdate = "UPDATE `orders_pay` SET `order_id` = '{$order_id}' WHERE `id` = {$lastInsertId}";
+    $pdo->query($sqlUpdate);
+};
+
+foreach ($_SESSION['seat'] as $key => $obj) {
+    foreach ($obj['seatName'] as $objSeatName) {
+        $sql = "INSERT INTO `orders`( `email`,`movie_TC`, `movie_EN`, `pg_rate`, `cinema`, `seat`, `date`, `showtime`, `screen`)
+                VALUES ('{$_SESSION['email']}','{$obj['movie_TC']}','{$obj['movie_EN']}','{$obj['pg_rate']}',
+                '{$obj['cinema']}','{$objSeatName}','{$obj['movie_date']}',
+                '{$obj['showtime']}','{$obj['movie_cat']}')";
+
+        $stmt = $pdo->query($sql);
+
+        /**
+         * 若訂單成立，則取得新增資料的 ID (Auto Increment)
+         * 透過 ID 來建立訂單資料表的訂單編號 (order_id)
+         */
+
+        if ($stmt->rowCount() > 0) {
+            //取得新增資料時的自動編號
+            $lastInsertId = $pdo->lastInsertId();
+
+            //建立訂單編號
+            $order_id = date("Ymd") . sprintf("%05d", $lastInsertId);
+
+
+
+            //將訂單編號更新回 orders 資料表
+
+            $value = sha1($objSeatName); //二維碼內容 
+            $errorCorrectionLevel = 'L'; //容錯級別 
+            $matrixPointSize = 6; //生成圖片大小 
+            QRcode::png($value, 'qrcode.png', $errorCorrectionLevel, $matrixPointSize, 2);
+            $QR = 'qrcode.png'; //已經生成的原始二維碼圖 
+            $QR = imagecreatefromstring(file_get_contents($QR));
+            imagepng($QR, $value . '.png');
+            $sqlUpdateQr = "UPDATE `orders` SET `order_id` = '{$order_id}',`qrcode` = '{$value}.png' WHERE `id` = {$lastInsertId}";
+            $pdo->query($sqlUpdateQr);
+        }
+
+        //刪除購物車 和 表單資訊
+        unset($_SESSION['cart'], $_SESSION['seat'], $_SESSION['form']);
+    }
+}
+?>
+
+<div class="text-center py-5">商品確認 - 填寫資料 - 確認付款 - <strong>訂單完成</strong></div>
+
+<?php require_once './tpl/movinon-footer.php' ?>
+
+<?php require_once './tpl/foot.php' ?>
