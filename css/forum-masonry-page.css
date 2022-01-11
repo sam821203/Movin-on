@@ -125,7 +125,7 @@ body {
 
 .masonry-articles-section .masonry-content .masonry-content-text {
     padding: 0px 32px 20px 32px;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
 }
 
 /* original CSS */
@@ -145,8 +145,28 @@ body {
 }
 
 .masonry-item, .masonry-content {
-  border-radius: 4px;
-  overflow: hidden;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.masonry-item .img-gradient-15 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgba(38,38,38,0), rgba(38,38,38,1));
+    opacity: .15;
+}
+
+.masonry-item .img-filter-10 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(38,38,38,0.25);
+    opacity: .1;
 }
 
 .masonry-item {
@@ -215,7 +235,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
 }
 
 .masonry-item .article-like {
@@ -226,7 +245,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.04);
+    background-color: #292929;
     border-radius: 0 0 8px 8px;   
 }
 
@@ -242,9 +261,16 @@ body {
     padding-right: 32px;
 }
 
+.masonry-item .overflow-gradient {
+    position: absolute;
+    bottom: 49.59px;
+    width: 100%;
+    height: 56px;
+    background-image: linear-gradient(to bottom, rgba(18,18,18,0), rgba(18,18,18,1));
+}
+
 .masonry-item .img-wrap {
     max-width: 100%;
-    height: 300px;
 }
 
 .masonry-item .img-wrap img {
@@ -280,7 +306,7 @@ body {
     color: rgba(255,255,255,0.5);
     line-height: 150%;
     height: 72px;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
 }
 
 .masonry-footer {
@@ -330,6 +356,14 @@ body {
         background-size: contain;
         background-color: var(--bg-color);
         width: 100%;
+    }
+
+    .masonry {
+        grid-auto-rows: unset;
+    }
+
+    .masonry-item .img-wrap {
+        height: 240px;
     }
 
     .masonry-articles-section { 

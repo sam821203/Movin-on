@@ -1017,7 +1017,7 @@
                         <div class="d-none d-lg-none d-xl-block col-xl-12 aside-ads">
                             <a href="#">
                                 <div class="img-wrap">
-                                    <img src="images/forum_article_page/ads_img.jpeg" alt="">
+                                    <img src="images/forum_article_page/ads_img.jpg" alt="">
                                 </div>
                             </a>
                         </div>

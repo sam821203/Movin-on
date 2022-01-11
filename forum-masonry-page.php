@@ -64,6 +64,10 @@
                                     <p class="article-cat body1-m">分類</p>
                                     <p class="spoiler-tag"><?= $obj['spoiler_tag'] ?></p>
                                 </div>
+
+                                <div class="img-gradient-15"></div>
+                                <div class="img-filter-10"></div>
+
                                 <div class="img-wrap">
                                     <img src="<?= $obj['article_photo'] ?>" alt="Dummy Image" class="atcphoto">
                                 </div>
@@ -91,6 +95,7 @@
                                         <p>10</p>
                                     </div>
                                 </div>
+                                <div class="overflow-gradient"></div>
                             </div>
                         </div>
                         
