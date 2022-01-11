@@ -1,11 +1,11 @@
 <?php require_once './tpl/head.php' ?>
 
 <style>
-
         body {
-            background: url("images/forum_overview_page/bg-img-min.jpg") top center no-repeat;
-            background-size: contain;
+            background: url("images/forum_masonry_page/masonry_bg_img.jpg") top center no-repeat;
+            background-size: cover;
             background-color: var(--bg-color);
+            background-attachment: fixed;
             width: 100%;
         }
 
@@ -97,7 +97,7 @@
         }
 
         .left-side-article .comment-data {
-            border-top: 1px solid rgba(255,255,255,0.25)
+            border-top: 1px solid rgba(255,255,255,0.1)
         }
 
         .left-side-article .comment .content i {
@@ -164,11 +164,11 @@
             width: 100;
             display: flex;
             padding: 40px 0 20px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.25);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
         .left-side-comment .comment-1 {
-            border-top: 1px solid rgba(255,255,255,0.25);
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
 
         .left-side-comment .comment .avatar,
@@ -211,7 +211,7 @@
         }
 
         .left-side-comment .fa-clock {
-            opacity: var(--opacity-75);
+            opacity: var(--opacity-50);
             margin-right: 8px;
         } 
 
@@ -663,8 +663,25 @@
         /* ------------------------  小於 418px  ------------------------*/
         @media screen and (max-width: 418px) {
 
+            .main-article {
+                margin-top: 96px;
+            }
+
             .left-side-section {
-                padding: 0 16px;
+                padding: 0;
+            }
+
+            /* left side article */
+            .left-side-article .section-header-b {
+                margin-bottom: 8px;
+            }
+
+            .left-side-article .article-extra-info {
+                margin-bottom: 24px;
+            }
+
+            .left-side-article .article-content {
+                margin-bottom: 24px;
             }
 
             /* left side comment */
@@ -673,7 +690,29 @@
                 display: none;
             }
 
+            .left-side-comment .comment .avatar,
+            .left-side-comment .write-comment .avatar {
+                width: 10%;
+            }
+
+            .left-side-comment .member-info {
+                margin-bottom: 4px;
+            }
+
+            .left-side-comment .response a, 
+            .left-side-comment .response i, 
+            .left-side-comment .response span,
+            .left-side-comment .member-name,
+            .left-side-comment .timestamp {
+                font-size: 0.875rem;
+            }
+
+            .left-side-comment .member-name {
+                margin-right: 8px;
+            }
+
             .left-side-comment .comment .content {
+                width: 90%;
                 padding-left: 12px;
             }
 
@@ -681,6 +720,28 @@
                 font-size: 0.875rem;
             }
 
+            .left-side-comment .fa-clock {
+                font-size: 15px;
+                margin-right: 4px;
+            }
+
+            .left-side-comment .comment .content p {
+                margin-bottom: 4px;
+            }
+
+            .left-side-comment .write-comment {
+                padding: 20px 0 48px 0;
+            }
+
+            .left-side-comment .write-comment .form-group {
+                margin-left: 12px;
+            }
+
+            .left-side-comment .tab-bar {
+                padding: 8px;
+                font-size: 16px;
+                margin-bottom: 16px;
+            }
         }
     </style>
 </head>

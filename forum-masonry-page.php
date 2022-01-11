@@ -64,7 +64,9 @@
                                     <p class="article-cat body1-m">分類</p>
                                     <p class="spoiler-tag"><?= $obj['spoiler_tag'] ?></p>
                                 </div>
-                                <img src="<?= $obj['article_photo'] ?>" alt="Dummy Image" class="atcphoto">
+                                <div class="img-wrap">
+                                    <img src="<?= $obj['article_photo'] ?>" alt="Dummy Image" class="atcphoto">
+                                </div>
                                 <div class="article-avatar">
                                     <div class="avatar">
                                         <img src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
@@ -75,7 +77,8 @@
                                     <div>2021-12-20</span>by<span>aaa</span></div>
                                     <h3 class="masonry-title sub-title-b"><?= $obj['title'] ?></h3>
                                     <p class="masonry-description">
-                                        <?= mb_substr($obj['article'],0,55) ?>...
+                                        <!-- <?= mb_substr($obj['article'],0,300) ?>... -->
+                                        <?= $obj['article'] ?>
                                     </p>
                                 </div>
                                 <div class="article-like">
@@ -90,6 +93,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                     <?php } ?>
                 </div>
             </div>

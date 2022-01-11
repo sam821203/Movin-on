@@ -96,16 +96,6 @@ p { line-height: var(--line-height-160); }
     box-shadow: var(--box-shadow-red);
 }
 
-.btn-brand-left-comment {
-    color: #fff;
-    transition: .4s ease-in-out;
-    font-weight: 500;
-    background-color: var(--brand-color);
-    box-shadow: var(--box-shadow-red);
-    padding: 8px 0 9px 0;
-    margin-top: 16px;
-}
-
 .btn-brand:hover,
 .btn-brand-left-comment:hover {
     box-shadow: var(--box-shadow-red-hover);
@@ -795,6 +785,16 @@ footer p {
     /* margin bottom */
     .g-section-mb { margin-bottom: 144px; }
     .g-subtitle-mb { margin-bottom: 32px; }
+
+    .btn-brand-left-comment {
+        color: #fff;
+        transition: .4s ease-in-out;
+        font-weight: 500;
+        background-color: var(--brand-color);
+        box-shadow: var(--box-shadow-red);
+        padding: 8px 0 9px 0;
+        margin-top: 16px;
+    }
 }
 
 @media screen and (min-width: 1400px) and (max-width: 1920px) {
@@ -835,6 +835,16 @@ footer p {
     
     /* margin bottom */
     .g-section-mb { margin-bottom: 144px; }
+
+    .btn-brand-left-comment {
+        color: #fff;
+        transition: .4s ease-in-out;
+        font-weight: 500;
+        background-color: var(--brand-color);
+        box-shadow: var(--box-shadow-red);
+        padding: 8px 0 9px 0;
+        margin-top: 16px;
+    }
 }
 
 /* ------------------------  小於 1200px  ------------------------*/
@@ -956,6 +966,7 @@ footer p {
     .spoiler-tag {
         width: 26px;
         height: 26px;
+        line-height: 100%;
     }
 
     /* -------movinon navbar-------*/
@@ -963,5 +974,9 @@ footer p {
     .movinon-navbar .row {
         padding-top: 6px;
         padding-bottom: 6px;
+    }
+
+    .btn-brand-left-comment {
+        margin-top: 0;
     }
 }
