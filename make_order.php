@@ -3,8 +3,6 @@
 <?php require_once './tpl/head.php' ?>
 <?php require_once 'phpqrcode.php' ?>
 
-
-
 <?php require_once './tpl/movinon-navbar.php' ?>
 
 <?php
