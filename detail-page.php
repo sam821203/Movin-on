@@ -2,11 +2,42 @@
 <?php require_once './tpl/head.php' ?>
 
 <style>
-
     body {
         background: url("images/detail_page/bg_img/bg_img_gradient_1200.jpg") top center no-repeat;
         background-size: contain;
         background-color: var(--bg-color);
+    }
+
+    .fixed-icon-ticket {
+        width: 56px;
+        height: 56px;
+        border-radius: var(--border-radius-50-percent);
+        background-color: var(--brand-color);
+        box-shadow: var(--box-shadow-red);
+        position: fixed;
+        right: 72px;
+        bottom: 96px;
+        z-index: 9998;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
+
+    .fixed-icon-ticket .img-wrap {
+        width: 24px;
+        height: 24px;
+    }
+
+    .fixed-icon-ticket .img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center center;
     }
 
     .related-articles-section .fa-chevron-right {
@@ -15,7 +46,9 @@
     }
 
     /* -----------------movie detail section----------------- */
-    .movie-detail-section { margin-top: 160px; }
+    .movie-detail-section {
+        margin-top: 160px;
+    }
 
     .movie-detail-section .social-media {
         margin-bottom: 32px;
@@ -31,17 +64,12 @@
         opacity: var(--opacity-75);
     }
 
-    .movie-detail-section
-    .movie-poster
-    .img-wrap {
+    .movie-detail-section .movie-poster .img-wrap {
         width: 100%;
         border-radius: var(--border-radius-4);
     }
 
-    .movie-detail-section
-    .movie-poster
-    .img-wrap 
-    img {
+    .movie-detail-section .movie-poster .img-wrap img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -49,9 +77,14 @@
         border-radius: var(--border-radius-4);
         box-shadow: var(--box-shadow-black);
     }
-    
-    .movie-detail-section .content { padding-left: 32px; }
-    .movie-detail-section .content span {  display: inline-block; }
+
+    .movie-detail-section .content {
+        padding-left: 32px;
+    }
+
+    .movie-detail-section .content span {
+        display: inline-block;
+    }
 
     .movie-detail-section .pg-rate {
         border: 1px solid var(--age12);
@@ -68,20 +101,20 @@
         font-size: 0.875rem;
     }
 
-    .movie-detail-section .title-tc { 
-        margin-bottom: 4px; 
+    .movie-detail-section .title-tc {
+        margin-bottom: 4px;
         font-size: 48px;
         font-weight: 700;
     }
 
-    .movie-detail-section .title-en { 
+    .movie-detail-section .title-en {
         margin-bottom: 16px;
-        opacity: var(--opacity-50); 
+        opacity: var(--opacity-50);
         font-style: italic;
         font-size: 20px;
     }
 
-    .movie-detail-section .reputation { 
+    .movie-detail-section .reputation {
         margin-bottom: 32px;
         display: flex;
         align-items: center;
@@ -97,7 +130,7 @@
         margin-right: 8px;
         margin-top: 4px;
     }
-    
+
     .movie-detail-section .reputation .img-wrap1 img,
     .movie-detail-section .reputation .img-wrap2 img {
         width: 100%;
@@ -106,26 +139,26 @@
         object-position: center center;
     }
 
-    .movie-detail-section .content .sub-title-r { 
-        margin-bottom: 8px; 
+    .movie-detail-section .content .sub-title-r {
+        margin-bottom: 8px;
         opacity: var(--opacity-90);
         font-size: 20px;
     }
 
-    .movie-detail-section .content p { 
+    .movie-detail-section .content p {
         font-size: 20px;
     }
 
     .movie-detail-section .content .release-date,
     .movie-detail-section .content .movie-length,
-    .movie-detail-section .content .movie-director {  
-        opacity: var(--opacity-90); 
+    .movie-detail-section .content .movie-director {
+        opacity: var(--opacity-90);
     }
 
     .movie-detail-section .content .date-data,
     .movie-detail-section .content .length-data,
-    .movie-detail-section .content .director-data {  
-        opacity: var(--opacity-75); 
+    .movie-detail-section .content .director-data {
+        opacity: var(--opacity-75);
     }
 
     .movie-detail-section .cat-tags {
@@ -135,7 +168,7 @@
     }
 
     .movie-detail-section .cat-tags .cat-tag {
-        border: 1px solid rgba(255,255,255,0.75);
+        border: 1px solid rgba(255, 255, 255, 0.75);
         border-radius: var(--border-radius-50);
         margin-right: 12px;
         margin-bottom: 32px;
@@ -158,7 +191,7 @@
 
     .movie-detail-section .description {
         padding-top: 20px;
-        border-top: 1px solid rgba(255,255,255,0.75);
+        border-top: 1px solid rgba(255, 255, 255, 0.75);
         margin-bottom: 64px;
         font-size: 20px;
         opacity: var(--opacity-90);
@@ -180,7 +213,7 @@
 
     /* -----------------related articles section----------------- */
     .related-articles-section .arti-cat-tag {
-        border: 1px solid rgba(255,255,255,0.5);
+        border: 1px solid rgba(255, 255, 255, 0.5);
         border-radius: var(--border-radius-50);
         background-color: var(--bg-color);
         margin-right: 16px;
@@ -193,7 +226,7 @@
 
     .related-articles-section .articles-1920 .article-light,
     .related-articles-section .articles-1920 .article-dark {
-        color: rgba(255,255,255,0.9);
+        color: rgba(255, 255, 255, 0.9);
     }
 
     /* .related-articles-section .articles-1920 .article-light .sub-title-r,
@@ -206,7 +239,7 @@
     .related-articles-section .articles-1920 .article-light {
         padding: 16px 32px;
         margin-bottom: 24px;
-        background-color: rgba(255,255,255,0.08);
+        background-color: rgba(255, 255, 255, 0.08);
         border-radius: var(--border-radius-8);
         box-shadow: var(--box-shadow-card-sm);
     }
@@ -214,7 +247,7 @@
     .related-articles-section .articles-1920 .article-dark {
         padding: 16px 32px;
         margin-bottom: 24px;
-        background-color: rgba(255,255,255,0.02);
+        background-color: rgba(255, 255, 255, 0.02);
         border-radius: var(--border-radius-8);
         box-shadow: var(--box-shadow-card-sm);
     }
@@ -226,13 +259,13 @@
     .related-articles-section .articles-xl ul,
     .related-articles-section .articles-md ul {
         width: 100%;
-    } 
+    }
 
     /* -----------------actors list section----------------- */
     .actors-list-section {
         width: 100%;
     }
-    
+
     .actors-list-section .subtitle .sub-title-r {
         opacity: var(--opacity-75);
     }
@@ -313,7 +346,7 @@
         height: 546px;
         overflow: hidden;
         position: relative;
-        border-radius: var(--border-radius-4); 
+        border-radius: var(--border-radius-4);
         margin-bottom: 32px;
         margin: 0 16px 8px 16px;
     }
@@ -326,9 +359,9 @@
         object-position: center center;
         -webkit-transition: all 0.6s;
         transition: all 0.6s;
-        border-radius: var(--border-radius-4); 
+        border-radius: var(--border-radius-4);
     }
-    
+
     .actors-list-section li {
         position: relative;
     }
@@ -337,21 +370,21 @@
         text-align: center;
     }
 
-    .actors-list-section .actor-name-tc1, 
+    .actors-list-section .actor-name-tc1,
     .actors-list-section .actor-name-en1,
-    .actors-list-section .actor-name-tc2, 
+    .actors-list-section .actor-name-tc2,
     .actors-list-section .actor-name-en2,
-    .actors-list-section .actor-name-tc3, 
+    .actors-list-section .actor-name-tc3,
     .actors-list-section .actor-name-en3,
-    .actors-list-section .actor-name-tc4, 
+    .actors-list-section .actor-name-tc4,
     .actors-list-section .actor-name-en4,
-    .actors-list-section .actor-name-tc5, 
+    .actors-list-section .actor-name-tc5,
     .actors-list-section .actor-name-en5,
-    .actors-list-section .actor-name-tc6, 
+    .actors-list-section .actor-name-tc6,
     .actors-list-section .actor-name-en6,
-    .actors-list-section .actor-name-tc7, 
+    .actors-list-section .actor-name-tc7,
     .actors-list-section .actor-name-en7,
-    .actors-list-section .actor-name-tc8, 
+    .actors-list-section .actor-name-tc8,
     .actors-list-section .actor-name-en8 {
         text-decoration: none;
         -webkit-transition: all 1s;
@@ -377,21 +410,21 @@
         opacity: 1;
     }
 
-    .actors-list-section li:hover .actor-name-tc1, 
+    .actors-list-section li:hover .actor-name-tc1,
     .actors-list-section li:hover .actor-name-en1,
-    .actors-list-section li:hover .actor-name-tc2, 
+    .actors-list-section li:hover .actor-name-tc2,
     .actors-list-section li:hover .actor-name-en2,
-    .actors-list-section li:hover .actor-name-tc3, 
+    .actors-list-section li:hover .actor-name-tc3,
     .actors-list-section li:hover .actor-name-en3,
-    .actors-list-section li:hover .actor-name-tc4, 
+    .actors-list-section li:hover .actor-name-tc4,
     .actors-list-section li:hover .actor-name-en4,
-    .actors-list-section li:hover .actor-name-tc5, 
+    .actors-list-section li:hover .actor-name-tc5,
     .actors-list-section li:hover .actor-name-en5,
-    .actors-list-section li:hover .actor-name-tc6, 
+    .actors-list-section li:hover .actor-name-tc6,
     .actors-list-section li:hover .actor-name-en6,
-    .actors-list-section li:hover .actor-name-tc7, 
+    .actors-list-section li:hover .actor-name-tc7,
     .actors-list-section li:hover .actor-name-en7,
-    .actors-list-section li:hover .actor-name-tc8, 
+    .actors-list-section li:hover .actor-name-tc8,
     .actors-list-section li:hover .actor-name-en8 {
         top: 40px;
         transform: translateY(60%);
@@ -412,7 +445,7 @@
         height: 100%;
         object-fit: cover;
         object-position: 50% 50%;
-        border-radius: var(--border-radius-4); 
+        border-radius: var(--border-radius-4);
     }
 
     .movie-stills-section .hall-screen {
@@ -453,9 +486,9 @@
         height: 100%;
         object-fit: cover;
         object-position: 50% 50%;
-        border-radius: var(--border-radius-4); 
+        border-radius: var(--border-radius-4);
     }
-    
+
     .movie-stills-carousel .carousel-wrap {
         width: 1114px;
         display: flex;
@@ -481,30 +514,30 @@
         height: 100%;
         object-fit: cover;
         object-position: 50% 50%;
-        border-radius: var(--border-radius-4); 
+        border-radius: var(--border-radius-4);
         filter: grayscale(1);
     }
 
     .movie-stills-section .movie {
         aspect-ratio: 16 / 9;
         background: var(--bg-color);
-        background-image: linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
-            linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)), linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
-            linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)), linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
-            linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)), linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
-            linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)), linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
-            linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)), linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
-            linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)), linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
-            linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)), linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
-            linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)), linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
-            linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1));
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+            linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+            linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+            linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+            linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+            linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+            linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+            linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+            linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+            linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
 
         background-repeat: no-repeat;
-        background-position: 
+        background-position:
             8% 5%, 18.5% 5%, 29% 5%, 39.5% 5%, 50% 5%, 60.5% 5%, 71% 5%, 81.5% 5%, 92% 5%,
-            8% 92%, 18.5% 92%, 29% 92%, 39.5% 92%, 50% 92%, 60.5% 92%, 71% 92%, 81.5% 92%, 92% 92%; 
+            8% 92%, 18.5% 92%, 29% 92%, 39.5% 92%, 50% 92%, 60.5% 92%, 71% 92%, 81.5% 92%, 92% 92%;
 
-        background-size: 
+        background-size:
             6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%,
             6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%;
     }
@@ -565,14 +598,12 @@
         opacity: var(--opacity-90);
     }
 
-    
+
     /* =================================== @media =================================== */
     /* ============================================================================== */
 
     /* ------------------------  小於 1344px  ------------------------*/
-    @media screen and (max-width: 1344px) {
-
-    }
+    @media screen and (max-width: 1344px) {}
 
     /* ------------------------  小於 1200px  ------------------------*/
     @media screen and (max-width: 1200px) {
@@ -583,14 +614,14 @@
             padding: 0;
         }
 
-        .movie-detail-section .movie-info { 
+        .movie-detail-section .movie-info {
             margin-bottom: 32px;
-            padding: 0; 
+            padding: 0;
         }
 
         .movie-detail-section .movie-info .release-date i,
         .movie-detail-section .movie-info .movie-length i,
-        .movie-detail-section .movie-info .movie-director i { 
+        .movie-detail-section .movie-info .movie-director i {
             margin-right: 8px;
         }
 
@@ -606,22 +637,32 @@
             font-size: 1.25rem;
         }
 
-        .movie-detail-section .content { padding-left: 16px; }
-        .movie-detail-section .title-tc { font-size: 34px; }
-        .movie-detail-section .title-en { font-size: 16px; }
+        .movie-detail-section .content {
+            padding-left: 16px;
+        }
 
-        .movie-detail-section .content { padding-left: 32px; }
+        .movie-detail-section .title-tc {
+            font-size: 34px;
+        }
+
+        .movie-detail-section .title-en {
+            font-size: 16px;
+        }
+
+        .movie-detail-section .content {
+            padding-left: 32px;
+        }
 
         .movie-detail-section .content .date-data,
         .movie-detail-section .content .length-data,
-        .movie-detail-section .content .director-data {  
+        .movie-detail-section .content .director-data {
             font-size: 16px;
             margin-right: 12px;
         }
 
         .movie-detail-section .content .fa-calendar-check,
         .movie-detail-section .content .fa-clock,
-        .movie-detail-section .content .fa-video {  
+        .movie-detail-section .content .fa-video {
             opacity: var(--opacity-90);
         }
 
@@ -655,15 +696,15 @@
         }
 
         /* related articles section */
-        .articles-xl li:nth-child(even){
+        .articles-xl li:nth-child(even) {
             padding: 16px 32px;
-            background-color: rgba(255,255,255,0.02);
+            background-color: rgba(255, 255, 255, 0.02);
             border-radius: var(--border-radius-8);
         }
 
         .articles-xl li:nth-child(odd) {
             padding: 16px 32px;
-            background-color: rgba(255,255,255,0.08);
+            background-color: rgba(255, 255, 255, 0.08);
             border-radius: var(--border-radius-8);
         }
     }
@@ -678,14 +719,19 @@
         }
 
         /* section margin bottom */
-        .movie-detail-section { margin-top: 288px; }
-        .movie-detail-section .cat-tags .cat-tag { margin-top: 32px; }
-        
-        .movie-detail-section .content { 
-            width: 100%;
-            padding-left: 16px; 
+        .movie-detail-section {
+            margin-top: 288px;
         }
-    
+
+        .movie-detail-section .cat-tags .cat-tag {
+            margin-top: 32px;
+        }
+
+        .movie-detail-section .content {
+            width: 100%;
+            padding-left: 16px;
+        }
+
         .movie-detail-section .description-title {
             margin-bottom: 16px;
         }
@@ -707,12 +753,12 @@
             padding: 0;
         }
 
-        .movie-detail-section .title-tc { 
-            margin-bottom: 4px; 
+        .movie-detail-section .title-tc {
+            margin-bottom: 4px;
             font-size: 34px;
         }
 
-        .movie-detail-section .title-en { 
+        .movie-detail-section .title-en {
             margin-bottom: 16px;
             font-size: 16px;
         }
@@ -721,7 +767,7 @@
             font-size: 14px;
         }
 
-        .movie-detail-section .content p { 
+        .movie-detail-section .content p {
             margin-bottom: 4px;
             font-size: 16px;
         }
@@ -731,17 +777,17 @@
         }
 
         .movie-detail-section .cat-tags .cat-tag {
-            border: 1px solid rgba(255,255,255,0.75);
+            border: 1px solid rgba(255, 255, 255, 0.75);
             border-radius: var(--border-radius-50);
             padding: 6px 20px;
             margin-right: 16px;
             margin-bottom: 32px;
         }
 
-        .articles-md li:nth-child(even){
+        .articles-md li:nth-child(even) {
             width: 100%;
             padding: 16px 0;
-            background-color: rgba(255,255,255,0.02);
+            background-color: rgba(255, 255, 255, 0.02);
             border-radius: var(--border-radius-8);
             margin-bottom: 8px;
         }
@@ -749,7 +795,7 @@
         .articles-md li:nth-child(odd) {
             width: 100%;
             padding: 16px 0;
-            background-color: rgba(255,255,255,0.08);
+            background-color: rgba(255, 255, 255, 0.08);
             border-radius: var(--border-radius-8);
             margin-bottom: 8px;
         }
@@ -775,7 +821,9 @@
             opacity: var(--opacity-75);
         }
 
-        .movie-detail-section { margin-top: 200px; }
+        .movie-detail-section {
+            margin-top: 200px;
+        }
 
         .movie-detail-section .movie-poster .img-wrap img {
             width: 110px;
@@ -807,7 +855,7 @@
             display: none;
         }
 
-        .movie-detail-section .content p { 
+        .movie-detail-section .content p {
             margin-bottom: 4px;
             font-size: 16px;
         }
@@ -905,9 +953,13 @@
             margin: 0 8px;
         }
 
-        .actors-list-section .carousel-wrap li.list-unstyled:nth-child(1) { margin: 0; }
+        .actors-list-section .carousel-wrap li.list-unstyled:nth-child(1) {
+            margin: 0;
+        }
 
-        .actors-list-section .carousel-wrap li.list-unstyled:nth-child(2) { margin-left: 0; }
+        .actors-list-section .carousel-wrap li.list-unstyled:nth-child(2) {
+            margin-left: 0;
+        }
 
         .actors-list-section .carousel-wrap .empty {
             display: none;
@@ -917,26 +969,26 @@
             text-align: left;
         }
 
-        .actors-list-section .actor-name-tc1, 
+        .actors-list-section .actor-name-tc1,
         .actors-list-section .actor-name-en1,
-        .actors-list-section .actor-name-tc2, 
+        .actors-list-section .actor-name-tc2,
         .actors-list-section .actor-name-en2,
-        .actors-list-section .actor-name-tc3, 
+        .actors-list-section .actor-name-tc3,
         .actors-list-section .actor-name-en3,
-        .actors-list-section .actor-name-tc4, 
+        .actors-list-section .actor-name-tc4,
         .actors-list-section .actor-name-en4,
-        .actors-list-section .actor-name-tc5, 
+        .actors-list-section .actor-name-tc5,
         .actors-list-section .actor-name-en5,
-        .actors-list-section .actor-name-tc6, 
+        .actors-list-section .actor-name-tc6,
         .actors-list-section .actor-name-en6,
-        .actors-list-section .actor-name-tc7, 
+        .actors-list-section .actor-name-tc7,
         .actors-list-section .actor-name-en7,
-        .actors-list-section .actor-name-tc8, 
+        .actors-list-section .actor-name-tc8,
         .actors-list-section .actor-name-en8 {
             opacity: var(--opacity-90);
         }
 
-/* 
+        /* 
         .actors-list-section .carousel-wrap {
             width: 2660px;
             display: flex;
@@ -950,8 +1002,16 @@
 <body>
     <!-- movinon-navbar -->
     <?php require_once './tpl/movinon-navbar.php' ?>
-		    
+
     <main>
+        <a href="">
+            <div class="fixed-icon-ticket">
+                <div class="img-wrap">
+                    <img src="images/icon_ticket_fill.svg" alt="">
+                </div>
+            </div>
+        </a>
+
         <!-- -----------movie detail section----------- -->
         <section class="movie-detail-section g-section-mb">
             <div class="container">
@@ -1046,11 +1106,11 @@
                             <button type="button" class="btn-white-outline">
                                 <div class="d-flex">
                                     <div class="img-wrap">
-                                            <img src="images/icon_play_fill.svg" alt="">
-                                        </div>
+                                        <img src="images/icon_play_fill.svg" alt="">
+                                    </div>
                                     <span>預告片</span>
                                 </div>
-                                    
+
                             </button>
                         </div>
                     </div>
@@ -1079,8 +1139,8 @@
                                 <span class="pg-rate body2-r">12</span>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="rating">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -1102,7 +1162,7 @@
                         <p class="release-date"><i class="far fa-calendar-check"></i><span class="date-data">2021/11/03</span></p>
                         <p class="movie-length"><i class="far fa-clock"></i><span class="length-data">156分鐘</span></p>
                         <p class="movie-director"><i class="fas fa-video"></i><span class="director-data">趙婷</span></p>
-                            
+
                         <!-- <p class="release-date">日期：<span class="date-data">2021/11/03</span></p>
                         <p class="movie-length">片長：<span class="length-data">156分鐘</span></p>
                         <p class="movie-director">導演：<span class="director-data">趙婷</span></p> -->
@@ -1135,11 +1195,11 @@
                             <button type="button" class="btn-white-outline">
                                 <div class="d-flex">
                                     <div class="img-wrap">
-                                            <img src="images/icon_play_fill.svg" alt="">
-                                        </div>
+                                        <img src="images/icon_play_fill.svg" alt="">
+                                    </div>
                                     <span>預告片</span>
                                 </div>
-                                    
+
                             </button>
                         </div>
                     </div>
@@ -1268,7 +1328,7 @@
 
                 <div class="row articles-xl d-none d-md-flex d-lg-flex d-xl-none">
                     <ul>
-                        <li class="mb-3"> 
+                        <li class="mb-3">
                             <div class="col-12">
                                 <a href="#">
                                     <div class="d-flex justify-content-between">
@@ -1328,7 +1388,7 @@
                             </div>
                         </li>
 
-                        <li class="mb-3"> 
+                        <li class="mb-3">
                             <div class="col-12">
                                 <a href="#">
                                     <div class="d-flex justify-content-between">
@@ -1392,7 +1452,7 @@
 
                 <div class="row articles-md d-sm-flex d-md-none d-lg-none d-xl-none">
                     <ul>
-                        <li> 
+                        <li>
                             <div class="col-12">
                                 <a href="#">
                                     <div class="extra-info">
@@ -1410,8 +1470,8 @@
                                 </a>
                             </div>
                         </li>
-                        
-                        <li> 
+
+                        <li>
                             <div class="col-12">
                                 <a href="#">
                                     <div class="extra-info">
@@ -1430,7 +1490,7 @@
                             </div>
                         </li>
 
-                        <li> 
+                        <li>
                             <div class="col-12">
                                 <a href="#">
                                     <div class="extra-info">
@@ -1449,7 +1509,7 @@
                             </div>
                         </li>
 
-                        <li> 
+                        <li>
                             <div class="col-12">
                                 <a href="#">
                                     <div class="extra-info">
@@ -1468,7 +1528,7 @@
                             </div>
                         </li>
 
-                        <li> 
+                        <li>
                             <div class="col-12">
                                 <a href="#">
                                     <div class="extra-info">
@@ -1486,8 +1546,8 @@
                                 </a>
                             </div>
                         </li>
-                        
-                        <li> 
+
+                        <li>
                             <div class="col-12">
                                 <a href="#">
                                     <div class="extra-info">
@@ -1506,7 +1566,7 @@
                             </div>
                         </li>
 
-                        <li> 
+                        <li>
                             <div class="col-12">
                                 <a href="#">
                                     <div class="extra-info">
@@ -1525,7 +1585,7 @@
                             </div>
                         </li>
 
-                        <li> 
+                        <li>
                             <div class="col-12">
                                 <a href="#">
                                     <div class="extra-info">
@@ -1544,7 +1604,7 @@
                             </div>
                         </li>
 
-                        <li> 
+                        <li>
                             <div class="col-12">
                                 <a href="#">
                                     <div class="extra-info">
@@ -1737,7 +1797,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </section>
 
         <!-- -----------movie stills section----------- -->
@@ -1805,21 +1865,21 @@
                         </li>
                     </div>
 
-                    
+
                 </div>
             </div>
         </section>
-    </main>    
+    </main>
 
     <?php require_once './tpl/movinon-footer.php' ?>
 
     <?php require_once './tpl/foot.php' ?>
-    
+
     <script>
         // ----------actors list carousel----------
         let nowIndex = $(this).index() + 1;
 
-        $('.actors-list-section .prev-btn').click(function () {
+        $('.actors-list-section .prev-btn').click(function() {
 
             nowIndex -= 1
             if (nowIndex < 0) {
@@ -1827,18 +1887,18 @@
             }
 
             let nowX = nowIndex * -266 + 'px';
-            $('.actors-list-section .carousel-wrap').css('transform',`translateX(${nowX})`).css('transition','.6s');
+            $('.actors-list-section .carousel-wrap').css('transform', `translateX(${nowX})`).css('transition', '.6s');
         });
 
-        $('.actors-list-section .next-btn').click(function () {
+        $('.actors-list-section .next-btn').click(function() {
 
             nowIndex += 1
             if (nowIndex > 6) {
                 nowIndex = 6
             }
-            
+
             let nowX = nowIndex * -266 + 'px';
-            $('.actors-list-section .carousel-wrap').css('transform',`translateX(${nowX})`).css('transition','.6s');
+            $('.actors-list-section .carousel-wrap').css('transform', `translateX(${nowX})`).css('transition', '.6s');
         });
 
         // -------------------- hall screen --------------------
@@ -1860,15 +1920,15 @@
                 $('.movie-stills .hall-screen img').attr('src', imgSrc);
             });
 
-            $(".movie-stills-carousel .carousel-wrap li img").hover (function() {
+            $(".movie-stills-carousel .carousel-wrap li img").hover(function() {
                 $(this).css("filter", "none").css('transition', '.4s');
-            }, function () {
+            }, function() {
                 $(this).css("filter", "grayscale(1)").css('transition', '.4s');
             });
         });
 
         // -------------------- hall screen carousel --------------------
-        $('.movie-stills-carousel .prev-btn').click(function () {
+        $('.movie-stills-carousel .prev-btn').click(function() {
 
             nowIndex -= 1
             if (nowIndex < 0) {
@@ -1876,18 +1936,18 @@
             }
 
             let nowX = nowIndex * -232 + 'px';
-            $('.movie-stills-carousel .movie').css('transform',`translateX(${nowX})`).css('transition','.6s');
+            $('.movie-stills-carousel .movie').css('transform', `translateX(${nowX})`).css('transition', '.6s');
         });
 
-        $('.movie-stills-carousel .next-btn').click(function () {
+        $('.movie-stills-carousel .next-btn').click(function() {
 
             nowIndex += 1
             if (nowIndex > 5) {
                 nowIndex = 5
             }
-            
+
             let nowX = nowIndex * -232 + 'px';
-            $('.movie-stills-carousel .movie').css('transform',`translateX(${nowX})`).css('transition','.6s');
+            $('.movie-stills-carousel .movie').css('transform', `translateX(${nowX})`).css('transition', '.6s');
         });
 
         // -------------------- word limits --------------------
@@ -1896,20 +1956,30 @@
         const ellipsisDark = document.querySelectorAll('.related-articles-section .article-dark .d-flex > div');
 
         ellipsisLight.forEach((item) => {
-            if(item.innerHTML.length > len) {
+            if (item.innerHTML.length > len) {
                 let txt = item.innerHTML.substring(0, len) + '...';
                 item.innerHTML = txt;
             }
         })
 
         ellipsisDark.forEach((item) => {
-            if(item.innerHTML.length > len) {
+            if (item.innerHTML.length > len) {
                 let txt = item.innerHTML.substring(0, len) + '...';
                 item.innerHTML = txt;
             }
         })
 
+        // -------------------- icon ticket appear  --------------------
+        $(window).scroll(function() {
+
+            if ($(window).scrollTop() > 600) {
+                $('.fixed-icon-ticket').css('opacity', '1');
+            } else {
+                $('.fixed-icon-ticket').css('opacity', '0');
+            };
+        });
     </script>
     <!-- <script src="js/detail-page.js"></script> -->
 </body>
+
 </html>

@@ -627,7 +627,8 @@
                 padding: 24px 0px;
                 border-radius: 0;
                 margin: 0;
-                background-color: var(--bg-color);
+                background-color: transparent;
+                box-shadow: none;
             }
 
             .left-side-article .img-wrap {
@@ -663,8 +664,14 @@
         /* ------------------------  小於 418px  ------------------------*/
         @media screen and (max-width: 418px) {
 
+            body {
+                background: url("images/forum_masonry_page/masonry_bg_img_418-1.jpg") top center no-repeat;
+                background-size: contain;
+                background-color: var(--bg-color);
+            }
+
             .main-article {
-                margin-top: 96px;
+                margin-top: 200px;
             }
 
             .left-side-section {
