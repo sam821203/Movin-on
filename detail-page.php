@@ -821,6 +821,16 @@
             opacity: var(--opacity-75);
         }
 
+        .movie-detail-section button .img-wrap {
+            width: 20px;
+            height: 100%;
+            display: flex;
+        }
+
+        .movie-detail-section button span {
+            line-height: 110%;
+        }
+
         .movie-detail-section {
             margin-top: 200px;
         }
@@ -1095,7 +1105,7 @@
                         <div class="booking-trailer">
                             <button type="button" class="btn-brand">
                                 <a href="./booking-movie-page.php">
-                                    <div class="d-flex">
+                                    <div class="d-flex align-items-center">
                                         <div class="img-wrap">
                                             <img src="images/icon_ticket_fill.svg" alt="">
                                         </div>
@@ -1184,7 +1194,7 @@
                         <div class="booking-trailer">
                             <button type="button" class="btn-brand">
                                 <a href="./booking-movie-page.php">
-                                    <div class="d-flex">
+                                    <div class="d-flex align-items-center">
                                         <div class="img-wrap">
                                             <img src="images/icon_ticket_fill.svg" alt="">
                                         </div>

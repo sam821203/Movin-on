@@ -524,7 +524,6 @@
             
             /* aside-related-articles */
             .aside-related-articles .related-articles {
-                display: block;
                 padding-bottom: 16px;
                 margin-bottom: 32px;
                 border-radius: var(--border-radius-4);
@@ -750,6 +749,39 @@
                 font-size: 16px;
                 margin-bottom: 16px;
             }
+
+            .aside-related-articles .d-lg-block .col-12,
+            .aside-related-articles .d-lg-block .col-sm-6,
+            .aside-related-articles .d-lg-block .col-md-6,
+            .aside-related-articles .d-lg-block .col-lg-4 {
+                padding: 0;
+            }
+
+            .aside-section.col-xl-3 {
+                padding: 0;
+            }
+
+            .aside-related-articles .related-articles {
+                padding-bottom: 0;
+                margin-bottom: 16px;
+            }            
+
+            .aside-related-articles .related-articles .content {
+                padding: 16px;
+            }
+
+            .aside-related-articles .related-articles .img-wrap {
+                height: 112px;
+                border-radius: 0 4px 4px 0;
+            }
+
+            .aside-related-articles .related-articles .img-wrap img {
+                border-radius: 0 4px 4px 0;
+            }
+
+            .aside-related-articles .subtitle .sub-title-r {
+            display: none;
+        }
         }
     </style>
 </head>
@@ -981,7 +1013,7 @@
 
                     <div class="aside-section mycol-12 col-xl-3">
 
-                        <!-- 小於 1200 後消失 -->
+                        <!-- 小於 1200 -->
                         <div class="d-none d-lg-none d-xl-block col-xl-12 aside-ads">
                             <a href="#">
                                 <div class="img-wrap">
@@ -1028,7 +1060,6 @@
                             </div>
                         </div>
 
-                        <!-- 小於 1200 後顯示 -->
                         <div class="d-none d-lg-none d-xl-block aside-related-articles">
                             <div class="d-flex subtitle g-subtitle-mb">
                                 <div class="d-flex">
@@ -1110,7 +1141,7 @@
                             </a>
                         </div>
                         
-                        <!-- 小於 992 後顯示 -->
+                        <!-- 小於 992 -->
                         <div class="d-none d-md-none d-lg-block d-xl-none aside-related-articles g-section-mb">
                             <div class="mycol-12 d-flex subtitle g-subtitle-mb">
                                 <div class="red-line my-auto"></div>
@@ -1212,182 +1243,119 @@
                         </div>
 
                         <!-- 小於 418 後顯示 -->
-                        <div class="d-flex d-xs-flex d-sm-none d-none aside-related-articles">
-                            <div class="d-flex subtitle g-subtitle-mb">
-                                <div class="d-flex">
+                        <div class="d-block d-lg-block d-xl-none aside-related-articles g-section-mb">
+                            <div class="subtitle g-subtitle-mb">
+                                <div class="mycol-6 d-flex">
                                     <div class="red-line my-auto"></div>
                                     <span class="section-header-b">相關看板文章</span>
                                 </div>
-                            </div>
-
-                            <!-- ------------第一篇相關文章------------ -->
-                            <a href="#">
-                                <div class="related-articles d-flex">
-                                    <div class="content">
-                                        <div class="d-flex tags">
-                                            <div class="spoiler body2-r">雷</div>
-                                            <div class="arti-cat-tag g-tag body2-r">新聞</div>
+                                <div class="mycol-6 d-flex justify-content-end align-items-end">
+                                    <a href="#">
+                                        <div class="d-flex justify-content-end align-items-end">
+                                            <div class="sub-title-r mt-2">前往討論區</div>
+                                            <div class="ml-2"><i class="fas fa-chevron-right"></i></div>
                                         </div>
-                                        <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
-                                    </div>
-                                    <div class="img-wrap">
-                                        <img src="images/forum_article_page/related-arti-img1.jpg" alt="">
-                                    </div>
+                                    </a>
                                 </div>
-                            </a>
-                            <a href="#">
-                                <div class="related-articles">
-                                    <div class="content">
-                                        <div class="d-flex tags">
-                                            <div class="spoiler body2-r">雷</div>
-                                            <div class="arti-cat-tag g-tag body2-r">新聞</div>
-                                        </div>
-                                        <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
-                                    </div>
-                                    <div class="img-wrap">
-                                        <img src="images/forum_article_page/related-arti-img1.jpg" alt="">
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="related-articles">
-                                    <div class="content">
-                                        <div class="d-flex tags">
-                                            <div class="spoiler body2-r">雷</div>
-                                            <div class="arti-cat-tag g-tag body2-r">新聞</div>
-                                        </div>
-                                        <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
-                                    </div>
-                                    <div class="img-wrap">
-                                        <img src="images/forum_article_page/related-arti-img1.jpg" alt="">
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="related-articles">
-                                    <div class="content">
-                                        <div class="d-flex tags">
-                                            <div class="spoiler body2-r">雷</div>
-                                            <div class="arti-cat-tag g-tag body2-r">新聞</div>
-                                        </div>
-                                        <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
-                                    </div>
-                                    <div class="img-wrap">
-                                        <img src="images/forum_article_page/related-arti-img1.jpg" alt="">
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="related-articles">
-                                    <div class="content">
-                                        <div class="d-flex tags">
-                                            <div class="spoiler body2-r">雷</div>
-                                            <div class="arti-cat-tag g-tag body2-r">新聞</div>
-                                        </div>
-                                        <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
-                                    </div>
-                                    <div class="img-wrap">
-                                        <img src="images/forum_article_page/related-arti-img1.jpg" alt="">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="d-lg-block d-xl-none aside-related-articles g-section-mb">
-                            <div class="mycol-12 d-flex subtitle g-subtitle-mb">
-                                <div class="red-line my-auto"></div>
-                                <span class="section-header-b">相關看板文章</span>
                             </div>
 
                             <!-- ------------第一篇相關文章------------ -->
                             <div class="d-flex flex-wrap">
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-                                    <div class="related-articles">
-                                        <div class="img-wrap">
-                                            <img src="images/forum_article_page/related-arti-img1.jpg" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <div class="d-flex tags">
-                                                <div class="spoiler body2-r">雷</div>
-                                                <div class="arti-cat-tag g-tag body2-r">新聞</div>
+                                <div class="mycol-12">
+                                    <a href="">
+                                        <div class="related-articles d-flex">
+                                            <div class="mycol-9 content">
+                                                <div class="d-flex tags">
+                                                    <div class="spoiler body2-r">雷</div>
+                                                    <div class="arti-cat-tag g-tag body2-r">新聞</div>
+                                                </div>
+                                                <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
                                             </div>
-                                            <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
+                                            <div class="mycol-3 img-wrap">
+                                                <img src="images/forum_article_page/related-arti-img1.jpg" alt="">
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-                                    <div class="related-articles">
-                                        <div class="img-wrap">
-                                            <img src="images/forum_article_page/related-arti-img1.jpg" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <div class="d-flex tags">
-                                                <div class="spoiler body2-r">雷</div>
-                                                <div class="arti-cat-tag g-tag body2-r">新聞</div>
+                                <div class="mycol-12">
+                                    <a href="">
+                                        <div class="related-articles d-flex">
+                                            <div class="mycol-9 content">
+                                                <div class="d-flex tags">
+                                                    <div class="spoiler body2-r">雷</div>
+                                                    <div class="arti-cat-tag g-tag body2-r">新聞</div>
+                                                </div>
+                                                <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
                                             </div>
-                                            <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
+                                            <div class="mycol-3 img-wrap">
+                                                <img src="images/forum_article_page/related-arti-img1.jpg" alt="">
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-                                    <div class="related-articles">
-                                        <div class="img-wrap">
-                                            <img src="images/forum_article_page/related-arti-img1.jpg" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <div class="d-flex tags">
-                                                <div class="spoiler body2-r">雷</div>
-                                                <div class="arti-cat-tag g-tag body2-r">新聞</div>
+                                <div class="mycol-12">
+                                    <a href="">
+                                        <div class="related-articles d-flex">
+                                            <div class="mycol-9 content">
+                                                <div class="d-flex tags">
+                                                    <div class="spoiler body2-r">雷</div>
+                                                    <div class="arti-cat-tag g-tag body2-r">新聞</div>
+                                                </div>
+                                                <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
                                             </div>
-                                            <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
+                                            <div class="mycol-3 img-wrap">
+                                                <img src="images/forum_article_page/related-arti-img1.jpg" alt="">
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-                                    <div class="related-articles">
-                                        <div class="img-wrap">
-                                            <img src="images/forum_article_page/related-arti-img1.jpg" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <div class="d-flex tags">
-                                                <div class="spoiler body2-r">雷</div>
-                                                <div class="arti-cat-tag g-tag body2-r">新聞</div>
+                                <div class="mycol-12">
+                                    <a href="">
+                                        <div class="related-articles d-flex">
+                                            <div class="mycol-9 content">
+                                                <div class="d-flex tags">
+                                                    <div class="spoiler body2-r">雷</div>
+                                                    <div class="arti-cat-tag g-tag body2-r">新聞</div>
+                                                </div>
+                                                <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
                                             </div>
-                                            <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
+                                            <div class="mycol-3 img-wrap">
+                                                <img src="images/forum_article_page/related-arti-img1.jpg" alt="">
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-                                    <div class="related-articles">
-                                        <div class="img-wrap">
-                                            <img src="images/forum_article_page/related-arti-img1.jpg" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <div class="d-flex tags">
-                                                <div class="spoiler body2-r">雷</div>
-                                                <div class="arti-cat-tag g-tag body2-r">新聞</div>
+                                <div class="mycol-12">
+                                    <a href="">
+                                        <div class="related-articles d-flex">
+                                            <div class="mycol-9 content">
+                                                <div class="d-flex tags">
+                                                    <div class="spoiler body2-r">雷</div>
+                                                    <div class="arti-cat-tag g-tag body2-r">新聞</div>
+                                                </div>
+                                                <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
                                             </div>
-                                            <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
+                                            <div class="mycol-3 img-wrap">
+                                                <img src="images/forum_article_page/related-arti-img1.jpg" alt="">
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-
-                                <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-                                    <div class="related-articles">
-                                        <div class="img-wrap">
-                                            <img src="images/forum_article_page/related-arti-img1.jpg" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <div class="d-flex tags">
-                                                <div class="spoiler body2-r">雷</div>
-                                                <div class="arti-cat-tag g-tag body2-r">新聞</div>
+                                <div class="mycol-12">
+                                    <a href="">
+                                        <div class="related-articles d-flex">
+                                            <div class="mycol-9 content">
+                                                <div class="d-flex tags">
+                                                    <div class="spoiler body2-r">雷</div>
+                                                    <div class="arti-cat-tag g-tag body2-r">新聞</div>
+                                                </div>
+                                                <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
                                             </div>
-                                            <p>湯姆：《蜘蛛人：無家日》的戰鬥場景非常暴...</p>
+                                            <div class="mycol-3 img-wrap">
+                                                <img src="images/forum_article_page/related-arti-img1.jpg" alt="">
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
