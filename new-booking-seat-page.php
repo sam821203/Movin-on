@@ -477,9 +477,9 @@
                     <div class="booking-seat-section g-section-mb">
                         <div class="container">
                             <div class="row seat-dataviz">
-                                <div class="col-9 d-flex justify-content-between">
-                                    <div class="col-1"></div>
-                                    <div class="col-12 d-flex justify-content-spacebetween">
+                                <div class="mycol-9 d-flex justify-content-between">
+                                    <div class="mycol-1"></div>
+                                    <div class="mycol-12 d-flex justify-content-between">
 
                                         <!-- 座位狀態 -->
                                         <div class="d-flex" id="legend"></div>
@@ -698,6 +698,8 @@
                             legend: {
                                 node: $('#legend'),
                                 items: [
+                                    // 1/11 修改：新增您的座位
+                                    ['f', 'current seat', '您的座位'],
                                     ['f', 'available', '未售出'],
                                     ['f', 'unavailable', '已售出']
                                 ]

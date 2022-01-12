@@ -600,32 +600,32 @@
                                     <?php } ?>
                                 </div>
                             </div>
-                            <div class="row movie-division">
-                                <div class="col-12 mb-3">
-                                    <i class="fas fa-city"></i>
-                                    <span class="sub-title-r">城市</span>
-                                </div>
-                                <div class="col-12">
-                                    <?php if (isset($_GET['sub_date_id'])) { ?>
-                                        <div class="divisions">
-                                            <?php
-                                            $sql = "SELECT `division_id`,`division`
-                                FROM `division` 
-                                ";
-                                            $arr = $pdo->query($sql)->fetchAll();
-                                            foreach ($arr as $obj2) {
-                                                $strStyleDiv = "";
-                                                if ($_GET['sub_division_id'] == $obj2['division_id']) {
-                                                    $strStyleDiv =  "style='border:1px solid #F53D3D ; opacity:1 ; box-shadow:0 0 16px 4px rgba(245, 61, 61, 0.25)'";
-                                                }
-                                            ?>
-                                                <a href="booking-time-page.php?movie_id=<?= $_GET['movie_id'] ?>&sub_date_id=<?= $_GET['sub_date_id'] ?>&sub_division_id=<?= $obj2['division_id'] ?>#def" class="division" id="divisiondv1">
-                                                    <span class="division selected div-sel" id="def" <?= $strStyleDiv ?>><?= $obj2['division'] ?></span>
-                                                </a>
-                                            <?php } ?>
-                                        </div>
-                                    <?php } ?>
-                                </div>
+                        </div>
+                        <div class="row movie-division">
+                            <div class="col-12 mb-3">
+                                <i class="fas fa-city"></i>
+                                <span class="sub-title-r">城市</span>
+                            </div>
+                            <div class="col-12">
+                                <?php if (isset($_GET['sub_date_id'])) { ?>
+                                    <div class="divisions">
+                                        <?php
+                                        $sql = "SELECT `division_id`,`division`
+                            FROM `division` 
+                            ";
+                                        $arr = $pdo->query($sql)->fetchAll();
+                                        foreach ($arr as $obj2) {
+                                            $strStyleDiv = "";
+                                            if ($_GET['sub_division_id'] == $obj2['division_id']) {
+                                                $strStyleDiv =  "style='border:1px solid #F53D3D ; opacity:1 ; box-shadow:0 0 16px 4px rgba(245, 61, 61, 0.25)'";
+                                            }
+                                        ?>
+                                            <a href="booking-time-page.php?movie_id=<?= $_GET['movie_id'] ?>&sub_date_id=<?= $_GET['sub_date_id'] ?>&sub_division_id=<?= $obj2['division_id'] ?>#def" class="division" id="divisiondv1">
+                                                <span class="division selected div-sel" id="def" <?= $strStyleDiv ?>><?= $obj2['division'] ?></span>
+                                            </a>
+                                        <?php } ?>
+                                    </div>
+                                <?php } ?>
                             </div>
                         </div>
                 </section>
@@ -702,9 +702,9 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="divide-line"></div>
                                 </div>
                             </div>
-                            <div class="divide-line"></div>
                             <?php } ?>
                         <?php } ?>
                     </div>
