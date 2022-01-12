@@ -511,7 +511,7 @@
         object-fit: cover;
         object-position: 50% 50%;
         border-radius: var(--border-radius-4);
-        filter: grayscale(1);
+        filter: grayscale(0);
     }
 
     .movie-stills-section .movie {
@@ -1989,24 +1989,62 @@
         });
 
         // -------------------- hall screen --------------------
-        $(document).ready(function() {
+        // $(document).ready(function() {
+        //         // Change image on selection
+        //         $(".movie-stills-carousel .carousel-wrap li img").click(function() {
 
-            // Change image on selection
-            $(".movie-stills-carousel .carousel-wrap li img").click(function() {
+        //         // Get current image source
+        //         const imgSrc = $(this).attr("src");
 
-                // Get current image source
-                const imgSrc = $(this).attr("src");
+        //         // Apply grayscale to thumbnails except selected
+        //         $(".movie-stills-carousel .carousel-wrap")
+        //             .find("img")
+        //             .css("filter", "grayscale(1)").css('transition', '.4s');
+        //         $(this).css("filter", "none");
 
-                // Apply grayscale to thumbnails except selected
-                $(".movie-stills-carousel .carousel-wrap")
-                    .find("img")
-                    .css("filter", "grayscale(1)").css('transition', '.4s');
-                $(this).css("filter", "none");
+        //         // Change image
+        //         $('.movie-stills .hall-screen img').attr('src', imgSrc);
+        //     });
+        // });
+        
 
-                // Change image
-                $('.movie-stills .hall-screen img').attr('src', imgSrc);
+        var foo = function() {
+            $(document).ready(function() {
+                    // Change image on selection
+                    $(".movie-stills-carousel .carousel-wrap li img").click(function() {
+
+                    // Get current image source
+                    const imgSrc = $(this).attr("src");
+
+                    // Apply grayscale to thumbnails except selected
+                    $(".movie-stills-carousel .carousel-wrap")
+                        .find("img")
+                        .css("filter", "grayscale(1)").css('transition', '.4s');
+                    $(this).css("filter", "none");
+
+                    // Change image
+                    $('.movie-stills .hall-screen img').attr('src', imgSrc);
+                });
             });
+        };
+
+        // call foo 
+        $( "body" ).on( "click", ".movie-stills-carousel .carousel-wrap li img", foo );
+
+        // when width() < 418, remove foo
+        $( window ).resize(function() {
+
+            let newWidth = $(window).width();
+            if (newWidth < 418) {
+                $( "body" ).off( "click", ".movie-stills-carousel .carousel-wrap li img", foo );
+            };
         });
+
+        
+
+
+
+
 
         // -------------------- hall screen carousel --------------------
         $('.movie-stills-carousel .prev-btn').click(function() {

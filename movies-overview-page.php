@@ -1,6 +1,6 @@
-
-<!-- 這裡需要 require "./db.inc.php" -->
 <?php require_once './tpl/head.php' ?>
+<?php require_once 'db.inc.php' ?>
+<?php session_start() ?>
 
     <style>
 
