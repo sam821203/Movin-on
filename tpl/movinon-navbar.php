@@ -107,7 +107,7 @@
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-header">
+                        <div class="modal-header d-flex justify-content-between align-items-center">
                             <h5 class="modal-title" id="exampleModalLabel">註冊帳號</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
                         </div>
@@ -147,7 +147,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">登入</h5><span class="Login">Login</span>
+                            <h5 class="modal-title" id="exampleModalLabel">登入</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
                         </div>
                         <div class="modal-body">
@@ -163,7 +163,7 @@
                                 <div class="col-6">
                                     <button type="submit" class="btn" id="btn_login">登入</button>
                                 </div>
-                                <div class="col-6"><a href="">忘記密碼？</a></div>
+                                <div class="col-6 d-flex align-items-end"><a href="">忘記密碼？</a></div>
                             </form>
                         </div>
                     </div>

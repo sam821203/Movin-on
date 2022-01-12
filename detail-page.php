@@ -8,6 +8,7 @@
         background-color: var(--bg-color);
     }
 
+    /* fixed icon ticket */
     .fixed-icon-ticket {
         width: 56px;
         height: 56px;
@@ -15,13 +16,12 @@
         background-color: var(--brand-color);
         box-shadow: var(--box-shadow-red);
         position: fixed;
-        right: 72px;
-        bottom: 96px;
+        right: 32px;
+        bottom: 48px;
         z-index: 9998;
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
-        opacity: 0;
         -webkit-transition: all .4s ease-in-out;
         -moz-transition: all .4s ease-in-out;
         -o-transition: all .4s ease-in-out;
@@ -57,11 +57,6 @@
     .movie-detail-section .social-media i {
         font-size: 2.125rem;
         opacity: var(--opacity-90);
-    }
-
-    .movie-detail-section .social-media svg {
-        font-size: 2.125rem;
-        opacity: var(--opacity-75);
     }
 
     .movie-detail-section .movie-poster .img-wrap {
@@ -202,6 +197,10 @@
         height: 152px;
     }
 
+    .movie-detail-section button span {
+        line-height: 110%;
+    }
+
     .movie-detail-section .booking-trailer {
         display: flex;
     }
@@ -261,6 +260,14 @@
         width: 100%;
     }
 
+    .related-articles-section .articles-1920 .col-xl-6:nth-child(even) {
+        padding-right: 0;
+    }
+
+    .related-articles-section .articles-1920 .col-xl-6:nth-child(odd) {
+        padding-left: 0;
+    }
+
     /* -----------------actors list section----------------- */
     .actors-list-section {
         width: 100%;
@@ -286,7 +293,7 @@
     .actors-list-section .next-btn,
     .actors-list-section .prev-btn {
         position: absolute;
-        top: 50%;
+        top: 45%;
         transform: translateY(-50%);
         z-index: 3999;
         color: white;
@@ -437,7 +444,8 @@
     }
 
     .movie-stills-section .movie-stills {
-        margin: 96px 0 72px 0;
+        margin: 32px 0 0 0;
+        position: relative;
     }
 
     .movie-stills-section .imgs-demo img {
@@ -449,17 +457,18 @@
     }
 
     .movie-stills-section .hall-screen {
-        position: relative;
         margin: 0 auto;
-        height: 304px;
-        width: 872px;
-        background-image: url(images/detail_page/movie-stills/large-img.jpg);
+        height: 752px;
+        width: 1344px;
+        background-image: url(images/detail_page/movie-stills/movie_still_img6.jpg);
         /* transform: perspective(1000px) rotateX(-30deg); */
         overflow: hidden;
-        /* border-radius: var(--border-radius-4); */
-        /* border-top-left-radius: 320% 120px;
-        border-top-right-radius: 320% 120px; */
-        box-shadow: 0 40px 55px -17px rgb(255 255 255 / 20%);
+        /* box-shadow: 0 40px 55px -17px rgb(255 255 255 / 20%); */
+        border-radius: var(--border-radius-8);
+    }
+
+    .movie-stills {
+        position: relative;
     }
 
     .movie-stills-section .hall-screen img {
@@ -467,26 +476,14 @@
         height: 100%;
         object-fit: cover;
         object-position: center center;
+        border-radius: var(--border-radius-8);
     }
 
     .movie-stills-carousel {
-        position: relative;
-        overflow: hidden;
-    }
-
-    .movie-stills-carousel .img-wrap {
-        width: 196px;
-        height: 88px;
-        margin-left: 16px;
-        margin-right: 16px;
-    }
-
-    .movie-stills-carousel .img-wrap img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 50% 50%;
-        border-radius: var(--border-radius-4);
+        position: absolute;
+        bottom: 0;
+        overflow: hidden;
     }
 
     .movie-stills-carousel .carousel-wrap {
@@ -498,15 +495,14 @@
     }
 
     .movie-stills-carousel .carousel-wrap .img-wrap {
-        width: 200px;
-        height: 70px;
-        margin-left: 16px;
-        margin-right: 16px;
+        width: 218px;
+        height: 122px;
         display: flex;
         justify-content: space-between;
         transform: translateX(0px);
+        border-radius: var(--border-radius-4);
         transition: .4s;
-        margin-top: 28px;
+        margin: 16px 8px 14px 8px;
     }
 
     .movie-stills-carousel .carousel-wrap .img-wrap img {
@@ -520,8 +516,8 @@
 
     .movie-stills-section .movie {
         aspect-ratio: 16 / 9;
-        background: var(--bg-color);
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+        background: rgba(18,18,18,0.5);
+        /* background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
             linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
             linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
             linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
@@ -530,16 +526,16 @@
             linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
             linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
             linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
-            linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+            linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)); */
 
         background-repeat: no-repeat;
-        background-position:
+        /* background-position:
             8% 5%, 18.5% 5%, 29% 5%, 39.5% 5%, 50% 5%, 60.5% 5%, 71% 5%, 81.5% 5%, 92% 5%,
             8% 92%, 18.5% 92%, 29% 92%, 39.5% 92%, 50% 92%, 60.5% 92%, 71% 92%, 81.5% 92%, 92% 92%;
 
         background-size:
             6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%,
-            6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%;
+            6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%, 6% 8%; */
     }
 
     .movie-stills-section .movie-frame {
@@ -571,15 +567,15 @@
     .movie-stills-section .next-btn {
         right: 0px;
         justify-content: flex-end;
-        padding-left: 120px;
-        padding-right: 40px;
-        background-image: linear-gradient(to right, rgba(18, 18, 18, 0), rgba(18, 18, 18, 1), rgba(18, 18, 18, 1));
+        padding-left: 96px;
+        padding-right: 16px;
+        background-image: linear-gradient(to right, rgba(18, 18, 18, 0), rgba(18, 18, 18, 1));
     }
 
     .movie-stills-section .prev-btn {
         left: 0px;
-        padding-left: 40px;
-        padding-right: 120px;
+        padding-left: 16px;
+        padding-right: 96px;
         background-image: linear-gradient(to right, rgba(18, 18, 18, 1), rgba(18, 18, 18, 0));
     }
 
@@ -753,6 +749,10 @@
             padding: 0;
         }
 
+        .movie-detail-section .description-title {
+            margin-bottom: 8px;
+        }
+
         .movie-detail-section .title-tc {
             margin-bottom: 4px;
             font-size: 34px;
@@ -781,7 +781,7 @@
             border-radius: var(--border-radius-50);
             padding: 6px 20px;
             margin-right: 16px;
-            margin-bottom: 32px;
+            margin-bottom: 0;
         }
 
         .articles-md li:nth-child(even) {
@@ -810,6 +810,10 @@
             background-color: var(--bg-color);
         }
 
+        .fixed-icon-ticket {
+            display: flex;
+        }
+
         .movie-detail-section .cat-tags .cat-tag {
             font-size: 16px;
             background-color: var(--card-color);
@@ -827,14 +831,10 @@
             display: flex;
         }
 
-        .movie-detail-section button span {
-            line-height: 110%;
-        }
-
         .movie-detail-section {
             margin-top: 200px;
         }
-
+       
         .movie-detail-section .movie-poster .img-wrap img {
             width: 110px;
             height: 156px;
@@ -1006,6 +1006,48 @@
             transform: translateX(-266px);
             transition: .4s;
         } */
+
+        /* movie stills */
+        .movie-stills-carousel {
+            position: unset;
+            overflow: auto;
+        }
+
+        .movie-stills-carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .movie-stills-section .movie-stills {
+            margin: 0;
+        }
+
+        .movie-stills-carousel .carousel-wrap {
+            width: 3040px;
+            display: flex;
+            justify-content: space-between;
+            transform: translateX(0px);
+            transition: .4s;
+        }
+
+        .movie-stills-carousel .carousel-wrap .img-wrap {
+            width: 288px;
+            height: 162px;
+            display: flex;
+            overflow: auto;
+        }
+
+        .movie-stills-carousel .carousel-wrap .img-wrap {
+            width: 288px;
+            height: 162px;
+            display: flex;
+            margin: 0;
+        }
+
+        .movie-stills-carousel .carousel-wrap .img-wrap {
+            filter: grayscale(0)
+        }
+
+        
     }
 </style>
 
@@ -1235,7 +1277,6 @@
                         </a>
                     </div>
                 </div>
-
 
                 <div class="row articles-1920 d-none d-xl-flex">
                     <div class="col-xl-6">
@@ -1652,16 +1693,16 @@
             </div>
 
             <div class="container-fluid">
-                <div class="row mb-4">
+                <div class="row">
                     <div class="wrap">
                         <div class="next-btn">
                             <div class="img-wrap">
-                                <img src="images/icon_arrow_right.svg" alt="">
+                                <img src="images/icon_arrow_right_gradient.svg" alt="">
                             </div>
                         </div>
                         <div class="prev-btn">
                             <div class="img-wrap">
-                                <img src="images/icon_arrow_left.svg" alt="">
+                                <img src="images/icon_arrow_left_gradient.svg" alt="">
                             </div>
                         </div>
                         <div class="carousel-wrap">
@@ -1814,68 +1855,104 @@
         <section class="movie-stills-section g-section-mb">
             <div class="container">
                 <div class="row subtitle g-subtitle-mb">
-                    <div class="col-12">
+                    <div class="mycol-12">
                         <div class="d-flex">
                             <div class="red-line my-auto"></div>
                             <span class="section-header-b mr-3">電影劇照</span>
-                            <span class="sub-title-r my-auto">共8張</span>
+                            <span class="sub-title-r my-auto">共10張</span>
                         </div>
                     </div>
                 </div>
-
-                <div class="row movie-stills">
+                
+                <!-- < 1920 -->
+                <div class="row movie-stills d-none d-xs-none d-xl-flex">
                     <div class="hall-screen">
-                        <img src="images/detail_page/movie_stills/movie_still_img2.jpg" alt="">
+                        <img src="images/detail_page/movie_stills/movie_stills_img2.jpg" alt="">
+                    </div>
+
+                    <div class="movie-stills-carousel">
+                        <div class="next-btn">
+                            <div class="img-wrap">
+                                <img src="images/icon_arrow_right_gradient.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="prev-btn">
+                            <div class="img-wrap">
+                                <img src="images/icon_arrow_left_gradient.svg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="carousel-wrap d-flex justify-content-between list-unstyled flex-nowrap">
+                            <li class="movie">
+                                <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img1.jpg"></div>
+                            </li>
+                            <li class="movie">
+                                <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img2.jpg"></div>
+                            </li>
+                            <li class="movie">
+                                <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img3.jpg"></div>
+                            </li>
+                            <li class="movie">
+                                <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img4.jpg"></div>
+                            </li>
+                            <li class="movie">
+                                <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img5.jpg"></div>
+                            </li>
+                            <li class="movie">
+                                <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img6.jpg"></div>
+                            </li>
+                            <li class="movie">
+                                <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img7.jpg"></div>
+                            </li>
+                            <li class="movie">
+                                <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img8.jpg"></div>
+                            </li>
+                            <li class="movie">
+                                <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img9.jpg"></div>
+                            </li>
+                            <li class="movie">
+                                <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img10.jpg"></div>
+                            </li>
+                        </div>
                     </div>
                 </div>
-
-                <div class="row movie-stills-carousel">
-
-                    <div class="next-btn">
-                        <div class="img-wrap">
-                            <img src="images/icon_arrow_right.svg" alt="">
+                
+                <!-- < 418 -->
+                <div class="row movie-stills d-flex d-xs-flex d-sm-none d-none">
+                    <div class="movie-stills-carousel">
+                        <div class="carousel-wrap d-flex justify-content-between list-unstyled flex-nowrap">
+                            <li class="movie">
+                                <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img1.jpg"></div>
+                            </li>
+                            <li class="movie">
+                                <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img2.jpg"></div>
+                            </li>
+                            <li class="movie">
+                                <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img3.jpg"></div>
+                            </li>
+                            <li class="movie">
+                                <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img4.jpg"></div>
+                            </li>
+                            <li class="movie">
+                                <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img5.jpg"></div>
+                            </li>
+                            <li class="movie">
+                                <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img6.jpg"></div>
+                            </li>
+                            <li class="movie">
+                                <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img7.jpg"></div>
+                            </li>
+                            <li class="movie">
+                                <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img8.jpg"></div>
+                            </li>
+                            <li class="movie">
+                                <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img9.jpg"></div>
+                            </li>
+                            <li class="movie">
+                                <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img10.jpg"></div>
+                            </li>
                         </div>
                     </div>
-                    <div class="prev-btn">
-                        <div class="img-wrap">
-                            <img src="images/icon_arrow_left.svg" alt="">
-                        </div>
-                    </div>
-
-                    <div class="carousel-wrap d-flex justify-content-between list-unstyled flex-nowrap">
-                        <li class="movie">
-                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img1.jpg"></div>
-                        </li>
-                        <li class="movie">
-                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img2.jpg"></div>
-                        </li>
-                        <li class="movie">
-                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img3.jpg"></div>
-                        </li>
-                        <li class="movie">
-                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img4.jpg"></div>
-                        </li>
-                        <li class="movie">
-                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img5.jpg"></div>
-                        </li>
-                        <li class="movie">
-                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img6.jpg"></div>
-                        </li>
-                        <li class="movie">
-                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img7.jpg"></div>
-                        </li>
-                        <li class="movie">
-                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img8.jpg"></div>
-                        </li>
-                        <li class="movie">
-                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img9.jpg"></div>
-                        </li>
-                        <li class="movie">
-                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_still_img10.jpg"></div>
-                        </li>
-                    </div>
-
-
                 </div>
             </div>
         </section>
@@ -1887,7 +1964,7 @@
 
     <script>
         // ----------actors list carousel----------
-        let nowIndex = $(this).index() + 1;
+        let nowIndex = $(this).index() + 2;
 
         $('.actors-list-section .prev-btn').click(function() {
 
@@ -1928,12 +2005,6 @@
 
                 // Change image
                 $('.movie-stills .hall-screen img').attr('src', imgSrc);
-            });
-
-            $(".movie-stills-carousel .carousel-wrap li img").hover(function() {
-                $(this).css("filter", "none").css('transition', '.4s');
-            }, function() {
-                $(this).css("filter", "grayscale(1)").css('transition', '.4s');
             });
         });
 
@@ -1980,14 +2051,14 @@
         })
 
         // -------------------- icon ticket appear  --------------------
-        $(window).scroll(function() {
+        // $(window).scroll(function() {
 
-            if ($(window).scrollTop() > 600) {
-                $('.fixed-icon-ticket').css('opacity', '1');
-            } else {
-                $('.fixed-icon-ticket').css('opacity', '0');
-            };
-        });
+        //     if ($(window).scrollTop() > 600) {
+        //         $('.fixed-icon-ticket').css('opacity', '1');
+        //     } else {
+        //         $('.fixed-icon-ticket').css('opacity', '0');
+        //     };
+        // });
     </script>
     <!-- <script src="js/detail-page.js"></script> -->
 </body>

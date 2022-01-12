@@ -220,7 +220,7 @@
 
     .hero .dropdown-menu.show {
         width: 176px;
-        height: 256px;
+        height: 316px;
         background-color: rgba(18,18,18,0.75);
         margin-bottom: 24px;
         padding: 20px;
@@ -313,13 +313,13 @@
         right: 0px;
         justify-content: flex-end;
         padding-left: 40px;
-        padding-right: 32px;
+        padding-right: 20px;
         background-image: linear-gradient(to right, rgba(18, 18, 18, 0), rgba(18, 18, 18, 1));
     }
 
     .ranking-section .prev-btn {
         left: 0px;
-        padding-left: 32px;
+        padding-left: 20px;
         padding-right: 40px;
         background-image: linear-gradient(to right, rgba(18, 18, 18, 1), rgba(18, 18, 18, 0));
     }
@@ -969,7 +969,7 @@
         <section class="ranking-section g-section-mb">
             <div class="container">
 
-                <div class="row subtitle g-subtitle-mb">
+                <div class="row subtitle">
                     <div class="mycol-6">
                         <div class="d-flex">
                             <div class="red-line my-auto"></div>
@@ -992,12 +992,12 @@
                     <div class="wrap">
                         <div class="next-btn">
                             <div class="img-wrap">
-                                <img src="images/icon_arrow_right.svg" alt="">
+                                <img src="images/icon_arrow_right_gradient.svg" alt="">
                             </div>
                         </div>
                         <div class="prev-btn">
                             <div class="img-wrap">
-                                <img src="images/icon_arrow_left.svg" alt="">
+                                <img src="images/icon_arrow_left_gradient.svg" alt="">
                             </div>
                         </div>
                         <div class="carousel-wrap">
@@ -1009,12 +1009,12 @@
                                     <div class="rank-hover-content1">
                                         <div class="d-flex">
                                             <div class="arrow-wrap">
-                                                <img src="images/rise_green.svg" alt="">
+                                                <img src="images/equal_arrow.svg" alt="">
                                             </div>
                                             <div class="rank-num">01</div>
                                             <div class="content-r">
                                                 <p class="section-header-b"><span>永恆族</span></p>
-                                                <p class="en-title">Treat or trick</p>
+                                                <p class="en-title">Eternals</p>
                                                 <div class="rating">
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
@@ -1076,7 +1076,7 @@
                                     <div class="rank-hover-content2">
                                         <div class="d-flex">
                                             <div class="arrow-wrap">
-                                                <img src="images/rise_green.svg" alt="">
+                                                <img src="images/rise_arrow.svg" alt="">
                                             </div>
                                             <div class="rank-num">02</div>
                                             <div class="content-r">
@@ -1122,7 +1122,7 @@
                                     <div class="rank-hover-content3">
                                         <div class="d-flex">
                                             <div class="arrow-wrap">
-                                                <img src="images/rise_green.svg" alt="">
+                                                <img src="images/drop_arrow.svg" alt="">
                                             </div>
                                             <div class="rank-num">03</div>
                                             <div class="content-r">
@@ -1168,7 +1168,7 @@
                                     <div class="rank-hover-content4">
                                         <div class="d-flex">
                                             <div class="arrow-wrap">
-                                                <img src="images/rise_green.svg" alt="">
+                                                <img src="images/rise_arrow.svg" alt="">
                                             </div>
                                             <div class="rank-num">04</div>
                                             <div class="content-r">
@@ -1214,7 +1214,7 @@
                                     <div class="rank-hover-content5">
                                         <div class="d-flex">
                                             <div class="arrow-wrap">
-                                                <img src="images/rise_green.svg" alt="">
+                                                <img src="images/rise_arrow.svg" alt="">
                                             </div>
                                             <div class="rank-num">05</div>
                                             <div class="content-r">
@@ -1260,7 +1260,7 @@
                                     <div class="rank-hover-content6">
                                         <div class="d-flex">
                                             <div class="arrow-wrap">
-                                                <img src="images/rise_green.svg" alt="">
+                                                <img src="images/drop_arrow.svg" alt="">
                                             </div>
                                             <div class="rank-num">06</div>
                                             <div class="content-r">
@@ -1306,7 +1306,7 @@
                                     <div class="rank-hover-content7">
                                         <div class="d-flex">
                                             <div class="arrow-wrap">
-                                                <img src="images/rise_green.svg" alt="">
+                                                <img src="images/equal_arrow.svg" alt="">
                                             </div>
                                             <div class="rank-num">07</div>
                                             <div class="content-r">
@@ -1352,7 +1352,7 @@
                                     <div class="rank-hover-content8">
                                         <div class="d-flex">
                                             <div class="arrow-wrap">
-                                                <img src="images/rise_green.svg" alt="">
+                                                <img src="images/rise_arrow.svg" alt="">
                                             </div>
                                             <div class="rank-num">08</div>
                                             <div class="content-r">
@@ -1398,7 +1398,7 @@
                                     <div class="rank-hover-content9">
                                         <div class="d-flex">
                                             <div class="arrow-wrap">
-                                                <img src="images/rise_green.svg" alt="">
+                                                <img src="images/drop_arrow.svg" alt="">
                                             </div>
                                             <div class="rank-num">09</div>
                                             <div class="content-r">
@@ -1445,7 +1445,7 @@
                                     <div class="rank-hover-content10">
                                         <div class="d-flex">
                                             <div class="arrow-wrap">
-                                                <img src="images/rise_green.svg" alt="">
+                                                <img src="images/rise_arrow.svg" alt="">
                                             </div>
                                             <div class="rank-num">10</div>
                                             <div class="content-r">
@@ -1493,11 +1493,11 @@
         <section class="forum-cards-section g-section-mb">
             <div class="container d-none d-xl-block">
                 <div class="row subtitle g-subtitle-mb">
-                    <div class="mycol-6 d-flex">
+                    <div class="col-6 d-flex">
                         <div class="red-line my-auto"></div>
                         <span class="section-header-b">精選討論區</span>
                     </div>
-                    <div class="mycol-6 d-flex justify-content-end align-items-end">
+                    <div class="col-6 d-flex justify-content-end align-items-end">
                         <a href="#">
                             <div class="d-flex justify-content-end align-items-end">
                                 <div class="sub-title-r mt-2">前往討論區</div>

@@ -368,13 +368,13 @@
                 
                 <!-- --------------------display 小於 1200-------------------- -->
                 <div class="row d-block d-xl-none">
-                    <div class="mycol-12">
+                    <div class="col-12">
                         <div class="forum-info-title">
                             <div class="main-header-b">影迷討論區</div>
                             <p class="sub-title-r">本討論區提供電影影評、心得或上映情報之相關分享，或國內外影展、電影獎項、推薦片單等話題討論。</p>
                         </div>
                     </div>
-                    <div class="mycol-12">
+                    <div class="col-12">
                         <div class="forum-info-board">
                             <div class="board-title">
                                 <div class="sub-title-m">討論區規定</div>
@@ -400,7 +400,7 @@
         <section class="forum-cards-section g-section-mb">
             <div class="container d-none d-xl-block">
                 <div class="row subtitle g-subtitle-mb">
-                    <div class="mycol-12">
+                    <div class="col-12">
                         <div class="d-flex">
                             <div class="red-line"></div>
                             <span class="section-header-b">精選討論區</span>
@@ -546,7 +546,7 @@
             <!-- --------------------display 小於 1200-------------------- -->
             <div class="container d-sm-block d-xl-none">
                 <div class="row subtitle g-subtitle-mb">
-                    <div class="mycol-12">
+                    <div class="col-12">
                         <div class="d-flex">
                             <div class="red-line"></div>
                             <span class="section-header-b">精選討論區</span>
@@ -673,7 +673,7 @@
         <section class="forum-cat-section g-section-mb">
             <div class="container">
                 <div class="row subtitle g-subtitle-mb">
-                    <div class="mycol-12">
+                    <div class="col-12">
                         <div class="d-flex">
                             <div class="red-line"></div>
                             <span class="section-header-b my-auto">分類討論區</span>
