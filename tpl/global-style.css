@@ -86,6 +86,10 @@ p { line-height: var(--line-height-160); }
     color: white;
 }
 
+.btn, .btn:focus {
+    box-shadow: none;
+}  
+
 .btn-brand {
     color: #fff;
     transition: .4s ease-in-out;
@@ -532,6 +536,10 @@ button .img-wrap img {
 }
 
 .movinon-navbar .img-wrap2 a {
+    padding-bottom: 0px;
+}
+
+.movinon-navbar .img-wrap2 .dropdown.show {
     padding-bottom: 0px;
 }
 

@@ -66,10 +66,15 @@
                         </a>
                         <?php } ?>
 
-                        <!-- <div class="divide-line"></div> -->
+                        
                         <?php if (isset($_SESSION['name'])) { ?>
-                            <a href="">會員中心</a>
-                            <a type="button" class="btn btn-outline-light" href="#" id="logout">登出</a>
+                            <div class="mb-3">
+                                <a href="">會員中心</a>
+                            </div>
+                            <div class="divide-line"></div>
+                            <div class="logout">
+                                <a type="button" class="mt-3" href="#" id="logout">登出</a>
+                            </div>
                         <?php } ?>
 
                     </div>
@@ -121,10 +126,16 @@
                                     <label for="inputPassword4" class="form-label">密碼</label>
                                     <input type="password" class="form-control" id="pwd" placeholder="請輸入密碼">
                                 </div>
-                                <div class="col-md-6">
+                                <!-- <div class="col-md-6">
                                     <label for="inputEmail4" class="form-label">姓名</label>
                                     <input type="text" class="form-control" id="name" placeholder="請輸入姓名">
+                                </div> -->
+
+                                <div class="col-md-6">
+                                    <label for="inputEmail4" class="form-label">姓名</label>
+                                    <input type="text" class="form-control" id="name" placeholder="請填寫生日">
                                 </div>
+
                                 <div class="col-md-6">
                                     <label for="inputPassword4" class="form-label">生日</label>
                                     <input type="text" class="form-control" id="birthdate" placeholder="請填寫生日">

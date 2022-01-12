@@ -3,28 +3,14 @@
 <?php session_start() ?>
 
 <style>
-
     <?php require_once './css/bootstrap-switch.css' ?>
-
-    body {
-        background-color: var(--bg-color);
-        width: 100%;
-    }
-
-    .sub-title-r {
-        line-height: 170%;
-    }
-
-    .btn, .btn:focus {
-        box-shadow: none;
-    }  
 
     /* ----------------------------hero & canvas---------------------------- */
     .hero {
         width: 100%;
         padding: 0px;
         position: relative;
-        display:flex;
+        display: flex;
         justify-content: center;
 
         /* 嘗試調整 @media 的固定寬 */
@@ -32,23 +18,25 @@
         max-width: 1920px;
     }
 
-    .hero .bg {
-        position: relative;
-        width: 100%;
-        height: 1080px;
-        background-image: url("images/main_page/hero-img1.jpg") ;
-        background-repeat: no-repeat;
-        background-size:cover ;
-    }
-
     canvas {
         pointer-events: none;
         position: absolute;
         /* width: 100%; */
-        height:100%;
+        height: 100%;
         top: 0;
         left: 0;
     }
+
+    .hero .bg {
+        position: relative;
+        width: 100%;
+        height: 1080px;
+        background-image: url("images/main_page/hero-img1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
 
     /* 輸入、功能 */
     .inputgroup {
@@ -56,47 +44,54 @@
         width: 100%;
         margin: 0 auto;
         bottom: 96px;
-        display: flex;   
+        display: flex;
         justify-content: center;
         align-items: center;
     }
-    
+
     /* 標籤選擇 */
     .hero .tag {
         padding: 8px 16px;
-        border-radius:50px;
+        border-radius: 50px;
     }
 
-    #tag_immortal{
+    #tag_immortal {
         letter-spacing: 0.05em;
-        color:#E4D965;
-        background-color:rgb(183,175,101,0.25);
+        color: #E4D965;
+        background-color: rgb(183, 175, 101, 0.25);
     }
 
     #tag_sao {
         letter-spacing: 0.05em;
-        color:#F53D3D;
-        background-color:rgb(141,31,31,0.25) ;
+        color: #F53D3D;
+        background-color: rgb(141, 31, 31, 0.25);
     }
 
     #tag_trick {
         letter-spacing: 0.05em;
-        color:#5E8FF1;
-        background-color:rgb(31,71,150,0.25) ;
+        color: #5E8FF1;
+        background-color: rgb(31, 71, 150, 0.25);
     }
 
-    #tag_mha{
+    #tag_mha {
         letter-spacing: 0.05em;
-        color:#5AC392;
-        background-color: rgb(71,125,100,0.25); 
+        color: #5AC392;
+        background-color: rgb(71, 125, 100, 0.25);
     }
 
-    #tag_soho{
+    #tag_soho {
         letter-spacing: 0.05em;
-        color:#FF6FBD;
-        background-color: rgb(255,111,189,0.25);
+        color: #FF6FBD;
+        background-color: rgb(255, 111, 189, 0.25);
     }
 
+    .hero .dropup .dropdown-menu.show {
+        width: 176px;
+        height: 256px;
+        background-color: rgba(18, 18, 18, 0.75);
+        margin-bottom: 24px;
+        padding: 20px;
+    }
 
     /* =================修改上啦式選單的背景圖片================= */
     .hero #dropdownMenuButton {
@@ -110,30 +105,21 @@
         margin-right: 12px;
         justify-content: space-between;
     }
-    
-    .hero a {  
+
+    .hero a {
         padding-bottom: 5px;
         line-height: 30px;
-        color:white;
+        color: white;
     }
 
     .hero .middle-bg {
-        /* width: 100%; */
-        background-color: rgba(18,18,18,0.9);
+        background-color: rgba(18, 18, 18, 0.9);
         border-radius: var(--border-radius-50);
         display: flex;
         padding: 12px 40px 12px 48px;
         margin: 0 24px;
         box-shadow: var(--box-shadow-black);
     }
-
-    /* .hero .middle-bg button {
-        background-color: rgba(18,18,18,0.9);
-        border-radius: var(--border-radius-50);
-        display: flex;
-        padding: 12px 40px 12px 48px;
-        margin: 0 24px;
-    } */
 
     /* 訊息欄 */
     /* ==========修改 padding========== */
@@ -143,23 +129,17 @@
         color: white;
         outline: none;
         padding: 8px 24px;
-        background: rgba(255,255,255,0.1);
+        background: rgba(255, 255, 255, 0.1);
         border: none;
         box-shadow: 0px 0px 24px #000000;
         border-radius: 50px;
         margin-right: 12px;
     }
 
-    .hero .inputgroup button.send,
-    .hero .inputgroup button.clear {
-        width: auto;
-        padding: 3px 19px 4px 20px;
-    }
-
-    .hero .inputgroup > button{
+    .hero .inputgroup>button {
         border: none;
         cursor: pointer;
-        color:white;
+        color: white;
         height: 30px;
         width: 64px;
         margin-right: 10px;
@@ -167,12 +147,18 @@
         background-color: rgb(0, 0, 0);
     }
 
-    .hero .inputgroup > button:hover{
+    .hero .inputgroup>button:hover {
         background-color: #F53D3D;
         box-shadow: 0px 0px 24px 4px rgba(245, 61, 61, 0.5);
         outline: none;
-    } 
+    }
 
+    .hero .inputgroup button.send,
+    .hero .inputgroup button.clear {
+        width: auto;
+        padding: 3px 19px 4px 20px;
+    }
+    
     .hero .send {
         vertical-align: middle;
         border: 1px solid transparent;
@@ -187,29 +173,31 @@
     }
 
     /* 修改 placeholder 的字體顏色 */
-    ::-webkit-input-placeholder { /* Edge */
-        color: rgba(255,255,255,0.25)
+    ::-webkit-input-placeholder {
+        /* Edge */
+        color: rgba(255, 255, 255, 0.25)
     }
 
-    :-ms-input-placeholder { /* Internet Explorer 10-11 */
-        color: rgba(255,255,255,0.25)
+    :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: rgba(255, 255, 255, 0.25)
     }
 
     ::placeholder {
-        color: rgba(255,255,255,0.25)
+        color: rgba(255, 255, 255, 0.25)
     }
 
     /* 背景更換 */
-    .colorDiv{
+    .hero .colorDiv {
         display: flex;
     }
 
-    .hero .inputgroup .colorDiv img{
+    .hero .inputgroup .colorDiv img {
         width: 80px;
         height: 40px;
     }
 
-    .hero .colorDiv .dropdown-menu{
+    .hero .colorDiv .dropdown-menu {
         right: 0;
         left: auto;
         padding: 5px;
@@ -218,39 +206,39 @@
         background: rgba(0, 0, 0, 0.5);
     }
 
-    .hero .dropdown-menu.show {
-        width: 176px;
-        height: 316px;
-        background-color: rgba(18,18,18,0.75);
-        margin-bottom: 24px;
-        padding: 20px;
-    }
-
     .hero .colorDiv .dropdown-menu li {
         display: inline-block;
     }
 
-    .hero .colorDiv .dropdown-menu li p{
+    .hero .colorDiv .dropdown-menu li p {
         line-height: 35px;
-        margin:0px 5px;
+        margin: 0px 5px;
     }
 
-    .hero .colorDiv .dropdown-menu li a{
+    .hero .colorDiv .dropdown-menu li a {
         padding: 3px !important;
     }
 
-    .hero .colorDiv .dropdown-menu li a image{
+    .hero .colorDiv .dropdown-menu li a image {
         width: 34px;
         height: 34px;
     }
 
+    .hero .colorDiv .dropdown-menu.show {
+        width: 176px;
+        height: 316px;
+        background-color: rgba(18, 18, 18, 0.75);
+        margin-bottom: 24px;
+        padding: 20px;
+    }
+    
     .hero .preview {
         width: 52px;
         height: 52px;
         border-radius: var(--border-radius-50-percent);
         background-size: cover;
         background-position: center center;
-        background-repeat: no-repeat; 
+        background-repeat: no-repeat;
         background-image: url(./images/main_page/hero-img1.jpg);
         box-shadow: var(--box-shadow-black);
     }
@@ -392,14 +380,19 @@
     .ranking-section .content-r p.section-header-b span {
         display: inline-block;
         padding-left: 100%;
-        -webkit-animation: marquee 6s linear infinite;    
+        -webkit-animation: marquee 6s linear infinite;
         animation: marquee 6s linear infinite;
     }
 
     /* Make it move */
     @keyframes marquee {
-        0%   { transform: translate(0, 0); }
-        100% { transform: translate(-100%, 0); }
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(-100%, 0);
+        }
     }
 
     .ranking-section .rank-hover-content1 p.section-header-b,
@@ -448,6 +441,7 @@
     .ranking-section .reputation {
         margin-top: 16px;
         margin-bottom: 128px;
+        line-height: 100%;
     }
 
     .ranking-section .rate {
@@ -456,8 +450,9 @@
     }
 
     .ranking-section .reputation .img-wrap1 {
-        height: 20px;
+        height: 22px;
         margin-right: 8px;
+        margin-bottom: 4px;
         opacity: var(--opacity-75);
     }
 
@@ -508,7 +503,7 @@
     .ranking-section .btn-description {
         text-align: center;
         padding: 8px 20px;
-        border: 1px solid rgba(255,255,255,0.75);
+        border: 1px solid rgba(255, 255, 255, 0.75);
         border-radius: var(--border-radius-4);
         box-shadow: var(--box-shadow-black);
         font-size: 0.875rem;
@@ -598,11 +593,25 @@
         margin-left: 8px;
     }
 
-    .com-1-count { background-color: #AE2B2C; }
-    .com-2-count { background-color: #16CFC4; }
-    .com-3-count { background-color: #FD8942; }
-    .com-4-count { background-color: #2B6714; }
-    .com-5-count { background-color: #B41127; }
+    .com-1-count {
+        background-color: #AE2B2C;
+    }
+
+    .com-2-count {
+        background-color: #16CFC4;
+    }
+
+    .com-3-count {
+        background-color: #FD8942;
+    }
+
+    .com-4-count {
+        background-color: #2B6714;
+    }
+
+    .com-5-count {
+        background-color: #B41127;
+    }
 
     .forum-cards-section .content .section-header-r {
         margin-bottom: 4px;
@@ -617,16 +626,21 @@
 
     /* ------------------------  小於 1920px  ------------------------*/
     @media screen and (max-width: 1920px) {
-        .row-d-1920 { display: flex; }
-        .row-d-418 { display: none; }
+        .row-d-1920 {
+            display: flex;
+        }
+
+        .row-d-418 {
+            display: none;
+        }
     }
 
     /* ------------------------  小於 1200px  ------------------------*/
     @media screen and (max-width: 1200px) {
 
         /* forum cards section */
-        .forum-cards-section .card-md .section-header-r { 
-            font-size: 20px; 
+        .forum-cards-section .card-md .section-header-r {
+            font-size: 20px;
             font-weight: 500;
             margin-bottom: 6px;
         }
@@ -647,8 +661,8 @@
     @media screen and (max-width: 768px) {
 
         /* 這裡強制將 .section-header-r 改為 字重500 */
-        .forum-cards-section .card-md .section-header-r { 
-            font-size: 20px; 
+        .forum-cards-section .card-md .section-header-r {
+            font-size: 20px;
             font-weight: 500;
             margin-bottom: 6px;
         }
@@ -661,13 +675,18 @@
 
     /* ------------------------  小於 418px  ------------------------*/
     @media screen and (max-width: 418px) {
-        
+
         canvas {
             top: -144px;
         }
 
-        .row-d-1920 { display: none; }
-        .row-d-418 { display: flex; }
+        .row-d-1920 {
+            display: none;
+        }
+
+        .row-d-418 {
+            display: flex;
+        }
 
         .hero .inputgroup {
             bottom: 24px;
@@ -684,7 +703,7 @@
             margin: 0;
             box-shadow: none;
         }
-        
+
         .hero .inputbar {
             width: 100%;
             height: 48px;
@@ -727,7 +746,7 @@
         .hero {
             padding: 0px;
             position: relative;
-            display:flex;
+            display: flex;
             justify-content: center;
 
             /* 嘗試調整 @media 的固定寬 */
@@ -740,7 +759,7 @@
             width: 100%;
             /* max-height: 812px; */
             max-height: 650px;
-            background-image: url("images/main_page/hero-img1_418.jpg") ;
+            background-image: url("images/main_page/hero-img1_418.jpg");
             background-repeat: no-repeat;
             background-size: contain;
         }
@@ -795,14 +814,14 @@
             display: none;
         }
 
-        .forum-cards-section .card-md .section-header-r { 
+        .forum-cards-section .card-md .section-header-r {
             font-weight: 400;
             margin-bottom: 4px;
             font-size: 16px;
         }
 
         /* 將預設的 .body1-b 改為 .body2-m  */
-        .forum-cards-section .card-md .body1-b { 
+        .forum-cards-section .card-md .body1-b {
             font-weight: 700;
             margin-bottom: 4px;
             font-size: 14px;
@@ -836,7 +855,7 @@
         }
     }
 </style>
-    
+
 <body>
 
     <!-- movinon-navbar -->
@@ -850,13 +869,13 @@
 
             <!-- ---------------canvas--------------- -->
             <canvas class="dm"></canvas>
-            
+
             <!-- ---------------inputgroup--------------- -->
             <div class="inputgroup row row-d-1920">
-    
+
                 <!-- 彈幕開關 -->
                 <input type="checkbox" name="my-checkbox" checked>
-                
+
                 <div class="middle-bg">
                     <!-- 標籤選單 -->
                     <div class="dropup col-xs-2 col-xs-offset-1">
@@ -865,32 +884,25 @@
                             電影標籤
                         </button>
                         <ul class="dropdown-menu tag-menu" aria-labelledby="dropdownMenu">
-                            <li class="mb-3"><a id=tag_immortal class="tag"  href="#">永恆族</a></li>
+                            <li class="mb-3"><a id=tag_immortal class="tag" href="#">永恆族</a></li>
                             <li class="mb-3"><a id=tag_sao class="tag" href="#">刀劍神域</a></li>
-                            <li class="mb-3"><a id=tag_trick class="tag"  href="#">詭扯</a></li>
+                            <li class="mb-3"><a id=tag_trick class="tag" href="#">詭扯</a></li>
                             <li class="mb-3"><a id=tag_mha class="tag" href="#">我的英雄學院</a></li>
-                            <li class="mb-3"><a id=tag_soho class="tag"  href="#">逃離夜蘇活</a></li>
+                            <li class="mb-3"><a id=tag_soho class="tag" href="#">逃離夜蘇活</a></li>
                         </ul>
                     </div>
-                    
+
                     <!-- 留言訊息欄 -->
                     <div>
-                        <input 
-                        class="inputbar " 
-                        name=txt 
-                        type="text" 
-                        value="" 
-                        maxlength="20"  
-                        placeholder="選擇電影標籤後才能發言喔 !">
+                        <input class="inputbar " name=txt type="text" value="" maxlength="20" placeholder="選擇電影標籤後才能發言喔 !">
                     </div>
-                    <button class="send btn-brand" disabled >送出</button>
+                    <button class="send btn-brand" disabled>送出</button>
                     <button class="clear btn-white-outline">清除</button>
                 </div>
 
                 <!-- 背景設定 -->
                 <div class="colorDiv dropup">
-                    <a id="colorDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                    href="javascript:;">
+                    <a id="colorDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="javascript:;">
                         <div class=preview></div>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="colorDropdownMenu">
@@ -899,7 +911,7 @@
                         <li><a class="canvas-preview" href="#"><img src="images/main_page/hero-img3.jpg"></a></li>
                         <li><a class="canvas-preview" href="#"><img src="images/main_page/hero-img4.jpg"></a></li>
                         <li><a class="canvas-preview" href="#"><img src="images/main_page/hero-img5.jpg"></a></li>
-                        
+
                         <li>
                             <p>點擊更換背景圖</p>
                         </li>
@@ -909,22 +921,21 @@
 
             <!-- ---------------inputgroup--------------- -->
             <div class="inputgroup row row-d-418">
-    
+
                 <!-- 彈幕開關 -->
                 <!-- <input type="checkbox" name="my-checkbox" checked> -->
-                 
+
                 <div class="middle-bg">
-                   
+
                     <!-- 背景設定 -->
                     <div class="colorDiv dropup d-418-row1 d-flex justify-content-end">
-                        <a id="colorDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                        href="javascript:;">
+                        <a id="colorDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="javascript:;">
                             <div class=preview></div>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="colorDropdownMenu">
                             <li><a class="canvas-preview" href="#"><img src="images/main_page/hero-img1.jpg"></a></li>
                             <li><a class="canvas-preview" href="#"><img src="images/main_page/eternals-bg-img-min.jpg"></a></li>
-                            
+
                             <li>
                                 <p>點擊更換背景圖</p>
                             </li>
@@ -932,35 +943,29 @@
                     </div>
 
                     <div class="d-418-row2 w-100">
-                         <!-- 標籤選單 -->
+                        <!-- 標籤選單 -->
                         <div class="dropup">
                             <!-- ==========修改 style="border: none;========== -->
                             <button class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border: none;">
                                 電影標籤
                             </button>
                             <ul class="dropdown-menu tag-menu" aria-labelledby="dropdownMenu">
-                                <li class="mb-3"><a id=tag_immortal class="tag"  href="#">永恆族</a></li>
+                                <li class="mb-3"><a id=tag_immortal class="tag" href="#">永恆族</a></li>
                                 <li class="mb-3"><a id=tag_sao class="tag" href="#">刀劍神域</a></li>
-                                <li class="mb-3"><a id=tag_trick class="tag"  href="#">詭扯</a></li>
+                                <li class="mb-3"><a id=tag_trick class="tag" href="#">詭扯</a></li>
                                 <li class="mb-3"><a id=tag_mha class="tag" href="#">我的英雄學院</a></li>
-                                <li class="mb-3"><a id=tag_soho class="tag"  href="#">逃離夜蘇活</a></li>
+                                <li class="mb-3"><a id=tag_soho class="tag" href="#">逃離夜蘇活</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <!-- 留言訊息欄 -->
                     <div class="d-418-row3">
-                        <input 
-                        class="inputbar " 
-                        name=txt 
-                        type="text" 
-                        value="" 
-                        maxlength="20"  
-                        placeholder="選擇電影標籤後才能發言喔 !">
+                        <input class="inputbar " name=txt type="text" value="" maxlength="20" placeholder="選擇電影標籤後才能發言喔 !">
                     </div>
-                        
+
                     <div class="d-flex w-100">
-                        <button class="send btn-brand" disabled >送出</button>
+                        <button class="send btn-brand" disabled>送出</button>
                     </div>
                 </div>
             </div>
@@ -1029,11 +1034,11 @@
                                             <div class="img-wrap1">
                                                 <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
                                             </div>
-                                            <span class="rate">53%</span>
+                                            <span class="rate">56%</span>
                                             <div class="img-wrap2">
                                                 <img src="./images/icon_IMDB_Logo.svg" alt="">
                                             </div>
-                                            <span class="rate">79%</span>
+                                            <span class="rate">6.8</span>
                                         </div>
 
                                         <div class="d-flex">
@@ -1067,7 +1072,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div>
                                 <div class="rank-num-418"><span class="roboto-condensed">02</span></div>
                                 <div class="img-wrap rank2">
@@ -1095,11 +1100,11 @@
                                             <div class="img-wrap1">
                                                 <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
                                             </div>
-                                            <span class="rate">53%</span>
+                                            <span class="rate">72%</span>
                                             <div class="img-wrap2">
                                                 <img src="./images/icon_IMDB_Logo.svg" alt="">
                                             </div>
-                                            <span class="rate">79%</span>
+                                            <span class="rate">8.7</span>
                                         </div>
 
                                         <div class="d-flex">
@@ -1113,7 +1118,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div>
                                 <div class="rank-num-418"><span class="roboto-condensed">03</span></div>
                                 <div class="img-wrap rank3">
@@ -1141,11 +1146,11 @@
                                             <div class="img-wrap1">
                                                 <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
                                             </div>
-                                            <span class="rate">53%</span>
+                                            <span class="rate">48%</span>
                                             <div class="img-wrap2">
                                                 <img src="./images/icon_IMDB_Logo.svg" alt="">
                                             </div>
-                                            <span class="rate">79%</span>
+                                            <span class="rate">7.0</span>
                                         </div>
 
                                         <div class="d-flex justify-content-between">
@@ -1187,11 +1192,11 @@
                                             <div class="img-wrap1">
                                                 <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
                                             </div>
-                                            <span class="rate">53%</span>
+                                            <span class="rate">90%</span>
                                             <div class="img-wrap2">
                                                 <img src="./images/icon_IMDB_Logo.svg" alt="">
                                             </div>
-                                            <span class="rate">79%</span>
+                                            <span class="rate">9.1</span>
                                         </div>
 
                                         <div class="d-flex">
@@ -1205,7 +1210,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div>
                                 <div class="rank-num-418"><span class="roboto-condensed">05</span></div>
                                 <div class="img-wrap rank5">
@@ -1233,11 +1238,11 @@
                                             <div class="img-wrap1">
                                                 <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
                                             </div>
-                                            <span class="rate">53%</span>
+                                            <span class="rate">67%</span>
                                             <div class="img-wrap2">
                                                 <img src="./images/icon_IMDB_Logo.svg" alt="">
                                             </div>
-                                            <span class="rate">79%</span>
+                                            <span class="rate">8.2</span>
                                         </div>
 
                                         <div class="d-flex">
@@ -1251,7 +1256,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div>
                                 <div class="rank-num-418"><span class="roboto-condensed">06</span></div>
                                 <div class="img-wrap rank6">
@@ -1279,11 +1284,11 @@
                                             <div class="img-wrap1">
                                                 <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
                                             </div>
-                                            <span class="rate">53%</span>
+                                            <span class="rate">59%</span>
                                             <div class="img-wrap2">
                                                 <img src="./images/icon_IMDB_Logo.svg" alt="">
                                             </div>
-                                            <span class="rate">79%</span>
+                                            <span class="rate">7.4</span>
                                         </div>
 
                                         <div class="d-flex">
@@ -1329,7 +1334,7 @@
                                             <div class="img-wrap2">
                                                 <img src="./images/icon_IMDB_Logo.svg" alt="">
                                             </div>
-                                            <span class="rate">90%</span>
+                                            <span class="rate">8.4</span>
                                         </div>
 
                                         <div class="d-flex">
@@ -1343,7 +1348,7 @@
                                     </div>
                                 </div>
                             </div>
-                           
+
                             <div>
                                 <div class="rank-num-418"><span class="roboto-condensed">08</span></div>
                                 <div class="img-wrap rank8">
@@ -1375,7 +1380,7 @@
                                             <div class="img-wrap2">
                                                 <img src="./images/icon_IMDB_Logo.svg" alt="">
                                             </div>
-                                            <span class="rate">85%</span>
+                                            <span class="rate">8.0</span>
                                         </div>
 
                                         <div class="d-flex">
@@ -1389,7 +1394,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div>
                                 <div class="rank-num-418"><span class="roboto-condensed">09</span></div>
                                 <div class="img-wrap rank9">
@@ -1417,11 +1422,11 @@
                                             <div class="img-wrap1">
                                                 <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
                                             </div>
-                                            <span class="rate">53%</span>
+                                            <span class="rate">88%</span>
                                             <div class="img-wrap2">
                                                 <img src="./images/icon_IMDB_Logo.svg" alt="">
                                             </div>
-                                            <span class="rate">79%</span>
+                                            <span class="rate">7.8</span>
                                         </div>
 
                                         <div class="d-flex">
@@ -1435,7 +1440,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div>
                                 <!-- rank10  -->
                                 <div class="rank-num-418"><span class="roboto-condensed">10</span></div>
@@ -1464,11 +1469,11 @@
                                             <div class="img-wrap1">
                                                 <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
                                             </div>
-                                            <span class="rate">53%</span>
+                                            <span class="rate">82%</span>
                                             <div class="img-wrap2">
                                                 <img src="./images/icon_IMDB_Logo.svg" alt="">
                                             </div>
-                                            <span class="rate">79%</span>
+                                            <span class="rate">6.2</span>
                                         </div>
 
                                         <div class="d-flex">
@@ -1487,7 +1492,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- -----------forum cards section----------- -->
         <section class="forum-cards-section g-section-mb">
             <div class="container d-none d-xl-block">
@@ -1546,7 +1551,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- -------------------中------------------- -->
                 <div class="row row2">
                     <div class="col-6">
@@ -1559,7 +1564,7 @@
                                 </div>
                             </div>
                         </a>
-                        
+
                     </div>
                     <div class="col-6">
                         <a href="#">
@@ -1593,7 +1598,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- forum cards section -->
                 <div class="row">
                     <div class="mycol-6 card-md">
@@ -1617,7 +1622,7 @@
                                 </div>
                             </div>
                         </a>
-                    </div> 
+                    </div>
                     <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
@@ -1628,7 +1633,7 @@
                                 </div>
                             </div>
                         </a>
-                    </div> 
+                    </div>
                     <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
@@ -1639,7 +1644,7 @@
                                 </div>
                             </div>
                         </a>
-                    </div> 
+                    </div>
                     <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
@@ -1661,7 +1666,7 @@
                             </div>
                         </a>
                     </div>
-                </div> 
+                </div>
             </div>
         </section>
     </main>
@@ -1670,7 +1675,7 @@
     <?php require_once './tpl/movinon-footer.php' ?>
 
     <?php require_once './tpl/foot.php' ?>
-    
+
     <!-- bootstrap switch js -->
     <script src='https://files.lovelong.cn/common/ui/bootstrap/bootstrap-switch/js/bootstrap-switch.min.js'></script>
 
@@ -1683,9 +1688,7 @@
     <!-- <script src="js/datepicker.js"></script> -->
 
     <script>
-
         <?php require_once './js/datepicker.js' ?>
-
     </script>
 </body>
 
