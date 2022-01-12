@@ -589,9 +589,8 @@
                                             $strStyleDate =  "style='border:1px solid #F53D3D ; opacity:1 ; box-shadow:0 0 16px 4px rgba(245, 61, 61, 0.25)'";
                                         }
                                     ?>
-                                        <a href="new-booking-time-page.php?movie_id=<?= $_GET['movie_id'] ?>&sub_date_id=<?= $obj1['date_id'] ?>&sub_division_id=<?= $_GET['sub_division_id'] ?>#abc" class="sel">
-                                            <!-- 1/7更改:增加hover用class:sel 定位id:abc-->
-                                            <div class="day selected" id="abc" <?= $strStyleDate ?>>
+                                        <a href="new-booking-time-page.php?movie_id=<?= $_GET['movie_id'] ?>&sub_date_id=<?= $obj1['date_id'] ?>&sub_division_id=<?= $_GET['sub_division_id'] ?>" class="sel">
+                                            <div class="day selected" <?= $strStyleDate ?>>
                                                 <span>星期<?= $obj1['week'] ?></span>
                                                 <span class="sub-title-r">1月</span>
                                                 <span class="roboto-condensed"><?= $obj1['date'] ?></span>
@@ -626,9 +625,9 @@
                                             $strStyleDiv =  "style='border:1px solid #F53D3D ; opacity:1 ; box-shadow:0 0 16px 4px rgba(245, 61, 61, 0.25)'";
                                         }
                                     ?>
-                                        <a href="new-booking-time-page.php?movie_id=<?= $_GET['movie_id'] ?>&sub_date_id=<?= $_GET['sub_date_id'] ?>&sub_division_id=<?= $obj2['division_id'] ?>#def" class="division" id="divisiondv1">
+                                        <a href="new-booking-time-page.php?movie_id=<?= $_GET['movie_id'] ?>&sub_date_id=<?= $_GET['sub_date_id'] ?>&sub_division_id=<?= $obj2['division_id'] ?>" class="division" id="divisiondv1">
                                             <!-- 1/7更改:增加hover用class:div-sel 定位id:def-->
-                                            <span class="division selected div-sel" id="def" <?= $strStyleDiv ?>><?= $obj2['division'] ?></span>
+                                            <span class="division selected div-sel" <?= $strStyleDiv ?>><?= $obj2['division'] ?></span>
                                         </a>
                                     <?php } ?>
                                 </div>

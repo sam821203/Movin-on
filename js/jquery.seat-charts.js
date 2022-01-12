@@ -438,7 +438,7 @@
 			$.each(legend.items, function(index, item) {
 				$ul.append(
 					$('<li></li>')
-						.addClass('seatCharts-legendItem')
+						.addClass('seatCharts-legendItem my-margin')
 						.append(
 							$('<div></div>')
 								//merge user defined classes with our standard ones

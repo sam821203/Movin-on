@@ -2,13 +2,32 @@
 <?php session_start(); ?>
 <?php require_once './tpl/head.php' ?>
 
+<link rel="stylesheet" type="text/css" href="css/jquery.seat-charts.css">
+
 <style>
-    <?php require_once './tpl/global-style.css' ?>body {
+    <?php require_once './tpl/global-style.css' ?>
+    
+    body {
         width: 100%;
         background-position: top center;
         background-repeat: no-repeat;
         background-size: contain;
         background-color: var(--bg-color);
+    }
+
+    input#Numseats {
+        width: 88px;
+        height: 32px;
+        margin-left: 8px;
+        border: 4px 0 0 4px;
+        border-color: rgba(255,255,255,0.5);
+        border-radius: var(--border-radius-4);
+        background-color: rgba(255,255,255,0.25);
+    }
+
+    button#takeData {
+        width: 56px;
+        border-radius: 0 4px 4px 0;
     }
 
     /* -----------------movie info section----------------- */
@@ -91,7 +110,8 @@
 
     /* -----------------seat dataviz section----------------- */
     .seat-dataviz {
-        margin-bottom: 56px;
+        width: 100%;
+        margin-bottom: 40px;
     }
 
     .seat-dataviz .selected,
@@ -318,7 +338,6 @@
         height: 25px;
         width: 25px;
         line-height: 25px;
-
     }
 
     div.seatCharts-seat {
@@ -367,12 +386,6 @@
         float: left;
     }
 
-    div.seatCharts-legend {
-        padding-left: 0px;
-        position: absolute;
-        bottom: 16px;
-    }
-
     ul.seatCharts-legendList {
         display: flex;
         padding-left: 0px;
@@ -386,8 +399,6 @@
     div.seatCharts-space {
         background-color: rgba(0, 0, 0, 0);
     }
-
-
 
     #selected-seats {
         list-style: none;
@@ -476,28 +487,23 @@
 
                     <div class="booking-seat-section g-section-mb">
                         <div class="container">
-                            <div class="row seat-dataviz">
-                                <div class="mycol-9 d-flex justify-content-between">
-                                    <div class="mycol-1"></div>
-                                    <div class="mycol-12 d-flex justify-content-between">
-
-                                        <!-- 座位狀態 -->
-                                        <div class="d-flex" id="legend"></div>
-
-                                        <div class="d-flex align-items-center">
-                                            <div>剩餘訂票時間：<span class="time-left" id="count-down-timer">02:53</span></div>
-                                        </div>
-                                    </div>
-                                    <!-- <div class="col-1"></div> -->
-                                </div>
-                                <!-- <div class="col-3"></div> -->
-                            </div>
-
-                            <div class=" col-12 d-flex">
+                            <div class="mycol-12 d-flex">
                                 選擇座位數量: <input type="number" id="Numseats" required min="1" max="10">
                                 <br /><br />
-                                <button id="takeData">請選擇座位數量</button>
+                                <button id="takeData" class="btn-white-outline">確定</button>
                             </div>
+
+                            <div class="row seat-dataviz w-100">
+                                <div class="mycol-9 d-flex justify-content-between align-items-center w-100">
+                                    <!-- 座位狀態 -->
+                                    <div class="d-flex" id="legend"></div>
+                                    <div class="d-flex align-items-center">
+                                        <div>剩餘訂票時間：<span class="time-left" id="count-down-timer">02:53</span></div>
+                                    </div>
+                                </div>
+                                <div class="mycol-3"></div>
+                            </div>
+
                             <p id="notification"></p>
                             <div class="row screen">
                                 <div class="col-9">
@@ -550,7 +556,7 @@
 
 
                                 <div class="btn-area">
-                                    <a class="btn btn-outline-light" href="#">
+                                    <a class="btn btn-outline-light" href="#" id="resetSeat">
                                         <span>重新選擇</span>
                                     </a>
 
@@ -573,10 +579,16 @@
             <?php require_once './tpl/foot.php' ?>
 
             <script>
-                setInterval(function() {
-                    alert("選位已逾時，請重新選擇。")
+                // setInterval(function() {
+                //     alert("選位已逾時，請重新選擇。")
+                //     location.reload();
+                // }, 300000);
+
+                $('a#resetSeat').click(function() {
                     location.reload();
-                }, 360000);
+                    unset($_SESSION['seat']);
+                });
+
                 $('a#headtopay').click(function(event) {
                     // event.preventDefault();
                     // let x = $('#total').text();
@@ -586,6 +598,16 @@
                     //送出 post 請求，加入細節
                     let item = $('#selected-seats').children('.sentSeat').length;
                     // console.log(item);
+
+                    let seatCount = $('input#Numseats').val();
+                    if (item != seatCount) {
+                        event.preventDefault();
+                        alert('請選擇正確座位數量');
+                        unset($_SESSION['seat']);
+                        // location.reload();
+                        // console.log(seatCount);
+                        // console.log(item);
+                    }; 
 
                     const selectSeatsArray = [];
                     $('#selected-seats').find('p').each((i, v) => {
@@ -649,7 +671,7 @@
                 }
 
                 window.onload = function() {
-                    let time_minutes = 6; // Value in minutes
+                    let time_minutes = 5; // Value in minutes
                     let time_seconds = 00; // Value in seconds
 
                     let duration = time_minutes * 60 + time_seconds;
@@ -709,7 +731,7 @@
                                 // console.log('hi');
                                 if (this.status() == 'available') {
                                     const nrow = this.settings.row + 1;
-                                    const ncolumn = this.settings.column + 1;
+                                    const ncolumn = this.settings.column;
                                     //let's create a new <li> which we'll add to the cart items
                                     $('<li>' + '<p>' + nrow + '排' + ncolumn + '號' + '</p>' + ': $' + this.data().price + '</li>')
                                         .attr('id', 'cart-item-' + this.settings.id)

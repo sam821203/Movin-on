@@ -14,6 +14,8 @@ div.seatCharts-cell {
 	color: blue;
 
 }
+
+/* 1/11 修改 */
 div.seatCharts-seat {
 	background-color: #F53D3D;
 	color: white;
@@ -22,15 +24,16 @@ div.seatCharts-seat {
 	border-radius: 5px;
 	cursor: default;
 }
+
 div.seatCharts-seat:focus {
 	border: none;
 }
+
 /*
 .seatCharts-seat:focus {
 	outline: none;
 }
 */
-
 
 div.seatCharts-row {
 	height: 50px;
@@ -61,6 +64,10 @@ ul.seatCharts-legendList {
 	list-style: none;
 }
 li.seatCharts-legendItem {
-	margin-top: 10px;
-	line-height: 2;
+	margin-top: 0;
+    margin-right: 8px;
+}
+
+.my-margin {
+    margin-right: 8px;
 }

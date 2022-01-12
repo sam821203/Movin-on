@@ -33,5 +33,6 @@
 
     <!-- seat jq-->
     <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.seat-charts.css">
+    
+    <!-- <link rel="stylesheet" type="text/css" href="css/jquery.seat-charts.css"> -->
 </head>
