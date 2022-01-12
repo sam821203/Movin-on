@@ -1,4 +1,5 @@
-<!-- 這裡需要 require "./db.inc.php" -->
+<?php require_once 'db.inc.php'; ?>
+
 <?php require_once './tpl/head.php' ?>
 
 <style>
@@ -6,6 +7,8 @@
         background: url("images/detail_page/bg_img/bg_img_gradient_1200.jpg") top center no-repeat;
         background-size: contain;
         background-color: var(--bg-color);
+        background-position: top center;
+        background-repeat: no-repeat;
     }
 
     /* fixed icon ticket */
@@ -418,23 +421,26 @@
     }
 
     .actors-list-section li:hover .actor-name-tc1,
-    .actors-list-section li:hover .actor-name-en1,
-    .actors-list-section li:hover .actor-name-tc2,
-    .actors-list-section li:hover .actor-name-en2,
-    .actors-list-section li:hover .actor-name-tc3,
-    .actors-list-section li:hover .actor-name-en3,
-    .actors-list-section li:hover .actor-name-tc4,
-    .actors-list-section li:hover .actor-name-en4,
-    .actors-list-section li:hover .actor-name-tc5,
-    .actors-list-section li:hover .actor-name-en5,
-    .actors-list-section li:hover .actor-name-tc6,
-    .actors-list-section li:hover .actor-name-en6,
-    .actors-list-section li:hover .actor-name-tc7,
-    .actors-list-section li:hover .actor-name-en7,
-    .actors-list-section li:hover .actor-name-tc8,
-    .actors-list-section li:hover .actor-name-en8 {
+    .actors-list-section li:hover .actor-name-en1 {
         top: 40px;
         transform: translateY(60%);
+        opacity: 0;
+    }
+
+    /* 0112新增character hover */
+    .actors-list-section .character-name-tc1,
+    .actors-list-section .character-name-en1 {
+        text-decoration: none;
+        -webkit-transition: all 1s;
+        transform: translateY(40%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    .actors-list-section li:hover .character-name-tc1,
+    .actors-list-section li:hover .character-name-en1 {
+        top: 50px;
+        transform: translateY(1%);
         opacity: 1;
     }
 
@@ -1051,7 +1057,12 @@
     }
 </style>
 
-<body>
+<?php if (isset($_GET['movie_id'])) { ?>
+    <?php $sql = "SELECT `movie_bg`FROM `movie` WHERE `movie_id` = {$_GET['movie_id']}";
+    $arr = $pdo->query($sql)->fetchAll();
+    foreach ($arr as $objbg) {
+    ?>
+<body style="background-image: url('images/<?= $objbg['movie_bg'] ?>')">
     <!-- movinon-navbar -->
     <?php require_once './tpl/movinon-navbar.php' ?>
 
@@ -1070,6 +1081,11 @@
 
                 <!-- social media display > 1200 -->
                 <div class="row social-media flex-column d-none d-lg-none d-xl-flex">
+                    <?php
+                    $sql = "SELECT * FROM `movie` WHERE `movie_id` = {$_GET['movie_id']}";
+                    $arr = $pdo->query($sql)->fetchAll();
+                    foreach ($arr as $obj) {
+                    ?>
                     <div class="d-flex justify-content-end mb-2">
                         <a href="#">
                             <i class="fab fa-facebook-square"></i>
@@ -1087,19 +1103,19 @@
                     <div class="col-xl-6 d-flex">
                         <div class="col-sm-3 col-lg-6 movie-poster">
                             <div class="img-wrap">
-                                <img src="images/poster_images/MSRbo2ocgQ6N9DdzBUk0-280 x 400.jpg" alt="">
+                                <img src="images/movies_overview_page/現正熱映/<?= $obj['poster'] ?>.jpg" alt="">
                             </div>
                         </div>
 
                         <div class="col-sm-9 col-lg-6 content">
                             <div>
-                                <span class="pg-rate body2-r">輔導級</span>
+                                <span class="pg-rate body2-r"><?= $obj['pg_rate_text'] ?></span>
                             </div>
                             <div>
-                                <span class="title-tc">永恆族</span>
+                                <span class="title-tc"><?= $obj['mName_TC'] ?></span>
                             </div>
                             <div>
-                                <span class="title-en">Eternals</span>
+                                <span class="title-en"><?= $obj['mName_EN'] ?></span>
                             </div>
                             <div class="rating">
                                 <i class="fas fa-star"></i>
@@ -1112,11 +1128,11 @@
                                 <div class="img-wrap1">
                                     <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
                                 </div>
-                                <span class="mr-3">53%</span>
+                                <span class="mr-3"><?= $obj['tomato_rate'] ?>%</span>
                                 <div class="img-wrap2">
                                     <img src="./images/icon_IMDB_Logo.svg" alt="">
                                 </div>
-                                <span>79%</span>
+                                <span><?= $obj['IMDB'] ?></span>
                             </div>
                             <!-- <p><span class="release-date"></span>日期：<span class="date-data">2021/11/03</span></p>
                             <p><span class="movie-length"></span>片長：<span class="length-data">156分鐘</span></p>
@@ -1125,28 +1141,48 @@
                             <p class="movie-length"><i class="far fa-clock">片長</i><span class="length-data">156分鐘</span></p>
                             <p class="movie-director"><i class="fas fa-video">導演</i><span class="director-data">趙婷</span></p> -->
 
-                            <p class="release-date">日期：<span class="date-data">2021/11/03</span></p>
-                            <p class="movie-length">片長：<span class="length-data">156分鐘</span></p>
-                            <p class="movie-director">導演：<span class="director-data">趙婷</span></p>
+                            <p class="release-date">日期：<span class="date-data"><?= $obj['release_time'] ?></span></p>
+                            <p class="movie-length">片長：<span class="length-data"><?= $obj['length'] ?>分鐘</span></p>
+                            <p class="movie-director">導演：<span class="director-data"><?= $obj['director_TC'] ?></span></p>
                         </div>
                     </div>
+                    <?php } ?>
 
                     <div class="col-md-12 col-lg-6">
                         <div class="cat-tags">
-                            <div class="cat-tag g-tag">奇幻</div>
-                            <div class="cat-tag g-tag">冒險</div>
-                            <div class="cat-tag g-tag">英雄</div>
-                            <div class="cat-tag g-tag">劇情</div>
+                            <?php
+                            $sql = "SELECT `movie_id`, `cat_id`, `cat_name` FROM `categories` WHERE `movie_id` = {$_GET['movie_id']}";
+                            $arr = $pdo->query($sql)->fetchAll();
+                            foreach ($arr as $obj) {
+                            ?>
+                            <div class="cat-tag g-tag"><?= $obj['cat_name'] ?></div>
+                        <?php } ?>
+
+                            
                         </div>
                         <div class="description-title">
                             <span class="section-header-b">劇情大綱</span>
                         </div>
                         <div class="description">
-                            <p>永恆族是超越繁星的神族，七千年前來到地球，誓言保護人類，各色各異的他們，擁有超凡智慧與能力，長生不老，每人具備迥然不同的絕頂神力。然而守護地球期間，各自強大的永恆族人並非和樂融融，內部紛爭不斷，最終整個族群分崩離析，直到一群古老的宿敵現身永恆族是超越繁星的神族，七千年前來到地球，誓言保護人類，各色各異的他們，擁有超凡智慧與能力，長生不老，每人具備迥然不同的絕頂神力。然而守護地球期間，各自強大的永恆族人並非和樂融融，內部紛爭不斷，最終整個族群分崩離析，直到一群古老的宿敵現身……</p>
+                            <?php
+                            $sql = "SELECT `description` FROM `movie` WHERE `movie_id` = {$_GET['movie_id']}";
+                            $arr = $pdo->query($sql)->fetchAll();
+                            foreach ($arr as $obj) {
+                            ?>
+                                <p><?= $obj['description'] ?></p>
+                            <?php } ?>
                         </div>
                         <div class="booking-trailer">
                             <button type="button" class="btn-brand">
-                                <a href="./booking-movie-page.php">
+                                <?php
+                                $sql = "SELECT `movie_id`, `poster`, `division_id`, `date_id` FROM `movie` INNER JOIN `division` INNER JOIN `date`
+                                WHERE `movie_id` = 1
+                                AND `division_id` = 'DV1'
+                                AND `date_id` = 'D1'";
+                                $arr = $pdo->query($sql)->fetchAll();
+                                foreach ($arr as $obj) {
+                                ?>
+                                <a href="booking-time-page.php?movie_id=<?= $obj['movie_id'] ?>&sub_date_id=<?= $obj['date_id'] ?>&sub_division_id=<?= $obj['division_id'] ?>">
                                     <div class="d-flex align-items-center">
                                         <div class="img-wrap">
                                             <img src="images/icon_ticket_fill.svg" alt="">
@@ -1154,6 +1190,7 @@
                                         <span>立即購票</span>
                                     </div>
                                 </a>
+                                <?php } ?>
                             </button>
                             <button type="button" class="btn-white-outline">
                                 <div class="d-flex">
@@ -1170,9 +1207,14 @@
 
                 <!-- movie info display < 418 -->
                 <div class="row movie-info d-flex d-xs-flex d-sm-none d-none">
+                    <?php
+                    $sql = "SELECT * FROM `movie` WHERE `movie_id` = {$_GET['movie_id']}";
+                    $arr = $pdo->query($sql)->fetchAll();
+                    foreach ($arr as $obj) {
+                    ?>
                     <div class="mycol-4 movie-poster">
                         <div class="img-wrap">
-                            <img src="images/poster_images/MSRbo2ocgQ6N9DdzBUk0-280 x 400.jpg" alt="">
+                            <img src="images/movies_overview_page/現正熱映/<?= $obj['poster'] ?>.jpg" alt="">
                         </div>
                     </div>
 
@@ -1180,15 +1222,15 @@
                         <div class="d-flex justify-content-between">
                             <div>
                                 <div>
-                                    <span class="title-tc">永恆族</span>
+                                    <span class="title-tc"><?= $obj['mName_TC'] ?></span>
                                 </div>
                                 <div>
-                                    <span class="title-en">Eternals</span>
+                                    <span class="title-en"><?= $obj['mName_EN'] ?></span>
                                 </div>
                             </div>
 
                             <div>
-                                <span class="pg-rate body2-r">12</span>
+                                <span class="pg-rate body2-r"><?= $obj['pg_rate'] ?></span>
                             </div>
                         </div>
 
@@ -1204,16 +1246,16 @@
                             <div class="img-wrap1">
                                 <img src="./images/icon_Rotten_Tomatoes.svg" alt="">
                             </div>
-                            <span class="mr-3">53%</span>
+                            <span class="mr-3"><?= $obj['tomato_rate'] ?>%</span>
                             <div class="img-wrap2">
                                 <img src="./images/icon_IMDB_Logo.svg" alt="">
                             </div>
-                            <span>79%</span>
+                            <span><?= $obj['IMDB'] ?></span>
                         </div>
 
-                        <p class="release-date"><i class="far fa-calendar-check"></i><span class="date-data">2021/11/03</span></p>
-                        <p class="movie-length"><i class="far fa-clock"></i><span class="length-data">156分鐘</span></p>
-                        <p class="movie-director"><i class="fas fa-video"></i><span class="director-data">趙婷</span></p>
+                        <p class="release-date"><i class="far fa-calendar-check"></i><span class="date-data"><?= $obj['release_time'] ?></span></p>
+                        <p class="movie-length"><i class="far fa-clock"></i><span class="length-data"><?= $obj['length'] ?>分鐘</span></p>
+                        <p class="movie-director"><i class="fas fa-video"></i><span class="director-data"><?= $obj['director_TC'] ?></span></p>
 
                         <!-- <p class="release-date">日期：<span class="date-data">2021/11/03</span></p>
                         <p class="movie-length">片長：<span class="length-data">156分鐘</span></p>
@@ -1222,20 +1264,37 @@
 
                     <div class="mycol-12">
                         <div class="cat-tags">
-                            <div class="cat-tag g-tag">奇幻</div>
-                            <div class="cat-tag g-tag">冒險</div>
-                            <div class="cat-tag g-tag">英雄</div>
-                            <div class="cat-tag g-tag">劇情</div>
+                            <?php
+                            $sql = "SELECT `movie_id`, `cat_id`, `cat_name` FROM `categories` WHERE `movie_id` = {$_GET['movie_id']}";
+                            $arr = $pdo->query($sql)->fetchAll();
+                            foreach ($arr as $obj) {
+                            ?>
+                                <div class="cat-tag g-tag"><?= $obj['cat_name'] ?></div>
+                            <?php } ?>
                         </div>
                         <div class="description-title">
                             <span class="section-header-b">劇情大綱</span>
                         </div>
                         <div class="description">
-                            <p>永恆族是超越繁星的神族，七千年前來到地球，誓言保護人類，各色各異的他們，擁有超凡智慧與能力，長生不老，每人具備迥然不同的絕頂神力。然而守護地球期間，各自強大的永恆族人並非和樂融融，內部紛爭不斷，最終整個族群分崩離析，直到一群古老的宿敵現身永恆族是超越繁星的神族，七千年前來到地球，誓言保護人類，各色各異的他們，擁有超凡智慧與能力，長生不老，每人具備迥然不同的絕頂神力。然而守護地球期間，各自強大的永恆族人並非和樂融融，內部紛爭不斷，最終整個族群分崩離析，直到一群古老的宿敵現身……</p>
+                            <?php
+                            $sql = "SELECT `description` FROM `movie` WHERE `movie_id` = {$_GET['movie_id']}";
+                            $arr = $pdo->query($sql)->fetchAll();
+                            foreach ($arr as $obj) {
+                            ?>
+                                <p><?= $obj['description'] ?></p>
+                            <?php } ?>
                         </div>
                         <div class="booking-trailer">
                             <button type="button" class="btn-brand">
-                                <a href="./booking-movie-page.php">
+                                <?php
+                                $sql = "SELECT `movie_id`, `poster`, `division_id`, `date_id` FROM `movie` INNER JOIN `division` INNER JOIN `date`
+                            WHERE `movie_id` = 1
+                            AND `division_id` = 'DV1'
+                            AND `date_id` = 'D1'";
+                                $arr = $pdo->query($sql)->fetchAll();
+                                foreach ($arr as $obj) {
+                                ?>
+                                <a href="booking-time-page.php?movie_id=<?= $obj['movie_id'] ?>&sub_date_id=<?= $obj['date_id'] ?>&sub_division_id=<?= $obj['division_id'] ?>">
                                     <div class="d-flex align-items-center">
                                         <div class="img-wrap">
                                             <img src="images/icon_ticket_fill.svg" alt="">
@@ -1243,6 +1302,7 @@
                                         <span>立即購票</span>
                                     </div>
                                 </a>
+                                <?php } ?>
                             </button>
                             <button type="button" class="btn-white-outline">
                                 <div class="d-flex">
@@ -1255,8 +1315,8 @@
                             </button>
                         </div>
                     </div>
+                    <?php } ?>
                 </div>
-
             </div>
         </section>
 
@@ -1279,104 +1339,27 @@
                 </div>
 
                 <div class="row articles-1920 d-none d-xl-flex">
+                    <?php
+                    $sql = "SELECT `movie_id`,`article_cat`,`title`,`spoiler_tag` FROM `spider_forum_article` WHERE `movie_id` = {$_GET['movie_id']}";
+                    $arr = $pdo->query($sql)->fetchAll();
+                    foreach ($arr as $objArt) {
+                    ?>
                     <div class="col-xl-6">
                         <a href="#">
                             <div class="article-light d-flex justify-content-between">
                                 <div class="d-flex align-items-center">
-                                    <div class="spoiler-free-tag">雷</div>
-                                    <div class="arti-cat-tag g-tag">選片</div>
-                                    <div class="sub-title-r">永恆族 vs 惡靈 首部曲</div>
+                                    <div class="spoiler-free-tag"><?= $objArt['spoiler_tag'] ?></div>
+                                    <div class="arti-cat-tag g-tag"><?= $objArt['article_cat'] ?></div>
+                                    <div class="sub-title-r"><?= $objArt['title'] ?></div>
                                 </div>
                                 <div class="time-stamp d-flex">1天前</div>
                             </div>
                         </a>
                     </div>
-                    <div class="col-xl-6">
-                        <a href="#">
-                            <div class="article-light d-flex justify-content-between">
-                                <div class="d-flex align-items-center">
-                                    <div class="spoiler-tag">雷</div>
-                                    <div class="arti-cat-tag g-tag">討論</div>
-                                    <div class="sub-title-r">永恆族 – 大型斯卡羅現場</div>
-                                </div>
-                                <div class="time-stamp d-flex">2天前</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xl-6">
-                        <a href="#">
-                            <div class="article-dark d-flex justify-content-between">
-                                <div class="d-flex align-items-center">
-                                    <div class="spoiler-tag">雷</div>
-                                    <div class="arti-cat-tag g-tag">討論</div>
-                                    <div class="sub-title-r">永恆族-篇幅不足的半成品</div>
-                                </div>
-                                <div class="time-stamp d-flex">3天前</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xl-6">
-                        <a href="#">
-                            <div class="article-dark d-flex justify-content-between">
-                                <div class="d-flex align-items-center">
-                                    <div class="spoiler-free-tag">雷</div>
-                                    <div class="arti-cat-tag g-tag">討論</div>
-                                    <div class="sub-title-r">所以永恆族算成功了嗎</div>
-                                </div>
-                                <div class="time-stamp d-flex">1週前</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xl-6">
-                        <a href="#">
-                            <div class="article-light d-flex justify-content-between">
-                                <div class="d-flex align-items-center">
-                                    <div class="spoiler-free-tag">雷</div>
-                                    <div class="arti-cat-tag g-tag">討論</div>
-                                    <div class="sub-title-r">永恆族有一段關鍵台詞這樣改應該更好，你覺得呢？</div>
-                                </div>
-                                <div class="time-stamp d-flex">1月前</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xl-6">
-                        <a href="#">
-                            <div class="article-light d-flex justify-content-between">
-                                <div class="d-flex align-items-center">
-                                    <div class="spoiler-free-tag">雷</div>
-                                    <div class="arti-cat-tag g-tag">討論</div>
-                                    <div class="sub-title-r">永恆族有一段關鍵台詞這樣改應該更好有一段關鍵台詞</div>
-                                </div>
-                                <div class="time-stamp d-flex">1月前</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xl-6">
-                        <a href="#">
-                            <div class="article-dark d-flex justify-content-between">
-                                <div class="d-flex align-items-center">
-                                    <div class="spoiler-tag">雷</div>
-                                    <div class="arti-cat-tag g-tag">討論</div>
-                                    <div class="sub-title-r">永恆族有一段關鍵台詞有一段關鍵台詞有一段關鍵台詞</div>
-                                </div>
-                                <div class="time-stamp d-flex">1月前</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xl-6">
-                        <a href="#">
-                            <div class="article-dark d-flex justify-content-between">
-                                <div class="d-flex align-items-center">
-                                    <div class="spoiler-free-tag">雷</div>
-                                    <div class="arti-cat-tag g-tag">討論</div>
-                                    <div class="sub-title-r">永恆族有一段關鍵台詞這樣不好有一段關鍵台詞</div>
-                                </div>
-                                <div class="time-stamp d-flex">1月前</div>
-                            </div>
-                        </a>
-                    </div>
+                    <?php } ?>
                 </div>
-
+                
+                <!-- < 1200 -->
                 <div class="row articles-xl d-none d-md-flex d-lg-flex d-xl-none">
                     <ul>
                         <li class="mb-3">
@@ -1715,18 +1698,26 @@
                             </li>
 
                             <!-- 第一張圖片 img-1 -->
+                            <?php
+                            $sql = "SELECT * FROM `actor_list` WHERE `movie_id` = {$_GET['movie_id']}";
+                            $arr = $pdo->query($sql)->fetchAll();
+                            foreach ($arr as $obj) {
+                            ?>
                             <li class="list-unstyled">
                                 <div class="img-wrap actor1">
-                                    <img src="images/detail_page/actors_list_section/actor-1-25.jpg" alt="">
+                                    <img src="images/detail_page/actors_list_section/<?= $obj['actor_img'] ?>.jpg" alt="">
                                     <div>
-                                        <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
+                                        <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/<?= $obj['character_img'] ?>.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="actor-name">
-                                    <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
-                                    <span class="actor-name-en1 italic-16">English</span>
+                                    <span class="actor-name-tc1 sub-title-b mb-1"><?= $obj['aName_TC'] ?></span>
+                                    <span class="character-name-tc1 sub-title-b mb-1"><?= $obj['character_TC'] ?></span>
+                                    <span class="actor-name-en1 italic-16"><?= $obj['aName_EN'] ?></span>
+                                    <span class="character-name-en1 italic-16"><?= $obj['character_EN'] ?></span>
                                 </div>
                             </li>
+                            <?php } ?>
 
                             <li class="list-unstyled">
                                 <div class="img-wrap actor2">
@@ -2006,10 +1997,25 @@
         //         $('.movie-stills .hall-screen img').attr('src', imgSrc);
         //     });
         // });
-        
+        $(document).ready(function(){
+            // --------雷標籤------------
+            let sTag = $('div.spoiler-free-tag');
+                    let sTagText = $('div.spoiler-free-tag').text();
+                    // console.log(sTagText);
+                    let spoiler = '雷'
+
+                    sTag.each((i, v) => {
+                        if ($(v).text() == spoiler) {
+                            sTag.eq(i).addClass('spoiler-tag');
+                        };
+                    });
+        });
 
         var foo = function() {
             $(document).ready(function() {
+
+                    
+
                     // Change image on selection
                     $(".movie-stills-carousel .carousel-wrap li img").click(function() {
 
@@ -2100,5 +2106,7 @@
     </script>
     <!-- <script src="js/detail-page.js"></script> -->
 </body>
+<?php }
+} ?>
 
 </html>

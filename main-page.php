@@ -1051,7 +1051,6 @@
                                                 </a>
                                             <?php } ?>
 
-
                                             <!-- 1/4更改: 電影介紹a連結加資料庫路徑 -->
                                             <?php
                                             $sql = "SELECT `movie_id`, `poster` FROM `movie` WHERE `movie_id` = 1";
