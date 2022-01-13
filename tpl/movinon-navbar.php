@@ -51,8 +51,25 @@
 
                 <!-- 登入視窗連結 -->
                 <div class="img-wrap2 d-flex align-items-center dropdown">
-                    <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false"><img src="images/icon_account.svg" alt=""></a>
+                    <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+                    
+                    <?php if (!isset($_SESSION['name'])) { ?>
+                        <img src="images/icon_account.svg" alt="">
+                    <?php } ?>
 
+                    <?php if (isset($_SESSION['name'])) { ?>
+                            <?php $sql = " SELECT `avatar` FROM `users` WHERE `email` = '{$_SESSION['email']}' ";
+                            $arr = $pdo->query($sql)->fetchAll();
+                            foreach ($arr as $objMember) {
+                            ?>
+                                <div class="avatar">
+                                    <img src="images/member_center_page/avatar/<?= $objMember['avatar'] ?>.jpg" alt="">
+                                </div>
+                            <?php } ?>
+                        <?php } ?>
+                    </a>
+
+                    
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 
                     <?php if ( !isset($_SESSION['name'])) { ?>

@@ -7,12 +7,23 @@
 </style>
 
 <?php if (isset($_GET['movie_id'])) { ?>
-    <?php $sql = "SELECT `movie_bg`FROM `movie` WHERE `movie_id` = {$_GET['movie_id']}";
-    $arr = $pdo->query($sql)->fetchAll();
+    <?php $sql = "SELECT `movie_bg`,`movie_bg418`FROM `movie` WHERE `movie_id` = {$_GET['movie_id']}";
+    $arr = $pdo->query($sql)->fetchAll(); ?>
+    <style>
+        body {
+            background-image: url('images/booking_time_page/bg_img/<?= $arr[0]['movie_bg'] ?>.jpg');
+        }
+
+        @media screen and (max-width:418px) {
+            body {
+                background-image: url('images/booking_time_page/bg_img/<?= $arr[0]['movie_bg418'] ?>.jpg');
+            }
+        }
+    </style>
+    <?php
     foreach ($arr as $objbg) {
     ?>
-
-        <body style="background-image: url('images/<?= $objbg['movie_bg'] ?>')">
+        <body>
             <!-- movinon-navbar -->
             <?php require_once './tpl/movinon-navbar.php' ?>
 
@@ -210,9 +221,27 @@
                 // left seat light                                                
                 $(document).ready(function(event) {
                     // event.preventDefault();
-
                     // console.log(seatPercent);
-
+                    
+                    // ----------分級判斷--------
+                    let pgRate = $('.pg-rate');
+                    let pgRateText = $('.pg-rate').text();
+                    let green = '普遍級';
+                    let blue = '保護級';
+                    let yellow = '輔導級';
+                    let red = '限制級';
+                    pgRate.each((i, v) => {
+                        if ($(v).text() == green) {
+                            pgRate.eq(i).addClass('green');
+                        } else if ($(v).text() == blue) {
+                            pgRate.eq(i).addClass('blue');
+                        } else if ($(v).text() == yellow) {
+                            pgRate.eq(i).addClass('yellow');
+                        } else if ($(v).text() == red) {
+                            pgRate.eq(i).addClass('red');
+                        };
+                    });
+                    
                     $('.dot').each((i, v) => {
                         let dotSeat = $('.dot').eq(i).attr('data-seat');
                         let dotLeftSeat = $('.dot').eq(i).attr('data-left-seat');

@@ -13,6 +13,6 @@
     <script src="./js/movinon-navbar.js"></script>
 
     <!-- datepicker js -->
-    <script src="./js/datepicker.js"></script>  
+    <!-- <script src="./js/datepicker.js"></script>   -->
 
    

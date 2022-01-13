@@ -84,7 +84,7 @@
 
                     <div class="booking-seat-section g-section-mb">
                         <div class="container">
-                            <div class="mycol-12 d-flex align-items-center">
+                            <div class="mycol-12 d-flex align-items-center mb-4">
                                 選擇座位數量: <input type="number" id="Numseats" required min="1" max="10">
                                 <button id="takeData">確定</button>
                             </div>

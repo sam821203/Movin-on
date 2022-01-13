@@ -15,7 +15,6 @@ $('button#btn_register').click( function (event) {
     
     alert('test');
 
-
     let re = /\S+@\S+(\.\S+)+/;
     if (!re.test(input_email.val())) {
         input_email

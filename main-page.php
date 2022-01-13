@@ -839,7 +839,65 @@
     <!-- <script src="js/datepicker.js"></script> -->
 
     <script>
-        <?php require_once './js/datepicker.js' ?>
+        $('button#btn_login').click(function (event) {
+            // event.preventDefault();
+
+            //各自將 input 帶入變數中
+            let input_email = $('input#email_login');
+            let input_pwd = $('input#pwd_login');
+
+            //檢查 email 是否輸入
+            if (input_email.val() == '') {
+                alert(`請輸入 E-mail`);
+                return false;
+            }
+
+            //檢查 密碼 是否輸入
+            if (input_pwd.val() == '') {
+                alert(`請輸入 密碼`);
+                return false;
+            }
+
+            //送出 post 請求
+            let objUser = {
+                email: input_email.val(),
+                pwd: input_pwd.val()
+            };
+
+            $.post("login.php", objUser, function (obj) {
+                if (obj['success']) {
+                    //關閉浮動視窗
+                    $('div#exampleModalLogin').hide();
+
+                    //成功訊息
+                    alert(`${obj['info']}`);
+
+                    //當成功訊息執行時，等數秒，執行自訂程式
+                    setTimeout(function () {
+                        
+                        location.reload();
+                    }, 3000)
+                    
+                } else {
+                    alert(`${obj['info']}`);
+                }
+                
+            }, 'html');
+        });
+        // logout 
+        $('a#logout').click(function(event) {
+            // event.preventDefault();
+            // console.log('hi');
+            $.get('logout.php', function(obj) {
+                if (obj['success']) {
+                    alert(`${obj['info']}`);
+
+                    setTimeout(function() {
+                        location.href = 'main-page.php';
+                    }, 1000);
+                }
+            }, 'json');
+        });
     </script>
 </body>
 

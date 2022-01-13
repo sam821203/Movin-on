@@ -382,7 +382,7 @@ div.seatCharts-seat.unavailable {
 
 div.seatCharts-container {
     width: 100%;
-    padding: 10px 120px;
+    padding: 0 72px;
     float: left;
 }
 
