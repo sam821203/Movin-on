@@ -1,15 +1,8 @@
-<?php require_once 'db.inc.php' ?>
-<!doctype html>
-<html>
-<!-- 這裡需要 require "./db.inc.php" -->
 <?php require_once './tpl/head.php' ?>
-
-
-<!-- <link rel="stylesheet" href="css/forum-masonry-page.css"> -->
-<!-- <link rel="stylesheet" href="/fontawesome-free-5.15.4-web/css/all.css"> -->
+<?php require_once 'db.inc.php' ?>
+<?php session_start() ?>
 
 <style>
-    /* forum masonry page css */
     <?php require_once './css/forum-masonry-page.css' ?>
 </style>
 
