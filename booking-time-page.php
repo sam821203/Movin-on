@@ -12,7 +12,6 @@
         background-color: var(--bg-color);
     }
 
-    /* -------section margin bottom------- */
     .movie-selecting-section {
         margin-top: 240px;
     }
@@ -29,12 +28,6 @@
     .movie-selecting-section .movie-date {
         margin-bottom: 48px;
     }
-
-    /* 2021/1/4 修改： */
-
-    /* .movie-selecting-section
-    .movie-info
-    .booking-time-poster { width: 25%; } */
 
     .movie-selecting-section .movie-info .img-wrap {
         display: flex;
@@ -180,26 +173,24 @@
         justify-content: end;
     }
 
-    .dot {
+    .movie-showtime-section .dot {
         border-radius: var(--border-radius-50);
         opacity: var(--opacity-75);
     }
 
-    .green-dot {
+    .movie-showtime-section .green-dot {
         background-color: #6DF14B;
     }
 
-    .yellow-dot {
+    .movie-showtime-section .yellow-dot {
         background-color: #F8CF40;
     }
 
-    .red-dot {
+    .movie-showtime-section .red-dot {
         background-color: #F84052;
     }
 
     .movie-showtime-section .timetable {
-        padding-left: 112px;
-        padding-right: 112px;
         margin-bottom: 32px;
     }
 
@@ -215,7 +206,6 @@
         margin-bottom: 4px;
     }
 
-    /* 1/11 更改 */
     .movie-showtime-section .cinema-name {
         width: 18%;
         padding-right: 16px;
@@ -276,14 +266,12 @@
     }
 
     /* -----------------selected----------------- */
-    /* 1/11 更改:註解選取日期、地區css */
     .timetable .showtime.selected {
         border: 1px solid var(--brand-color);
         opacity: 1;
         box-shadow: var(--box-shadow-red);
     }
 
-    /* 1/11 更改:加入 hover */
     .movie-selecting-section .movie-date .selected:hover,
     .movie-selecting-section .movie-division .div-sel:hover {
         border: 1px solid var(--brand-color);
@@ -306,8 +294,6 @@
     /* ------------------------  小於 1200px  ------------------------*/
     @media screen and (max-width: 1200px) {
 
-        /* section margin bottom */
-        /* .movie-selecting-section { margin-top: 96px; } */
         .movie-selecting-section {
             margin-top: 144px;
         }
@@ -346,7 +332,7 @@
             margin-bottom: 48px;
         }
 
-        /* movie showtime section */
+        /* ----- movie showtime section ----- */
         .movie-showtime-section .subtitle {
             margin-bottom: 32px;
             padding: 0;
@@ -375,7 +361,7 @@
     /* ------------------------  小於 768px  ------------------------*/
     @media screen and (max-width: 768px) {
 
-        /* movie selecting section */
+        /* ----- movie selecting section ----- */
         .movie-selecting-section .booking-time-poster {
             padding: 0;
         }
@@ -414,7 +400,7 @@
             margin-right: 12px;
         }
 
-        /* movie showtime section */
+        /* ----- movie showtime section ----- */
         .movie-showtime-section .seat-left-info {
             justify-content: start;
         }
@@ -461,24 +447,12 @@
             margin-bottom: 32px;
         }
 
-        .section-header-b {
+        .movie-selecting-section .movie-division .division {
+            margin-right: 0;
+        }
+
+        .movie-selecting-section .section-header-b {
             font-size: 20px;
-        }
-
-        .related-articles-section .subtitle {
-            margin-bottom: 24px;
-        }
-
-        .sub-title-r,
-        .sub-title-m,
-        .sub-title-b {
-            font-size: 16px;
-        }
-
-        .body1-r,
-        .body1-m,
-        .body1-b {
-            font-size: 14px;
         }
 
         .movie-selecting-section .content p {
@@ -500,7 +474,7 @@
             padding: 8px 10px 0px 8px;
         }
 
-        /* movie showtime section */
+        /* ----- movie showtime section ----- */
         .movie-showtime-section div.subtitle {
             overflow: auto;
         }
@@ -511,6 +485,18 @@
 
         .movie-showtime-section .options .showtime {
             padding: 8px 16px;
+        }
+
+        .movie-showtime-section .sub-title-r,
+        .movie-showtime-section .sub-title-m,
+        .movie-showtime-section .sub-title-b {
+            font-size: 16px;
+        }
+
+        .movie-showtime-section .body1-r,
+        .movie-showtime-section .body1-m,
+        .movie-showtime-section .body1-b {
+            font-size: 14px;
         }
     }
 </style>
@@ -589,7 +575,7 @@
                                                 }
                                             ?>
                                                 <a href="booking-time-page.php?movie_id=<?= $_GET['movie_id'] ?>&sub_date_id=<?= $obj1['date_id'] ?>&sub_division_id=<?= $_GET['sub_division_id'] ?>#abc" class="sel">
-                                                    <div class="day selected"<?= $strStyleDate ?>>
+                                                    <div class="day selected" <?= $strStyleDate ?>>
                                                         <span>星期<?= $obj1['week'] ?></span>
                                                         <span class="sub-title-r">1月</span>
                                                         <span class="roboto-condensed"><?= $obj1['date'] ?></span>
@@ -621,7 +607,7 @@
                                             }
                                         ?>
                                             <a href="booking-time-page.php?movie_id=<?= $_GET['movie_id'] ?>&sub_date_id=<?= $_GET['sub_date_id'] ?>&sub_division_id=<?= $obj2['division_id'] ?>#abc" class="division" id="divisiondv1">
-                                                <span class="division selected div-sel"<?= $strStyleDiv ?>><?= $obj2['division'] ?></span>
+                                                <span class="division selected div-sel" <?= $strStyleDiv ?>><?= $obj2['division'] ?></span>
                                             </a>
                                         <?php } ?>
                                     </div>
@@ -679,32 +665,32 @@
                             } ?>
                             <?php foreach ($arrNew as $hall => $time) { ?>
 
-                            <div class="row timetable">
-                                <div class="col-12">
-                                    <div class="timetable-row">
-                                        <div class="cinema-name sub-title-r"><?= $hall ?></div>
-                                        <div class="showtime-options-wrap">
-                                            <div class="showtime-options">
-                                                <div class="movie-type">
-                                                    <span class="digital"><?= $arr3[0]['screen'] ?></span>
-                                                </div>
-                                                <div class="options d-flex flex-wrap">
-                                                    <!-- 第一個場次 -->
-                                                    <?php foreach ($time as $stime) { ?>
-                                                    <a href="booking-seat-page.php?movie_id=<?= $_GET['movie_id'] ?>" data-movie-poster="<?= $objM['poster'] ?>" data-movieTC="<?= $objM['mName_TC'] ?>" data-movieEN="<?= $objM['mName_EN'] ?>" data-date="1月<?= $obj['date'] ?>" data-division="<?= $obj['division'] ?>" data-moviecat="<?= $arr3[0]['screen'] ?>" data-showtime="<?= $stime ?>" data-cinema="<?= $hall ?>" data-left-seat="<?= $obj['left_seat'] ?>" data-ticket-poster="<?= $objM['ticket_poster'] ?>" data-pg-rate="<?= $objM['pg_rate_text'] ?>" data-length="<?= $objM['length'] ?>" data-director="<?= $objM['director_TC'] ?>" id="showdetail">
-                                                        <div class="showtime d-flex">
-                                                            <div class="dot green-dot my-auto mr-2" data-seat="<?= $arrDataSeat[$hall . $stime] ?>" data-left-seat="<?= $arrData[$hall . $stime] ?>"></div>
-                                                            <span class="body1-r"><?= $stime ?></span>
-                                                        </div>
-                                                    </a>
-                                                    <?php } ?>
+                                <div class="row timetable">
+                                    <div class="col-12">
+                                        <div class="timetable-row">
+                                            <div class="cinema-name sub-title-r"><?= $hall ?></div>
+                                            <div class="showtime-options-wrap">
+                                                <div class="showtime-options">
+                                                    <div class="movie-type">
+                                                        <span class="digital"><?= $arr3[0]['screen'] ?></span>
+                                                    </div>
+                                                    <div class="options d-flex flex-wrap">
+                                                        <!-- 第一個場次 -->
+                                                        <?php foreach ($time as $stime) { ?>
+                                                            <a href="booking-seat-page.php?movie_id=<?= $_GET['movie_id'] ?>" data-movie-poster="<?= $objM['poster'] ?>" data-movieTC="<?= $objM['mName_TC'] ?>" data-movieEN="<?= $objM['mName_EN'] ?>" data-date="1月<?= $obj['date'] ?>" data-division="<?= $obj['division'] ?>" data-moviecat="<?= $arr3[0]['screen'] ?>" data-showtime="<?= $stime ?>" data-cinema="<?= $hall ?>" data-left-seat="<?= $obj['left_seat'] ?>" data-ticket-poster="<?= $objM['ticket_poster'] ?>" data-pg-rate="<?= $objM['pg_rate_text'] ?>" data-length="<?= $objM['length'] ?>" data-director="<?= $objM['director_TC'] ?>" id="showdetail">
+                                                                <div class="showtime d-flex">
+                                                                    <div class="dot green-dot my-auto mr-2" data-seat="<?= $arrDataSeat[$hall . $stime] ?>" data-left-seat="<?= $arrData[$hall . $stime] ?>"></div>
+                                                                    <span class="body1-r"><?= $stime ?></span>
+                                                                </div>
+                                                            </a>
+                                                        <?php } ?>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="divide-line"></div>
                                     </div>
-                                    <div class="divide-line"></div>
                                 </div>
-                            </div>
                             <?php } ?>
                         <?php } ?>
                     </div>
@@ -716,7 +702,6 @@
             <?php require_once './tpl/foot.php' ?>
 
             <script>
-
                 // left seat light                                                
                 $(document).ready(function(event) {
                     // event.preventDefault();

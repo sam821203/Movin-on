@@ -116,9 +116,6 @@ if (!isset($_SESSION['seat'])) {
         color: rgba(18, 18, 18, 0.5);
     }
 
-
-
-
     /* -----------------payment section r----------------- */
     .payment-section-r .detail-head,
     .payment-section-r .detail-head .detail-head-l,
@@ -254,14 +251,14 @@ if (!isset($_SESSION['seat'])) {
         color: white;
     }
 
-    .ticket-wrap {
+    .payment-section .ticket-wrap {
         height: 500px;
         overflow: auto;
         display: flex;
         flex-direction: column;
     }
 
-    .myticket {
+    .payment-section .myticket {
         float: left;
         margin: 20px 0 500px 0;
     }

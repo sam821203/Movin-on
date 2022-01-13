@@ -160,7 +160,7 @@
     }
 
     /* -----------------screen section----------------- */
-    .screen span {
+    .booking-seat-section .screen span {
         opacity: var(--opacity-75);
         position: absolute;
         top: 30px;
@@ -168,21 +168,21 @@
         transform: translateX(-50%);
     }
 
-    .screen .img-wrap {
+    .booking-seat-section .screen .img-wrap {
         position: relative;
         width: 100%;
         margin: 0 auto;
         padding: 0 24px;
     }
 
-    .screen .img-wrap img {
+    .booking-seat-section .screen .img-wrap img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center center;
     }
 
-    .screen .col-12.img-wrap {
+    .booking-seat-section .screen .col-12.img-wrap {
         display: flex;
         justify-content: center;
     }
@@ -254,42 +254,42 @@
         opacity: var(--opacity-75);
     }
 
-    .ticket-detail .detail-title {
+    .booking-seat-section .ticket-detail .detail-title {
         opacity: var(--opacity-90);
     }
 
-    .ticket-detail .devision,
-    .ticket-detail .date,
-    .ticket-detail .cinema,
-    .ticket-detail .type,
-    .ticket-detail .showtime,
-    .ticket-detail .my-seat {
+    .booking-seat-section .ticket-detail .devision,
+    .booking-seat-section .ticket-detail .date,
+    .booking-seat-section .ticket-detail .cinema,
+    .booking-seat-section .ticket-detail .type,
+    .booking-seat-section .ticket-detail .showtime,
+    .booking-seat-section .ticket-detail .my-seat {
         opacity: var(--opacity-50);
     }
 
-    .ticket-detail .fa-map-marker-alt {
+    .booking-seat-section .ticket-detail .fa-map-marker-alt {
         font-size: 20px;
     }
 
-    .ticket-detail .fa-calendar-alt {
+    .booking-seat-section .ticket-detail .fa-calendar-alt {
         font-size: 18px;
     }
 
-    .ticket-detail .fa-kaaba {
+    .booking-seat-section .ticket-detail .fa-kaaba {
         font-size: 16px;
     }
 
-    .ticket-detail .fa-clock {
+    .booking-seat-section .ticket-detail .fa-clock {
         font-size: 18px;
     }
 
-    .ticket-detail .img-wrap {
+    .booking-seat-section .ticket-detail .img-wrap {
         width: 18px;
         margin-right: 12px;
         display: flex;
     }
 
-    .ticket-detail .img-wrap img {
+    .booking-seat-section .ticket-detail .img-wrap img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -505,6 +505,7 @@
                             </div>
 
                             <p id="notification"></p>
+
                             <div class="row screen">
                                 <div class="col-9">
                                     <div class="col-12">

@@ -65,12 +65,14 @@
                                     <p class="spoiler-tag"><?= $obj['spoiler_tag'] ?></p>
                                 </div>
 
-                                <div class="img-gradient-15"></div>
-                                <div class="img-filter-10"></div>
-
-                                <div class="img-wrap">
-                                    <img src="<?= $obj['article_photo'] ?>" alt="Dummy Image" class="atcphoto">
+                                <div>
+                                    <div class="img-wrap">
+                                        <div class="img-gradient-15"></div>
+                                        <div class="img-filter-15"></div>
+                                        <img src="<?= $obj['article_photo'] ?>" alt="Dummy Image" class="atcphoto">
+                                    </div>
                                 </div>
+                                
                                 <div class="article-avatar">
                                     <div class="avatar">
                                         <img src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">

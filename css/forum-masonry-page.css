@@ -1,64 +1,9 @@
-/**
- * RESET
- * Reference: http://meyerweb.com/eric/tools/css/reset/
- */
-
-/* html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-main, menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-} */
-
-/* article, aside, details, figcaption, figure,
-footer, header, hgroup, main, menu, nav, section {
-  display: block;
-} */
-
-/* ol, ul {
-  list-style: none;
+body {
+    background: url("images/forum_masonry_page/masonry_bg_img.jpg") top center no-repeat;
+    background-size: contain;
+    background-color: var(--bg-color);
+    width: 100%;
 }
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-} */
-
-/* a {
-  text-decoration: none;
-} */
-
-/* code, pre, samp {
-  font-family: monospace;
-} */
-
-/**
- * BASIC TYPE
- */
 
 .masonry-articles-section img, 
 .masonry-articles-section video {
@@ -66,28 +11,15 @@ table {
   vertical-align: middle;
 }
 
-p:not(:last-child) {
+/* .masonry-articles-section p:not(:last-child) {
   margin: 0 0 1em;
-}
-
-/* *,
-*:before,
-*:after {
-  box-sizing: inherit;
 } */
 
-.wrapper { 
+.masonry-articles-section .wrapper { 
     max-width: 1280px;
     margin-right: auto;
     margin-left: auto;
     padding: 1.5em;
-}
-
-body {
-    background: url("images/forum_masonry_page/masonry_bg_img.jpg") top center no-repeat;
-    background-size: contain;
-    background-color: var(--bg-color);
-    width: 100%;
 }
 
 .masonry-articles-section { 
@@ -160,13 +92,13 @@ body {
     opacity: .15;
 }
 
-.masonry-item .img-filter-10 {
+.masonry-item .img-filter-15 {
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(38,38,38,0.25);
-    opacity: .1;
+    opacity: .15;
 }
 
 .masonry-item {
@@ -183,11 +115,11 @@ body {
     position: relative;
 }
 
-.actphoto{
+/* .actphoto {
     width: 100%;
-}
+} */
 
-.article-tag {
+.masonry-item .article-tag {
     width: auto;
     position: absolute;
     top: 30px;
@@ -195,7 +127,7 @@ body {
     display: flex;
 }
 
-.article-tag .article-cat {
+.masonry-item .article-tag .article-cat {
     padding: 5px 20px 4px 20px;
     background-color: rgba(18,18,18,0.5);
     border: 1px solid #fff;
@@ -205,7 +137,7 @@ body {
     line-height: 140%;
 }
 
-.article-tag .spoiler-tag {
+.masonry-item .article-tag .spoiler-tag {
     color: var(--bg-color);
     line-height: 100%;
     background-color: var(--brand-color);
@@ -217,21 +149,21 @@ body {
     border-radius: var(--border-radius-50-percent);
 }
 
-.article-avatar {
+.masonry-item .article-avatar {
     display: flex;
     justify-content: flex-end;
     margin-top: -30px;
     padding-right: 28px;
 }
 
-.avatar {
+.masonry-item .avatar {
   width: 61px;
   height: 61px;
   border-radius: 50px;
   overflow: hidden;
 }
 
-.avatar>img {
+.masonry-item .avatar>img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -271,6 +203,7 @@ body {
 
 .masonry-item .img-wrap {
     max-width: 100%;
+    border-radius: 8px 8px 0 0;
 }
 
 .masonry-item .img-wrap img {
@@ -278,17 +211,18 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center center;
+    border-radius: 8px 8px 0 0;
 }
 
-.like-btn>p {
+.masonry-item .like-btn>p {
     margin-left: 8px;
 }
 
-.comment>p {
+.masonry-item .comment>p {
     margin-left: 8px;
 }
 
-.masonry-title, .masonry-description {
+.masonry-item .masonry-title, .masonry-description {
     display: -webkit-box;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
@@ -297,34 +231,16 @@ body {
     line-height: 150%;
 }
 
-.masonry-title {
+.masonry-item .masonry-title {
     padding: 8px 0 12px 0;
     color: rgba(255,255,255,0.9);
 }
 
-.masonry-description {
+.masonry-item .masonry-description {
     color: rgba(255,255,255,0.5);
     line-height: 150%;
     height: 72px;
     margin-bottom: 40px;
-}
-
-.masonry-footer {
-  font-size: .75em;
-  opacity: .25;
-  text-align: center;
-  padding-top: 3em; 
-  padding-bottom: 3em;
-  margin-bottom: -1.5em;
-  transition: opacity 1s ease-in-out;
-}
-
-.masonry-footer a {
-  color: currentColor;
-}
-
-.masonry-footer:hover, .masonry-footer:active, .masonry-footer:focus {
-  opacity: .75;
 }
 
 /* =================================== @media =================================== */
@@ -342,12 +258,6 @@ body {
     }
   }
 
-/* ------------------------  小於 768px  ------------------------*/
-@media screen and (max-width: 768px) {
-    
-   
-}
-  
 /* ------------------------  小於 418px  ------------------------*/
 @media screen and (max-width: 418px) {
 

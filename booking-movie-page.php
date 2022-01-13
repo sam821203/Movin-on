@@ -8,14 +8,6 @@
         width: 100%;
     }
 
-    .sub-title-r {
-        line-height: 170%;
-    }
-
-    .btn, .btn:focus {
-        box-shadow: none;
-    } 
-
     /* ----------------------------top five section---------------------------- */
     .top-five-section {
         margin-bottom: 96px;
@@ -137,7 +129,6 @@
 
     .other-movies-section .italic-16 { opacity: var(--opacity-50); }
 
-    /* animation */
     .other-movies-section .mov-card p {
         width: 128px;
         margin: 0 auto;

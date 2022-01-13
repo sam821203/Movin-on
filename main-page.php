@@ -254,10 +254,6 @@
         opacity: var(--opacity-90);
     }
 
-    .ranking-section .rank-num-418 {
-        display: none;
-    }
-
     .ranking-section .wrap {
         width: 100%;
         height: 560px;
@@ -444,7 +440,7 @@
         line-height: 100%;
     }
 
-    .ranking-section .rate {
+    .ranking-section .reputation .rate {
         margin-right: 32px;
         opacity: var(--opacity-75);
     }
@@ -471,20 +467,14 @@
         border-radius: 0;
     }
 
-    .ranking-section .en-title {
+    .ranking-section .content-r .en-title {
         font-style: italic;
         opacity: var(--opacity-50);
         margin-bottom: 4px;
     }
 
-    .ranking-section .italic-16 {
-        font-size: 1rem;
-        font-style: italic;
-    }
-
     .ranking-section .rank-num {
         font-family: 'BenchNine', 'Roboto Condensed', sans-serif;
-        /* font-size: 6rem; */
         font-size: 6rem;
         opacity: var(--opacity-25);
         letter-spacing: -2px;
@@ -495,8 +485,8 @@
         width: 30%;
     }
 
-    .ranking-section .content {
-        margin-bottom: 8px;
+    .ranking-section .rank-num-418 {
+        display: none;
     }
 
     .ranking-section .btn-booking,
@@ -582,34 +572,30 @@
         height: 100%;
     }
 
-    .inner-row1 {
-        margin-bottom: 32px;
-    }
-
     /* -----------com-count----------- */
-    .com-count {
+    .forum-cards-section .com-count {
         border-radius: var(--border-radius-50);
         padding: 4px 8px;
         margin-left: 8px;
     }
 
-    .com-1-count {
+    .forum-cards-section .com-1-count {
         background-color: #AE2B2C;
     }
 
-    .com-2-count {
+    .forum-cards-section .com-2-count {
         background-color: #16CFC4;
     }
 
-    .com-3-count {
+    .forum-cards-section .com-3-count {
         background-color: #FD8942;
     }
 
-    .com-4-count {
+    .forum-cards-section .com-4-count {
         background-color: #2B6714;
     }
 
-    .com-5-count {
+    .forum-cards-section .com-5-count {
         background-color: #B41127;
     }
 
@@ -651,16 +637,10 @@
         }
     }
 
-    /* ------------------------  小於 992px  ------------------------*/
-    /* @media screen and (max-width: 992px) {
-
-        
-    } */
-
     /* ------------------------  小於 768px  ------------------------*/
     @media screen and (max-width: 768px) {
 
-        /* 這裡強制將 .section-header-r 改為 字重500 */
+        /* 這裡強制將 .section-header-r 改為字重500 */
         .forum-cards-section .card-md .section-header-r {
             font-size: 20px;
             font-weight: 500;
@@ -676,15 +656,37 @@
     /* ------------------------  小於 418px  ------------------------*/
     @media screen and (max-width: 418px) {
 
+        /* ----- hero -----*/
+        .hero {
+            padding: 0px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+            /* 嘗試調整 @media 的固定寬 */
+            overflow: hidden;
+            max-width: 418px;
+        }
+
+        .hero .bg {
+            position: relative;
+            width: 100%;
+            /* max-height: 812px; */
+            max-height: 650px;
+            background-image: url("images/main_page/hero-img1_418.jpg");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
         canvas {
             top: -144px;
         }
 
-        .row-d-1920 {
+        .hero .row-d-1920 {
             display: none;
         }
 
-        .row-d-418 {
+        .hero .row-d-418 {
             display: flex;
         }
 
@@ -715,6 +717,26 @@
             height: 40px;
         }
 
+        .hero .d-418-row2 {
+            margin-bottom: 24px;
+        }
+
+        .hero .d-418-row1,
+        .hero .d-418-row3 {
+            margin-bottom: 12px;
+        }
+
+        .hero .inputgroup .middle-bg button {
+            margin-right: 0;
+        }
+
+        .hero .inputgroup .middle-bg button.send {
+            width: 100%;
+            margin-right: 0;
+            padding: 12px 0 10px 0;
+        }
+
+        /* ----- raking section -----*/
         .ranking-section .wrap {
             height: 216px;
             overflow: auto;
@@ -734,47 +756,6 @@
             margin-left: 0;
         }
 
-        .hero .d-418-row2 {
-            margin-bottom: 24px;
-        }
-
-        .hero .d-418-row1,
-        .hero .d-418-row3 {
-            margin-bottom: 12px;
-        }
-
-        .hero {
-            padding: 0px;
-            position: relative;
-            display: flex;
-            justify-content: center;
-
-            /* 嘗試調整 @media 的固定寬 */
-            overflow: hidden;
-            max-width: 418px;
-        }
-
-        .hero .bg {
-            position: relative;
-            width: 100%;
-            /* max-height: 812px; */
-            max-height: 650px;
-            background-image: url("images/main_page/hero-img1_418.jpg");
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
-
-        .hero .inputgroup .middle-bg button {
-            margin-right: 0;
-        }
-
-        .hero .inputgroup .middle-bg button.send {
-            width: 100%;
-            margin-right: 0;
-            padding: 12px 0 10px 0;
-        }
-
-        /* ranking section */
         .ranking-section .subtitle .sub-title-r,
         .ranking-section .wrap .next-btn,
         .ranking-section .wrap .prev-btn,
@@ -809,7 +790,7 @@
             margin-bottom: 8px;
         }
 
-        /* forum card section */
+        /* ----- forum card section -----*/
         .forum-cards-section .subtitle .sub-title-r {
             display: none;
         }
