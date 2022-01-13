@@ -7,12 +7,24 @@
 </style>
 
 <?php if (isset($_GET['movie_id'])) { ?>
-    <?php $sql = "SELECT `movie_bg`FROM `movie` WHERE `movie_id` = {$_GET['movie_id']}";
-    $arr = $pdo->query($sql)->fetchAll();
+    <?php $sql = "SELECT `movie_bg`,`movie_bg418`FROM `movie` WHERE `movie_id` = {$_GET['movie_id']}";
+    $arr = $pdo->query($sql)->fetchAll(); ?>
+    <style>
+        body {
+            background-image: url('images/booking_time_page/bg_img/<?= $arr[0]['movie_bg'] ?>.jpg');
+        }
+
+        @media screen and (max-width:418px) {
+            body {
+                background-image: url('images/booking_time_page/bg_img/<?= $arr[0]['movie_bg418'] ?>.jpg');
+            }
+        }
+    </style>
+    <?php
     foreach ($arr as $objbg) {
     ?>
 
-        <body style="background-image: url('images/<?= $objbg['movie_bg'] ?>')">
+        <body>
 
             <!-- movinon-navbar -->
             <?php require_once './tpl/movinon-navbar.php' ?>
@@ -96,7 +108,7 @@
                         <div class="col-md-12 col-lg-6">
                             <div class="cat-tags">
                                 <?php
-                                $sql = "SELECT `movie_id`, `cat_id`, `cat_name` FROM `categories` WHERE `movie_id` = {$_GET['movie_id']}";
+                                $sql = "SELECT `movie_id`,`cat_name` FROM `categories` WHERE `movie_id` = {$_GET['movie_id']}";
                                 $arr = $pdo->query($sql)->fetchAll();
                                 foreach ($arr as $obj) {
                                 ?>
@@ -206,13 +218,14 @@
                                 <div class="mycol-12">
                                     <div class="cat-tags">
                                         <?php
-                                        $sql = "SELECT `movie_id`, `cat_id`, `cat_name` FROM `categories` WHERE `movie_id` = {$_GET['movie_id']}";
+                                        $sql = "SELECT `movie_id`,`cat_name` FROM `categories` WHERE `movie_id` = {$_GET['movie_id']}";
                                         $arr = $pdo->query($sql)->fetchAll();
                                         foreach ($arr as $obj) {
                                         ?>
                                             <div class="cat-tag g-tag"><?= $obj['cat_name'] ?></div>
                                         <?php } ?>
                                     </div>
+
                                     <div class="description-title">
                                         <span class="section-header-b">劇情大綱</span>
                                     </div>
@@ -939,6 +952,27 @@
                 //     });
                 // });
                 $(document).ready(function() {
+
+                    // ----------分級判斷--------
+                    let pgRate = $('.pg-rate');
+                    let pgRateText = $('.pg-rate').text();
+                    let green = '普遍級';
+                    let blue = '保護級';
+                    let yellow = '輔導級';
+                    let red = '限制級';
+                    pgRate.each((i, v) => {
+                        if ($(v).text() == green) {
+                            pgRate.eq(i).addClass('green');
+                        }else if($(v).text() == blue){
+                            pgRate.eq(i).addClass('blue');
+                        }else if($(v).text() == yellow){
+                            pgRate.eq(i).addClass('yellow');
+                        }else if($(v).text() == red){
+                            pgRate.eq(i).addClass('red');
+                        };
+
+                    });
+
                     // --------雷標籤------------
                     let sTag = $('div.spoiler-free-tag');
                     let sTagText = $('div.spoiler-free-tag').text();

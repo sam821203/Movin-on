@@ -130,8 +130,8 @@
     }
 
     .ticket-img-wrap {
-        max-width: 300px;
-        margin-right: 40px;
+        max-width: 30%;
+        margin-right: 16px;
         border-radius: 50px;
         box-shadow: var(--box-shadow-black);
     }
@@ -329,61 +329,72 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-9">
-                        <div class="member-r-board">
-                            <!-- 票券 -->
-                            <?php 
-                            $sql = "SELECT * FROM `orders_pay` WHERE `email` = '{$_SESSION['email']}'";
-                            $arr = $pdo->query($sql)->fetchAll();
-                            foreach ($arr as $obj) {
-                            ?>
-                            <a href="member-center-page-myticket.php?order_id_parent=<?= $obj['order_id_parent']?>">
-                            <div class="myticket">
-                                <div class="ticket-img-wrap">
-                                    <img src="images/ticket_single.svg" alt="">
-                                </div>
-                                <div class="ticket-card">
-                                    <div class="poster-img-wrap">
-                                        <img src="images/payment_page/<?= $obj['ticket_poster']?>.jpg" alt="">
-                                    </div>
-                                    <div class="content">
-
-                                        <p class="order-num">訂單編號：<?= $obj['order_id_parent']?></p>
-
-                                        <div class="content-row col-12 d-flex justify-content-between">
-                                            <div>
-                                                <div class="section-header-b"><?= $obj['movie_TC']?></div>
-                                                <div class="title-en"><?= $obj['movie_EN']?></div>
+                    
+                    <?php if (isset($_GET['order_id_parent'])) { ?>
+                        <div class="col-9">
+                            <div class="member-r-board">
+                                <!-- 票券 -->
+                                <?php
+                                $sql = "SELECT * FROM `orders` WHERE `order_id_parent` = {$_GET['order_id_parent']}";
+                                $arr = $pdo->query($sql)->fetchAll();
+                                foreach ($arr as $obj) {
+                                ?>
+                                    <div class="myticket">
+                                        <div class="ticket-img-wrap">
+                                            <img src="images/ticket_single.svg" alt="">
+                                        </div>
+                                        <div class="ticket-card">
+                                            <div class="poster-img-wrap">
+                                                <img src="images/payment_page/<?= $obj['ticket_poster'] ?>.jpg" alt="">
                                             </div>
-                                            <div class="d-flex align-items-start">
-                                                <span class="pg-rate"><?= $obj['pg_rate']?></span>
+                                            <div class="content">
+
+                                                <p class="order-num">訂單編號：<?= $obj['order_id'] ?></p>
+
+                                                <div class="content-row col-12 d-flex justify-content-between">
+                                                    <div>
+                                                        <div class="section-header-b"><?= $obj['movie_TC'] ?></div>
+                                                        <div class="title-en"><?= $obj['movie_EN'] ?></div>
+                                                    </div>
+                                                    <div class="d-flex align-items-start">
+                                                        <span class="pg-rate"><?= $obj['pg_rate'] ?></span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content-row">
+                                                    <div>
+                                                        <div class="body2-r">影城</div>
+                                                        <div class="sub-title-b"><?= $obj['cinema'] ?></div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="body2-r">座位</div>
+                                                        <div class="sub-title-b"><?= $obj['seat'] ?></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content-row">
+                                                    <div>
+                                                        <div class="body2-r">日期</div>
+                                                        <div class="body2-b">2022年<?= $obj['date'] ?></div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="body2-r">場次</div>
+                                                        <div class="body2-b"><?= $obj['showtime'] ?></div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="body2-r">類型</div>
+                                                        <div class="body2-b"><?= $obj['screen'] ?></div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-
-                                        <div class="content-row">
-                                            <div>
-                                                <div class="body2-r">訂單時間</div>
-                                                <div class="body2-b"><?= $obj['created_at']?></div>
-                                            </div>
-                                            <div>
-                                                <div class="body2-r">張數</div>
-                                                <div class="body2-b"><?= $obj['count']?>張</div>
-                                            </div>
-                                            <div>
-                                                <div class="body2-r">金額</div>
-                                                <div class="body2-b">$NT<?= $obj['total']?></div>
-                                            </div>
-                                        </div>
                                     </div>
-                                </div>
+                                <?php } ?>
+
+                                <!-- 票券 -->
                             </div>
-                            </a>
-                            <?php }?>
-
-                            <!-- 票券 -->
                         </div>
-                    </div>
+                    <?php } ?>
                 </div>
         </section>
     </main>

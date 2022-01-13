@@ -45,7 +45,7 @@ if (!isset($_SESSION['seat'])) {
                                             </div>
                                             <div class="ticket-card">
                                                 <div class="poster-img-wrap">
-                                                    <img src="images/<?= $obj['ticket_poster'] ?>" alt="">
+                                                    <img src="images/payment_page/<?= $obj['ticket_poster'] ?>.jpg" alt="">
                                                 </div>
                                                 <div class="content">
 

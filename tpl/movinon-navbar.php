@@ -86,7 +86,7 @@
                         
                         <?php if (isset($_SESSION['name'])) { ?>
                             <div class="mb-3">
-                                <a href="">會員中心</a>
+                                <a href="member-center-page.php">會員中心</a>
                             </div>
                             <div class="divide-line"></div>
                             <div class="logout">

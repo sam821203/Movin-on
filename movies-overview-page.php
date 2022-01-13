@@ -40,13 +40,13 @@
 
                                         <!-- 1/5更改 電影資料提取與輸出 -->
                                         <?php
-                                        $sql = "SELECT `poster`, `mName_TC`,  `mName_EN`, `movinon_rate` FROM `movie`WHERE `ov_id`='1' ";
+                                        $sql = "SELECT `movie_id`, `poster`, `mName_TC`,  `mName_EN`, `movinon_rate` FROM `movie`WHERE `ov_id`='1' ";
                                         $arr = $pdo->query($sql)->fetchAll();
                                         foreach ($arr as $obj) {
                                         ?>
                                             <div class="mycard-height col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
                                                 <div class="mycard">
-                                                    <a href="./detail-page.php">
+                                                    <a href="detail-page.php?movie_id=<?= $obj['movie_id'] ?>">
                                                         <div class="img-wrap">
 
                                                             <!-- 1/5更改 海報資料輸出 -->
@@ -93,13 +93,13 @@
 
                                         <!-- 1/5更改 電影資料提取與輸出 -->
                                         <?php
-                                        $sql = "SELECT `poster`, `mName_TC`,  `mName_EN`, `movinon_rate` FROM `movie`WHERE `ov_id`='2' ";
+                                        $sql = "SELECT `movie_id`, `poster`, `mName_TC`,  `mName_EN`, `movinon_rate` FROM `movie`WHERE `ov_id`='2' ";
                                         $arr = $pdo->query($sql)->fetchAll();
                                         foreach ($arr as $obj) {
                                         ?>
                                             <div class="mycard-height col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
                                                 <div class="mycard">
-                                                    <a href="./detail-page.php">
+                                                    <a href="detail-page.php?movie_id=<?= $obj['movie_id'] ?>">
                                                         <div class="img-wrap">
 
                                                             <!-- 1/5更改 海報資料輸出 -->
@@ -145,13 +145,13 @@
                                     <div class="row mb-3">
                                         <!-- 1/5更改 電影資料提取與輸出 -->
                                         <?php
-                                        $sql = "SELECT `poster`, `mName_TC`,  `mName_EN`, `movinon_rate` FROM `movie`WHERE `ov_id`='3' ";
+                                        $sql = "SELECT `movie_id`, `poster`, `mName_TC`,  `mName_EN`, `movinon_rate` FROM `movie`WHERE `ov_id`='3' ";
                                         $arr = $pdo->query($sql)->fetchAll();
                                         foreach ($arr as $obj) {
                                         ?>
                                             <div class="mycard-height col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
                                                 <div class="mycard">
-                                                    <a href="./detail-page.php">
+                                                    <a href="detail-page.php?movie_id=<?= $obj['movie_id'] ?>">
                                                         <div class="img-wrap">
 
                                                             <!-- 1/5更改 海報資料輸出 -->

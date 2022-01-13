@@ -3,6 +3,8 @@
 <?php require_once './tpl/head.php' ?>
 <?php require_once 'phpqrcode.php' ?>
 
+
+
 <?php require_once './tpl/movinon-navbar.php' ?>
 
 <?php
@@ -16,6 +18,10 @@ if (!isset($_SESSION['seat'])) {
 //將表單資訊寫入 session，之後建立訂單時，一起變成訂單資訊
 foreach ($_SESSION['seat'] as $key => $obj) {
     $_SESSION['form'] = [];
+    $_SESSION['form']['ticket_poster'] = $obj['ticket_poster'];
+    $_SESSION['form']['movie_TC'] = $obj['movie_TC'];
+    $_SESSION['form']['movie_EN'] = $obj['movie_EN'];
+    $_SESSION['form']['pg_rate'] = $obj['pg_rate'];
     $_SESSION['form']['count'] = $obj['seatTotal'];
     $_SESSION['form']['total'] = $obj['payTotal'] + 20;
 };
@@ -30,26 +36,29 @@ $card_ccv = $_POST['ccv-code'];
 $card_holder = $_POST['holder_name'];
 
 
-$sql = "INSERT INTO `orders_pay`( `email`,`invoice_type`, `invoice_name`, `card_number`, `card_valid_date`, `card_ccv`, `card_holder`, `count`, `total`) 
-VALUES ('{$_SESSION['email']}','{$_POST['payment_type']}','{$_POST['payment_name']}','$card_number','$card_valid_date','$card_ccv','$card_holder',
+$sql = "INSERT INTO `orders_pay`( `email`, `ticket_poster`, `movie_TC`, `movie_EN`, `pg_rate`,`invoice_type`, `invoice_name`, `card_number`, `card_valid_date`, `card_ccv`, `card_holder`, `count`, `total`) 
+VALUES ('{$_SESSION['email']}','{$_SESSION['form']['ticket_poster']}','{$_SESSION['form']['movie_TC']}','{$_SESSION['form']['movie_EN']}','{$_SESSION['form']['pg_rate']}',
+'{$_POST['payment_type']}','{$_POST['payment_name']}','$card_number','$card_valid_date','$card_ccv','$card_holder',
 '{$_SESSION['form']['count']}','{$_SESSION['form']['total']}')";
 $stmt = $pdo->query($sql);
-if ($stmt->rowCount() > 0) {
-    //取得新增資料時的自動編號
-    $lastInsertId = $pdo->lastInsertId();
+//取得新增資料時的自動編號
+$lastInsertId = $pdo->lastInsertId();
 
-    //建立訂單編號
-    $order_id = date("Ymd") . sprintf("%05d", $lastInsertId);
+//建立訂單編號
+$order_id_parent = date("Ymd") . sprintf("%05d", $lastInsertId);
+
+if ($stmt->rowCount() > 0) {
+    
 
     //將訂單編號更新回 orders 資料表
-    $sqlUpdate = "UPDATE `orders_pay` SET `order_id` = '{$order_id}' WHERE `id` = {$lastInsertId}";
+    $sqlUpdate = "UPDATE `orders_pay` SET `order_id_parent` = '{$order_id_parent}' WHERE `id` = {$lastInsertId}";
     $pdo->query($sqlUpdate);
 };
 
 foreach ($_SESSION['seat'] as $key => $obj) {
     foreach ($obj['seatName'] as $objSeatName) {
-        $sql = "INSERT INTO `orders`( `email`,`movie_TC`, `movie_EN`, `pg_rate`, `cinema`, `seat`, `date`, `showtime`, `screen`)
-                VALUES ('{$_SESSION['email']}','{$obj['movie_TC']}','{$obj['movie_EN']}','{$obj['pg_rate']}',
+        $sql = "INSERT INTO `orders`( `email`,`ticket_poster`,`movie_TC`, `movie_EN`, `pg_rate`, `cinema`, `seat`, `date`, `showtime`, `screen`)
+                VALUES ('{$_SESSION['email']}','{$obj['ticket_poster']}','{$obj['movie_TC']}','{$obj['movie_EN']}','{$obj['pg_rate']}',
                 '{$obj['cinema']}','{$objSeatName}','{$obj['movie_date']}',
                 '{$obj['showtime']}','{$obj['movie_cat']}')";
 
@@ -65,7 +74,7 @@ foreach ($_SESSION['seat'] as $key => $obj) {
             $lastInsertId = $pdo->lastInsertId();
 
             //建立訂單編號
-            $order_id = date("Ymd") . sprintf("%05d", $lastInsertId);
+            $order_id = sprintf("%05d", $lastInsertId);
 
 
 
@@ -78,7 +87,7 @@ foreach ($_SESSION['seat'] as $key => $obj) {
             $QR = 'qrcode.png'; //已經生成的原始二維碼圖 
             $QR = imagecreatefromstring(file_get_contents($QR));
             imagepng($QR, $value . '.png');
-            $sqlUpdateQr = "UPDATE `orders` SET `order_id` = '{$order_id}',`qrcode` = '{$value}.png' WHERE `id` = {$lastInsertId}";
+            $sqlUpdateQr = "UPDATE `orders` SET `order_id_parent` = '{$order_id_parent}',`order_id` = '{$order_id}',`qrcode` = '{$value}.png' WHERE `id` = {$lastInsertId}";
             $pdo->query($sqlUpdateQr);
         }
 
