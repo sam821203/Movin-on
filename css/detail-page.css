@@ -1,9 +1,12 @@
 body {
-    background: url("images/detail_page/bg_img/bg_img_gradient_1200.jpg") top center no-repeat;
+    background-image: url("images/detail_page/bg_img/bg_img_gradient_1200.jpg");
     background-size: contain;
-    background-color: var(--bg-color);
     background-position: top center;
     background-repeat: no-repeat;
+}
+
+.actors-list-section .img-wrap {
+    opacity: .75;
 }
 
 /*----- fixed icon ticket -----*/

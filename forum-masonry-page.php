@@ -10,6 +10,13 @@
     <!-- movinon-navbar -->
     <?php require_once './tpl/movinon-navbar.php' ?>
 
+    <div class="masonry-title-section">
+        <div class="text-center">
+            <div class="title-tc">蜘蛛人：無家日</div>
+            <div class="title-en">Spider-man: no way home</div>
+        </div>
+    </div>
+
     <section class="masonry-articles-section">
         <div>
             <div class="cat-tag-selector"><i class="fas fa-grip-vertical"></i>依類別分類</div>
@@ -62,7 +69,7 @@
                                     <div class="img-wrap">
                                         <div class="img-gradient-15"></div>
                                         <div class="img-filter-15"></div>
-                                        <img src="<?= $obj['article_photo'] ?>" alt="Dummy Image" class="atcphoto">
+                                        <img src="<?= $obj['article_photo'] ?>" alt="Dummy Image">
                                     </div>
                                 </div>
                                 
@@ -76,7 +83,6 @@
                                     <div>2021-12-20</span>by<span>aaa</span></div>
                                     <h3 class="masonry-title sub-title-b"><?= $obj['title'] ?></h3>
                                     <p class="masonry-description">
-                                        <!-- <?= mb_substr($obj['article'],0,300) ?>... -->
                                         <?= $obj['article'] ?>
                                     </p>
                                 </div>

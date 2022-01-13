@@ -235,7 +235,7 @@
                                             </div>
                                             <div class="rank-num">02</div>
                                             <div class="content-r">
-                                                <p class="section-header-b"><span>刀劍神域 –Progressive- 無星夜的詠嘆調</span></p>
+                                                <p class="section-header-b"><span class="marquee">刀劍神域 –Progressive- 無星夜的詠嘆調</span></p>
                                                 <p class="en-title">Sword Art Online: Progressive</p>
                                                 <div class="rating">
                                                     <i class="fas fa-star"></i>
@@ -327,7 +327,7 @@
                                             </div>
                                             <div class="rank-num">04</div>
                                             <div class="content-r">
-                                                <p class="section-header-b"><span>我的英雄學院劇場版：世界英雄任務</span></p>
+                                                <p class="section-header-b"><span class="marquee">我的英雄學院劇場版：世界英雄任務</span></p>
                                                 <p class="en-title">My Hero Academia The Movie : World Heores Mission</p>
                                                 <div class="rating">
                                                     <i class="fas fa-star"></i>
@@ -373,7 +373,7 @@
                                             </div>
                                             <div class="rank-num">05</div>
                                             <div class="content-r">
-                                                <p class="section-header-b"><span>迷離夜蘇活</span></p>
+                                                <p class="section-header-b"><span class="marquee">迷離夜蘇活</span></p>
                                                 <p class="en-title">Last Night in Soho</p>
                                                 <div class="rating">
                                                     <i class="fas fa-star"></i>

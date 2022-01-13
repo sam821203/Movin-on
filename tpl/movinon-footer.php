@@ -1,5 +1,7 @@
+
+
 <!-- -----------footer Start----------- -->
-<footer class="mt-5">
+<footer class="mt-5" style="background-image: url('images/footer_bg_img.jpg')"> 
     <div class="movinon-footer">
         <div class="container">
             <div class="row">

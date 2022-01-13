@@ -11,12 +11,13 @@
     max-width: 1920px;
 }
 
+/* 1/13 調整 bottom / top */
 canvas {
     pointer-events: none;
     position: absolute;
-    /* width: 100%; */
+    width: 100%;
     height: 100%;
-    top: 0;
+    bottom: 160px;
     left: 0;
 }
 
@@ -366,7 +367,7 @@ canvas {
     overflow: hidden;
 }
 
-.ranking-section .content-r p.section-header-b span {
+.ranking-section .content-r p.section-header-b span.marquee {
     display: inline-block;
     padding-left: 100%;
     -webkit-animation: marquee 6s linear infinite;

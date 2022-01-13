@@ -44,7 +44,7 @@
                                         $arr = $pdo->query($sql)->fetchAll();
                                         foreach ($arr as $obj) {
                                         ?>
-                                            <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard-height col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
                                                 <div class="mycard">
                                                     <a href="./detail-page.php">
                                                         <div class="img-wrap">
@@ -74,7 +74,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-
                                         <?php
                                         }
                                         ?>
@@ -98,7 +97,7 @@
                                         $arr = $pdo->query($sql)->fetchAll();
                                         foreach ($arr as $obj) {
                                         ?>
-                                            <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard-height col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
                                                 <div class="mycard">
                                                     <a href="./detail-page.php">
                                                         <div class="img-wrap">
@@ -150,7 +149,7 @@
                                         $arr = $pdo->query($sql)->fetchAll();
                                         foreach ($arr as $obj) {
                                         ?>
-                                            <div class="col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
+                                            <div class="mycard-height col-xl-2 col-lg-3 col-md-4 col-md-4 col-sm-6 col-xs-6 col-6">
                                                 <div class="mycard">
                                                     <a href="./detail-page.php">
                                                         <div class="img-wrap">

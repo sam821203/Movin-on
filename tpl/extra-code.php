@@ -1,0 +1,3 @@
+<?= mb_substr($obj['article'],0,300) ?>...
+
+<body style="background-image: url('images/<?= $objbg['movie_bg'] ?>')">

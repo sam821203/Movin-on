@@ -1,6 +1,6 @@
 <?php require_once './tpl/head.php' ?>
-<?php require_once 'db.inc.php'; ?>
-
+<?php require_once 'db.inc.php' ?>
+<?php session_start() ?>
 
 <style>
     <?php require_once './css/detail-page.css' ?>

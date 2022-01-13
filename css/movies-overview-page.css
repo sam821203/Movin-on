@@ -1,3 +1,7 @@
+.content-section .mycard-height {
+    height: 384px;
+}
+
 .content-section .mycard .img-wrap {
     max-width: 280px;
     margin-bottom: 12px;
