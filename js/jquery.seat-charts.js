@@ -26,6 +26,7 @@
 				naming  : {
 					top    : true,
 					left   : true,
+                    // right  : true,
 					getId  : function(character, row, column) {
 						return row + '_' + column;
 					},

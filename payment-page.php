@@ -185,18 +185,18 @@ if (!isset($_SESSION['seat'])) {
                                 <!-- 電子發票 -->
                                 <div class="e-invoice">
                                     <div class="section-header-b g-subtitle-mb col-12">電子發票</div>
-                                    <div class="e-invoice-select d-flex">
+                                    <div class="e-invoice-select d-flex justify-content-between">
 
-                                        <div class="form-group d-flex">
+                                        <div class="e-invoice-group1 form-group d-flex">
                                             <select class="form-control custom-select" id="exampleFormControlSelect1" name="payment_type">
                                                 <option value="捐贈">捐贈</option>
-                                                <option value="捐贈">3</option>
+                                                <option value="寄送">寄送</option>
                                             </select>
                                         </div>
-                                        <div class="form-group">
+                                        <div class="e-invoice-group2 form-group">
                                             <select class="form-control custom-select" id="exampleFormControlSelect1" name="payment_name">
                                                 <option value="創世基金會">創世基金會</option>
-                                                <option value="創世基金會">3</option>
+                                                <option value="公益協會">公益協會</option>
                                             </select>
                                         </div>
                                     </div>

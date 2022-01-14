@@ -918,9 +918,8 @@
             }, 'json');
         });
 
-
-        $('button#btn_login').click(function (event) {
-            // event.preventDefault();
+        $('button#btn_login').click(function(event) {
+            event.preventDefault();
 
             //各自將 input 帶入變數中
             let input_email = $('input#email_login');
@@ -944,7 +943,7 @@
                 pwd: input_pwd.val()
             };
 
-            $.post("login.php", objUser, function (obj) {
+            $.post("login.php", objUser, function(obj) {
                 if (obj['success']) {
                     //關閉浮動視窗
                     $('div#exampleModalLogin').hide();
@@ -953,17 +952,20 @@
                     alert(`${obj['info']}`);
 
                     //當成功訊息執行時，等數秒，執行自訂程式
-                    setTimeout(function () {
-                        
+                    setTimeout(function() {
+
                         location.reload();
-                    }, 3000)
-                    
+                    }, 1000)
+
                 } else {
                     alert(`${obj['info']}`);
                 }
-                
-            }, 'html');
+
+            }, 'json');
+
         });
+
+
         // logout 
         $('a#logout').click(function(event) {
             // event.preventDefault();

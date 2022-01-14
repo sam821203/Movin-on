@@ -174,6 +174,7 @@
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: var(--border-radius-4);
     width: 100%;
+    color: rgba(255,255,255,0.9);
     border: none;
     padding: 12px 24px;
 }
@@ -200,16 +201,30 @@
 
 .payment-section-r .e-invoice .e-invoice-select {
     margin-bottom: 32px;
+    padding: 0 16px;
 }
 
-.my-form-check .form-group .form-control {
+.payment-section select.custom-select {
+    background: url("images/icon_custom_select.svg") right 0.75rem center/12px 12px no-repeat;
+    border: transparent;
+    color: rgba(255,255,255,0.9);
+}
+
+.payment-section .form-group .form-control {
     background-color: rgba(255, 255, 255, 0.1);
     border: none;
     color: rgba(255, 255, 255, 0.9);
+    height: 43px;
 }
 
-.my-form-check .custom-select {
-    background: rgba(255, 255, 255, 0.9) url("images/triangle_down.svg") right 0.75rem center/12px 12px no-repeat;
+.payment-section .e-invoice-group1 {
+    width: 25%;
+    height: 43px;
+}
+
+.payment-section .e-invoice-group2 {
+    width: 70%;
+    height: 43px;
 }
 
 .payment-section-r .agreement-alert {

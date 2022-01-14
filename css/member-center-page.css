@@ -16,10 +16,10 @@ body {
     font-size: 14px;
 }
 
-.member-l-info, 
-.member-l-setting, 
+.member-l-info,
+.member-l-setting,
 .member-r-board {
-    background-color: rgba(18,18,18,0.9);
+    background-color: rgba(18, 18, 18, 0.9);
     border-radius: var(--border-radius-8);
     box-shadow: var(--box-shadow-card-lg);
 }
@@ -79,7 +79,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 24px 32px;
-    border-bottom: 1px solid rgba(255,255,255,0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .member-l-setting .setting-row .img-wrap {
@@ -110,5 +110,89 @@ body {
 
 /* -------------------------member r board------------------------- */
 .member-r-board {
-    background-color: rgba(18,18,18,0.9);
+    background-color: rgba(18, 18, 18, 0.9);
+    height: 800px;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+}
+
+/* -------------0113-ticket---------------- */
+.myticket {
+    position: relative;
+    width: 100%;
+}
+
+.ticket-img-wrap {
+    width: 248px;
+    margin-right: 40px;
+    border-radius: 50px;
+    box-shadow: var(--box-shadow-black);
+}
+
+.ticket-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.poster-img-wrap {
+    position: absolute;
+    top: 56px;
+    left: 0;
+}
+
+.poster-img-wrap img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.ticket-card {
+    width: 100%;
+}
+
+.content {
+    position: absolute;
+    top: 24px;
+    left: 32px;
+    color: #121212;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.content .body2-r {
+    opacity: var(--opacity-50);
+}
+
+.content .section-header-b {
+    margin-bottom: 4px;
+}
+
+.content .order-num {
+    color: rgba(18, 18, 18, 0.5);
+    margin-bottom: 256px;
+}
+
+.content .title-en {
+    opacity: var(--opacity-50);
+}
+
+.content .col-12 {
+    padding: 0;
+}
+
+.content-row {
+    width: 256px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.pg-rate {
+    padding: 4px 12px;
+    border-radius: var(--border-radius-50);
+    border: 1px solid rgba(18, 18, 18, 0.5);
+    color: rgba(18, 18, 18, 0.5);
 }
