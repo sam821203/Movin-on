@@ -54,50 +54,53 @@
         <div>
             <div class="masonry-wrapper">
                 <div class="masonry">
-                    <?php $sql = "SELECT `title`, `article`, `article_photo`, `spoiler_tag` FROM `spider_forum_article`";
+                    <?php $sql = "SELECT `article_cat`,`article_id`,`title`, `article`, `article_photo`, `spoiler_tag` FROM `spider_forum_article`";
                     $arr = $pdo->query($sql)->fetchAll();
                     foreach ($arr as $obj) {
                     ?>
                         <div class="masonry-item">
-                            <div class="masonry-content">
-                                <div class="article-tag">
-                                    <p class="article-cat body1-m">分類</p>
-                                    <p class="spoiler-tag"><?= $obj['spoiler_tag'] ?></p>
-                                </div>
+                            
+                            <a href="./forum-article-page.php?id=<?= $obj['article_id'] ?>">
+                                <div class="masonry-content">
+                                    <div class="article-tag">
+                                        <p class="article-cat body1-m">分類</p>
+                                        <p class="spoiler-tag"><?= $obj['spoiler_tag'] ?></p>
+                                    </div>
 
-                                <div>
-                                    <div class="img-wrap">
-                                        <div class="img-gradient-15"></div>
-                                        <div class="img-filter-15"></div>
-                                        <img src="<?= $obj['article_photo'] ?>" alt="Dummy Image">
+                                    <div>
+                                        <div class="img-wrap">
+                                            <div class="img-gradient-15"></div>
+                                            <div class="img-filter-15"></div>
+                                            <img src="<?= $obj['article_photo'] ?>" alt="Dummy Image">
+                                        </div>
                                     </div>
-                                </div>
-                                
-                                <div class="article-avatar">
-                                    <div class="avatar">
-                                        <img src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                                    
+                                    <div class="article-avatar">
+                                        <div class="avatar">
+                                            <img src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="masonry-content-text">
-                                    <div>2021-12-20</span>by<span>aaa</span></div>
-                                    <h3 class="masonry-title sub-title-b"><?= $obj['title'] ?></h3>
-                                    <p class="masonry-description">
-                                        <?= $obj['article'] ?>
-                                    </p>
-                                </div>
-                                <div class="article-like">
-                                    <div class="like-btn">
-                                        <i class="fas fa-thumbs-up"></i>
-                                        <p>20</p>
+                                    <div class="masonry-content-text">
+                                        <div>2021-12-20</span>by<span>aaa</span></div>
+                                        <h3 class="masonry-title sub-title-b"><?= $obj['title'] ?></h3>
+                                        <p class="masonry-description">
+                                            <?= $obj['article'] ?>
+                                        </p>
                                     </div>
-                                    <div class="comment">
-                                        <i class="far fa-comment"></i>
-                                        <p>10</p>
+                                    <div class="article-like">
+                                        <div class="like-btn">
+                                            <i class="fas fa-thumbs-up"></i>
+                                            <p>20</p>
+                                        </div>
+                                        <div class="comment">
+                                            <i class="far fa-comment"></i>
+                                            <p>10</p>
+                                        </div>
                                     </div>
+                                    <div class="overflow-gradient"></div>
                                 </div>
-                                <div class="overflow-gradient"></div>
-                            </div>
+                            </a>
                         </div>
                         
                     <?php } ?>
