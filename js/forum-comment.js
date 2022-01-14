@@ -4,22 +4,22 @@ $(".comment-send").click(function (event) {
     event.preventDefault();
     let comment = $(".comment-txt").val()
 
-    // console.log(comment) 
-    // console.log($(".comment-txt").val())
+    console.log(comment) 
+    console.log($(".comment-txt").val())
 
     if (comment != "") {
         $(".comment-txt").val('')
 
         var url = new URL(location.href)
         
-        
         let objComment = {
             comment: comment,
             title_id: url.searchParams.get('id'),
             member_id: $(".user_identify").attr('id'),
-            comment_order: parseInt($(".comment-count").text(), 10 )+1
+            comment_id: parseInt($(".comment-count").text(), 10 )+1
             };
-        // console.log(objComment) 
+
+        console.log(objComment) 
 
         $.post("insertComment.php", objComment, function (obj) {
             if (obj['success']) {

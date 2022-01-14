@@ -228,22 +228,22 @@
                                 $arr = $pdo->query($sql)->fetchAll();
                                 foreach ($arr as $obj) {
                             ?>
-                                    <div class="write-comment">
-                                        <div class="avatar">
-                                            <div class="img-wrap">
-                                                <img class="user_identify" id="<?= $obj['member_id'] ?>" src=".\images\forum_article_page\avatar\<?= $obj['avatar'] ?>.svg">
-                                            </div>
-                                        </div>
-                                        <div class="form">
-                                            <div class="form-group">
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="寫些什麼"></textarea>
-                                            </div>
-
-                                            <div class="d-flex justify-content-end align-items-end">
-                                                <button type="submit" class="btn-brand-left-comment mr-0">送出</button>
-                                            </div>
+                                <div class="write-comment">
+                                    <div class="avatar">
+                                        <div class="img-wrap">
+                                            <img class="user_identify" id="<?= $obj['member_id'] ?>" src=".\images\forum_article_page\avatar\<?= $obj['avatar'] ?>.svg">
                                         </div>
                                     </div>
+                                    <div class="form">
+                                        <div class="form-group">
+                                            <textarea class="form-control comment-txt" id="exampleFormControlTextarea1" rows="3" placeholder="寫些什麼"></textarea>
+                                        </div>
+
+                                        <div class="d-flex justify-content-end align-items-end">
+                                            <button type="submit" class="comment-send btn-brand-left-comment mr-0">送出</button>
+                                        </div>
+                                    </div>
+                                </div>
                             <?php
                                 }
                             }

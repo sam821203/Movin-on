@@ -7,7 +7,7 @@
 </style>
 
 <body>
-    
+
     <!-- movinon-navbar -->
     <?php require_once './tpl/movinon-navbar.php' ?>
 
@@ -31,18 +31,19 @@
                             <div class="board-content">
                                 <p class="sub-title-r">於本討論區發文，需遵守全站站規與本區規則。違者將刪除文章，累犯將停權 30 天。</p>
                                 <p class="body1-r">1. 禁止發文標題爆雷，內文如有爆雷內容<br>
-                                ⚠️ 請於標題最前面加上 #有雷<br>
-                                2. 禁止於無雷文章回應爆雷<br>
-                                3. 禁止發表與本板主旨無關的內容與回應<br>
-                                4. 分享資訊時儘量以官網資訊爲主，且禁止分享營利個人頁面網址<br>
-                                5. 發文前請確認是否重複轉貼文章，若 7 日內有其他人張貼，請勿再次張貼<br>
-                                <br>
-                                ⚠️ 重要聲明：本討論區是以即時上載留言的方式運作，對所有留言的真實性、完整性及立場等，不負任何法律責任。而一切留言之言論只代表留言者個人意見，並非本網站之立場，用戶不應信賴內容，並應自行判斷內容之真實性。於有關情形下，用戶應尋求專業意見(如涉及醫療、法律或投資等問題)。 由於本討論區受到「即時上載留言」運作方式所規限，故不能完全監察所有留言，若讀者發現有留言出現問題，請聯絡我們。有權刪除任何留言及拒絕任何人士上載留言，同時亦有不刪除留言的權利。切勿上傳和撰寫 侵犯版權(未經授權)、粗言穢語、誹謗、渲染色情暴力或人身攻擊的言論，敬請自律。本網站保留一切法律權利。</p>
-                        </div>
+                                    ⚠️ 請於標題最前面加上 #有雷<br>
+                                    2. 禁止於無雷文章回應爆雷<br>
+                                    3. 禁止發表與本板主旨無關的內容與回應<br>
+                                    4. 分享資訊時儘量以官網資訊爲主，且禁止分享營利個人頁面網址<br>
+                                    5. 發文前請確認是否重複轉貼文章，若 7 日內有其他人張貼，請勿再次張貼<br>
+                                    <br>
+                                    ⚠️ 重要聲明：本討論區是以即時上載留言的方式運作，對所有留言的真實性、完整性及立場等，不負任何法律責任。而一切留言之言論只代表留言者個人意見，並非本網站之立場，用戶不應信賴內容，並應自行判斷內容之真實性。於有關情形下，用戶應尋求專業意見(如涉及醫療、法律或投資等問題)。 由於本討論區受到「即時上載留言」運作方式所規限，故不能完全監察所有留言，若讀者發現有留言出現問題，請聯絡我們。有權刪除任何留言及拒絕任何人士上載留言，同時亦有不刪除留言的權利。切勿上傳和撰寫 侵犯版權(未經授權)、粗言穢語、誹謗、渲染色情暴力或人身攻擊的言論，敬請自律。本網站保留一切法律權利。
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- --------------------display 小於 1200-------------------- -->
                 <div class="row d-block d-xl-none">
                     <div class="col-12">
@@ -59,20 +60,21 @@
                             <div class="board-content">
                                 <p class="sub-title-r">於本討論區發文，需遵守全站站規與本區規則。違者將刪除文章，累犯將停權 30 天。</p>
                                 <p class="body1-r">1. 禁止發文標題爆雷，內文如有爆雷內容<br>
-                                ⚠️ 請於標題最前面加上 #有雷<br>
-                                2. 禁止於無雷文章回應爆雷<br>
-                                3. 禁止發表與本板主旨無關的內容與回應<br>
-                                4. 分享資訊時儘量以官網資訊爲主，且禁止分享營利個人頁面網址<br>
-                                5. 發文前請確認是否重複轉貼文章，若 7 日內有其他人張貼，請勿再次張貼<br>
-                                <br>
-                                ⚠️ 重要聲明：本討論區是以即時上載留言的方式運作，對所有留言的真實性、完整性及立場等，不負任何法律責任。而一切留言之言論只代表留言者個人意見，並非本網站之立場，用戶不應信賴內容，並應自行判斷內容之真實性。於有關情形下，用戶應尋求專業意見(如涉及醫療、法律或投資等問題)。 由於本討論區受到「即時上載留言」運作方式所規限，故不能完全監察所有留言，若讀者發現有留言出現問題，請聯絡我們。有權刪除任何留言及拒絕任何人士上載留言，同時亦有不刪除留言的權利。切勿上傳和撰寫 侵犯版權(未經授權)、粗言穢語、誹謗、渲染色情暴力或人身攻擊的言論，敬請自律。本網站保留一切法律權利。</p>
-                        </div>
+                                    ⚠️ 請於標題最前面加上 #有雷<br>
+                                    2. 禁止於無雷文章回應爆雷<br>
+                                    3. 禁止發表與本板主旨無關的內容與回應<br>
+                                    4. 分享資訊時儘量以官網資訊爲主，且禁止分享營利個人頁面網址<br>
+                                    5. 發文前請確認是否重複轉貼文章，若 7 日內有其他人張貼，請勿再次張貼<br>
+                                    <br>
+                                    ⚠️ 重要聲明：本討論區是以即時上載留言的方式運作，對所有留言的真實性、完整性及立場等，不負任何法律責任。而一切留言之言論只代表留言者個人意見，並非本網站之立場，用戶不應信賴內容，並應自行判斷內容之真實性。於有關情形下，用戶應尋求專業意見(如涉及醫療、法律或投資等問題)。 由於本討論區受到「即時上載留言」運作方式所規限，故不能完全監察所有留言，若讀者發現有留言出現問題，請聯絡我們。有權刪除任何留言及拒絕任何人士上載留言，同時亦有不刪除留言的權利。切勿上傳和撰寫 侵犯版權(未經授權)、粗言穢語、誹謗、渲染色情暴力或人身攻擊的言論，敬請自律。本網站保留一切法律權利。
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <!-- -----------forum cards section----------- -->
         <section class="forum-cards-section g-section-mb">
             <div class="container d-none d-xl-block">
@@ -113,18 +115,24 @@
                         </div>
                     </div>
                     <div class="col-8">
-                        <a href="./forum-masonry-page.php">
-                            <div class="img-wrap card-3">
-                                <img src="images/forum_overview_page/card_3.jpg" alt="">
-                                <div class="content">
-                                    <div class="section-header-r">蜘蛛人: 無家日</div>
-                                    <span class="body1-b">Today</span><span class="caption-12 com-count com-3-count">+<span class="count">134</span></span>
+                        <?php
+                        $sql = "SELECT `movie_id` FROM `movie` WHERE `movie_id` = '73'";
+                        $arr = $pdo->query($sql)->fetchAll();
+                        foreach ($arr as $obj) {
+                        ?>
+                            <a href="forum-masonry-page.php?movie_id=<?= $obj['movie_id'] ?>">
+                                <div class="img-wrap card-3">
+                                    <img src="images/forum_overview_page/card_3.jpg" alt="">
+                                    <div class="content">
+                                        <div class="section-header-r">蜘蛛人: 無家日</div>
+                                        <span class="body1-b">Today</span><span class="caption-12 com-count com-3-count">+<span class="count">134</span></span>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        <?php } ?>
                     </div>
                 </div>
-                
+
                 <!-- -------------------中------------------- -->
                 <div class="row row2">
                     <div class="col-6">
@@ -137,7 +145,7 @@
                                 </div>
                             </div>
                         </a>
-                        
+
                     </div>
                     <div class="col-6">
                         <a href="#">
@@ -151,7 +159,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- -------------------下------------------- -->
                 <div class="row row3">
                     <div class="col-3">
@@ -253,7 +261,7 @@
                                 </div>
                             </div>
                         </a>
-                    </div> 
+                    </div>
                     <div class="mycol-6 card-md">
                         <a href="./forum-masonry-page.php">
                             <div class="img-wrap">
@@ -264,7 +272,7 @@
                                 </div>
                             </div>
                         </a>
-                    </div> 
+                    </div>
                     <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
@@ -275,7 +283,7 @@
                                 </div>
                             </div>
                         </a>
-                    </div> 
+                    </div>
                     <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
@@ -286,7 +294,7 @@
                                 </div>
                             </div>
                         </a>
-                    </div> 
+                    </div>
                     <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
@@ -297,7 +305,7 @@
                                 </div>
                             </div>
                         </a>
-                    </div> 
+                    </div>
                     <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
@@ -308,7 +316,7 @@
                                 </div>
                             </div>
                         </a>
-                    </div> 
+                    </div>
                     <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
@@ -319,7 +327,7 @@
                                 </div>
                             </div>
                         </a>
-                    </div> 
+                    </div>
                     <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
@@ -330,7 +338,7 @@
                                 </div>
                             </div>
                         </a>
-                    </div> 
+                    </div>
                     <div class="mycol-6 card-md">
                         <a href="#">
                             <div class="img-wrap">
@@ -341,11 +349,11 @@
                                 </div>
                             </div>
                         </a>
-                    </div> 
-                </div> 
+                    </div>
+                </div>
             </div>
         </section>
-        
+
         <!-- -----------forum cat section----------- -->
         <section class="forum-cat-section g-section-mb">
             <div class="container">
@@ -466,7 +474,7 @@
                 </div>
             </div>
         </section>
-    </main>    
+    </main>
 
     <?php require_once './tpl/movinon-footer.php' ?>
 
@@ -474,4 +482,5 @@
 
     <script src="js/custom.js"></script>
 </body>
+
 </html>

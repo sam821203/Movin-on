@@ -18,14 +18,15 @@ if( isset($_POST['email']) &&
 
     try{
         //新增使用者的 SQL 語法
-        $sql = "INSERT INTO `users` (`email`, `pwd`, `verified_code`, `name`, `birthdate`, `address`)
+        $sql = "INSERT INTO `users` (`email`, `pwd`, `verified_code`, `name`, `birthdate`, `address`, `avatar`)
                 VALUES (
                     '{$_POST['email']}', 
                     '{$pwd}', 
                     '{$verified_code}',
                     '{$_POST['name']}', 
                     '{$_POST['birthdate']}', 
-                    '{$_POST['address']}'
+                    '{$_POST['address']}',
+                    'member1-avatar'
                 )";
         
         //執行 SQL 語法
