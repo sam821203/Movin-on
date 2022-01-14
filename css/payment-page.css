@@ -204,6 +204,14 @@
     padding: 0 16px;
 }
 
+.payment-section-r button {
+    padding: 0;
+    border: transparent;
+    width: 144px;
+    height: 48px;
+    margin-right: 0;
+}
+
 .payment-section select.custom-select {
     background: url("images/icon_custom_select.svg") right 0.75rem center/12px 12px no-repeat;
     border: transparent;
@@ -238,11 +246,14 @@
 }
 
 /* -----------------btn area----------------- */
-.payment-section-r .btn-area .btn {
-    border-radius: var(--border-radius-50);
-    padding: 4px 64px;
+.payment-section-r .btn-area {
     background-color: var(--brand-color);
     box-shadow: var(--box-shadow-red);
+}
+
+.payment-section-r .btn-area .btn {
+    border-radius: var(--border-radius-50);
+    /* padding: 4px 64px; */
     color: white;
 }
 

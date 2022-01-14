@@ -836,7 +836,6 @@
     <script src="js/main-page.js"></script>
 
     <script src="js/custom.js"></script>
-    <!-- <script src="js/datepicker.js"></script> -->
 
     <script>
         $('input#birthdate').datepicker({
