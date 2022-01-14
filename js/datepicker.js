@@ -2,18 +2,16 @@ $('input#birthdate').datepicker({
     dateFormat: "yy-mm-dd"
 });
 
-$('button#btn_register').click( function (event) {
+$('button#btn_register').click(function (event) {
     event.preventDefault();
 
-    console.log('hi');
+    // console.log('hi');
 
     let input_email = $('input#email');
     let input_pwd = $('input#pwd');
     let input_name = $('input#name');
     let input_birthdate = $('input#birthdate');
     let input_address = $('input#address');
-    
-    alert('test');
 
     let re = /\S+@\S+(\.\S+)+/;
     if (!re.test(input_email.val())) {
@@ -84,7 +82,7 @@ $('button#btn_register').click( function (event) {
 
 $('button#btn_login').click(function (event) {
     event.preventDefault();
-    
+
 
     //各自將 input 帶入變數中
     let input_email = $('input#email_login');
@@ -118,14 +116,15 @@ $('button#btn_login').click(function (event) {
 
             //當成功訊息執行時，等數秒，執行自訂程式
             setTimeout(function () {
-                
+
                 location.reload();
             }, 3000)
-            
+
         } else {
             alert(`${obj['info']}`);
         }
-        
+
     }, 'json');
-    
+
 });
+

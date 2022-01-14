@@ -837,7 +837,7 @@
 
     <script src="js/custom.js"></script>
 
-    <script>
+    <!-- <script>
         $('input#birthdate').datepicker({
             dateFormat: "yy-mm-dd"
         });
@@ -979,7 +979,7 @@
                 }
             }, 'json');
         });
-    </script>
+    </script> -->
 </body>
 
 </html>

@@ -8,11 +8,14 @@
     
     <!-- Font awesome -->
     <script src="./js/fontawesome.js"></script>
-    
-    <!-- Movinon navbar js -->
-    <script src="./js/movinon-navbar.js"></script>
 
     <!-- datepicker js -->
-    <!-- <script src="./js/datepicker.js"></script>   -->
+    <script src="./js/datepicker.js"></script>  
+
+    <!-- datepicker js -->
+    <script src="./js/logout.js"></script>  
+
+    <!-- Movinon navbar js -->
+    <script src="./js/movinon-navbar.js"></script>
 
    

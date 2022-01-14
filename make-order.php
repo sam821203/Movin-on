@@ -1,14 +1,13 @@
 <?php require_once './db.inc.php' ?>
-<?php session_start() ?>
 <?php require_once './tpl/head.php' ?>
+<?php session_start() ?>
 <?php require_once 'phpqrcode.php' ?>
 
-
-
-<?php require_once './tpl/movinon-navbar.php' ?>
+<style>
+    
+</style>
 
 <?php
-
 //如果這個階段沒有購物車，就將頁面轉到商品確認頁
 if (!isset($_SESSION['seat'])) {
     header("Location: new-booking-time-page.php");
@@ -97,8 +96,15 @@ foreach ($_SESSION['seat'] as $key => $obj) {
 }
 ?>
 
-<div class="text-center py-5">商品確認 - 填寫資料 - 確認付款 - <strong>訂單完成</strong></div>
+<body>
+    <?php require_once './tpl/movinon-navbar.php' ?>    
 
-<?php require_once './tpl/movinon-footer.php' ?>
+    <main>
+        <div class="text-center py-5">付款成功！</div>
+    </main>
 
-<?php require_once './tpl/foot.php' ?>
+    <?php require_once './tpl/movinon-footer.php' ?>
+
+    <?php require_once './tpl/foot.php' ?>
+</body>
+
