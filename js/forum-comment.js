@@ -21,7 +21,7 @@ $(".comment-send").click(function (event) {
             };
         // console.log(objComment) 
 
-        $.post("insertCommnent.php", objComment, function (obj) {
+        $.post("insertComment.php", objComment, function (obj) {
             if (obj['success']) {
                 // alert('送出成功');
                 setTimeout(function () {

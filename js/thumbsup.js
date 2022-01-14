@@ -31,7 +31,7 @@ $(".thumb").click(function (event) {
             like: like
         };
 
-        $.post("insert-thumbscount.php", objComment, function (obj) {
+        $.post("insertThumbsCount.php", objComment, function (obj) {
             // if (obj['success']) {
             //     alert('送出成功');
 
@@ -58,7 +58,7 @@ $(".thumb").click(function (event) {
             like: like
         };
 
-        $.post("insert-thumbscount.php", objComment, function (obj) {
+        $.post("insertthumbscount.php", objComment, function (obj) {
             // if (obj['success']) {
             //     alert('送出成功');
 
@@ -68,9 +68,6 @@ $(".thumb").click(function (event) {
         }, 'json')
 
     }
-
-
-
 })
 
 

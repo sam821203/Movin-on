@@ -136,7 +136,7 @@
                                                                 $a = $pdo->query($like)->fetch();
                                                             }
                                                             ?>
-                                                            <a class="thumb-<?= $a['like'] ?>" href="<?= $obj['comment_id'] ?>"><i class="fas fa-thumbs-up"></i></a><span class="like-count"><?= $obj['like_num_cm'] ?></span>
+                                                            <a class="thumb thumb-<?= $a['like'] ?>" href="<?= $obj['comment_id'] ?>"><i class="fas fa-thumbs-up"></i></a><span class="like-count"><?= $obj['like_num_cm'] ?></span>
                                                         </div>
                                                         <div class="reply">
                                                             <a href="#"><span>回覆</span></a>
@@ -511,6 +511,7 @@
 
     <!-- forum-comment -->
     <script src="./js/forum-comment.js"></script>
+
     <!-- thumbsup -->
     <script src="./js/thumbsup.js"></script>
 
