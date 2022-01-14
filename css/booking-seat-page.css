@@ -7,27 +7,40 @@ body {
 }
 
 div button {
-    padding: 3px;
+    padding-top: 2px;
+    padding-bottom: 3px;
     border-color: rgba(255,255,255,0.5);
 }
 
 li.seatCharts-legendItem {
-    margin-right: 48px;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+}
+
+span.seatCharts-legendDescription {
+    margin-top: 2px;
 }
 
 input#Numseats {
-    width: 88px;
+    width: 144px;
     height: 32px;
     margin-left: 8px;
-    border: 4px 0 0 4px;
-    border-color: rgba(255,255,255,0.5);
-    border-radius: 4px 0 0 4px;
-    background-color: rgba(255,255,255,0.1);
+    margin-right: 16px;
+    color: white;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
 }
 
 button#takeData {
     width: 56px;
-    border-radius: 0 4px 4px 0;
+    color: white;
+    margin-right: 16px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: rgba(255,255,255,0.25);
 }
 
 /* -----------------movie info section----------------- */
@@ -35,9 +48,8 @@ button#takeData {
     margin-top: 248px;
 }
 
-.movie-info-section .movie-info,
-.movie-info-section .movie-division {
-    margin-bottom: 72px;
+.movie-info-section .movie-info {
+    margin-bottom: 96px;
 }
 
 .movie-info-section .movie-info .movie-poster {
@@ -108,6 +120,10 @@ button#takeData {
     opacity: var(--opacity-75);
 }
 
+p#notification {
+    margin-top: 4px;
+}
+
 /* -----------------seat dataviz section----------------- */
 .seat-dataviz {
     width: 100%;
@@ -148,15 +164,15 @@ button#takeData {
     object-position: center center;
 }
 
-.seat-dataviz .selected,
-.seat-dataviz .available {
-    margin-right: 10px;
-}
-
 .seat-dataviz .time-left {
     color: var(--success-color);
     font-weight: 500;
     text-shadow: var(--text-shadow-green);
+}
+
+.seat-dataviz .time-left-status {
+    margin-top: 4px;
+    padding-right: 92px;
 }
 
 /* -----------------screen section----------------- */
@@ -188,6 +204,15 @@ button#takeData {
 }
 
 /* -----------------booking seat section----------------- */
+div.seat-demo {
+    margin-right: 8px;
+}
+
+div.seatCharts-cell.seat-demo {
+    width: 24px;
+    height: 24px;
+}
+
 .booking-seat-section .seats-area .seats {
     display: flex;
     justify-content: space-between;
@@ -300,16 +325,16 @@ button#takeData {
 .seats-area .btn-area {
     margin-top: 48px;
     display: flex;
-    justify-content: space-between;
 }
 
 .seats-area .btn-area a {
-    border-radius: var(--border-radius-50);
-    padding: 8px 36px;
+    border-radius: var(--border-radius-4);
+    margin-right: 12px;
+    padding: 8px 24px;
     color: white;
 }
 
-.seats-area .btn-area a:nth-child(2) {
+.seats-area .btn-area a:nth-child(1) {
     background-color: var(--brand-color);
     box-shadow: var(--box-shadow-red);
 }
@@ -335,9 +360,8 @@ button#takeData {
 
 div.seatCharts-cell {
     color: white;
-    height: 25px;
-    width: 25px;
-    line-height: 25px;
+    height: 28px;
+    width: 28px;
 }
 
 div.seatCharts-seat {
@@ -346,7 +370,7 @@ div.seatCharts-seat {
 }
 
 div.seatCharts-row {
-    height: 35px;
+    height: 44px;
 }
 
 div.seatCharts-seat.available {
@@ -388,23 +412,49 @@ div.seatCharts-container {
 
 ul.seatCharts-legendList {
     display: flex;
-    padding-left: 0px;
-}
-
-span.seatCharts-legendDescription {
-    margin-left: 5px;
-    line-height: 30px;
+    line-height: 100%;
+    align-items: center;
+    padding-left: 92px;
+    margin-bottom: 24px;
 }
 
 div.seatCharts-space {
     background-color: rgba(0, 0, 0, 0);
 }
 
-#selected-seats {
+ul#selected-seats {
     list-style: none;
-    max-height: 100px;
+    max-height: 110px;
+    padding-right: 0px;
     overflow-y: scroll;
-    overflow-x: none;
-    width: 200px;
-    color: red;
+    width: 100%;
+    color: rgba(255,255,255,0.9);
+}
+
+.booking-seat-section .divide-line {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    border-top: 1px solid rgba(255,255,255,0.25);
+}
+
+.booking-seat-section .seats-area div.sub-title-b {
+    margin-bottom: 24px;
+}
+
+.booking-seat-section span#total {
+    display: flex;
+    justify-content: end;
+    padding-right: 10px;
+}
+
+.sentSeat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.total-custom {
+    font-weight: 700;
+    padding-top: 8px;
 }

@@ -3,18 +3,28 @@
 <?php session_start(); ?>
 
 <style>
-    <?php require_once './css/jquery.seat-charts.css' ?>
-    <?php require_once './css/booking-seat-page.css' ?>
+    <?php require_once './css/jquery.seat-charts.css' ?><?php require_once './css/booking-seat-page.css' ?>
 </style>
 
 <?php if (isset($_GET['movie_id'])) { ?>
-    <?php $sql = "SELECT `movie_bg`FROM `movie` WHERE `movie_id` = {$_GET['movie_id']}";
-    $arr = $pdo->query($sql)->fetchAll();
+    <?php $sql = "SELECT `movie_bg`,`movie_bg418`FROM `movie` WHERE `movie_id` = {$_GET['movie_id']}";
+    $arr = $pdo->query($sql)->fetchAll(); ?>
+    <style>
+        body {
+            background-image: url('images/booking_time_page/bg_img/<?= $arr[0]['movie_bg'] ?>.jpg');
+        }
+
+        @media screen and (max-width:418px) {
+            body {
+                background-image: url('images/booking_time_page/bg_img/<?= $arr[0]['movie_bg418'] ?>.jpg');
+            }
+        }
+    </style>
+    <?php
     foreach ($arr as $objbg) {
     ?>
 
-        <body onload="onLoaderFunc()" style="background-image: url('images/<?= $objbg['movie_bg'] ?>')">
-
+        <body>
             <!-- movinon-navbar -->
             <?php require_once './tpl/movinon-navbar.php' ?>
             <script type="text/javascript">
@@ -45,7 +55,7 @@
                                             <div class="d-flex">
                                                 <div class="movie-poster">
                                                     <div class="img-wrap">
-                                                        <img src="images/movies_overview_page/現正熱映/<?= $obj['movie_poster']?>.jpg" alt="">
+                                                        <img src="images/movies_overview_page/現正熱映/<?= $obj['movie_poster'] ?>.jpg" alt="">
                                                     </div>
                                                 </div>
                                                 <div class="content">
@@ -84,23 +94,30 @@
 
                     <div class="booking-seat-section g-section-mb">
                         <div class="container">
-                            <div class="mycol-12 d-flex align-items-center mb-4">
-                                選擇座位數量: <input type="number" id="Numseats" required min="1" max="10">
-                                <button id="takeData">確定</button>
+                            <div class="row align-items-center mb-4">
+                                <div class="col-9 d-flex">
+                                    <div class="col-1"></div>
+                                    <div class="col-10 d-flex align-items-center">
+                                        <div>填寫座位數量：</div>
+                                        <input type="number" id="Numseats" required min="1" max="10">
+                                        <button id="takeData">確定</button>
+                                        <p id="notification"></p>
+                                    </div>
+                                    <div class="col-1"></div>
+                                </div>
+                                <div class="col-3"></div>
                             </div>
 
                             <div class="row seat-dataviz w-100">
-                                <div class="mycol-9 d-flex justify-content-between align-items-center w-100">
+                                <div class="col-9 d-flex justify-content-between align-items-center w-100">
                                     <!-- 座位狀態 -->
                                     <div class="d-flex" id="legend"></div>
                                     <div class="d-flex align-items-center">
-                                        <div>剩餘訂票時間：<span class="time-left" id="count-down-timer">02:53</span></div>
+                                        <div class="time-left-status">剩餘訂票時間：<span class="time-left" id="count-down-timer"></span></div>
                                     </div>
                                 </div>
-                                <div class="mycol-3"></div>
+                                <div class="col-3"></div>
                             </div>
-
-                            <p id="notification"></p>
 
                             <div class="row screen">
                                 <div class="col-9">
@@ -123,7 +140,6 @@
                                 ?>
                                     <div class="col-3">
                                         <div class="sub-title-b">購票資訊</div>
-                                        <hr>
                                         <div class="ticket-detail">
                                             <i class="fas fa-map-marker-alt"></i><span class="detail-title">城市：</span><span class="devision"><?= $obj['division'] ?></span>
                                         </div>
@@ -145,22 +161,27 @@
                                             </div>
                                             <span class="detail-title">座位：</span><span class="my-seat" id="counter">0</span>
                                         </div>
+                                        <div class="divide-line"></div>
                                         <ul id="selected-seats">
                                         </ul>
-                                        Total: <b>$<span id="total">0</span></b>
+                                        <div class="total-custom d-flex justify-content-between align-items-center">
+                                            <span class="body1-m">
+                                                Total :
+                                            </span>
+                                            <b><span id="total">NT$ 0</span></b>
+                                        </div>
+
+                                        <div class="btn-area">
+                                            <a class="btn" href="payment-page.php" id="headtopay" data-movie-poster="<?= $obj['movie_poster'] ?>" data-movieTC="<?= $obj['movie_TC'] ?>" data-movieEN="<?= $obj['movie_EN'] ?>" data-date="<?= $obj['movie_date'] ?>" data-moviecat="<?= $obj['movie_cat'] ?>" data-showtime="<?= $obj['showtime'] ?>" data-cinema="<?= $obj['cinema'] ?>" data-ticket-poster="<?= $obj['ticket_poster'] ?>" data-pg-rate="<?= $obj['pg_rate'] ?>">
+                                                <span>前往結帳</span>
+                                            </a>
+
+                                            <a class="btn btn-outline-light" href="#" id="resetSeat">
+                                                <span>重新選擇</span>
+                                            </a>
+                                        </div>
                                     </div>
                                 <?php } ?>
-
-
-                                <div class="btn-area">
-                                    <a class="btn btn-outline-light" href="#" id="resetSeat">
-                                        <span>重新選擇</span>
-                                    </a>
-
-                                    <a class="btn" href="payment-page.php" id="headtopay" data-movie-poster="<?= $obj['movie_poster'] ?>" data-movieTC="<?= $obj['movie_TC'] ?>" data-movieEN="<?= $obj['movie_EN'] ?>" data-date="<?= $obj['movie_date'] ?>" data-moviecat="<?= $obj['movie_cat'] ?>" data-showtime="<?= $obj['showtime'] ?>" data-cinema="<?= $obj['cinema'] ?>" data-ticket-poster="<?= $obj['ticket_poster'] ?>" data-pg-rate="<?= $obj['pg_rate'] ?>">
-                                        <span>前往結帳</span>
-                                    </a>
-                                </div>
                             </div>
                         </div>
 
@@ -204,7 +225,7 @@
                         // location.reload();
                         // console.log(seatCount);
                         // console.log(item);
-                    }; 
+                    };
 
                     const selectSeatsArray = [];
                     $('#selected-seats').find('p').each((i, v) => {
@@ -232,7 +253,7 @@
 
                     $.post('setSeat.php', objpaydetail, function(obj) {
                         if (obj['success']) {
-                            
+
                         }
                         console.log(obj);
                     }, 'json');
@@ -298,7 +319,6 @@
                                 '_ffff_ffffffffff_ffff_',
                                 '_ffff_ffffffffff_ffff_',
                                 '_ffff_ffffffffff_ffff_'
-
                             ],
                             seats: {
                                 f: {
@@ -306,7 +326,6 @@
                                     classes: 'first-class', //your custom CSS class
                                     category: '電影票'
                                 }
-
                             },
                             naming: {
                                 top: false,
@@ -318,9 +337,9 @@
                                 node: $('#legend'),
                                 items: [
                                     // 1/11 修改：新增您的座位
-                                    ['f', 'current seat', '您的座位'],
-                                    ['f', 'available', '未售出'],
-                                    ['f', 'unavailable', '已售出']
+                                    ['f', 'seat-demo', '您的座位'],
+                                    ['f', 'available seat-demo', '未售出'],
+                                    ['f', 'unavailable seat-demo', '已售出']
                                 ]
                             },
                             click: function() {
@@ -330,7 +349,7 @@
                                     const nrow = this.settings.row + 1;
                                     const ncolumn = this.settings.column;
                                     //let's create a new <li> which we'll add to the cart items
-                                    $('<li>' + '<p>' + nrow + '排' + ncolumn + '號' + '</p>' + ': $' + this.data().price + '</li>')
+                                    $('<li>' + '<p>' + nrow + '排' + ncolumn + '號' + '</p>' + 'NT$ ' + this.data().price + '</li>')
                                         .attr('id', 'cart-item-' + this.settings.id)
                                         .addClass('sentSeat')
                                         .data('seatId', this.settings.id)
@@ -385,7 +404,7 @@
                             sc.get(['1_2', '4_1', '7_1', '7_2', '7_3', '7_4', '7_5', '7_6', '7_7', '7_8', '7_9', '7_10', '7_11', '7_12', '7_13', '7_14', '7_15', '7_16', '7_17', '7_18', '7_19', '7_20']).status('unavailable');
                             $(".seatCharts-cell *").prop("disabled", true);
                             $("div.wrapper *").prop("disabled", false);
-                            document.getElementById("notification").innerHTML = "<b style='margin-bottom:0px;background:#F53D3D;'>請開始選擇座位</b>";
+                            document.getElementById("notification").innerHTML = "<b style='color:#6DF14B;'>請開始選擇座位</b>";
                         }
                     }
 
@@ -402,7 +421,9 @@
 
                     return total;
                 }
+                
             </script>
+
             <script type="text/javascript">
                 var _gaq = _gaq || [];
                 _gaq.push(['_setAccount', 'UA-36251023-1']);

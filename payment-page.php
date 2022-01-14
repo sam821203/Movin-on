@@ -135,7 +135,7 @@ if (!isset($_SESSION['seat'])) {
                         <?php } ?>
 
                         <div class="payment-section-r-bottom g-section-mb">
-                            <form name="myForm" method="post" action="make_order.php">
+                            <form name="myForm" method="post" action="make-order.php">
 
                                 <div>
                                     <div class="section-header-b g-subtitle-mb col-12">付款方式</div>
