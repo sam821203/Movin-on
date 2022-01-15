@@ -233,6 +233,10 @@ button .img-wrap img {
     border-top: 1px solid rgba(255,255,255,0.25);
 }
 
+.divide-line-bottom {
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
 /* global width percent */
 .mycol-1, .mycol-3, .mycol-4, .mycol-6, .mycol-7, .mycol-8, .mycol-9, .mycol-12 {
     width: 100%;
@@ -1062,5 +1066,40 @@ footer p {
     .movinon-navbar .menu-bar.open .menu-items {
         top: 48px;
         right: 24px;
+    }
+
+    /* -------movinon footer-------*/
+    .movinon-footer {
+        padding: 24px 0;
+    }
+
+    .movinon-footer .img-wrap {
+        width: 200px;
+        margin-bottom: 16px;
+    }
+    
+    .movinon-footer .img-wrap img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .movinon-footer .our-info {
+        padding-bottom: 16px;
+    }
+
+    .movinon-footer .footer-icons {
+        padding-bottom: 32px;
+    }
+
+    .movinon-footer .footer-info h4 {
+        padding: 20px 0 20px 0;
+    }
+
+    .movinon-footer .copyright {
+        letter-spacing: 0.5px;
+        opacity: var(--opacity-75);
+        text-align: center;
+        padding: 32px 0;
+        font-weight: 300;
     }
 }

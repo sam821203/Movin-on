@@ -665,9 +665,10 @@
                                                 </div>
                                             </div>
                                             <div class="actor-name">
-                                                <span class="actor-name-tc1 sub-title-b mb-1"><?= $obj['aName_TC'] ?></span>
-                                                <span class="character-name-tc1 sub-title-b mb-1"><?= $obj['character_TC'] ?></span>
+                                                <span class="actor-name-tc1 sub-title-b"><?= $obj['aName_TC'] ?></span>
                                                 <span class="actor-name-en1 italic-16"><?= $obj['aName_EN'] ?></span>
+
+                                                <span class="character-name-tc1 sub-title-b"><?= $obj['character_TC'] ?></span>
                                                 <span class="character-name-en1 italic-16"><?= $obj['character_EN'] ?></span>
                                             </div>
                                         </li>

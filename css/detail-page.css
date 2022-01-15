@@ -5,10 +5,6 @@ body {
     background-repeat: no-repeat;
 }
 
-.actors-list-section .img-wrap {
-    opacity: .75;
-}
-
 /*----- fixed icon ticket -----*/
 .fixed-icon-ticket {
     width: 56px;
@@ -373,8 +369,8 @@ body {
     overflow: hidden;
     position: relative;
     border-radius: var(--border-radius-4);
-    margin-bottom: 32px;
-    margin: 0 16px 8px 16px;
+    margin: 0 16px 16px 16px;
+    opacity: .75;
 }
 
 .actors-list-section .img-wrap img {
@@ -447,7 +443,7 @@ body {
 .actors-list-section .character-name-en1 {
     text-decoration: none;
     -webkit-transition: all 1s;
-    transform: translateY(40%);
+    transform: translateY(-120%);
     transition: all 1s;
     opacity: 0;
 }
@@ -455,15 +451,16 @@ body {
 .actors-list-section li:hover .character-name-tc1,
 .actors-list-section li:hover .character-name-en1 {
     top: 50px;
-    transform: translateY(1%);
+    transform: translateY(-190%);
     opacity: 1;
 }
 
-/* -----------------movie stills section----------------- */
-.movie-stills-section {
-    margin-bottom: 144px;
+.actors-list-section .actor-name-tc1,
+.actors-list-section .character-name-tc1 {
+    margin-bottom: 8px;
 }
 
+/* -----------------movie stills section----------------- */
 .movie-stills-section .movie-stills {
     margin: 32px 0 0 0;
     position: relative;
