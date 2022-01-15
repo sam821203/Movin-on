@@ -83,6 +83,10 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
+.member-l-setting .setting-row-select {
+    background-color: rgba(255,255,255,0.08);
+}
+
 .member-l-setting div:nth-child(6) {
     border-bottom: none;
 }
@@ -114,27 +118,24 @@ body {
 
 .member-l-setting .setting-row .fa-chevron-right {
     opacity: var(--opacity-75);
-    margin-top: auto 0;
 }
 
 
 /* -------------------------member r board------------------------- */
 .member-r-board {
     background-color: rgba(18, 18, 18, 0.9);
-    max-height: 768px;
+    height: 768px;
     overflow: auto;
     display: flex;
     flex-wrap: wrap;
-    padding: 48px 48px 24px 48px;
+    padding: 48px 32px 24px 32px;
     border-radius: 8px 0 0 8px;
-    /* flex-direction: column; */
 }
 
 /* -------------0113-ticket---------------- */
 .myticket {
     position: relative;
-    width: 100%;
-    margin-bottom: 32px;
+    margin: 0 16px 32px 16px;
 }
 
 .myticket .ticket-img-wrap {
@@ -153,7 +154,7 @@ body {
 .myticket .poster-img-wrap {
     width: 256.1px;
     position: absolute;
-    top: 40px;
+    top: 42px;
     left: 0;
 }
 

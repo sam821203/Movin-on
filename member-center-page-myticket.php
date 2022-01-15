@@ -10,8 +10,8 @@
         height: 100%;
     }
 
-    .container {
-        margin-top: 144px;
+    .boards-section .container {
+        margin-top: 200px;
     }
 
     /* -------------------------member l info------------------------- */
@@ -30,7 +30,7 @@
     }
 
     .member-l-info .img-wrap {
-        width: 75%;
+        width: 208px;
         margin: 32px 0 16px 0;
         padding: 0 40px;
     }
@@ -74,7 +74,7 @@
     .member-l-info .social-media {
         display: flex;
         justify-content: space-between;
-        padding: 0 48px;
+        padding: 0 72px;
         font-size: 32px;
         opacity: var(--opacity-50);
     }
@@ -83,8 +83,17 @@
     .member-l-setting .setting-row {
         display: flex;
         justify-content: space-between;
-        padding: 24px 32px;
+        align-items: center;
+        padding: 20px 32px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .member-l-setting div:nth-child(6) {
+        border-bottom: none;
+    }
+
+    .member-l-setting .fa-chevron-right {
+        margin-top: 2px;
     }
 
     .member-l-setting .setting-row .img-wrap {
@@ -110,92 +119,106 @@
 
     .member-l-setting .setting-row .fa-chevron-right {
         opacity: var(--opacity-75);
-        margin-top: auto 0;
     }
+
 
     /* -------------------------member r board------------------------- */
     .member-r-board {
         background-color: rgba(18, 18, 18, 0.9);
-        height: 800px;
+        height: 768px;
         overflow: auto;
         display: flex;
         flex-wrap: wrap;
-        /* flex-direction: column; */
+        padding: 48px 32px 24px 32px;
     }
 
     /* -------------0113-ticket---------------- */
     .myticket {
         position: relative;
-        float: left;
+        margin: 0 16px 32px 16px;
     }
 
-    .ticket-img-wrap {
-        max-width: 30%;
-        margin-right: 16px;
+    .myticket .ticket-img-wrap {
+        width: 256px;
         border-radius: 50px;
         box-shadow: var(--box-shadow-black);
     }
 
-    .ticket-img-wrap img {
+    .myticket .ticket-img-wrap img {
+        width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center center;
     }
 
-    .poster-img-wrap {
+    .myticket .poster-img-wrap {
+        width: 256.1px;
         position: absolute;
-        top: 56px;
+        top: 42px;
         left: 0;
     }
 
-    .poster-img-wrap img {
+    .myticket .poster-img-wrap img {
+        width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center center;
     }
 
-    .ticket-card {
+    .myticket .ticket-card {
         width: 100%;
     }
 
-    .content {
+    .myticket .content {
         position: absolute;
-        top: 24px;
-        left: 32px;
+        top: 16px;
+        left: 0px;
+        padding: 0 24px;
+        max-width: 256px;
         color: #121212;
         font-family: 'Roboto Condensed', sans-serif;
     }
 
-    .content .body2-r {
+    .myticket .content .body2-r {
         opacity: var(--opacity-50);
     }
 
-    .content .section-header-b {
+    .myticket .content .section-header-b {
         margin-bottom: 4px;
+        font-size: 20px;
+        font-weight: 700;
     }
 
-    .content .order-num {
+    .myticket .content .order-num {
         color: rgba(18, 18, 18, 0.5);
-        margin-bottom: 256px;
+        font-size: 14px;
+        margin-bottom: 200px;
     }
 
-    .content .title-en {
+    .myticket .content .title-en {
         opacity: var(--opacity-50);
     }
 
-    .content .col-12 {
+    .myticket .content .col-12 {
         padding: 0;
     }
 
-    .content-row {
-        width: 256px;
+    .myticket .content-row {
+        width: 208px;
         display: flex;
         justify-content: space-between;
         margin-bottom: 8px;
     }
 
-    .pg-rate {
-        padding: 4px 12px;
+    .myticket .content-row .sub-title-b {
+        font-size: 16px;
+        font-weight: 400;
+        opacity: .9;
+    }
+
+    .myticket .pg-rate {
+        font-size: 14px;
+        padding: 2px 8px;
         border-radius: var(--border-radius-50);
         border: 1px solid rgba(18, 18, 18, 0.5);
         color: rgba(18, 18, 18, 0.5);
@@ -207,7 +230,7 @@
     <?php require_once './tpl/movinon-navbar.php' ?>
 
     <main>
-        <section>
+        <section class="boards-section">
             <div class="container">
                 <div class="row">
                     <div class="col-3">
@@ -363,11 +386,11 @@
 
                                                 <div class="content-row">
                                                     <div>
-                                                        <div class="body2-r">影城</div>
+                                                        <div class="body2-r mb-1">影城</div>
                                                         <div class="sub-title-b"><?= $obj['cinema'] ?></div>
                                                     </div>
                                                     <div>
-                                                        <div class="body2-r">座位</div>
+                                                        <div class="body2-r mb-1">座位</div>
                                                         <div class="sub-title-b"><?= $obj['seat'] ?></div>
                                                     </div>
                                                 </div>

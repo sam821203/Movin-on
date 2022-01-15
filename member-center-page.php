@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="member-l-setting">
-                            <div class="setting-row">
+                            <div class="setting-row setting-row-select">
                                 <div class="d-flex align-items-center">
                                     <div class="img-wrap">
                                         <img src="images/ticket.svg" alt="">
@@ -135,7 +135,7 @@
                     </div>
 
                     <div class="col-9">
-                        <div class="member-r-board d-flex justify-content-between">
+                        <div class="member-r-board">
                             <!-- 票券 -->
                             <?php 
                             $sql = "SELECT * FROM `orders_pay` WHERE `email` = '{$_SESSION['email']}'";

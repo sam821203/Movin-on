@@ -812,7 +812,13 @@
                         <!-- < 1920 -->
                         <div class="row movie-stills d-none d-xs-none d-xl-flex">
                             <div class="hall-screen">
-                                <img src="images/detail_page/movie_stills/movie_stills_img2.jpg" alt="">
+                                <?php
+                                $sql = "SELECT `photo` FROM `movie_stills` WHERE `movie_id` = {$_GET['movie_id']} LIMIT 0,1";
+                                $arr = $pdo->query($sql)->fetchAll();
+                                foreach ($arr as $objSteel) {
+                                ?>
+                                    <img src="images/detail_page/movie_stills/<?= $objSteel['photo'] ?>.jpg" alt="">
+                                <?php } ?>
                             </div>
 
                             <div class="movie-stills-carousel">
@@ -827,38 +833,19 @@
                                     </div>
                                 </div>
 
+
                                 <div class="carousel-wrap d-flex justify-content-between list-unstyled flex-nowrap">
-                                    <li class="movie">
-                                        <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img1.jpg"></div>
-                                    </li>
-                                    <li class="movie">
-                                        <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img2.jpg"></div>
-                                    </li>
-                                    <li class="movie">
-                                        <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img3.jpg"></div>
-                                    </li>
-                                    <li class="movie">
-                                        <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img4.jpg"></div>
-                                    </li>
-                                    <li class="movie">
-                                        <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img5.jpg"></div>
-                                    </li>
-                                    <li class="movie">
-                                        <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img6.jpg"></div>
-                                    </li>
-                                    <li class="movie">
-                                        <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img7.jpg"></div>
-                                    </li>
-                                    <li class="movie">
-                                        <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img8.jpg"></div>
-                                    </li>
-                                    <li class="movie">
-                                        <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img9.jpg"></div>
-                                    </li>
-                                    <li class="movie">
-                                        <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img10.jpg"></div>
-                                    </li>
+                                    <?php
+                                    $sql = "SELECT `photo` FROM `movie_stills` WHERE `movie_id` = {$_GET['movie_id']}";
+                                    $arr = $pdo->query($sql)->fetchAll();
+                                    foreach ($arr as $objSteel) {
+                                    ?>
+                                        <li class="movie">
+                                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/<?= $objSteel['photo'] ?>.jpg"></div>
+                                        </li>
+                                    <?php } ?>
                                 </div>
+
                             </div>
                         </div>
 
@@ -866,36 +853,15 @@
                         <div class="row movie-stills d-flex d-xs-flex d-sm-none d-none">
                             <div class="movie-stills-carousel">
                                 <div class="carousel-wrap d-flex justify-content-between list-unstyled flex-nowrap">
-                                    <li class="movie">
-                                        <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img1.jpg"></div>
-                                    </li>
-                                    <li class="movie">
-                                        <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img2.jpg"></div>
-                                    </li>
-                                    <li class="movie">
-                                        <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img3.jpg"></div>
-                                    </li>
-                                    <li class="movie">
-                                        <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img4.jpg"></div>
-                                    </li>
-                                    <li class="movie">
-                                        <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img5.jpg"></div>
-                                    </li>
-                                    <li class="movie">
-                                        <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img6.jpg"></div>
-                                    </li>
-                                    <li class="movie">
-                                        <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img7.jpg"></div>
-                                    </li>
-                                    <li class="movie">
-                                        <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img8.jpg"></div>
-                                    </li>
-                                    <li class="movie">
-                                        <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img9.jpg"></div>
-                                    </li>
-                                    <li class="movie">
-                                        <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/movie_stills_img10.jpg"></div>
-                                    </li>
+                                    <?php
+                                    $sql = "SELECT `photo` FROM `movie_stills` WHERE `movie_id` = {$_GET['movie_id']}";
+                                    $arr = $pdo->query($sql)->fetchAll();
+                                    foreach ($arr as $objSteel) {
+                                    ?>
+                                        <li class="movie">
+                                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/<?= $objSteel['photo'] ?>.jpg"></div>
+                                        </li>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
