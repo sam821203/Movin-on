@@ -11,7 +11,7 @@
     <?php require_once './tpl/movinon-navbar.php' ?>
 
     <main>
-        <section>
+        <section class="boards-section">
             <div class="container">
                 <div class="row">
                     <div class="col-3">
@@ -60,7 +60,7 @@
                                 </div>
                                 <a href="#">
                                     <div class="d-flex align-items-center">
-                                        <div class="ticket-count body2-r"><span class="count">12</span>部</div>
+                                        <div class="ticket-count body2-r"><span class="count">8</span>部</div>
                                         <i class="fas fa-chevron-right"></i>
                                     </div>
                                 </a>
@@ -135,7 +135,7 @@
                     </div>
 
                     <div class="col-9">
-                        <div class="member-r-board">
+                        <div class="member-r-board d-flex justify-content-between">
                             <!-- 票券 -->
                             <?php 
                             $sql = "SELECT * FROM `orders_pay` WHERE `email` = '{$_SESSION['email']}'";
@@ -171,13 +171,13 @@
                                                 <div class="body2-b"><?= $obj['created_at']?></div>
                                             </div>
                                             <div>
-                                                <div class="body2-r">張數</div>
+                                                <div class="body2-r">票夾張數</div>
                                                 <div class="body2-b"><?= $obj['count']?>張</div>
                                             </div>
-                                            <div>
+                                            <!-- <div>
                                                 <div class="body2-r">金額</div>
                                                 <div class="body2-b">$NT<?= $obj['total']?></div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
