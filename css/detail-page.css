@@ -240,6 +240,13 @@ body {
     color: rgba(255, 255, 255, 0.9);
 }
 
+.related-articles-section .article-light .spoiler-tag,
+.related-articles-section .article-light .spoiler-free-tag,
+.related-articles-section .article-dark .spoiler-tag,
+.related-articles-section .article-dark .spoiler-free-tag {
+    padding-top: 4px;
+}
+
 /* .related-articles-section .articles-1920 .article-light .sub-title-r,
 .related-articles-section .articles-1920 .article-dark .sub-title-r {
     white-space: nowrap;

@@ -953,8 +953,6 @@
                 });
 
                 var foo = function() {
-                    $(document).ready(function() {
-                        
                         // Change image on selection
                         $(".movie-stills-carousel .carousel-wrap li img").click(function() {
 
@@ -969,12 +967,11 @@
 
                             // Change image
                             $('.movie-stills .hall-screen img').attr('src', imgSrc);
-                        });
                     });
                 };
 
                 // call foo 
-                $("body").on("click", ".movie-stills-carousel .carousel-wrap li img", foo);
+                foo();
 
                 // when width() < 418, remove foo
                 $(window).resize(function() {

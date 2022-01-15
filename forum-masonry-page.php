@@ -15,31 +15,41 @@
         <div class="masonry-title-section">
             <div class="text-center">
                 <div class="title-tc">蜘蛛人：無家日</div>
-                <div class="title-en">Spider-man: no way home</div>
+                <div class="d-flex align-items-center">
+                    <div class="deco-line mr-3"></div>
+                    <div class="title-en">Spider-man: no way home</div>
+                    <div class="deco-line ml-3"></div>
+                </div>
             </div>
         </div>
 
-        <section class="masonry-articles-section">
+        <section class="masonry-articles-section g-section-mb">
             <div>
                 <div class="cat-tag-selector"><i class="fas fa-grip-vertical"></i>依類別分類</div>
 
-                <div class="movie-type-wrap d-flex flex-wrap">
-                    <a href="" class="d-flex">
+                <div class="movie-type-wrap d-flex align-items-center flex-wrap">
+
+                <!-- 1/15 修改 "全部" 選項 -->
+                    <a href="">
+                        <span class="body1-m type g-tag news" data-cat='1'>全部</span>
+                    </a>
+
+                    <a href="">
                         <span class="body1-m type g-tag news" data-cat='1'>新聞</span>
                     </a>
-                    <a href="" class="d-flex">
+                    <a href="">
                         <span class="body1-m type g-tag askfilm" data-cat='2'>問片</span>
                     </a>
-                    <a href="" class="d-flex">
+                    <a href="">
                         <span class="body1-m type g-tag filmlist" data-cat='3'>片單</span>
                     </a>
-                    <a href="" class="d-flex">
+                    <a href="">
                         <span class="body1-m type g-tag discuss" data-cat='4'>討論</span>
                     </a>
-                    <a href="" class="d-flex">
+                    <a href="">
                         <span class="body1-m type g-tag askfor" data-cat='5'>請益</span>
                     </a>
-                    <a href="" class="d-flex">
+                    <a href="">
                         <span class="body1-m type g-tag selfilm" data-cat='6'>選片</span>
                     </a>
                 </div>
@@ -69,8 +79,8 @@
 
                                     <div>
                                         <div class="img-wrap">
-                                            <div class="img-gradient-15"></div>
-                                            <div class="img-filter-15"></div>
+                                            <div class="img-gradient-20"></div>
+                                            <div class="img-filter-50"></div>
                                             <img src="images/forum_masonry_page/<?= $obj['article_photo']?>.jpg" alt="">
                                         </div>
                                     </div>

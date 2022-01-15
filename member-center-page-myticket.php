@@ -129,7 +129,7 @@
         overflow: auto;
         display: flex;
         flex-wrap: wrap;
-        padding: 48px 32px 24px 32px;
+        padding: 48px 38px 24px 38px;
     }
 
     /* -------------0113-ticket---------------- */
@@ -364,7 +364,7 @@
                                 ?>
                                     <div class="myticket">
                                         <div class="ticket-img-wrap">
-                                            <img src="images/ticket_single.svg" alt="">
+                                            <img src="images/ticket_code.svg" alt="">
                                         </div>
                                         <div class="ticket-card">
                                             <div class="poster-img-wrap">
@@ -407,6 +407,11 @@
                                                     <div>
                                                         <div class="body2-r">類型</div>
                                                         <div class="body2-b"><?= $obj['screen'] ?></div>
+                                                    </div>
+                                                </div>
+                                                <div class="content-row">
+                                                    <div class="body2-b">
+                                                        <img src="<?= $obj['qrcode'] ?>">
                                                     </div>
                                                 </div>
                                             </div>

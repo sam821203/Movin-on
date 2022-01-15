@@ -671,7 +671,7 @@
                                     <img src="images/forum_overview_page/card_1.jpg" alt="">
                                     <div class="content">
                                         <div class="section-header-r">再說一次我願意</div>
-                                        <span class="body1-b">Today</span><span class="caption-12 com-count com-1-count">+<span class="count">134</span></span>
+                                        <span class="body1-b">Today</span><span class="caption-12 com-count com-1-count">+<span class="count">74</span></span>
                                     </div>
                                 </div>
                             </a>
@@ -683,7 +683,7 @@
                                     <img src="images/forum_overview_page/card_2.jpg" alt="">
                                     <div class="content">
                                         <div class="section-header-r">駭客任務</div>
-                                        <span class="body1-b">Today</span><span class="caption-12 com-count com-2-count">+<span class="count">34</span></span>
+                                        <span class="body1-b">Today</span><span class="caption-12 com-count com-2-count">+<span class="count">189</span></span>
                                     </div>
                                 </div>
                             </a>
@@ -696,7 +696,7 @@
                                 <img src="images/forum_overview_page/card_3.jpg" alt="">
                                 <div class="content">
                                     <div class="section-header-r">蜘蛛人: 無家日</div>
-                                    <span class="body1-b">Today</span><span class="caption-12 com-count com-3-count">+<span class="count">134</span></span>
+                                    <span class="body1-b">Today</span><span class="caption-12 com-count com-3-count">+<span class="count">334</span></span>
                                 </div>
                             </div>
                         </a>
@@ -711,7 +711,7 @@
                                 <img src="images/forum_overview_page/card_4.jpg" alt="">
                                 <div class="content">
                                     <div class="section-header-r">魔鬼剋星未來世</div>
-                                    <span class="body1-b">Today</span><span class="caption-12 com-count com-4-count">+<span class="count">134</span></span>
+                                    <span class="body1-b">Today</span><span class="caption-12 com-count com-4-count">+<span class="count">138</span></span>
                                 </div>
                             </div>
                         </a>
@@ -723,7 +723,7 @@
                                 <img src="images/forum_overview_page/card_5.jpg" alt="">
                                 <div class="content">
                                     <div class="section-header-r">梅艷芳</div>
-                                    <span class="body1-b">Today</span><span class="caption-12 com-count com-5-count">+<span class="count">134</span></span>
+                                    <span class="body1-b">Today</span><span class="caption-12 com-count com-5-count">+<span class="count">60</span></span>
                                 </div>
                             </div>
                         </a>
