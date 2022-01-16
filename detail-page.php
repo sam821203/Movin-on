@@ -954,9 +954,10 @@
                         };
                     });
 
+                    // 打開 function 
                     var foo = function() {
                         // Change image on selection
-                        $(".movie-stills-carousel .carousel-wrap li img").click(function() {
+                        // $(".movie-stills-carousel .carousel-wrap li img").click(function() {
 
                             // Get current image source
                             const imgSrc = $(this).attr("src");
@@ -969,23 +970,25 @@
 
                             // Change image
                             $('.movie-stills .hall-screen img').attr('src', imgSrc);
-                        });
+                        // });
                     };
 
                     // call foo 
-                    foo();
-
+                    // foo();
+                    $("body").on("click", ".movie-stills-carousel .carousel-wrap li img", foo);
                     // when width() < 418, remove foo
                     $(window).resize(function() {
 
                         let newWidth = $(window).width();
-                        if (newWidth < 418) {
-                            $("body").off("click", ".movie-stills-carousel .carousel-wrap li img", foo);
-                        };
+                        if (newWidth > 418) {
+                        $("body").on("click", ".movie-stills-carousel .carousel-wrap li img", foo);
+                    }else{
+                        $("body").off("click", ".movie-stills-carousel .carousel-wrap li img", foo);
+                        $(".movie-stills-carousel .carousel-wrap li img").css("filter","none");
+                        
+                    };
                     });
                 });
-
-                
 
                 // -------------------- hall screen carousel --------------------
                 $('.movie-stills-carousel .prev-btn').click(function() {

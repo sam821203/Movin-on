@@ -1,8 +1,6 @@
 <?php require_once './tpl/head.php' ?>
 <?php require_once 'db.inc.php' ?>
-
 <?php session_start() ?>
-<?php echo $_SESSION['name']?>
 
 <style>
     <?php require_once './css/bootstrap-switch.css' ?>

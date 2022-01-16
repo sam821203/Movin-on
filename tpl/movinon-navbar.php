@@ -98,13 +98,47 @@
                 </div>
             </div>
             
+            <!-- display 小於 418px -->
             <div class="d-block d-lg-block d-xl-none menu-bar">
                 <div class="lines">
                     <div class="line-1"></div>
                     <div class="line-2"></div>
                     <div class="line-3"></div>
                 </div>
+                
+                <?php if (isset($_SESSION['name'])) { ?>
+                <div class="menu-items">
 
+                    <div class="mb-3">
+                        <a href="member-center-page.php">會員中心</a>
+                    </div>
+                    <div class="divide-line"></div>
+                    
+                    <a href="./movies-overview-page.php">
+                        <div class="item">電影排行榜</div>
+                    </a>
+                    <div class="divide-line"></div>
+                    <a href="./forum-overview-page.php">
+                        <div class="item">影迷討論區</div>
+                    </a>
+                    <div class="divide-line"></div>
+                    <a href="#">
+                        <div class="item">電影新聞</div>
+                    </a>
+                    <div class="divide-line"></div>
+                    <a href="./booking-movie-page.php">
+                        <div class="item">立即購票</div>
+                    </a>
+
+
+                    <div class="logout">
+                        <a type="button" href="#" id="logout">登出</a>
+                    </div>
+                </div>
+                <?php } ?>
+
+
+                <?php if (!isset($_SESSION['name'])) { ?>
                 <div class="menu-items">
                     <a class="btn rounded text-white mb-3" href="#" data-toggle="modal" data-target="#exampleModalLogin">登入</a>
                     <a type="button" class="btn rounded text-white mb-4" href="#" data-toggle="modal" data-target="#exampleModal">註冊</a>
@@ -122,8 +156,9 @@
                         <div class="item mb-2">立即購票</div>
                     </a>
                 </div>
+                <?php } ?>
             </div>
-            
+
 
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
