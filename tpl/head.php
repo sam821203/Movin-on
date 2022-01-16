@@ -34,4 +34,8 @@
     <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     
     <!-- <link rel="stylesheet" type="text/css" href="css/jquery.seat-charts.css"> -->
+
+    <!-- Youtube vedio popup css -->
+    <link href="https://rawgithub.com/dimsemenov/Magnific-Popup/master/dist/magnific-popup.css" rel="stylesheet" type="text/css">
+
 </head>

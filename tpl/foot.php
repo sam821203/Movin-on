@@ -20,6 +20,9 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
 
+    <!-- Youtube vedio popup js -->
+    <script src="https://rawgithub.com/dimsemenov/Magnific-Popup/master/dist/jquery.magnific-popup.js"></script>
+
 
 
    
