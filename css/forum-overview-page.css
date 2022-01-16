@@ -308,7 +308,6 @@ body {
 /* -------------------forum cat section-------------------- */
 .forum-cat-section {
     width: 100%;
-    margin-bottom: 144px;
 }
 
 .forum-cat-section .img-wrap {
@@ -411,11 +410,30 @@ body {
         box-shadow: var(--box-shadow-black-25);
     }
 
+    .forum-info-section .board-content p.body1-r {
+        font-size: 0.875rem;
+    }
+
     .forum-cards-section .card-md .section-header-r { 
         font-weight: 400;
         margin-bottom: 4px;
         font-size: 14px;
     }
+
+    .forum-cards-section .row.subtitle.g-subtitle-mb .col-12,
+    .forum-cat-section .row.subtitle.g-subtitle-mb .col-12,
+    .forum-cat-section .row .col-6 {
+        padding: 0;
+    }
+
+    .forum-cat-section .row .col-6:nth-child(even) {
+        padding-left: 8px;
+    }
+
+    .forum-cat-section .row .col-6:nth-child(odd) {
+        padding-right: 8px;
+    }
+
 
     /* 將預設的 .body1-b 改為 .body2-m  */
     .forum-cards-section .card-md .body1-b { 

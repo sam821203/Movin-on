@@ -954,39 +954,34 @@
                         };
                     });
 
-                    // 打開 function 
+                    // Change image on selection
                     var foo = function() {
-                        // Change image on selection
-                        // $(".movie-stills-carousel .carousel-wrap li img").click(function() {
 
-                            // Get current image source
-                            const imgSrc = $(this).attr("src");
+                        // Get current image source
+                        const imgSrc = $(this).attr("src");
 
-                            // Apply grayscale to thumbnails except selected
-                            $(".movie-stills-carousel .carousel-wrap")
-                                .find("img")
-                                .css("filter", "grayscale(1)").css('transition', '.4s');
-                            $(this).css("filter", "none");
+                        // Apply grayscale to thumbnails except selected
+                        $(".movie-stills-carousel .carousel-wrap")
+                            .find("img")
+                            .css("filter", "grayscale(1)").css('transition', '.4s');
+                        $(this).css("filter", "none");
 
-                            // Change image
-                            $('.movie-stills .hall-screen img').attr('src', imgSrc);
-                        // });
+                        // Change image
+                        $('.movie-stills .hall-screen img').attr('src', imgSrc);
                     };
 
-                    // call foo 
-                    // foo();
                     $("body").on("click", ".movie-stills-carousel .carousel-wrap li img", foo);
+
                     // when width() < 418, remove foo
                     $(window).resize(function() {
 
                         let newWidth = $(window).width();
                         if (newWidth > 418) {
-                        $("body").on("click", ".movie-stills-carousel .carousel-wrap li img", foo);
-                    }else{
-                        $("body").off("click", ".movie-stills-carousel .carousel-wrap li img", foo);
-                        $(".movie-stills-carousel .carousel-wrap li img").css("filter","none");
-                        
-                    };
+                            $("body").on("click", ".movie-stills-carousel .carousel-wrap li img", foo);
+                        } else {
+                            $("body").off("click", ".movie-stills-carousel .carousel-wrap li img", foo);
+                            $(".movie-stills-carousel .carousel-wrap li img").css("filter", "none");
+                        };
                     });
                 });
 

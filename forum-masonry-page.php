@@ -104,7 +104,9 @@
 
                                         <div class="masonry-content-text">
                                             <!--1/15 修改 置入&nbsp;與用戶名 -->
-                                            <div><?= $obj['article_date']?>&nbsp;</span>by&nbsp;<span><?= $author['name'] ?>&nbsp;</span></div>
+                                            <span class="article-date"><?= $obj['article_date']?></span>
+                                            <span>by</span>
+                                            <span class="author-name"><?= $author['name'] ?></span>
                                             <?php
 
                                             ?>
