@@ -167,7 +167,7 @@
                                 <img src="images/forum_overview_page/card_6.jpg" alt="">
                                 <div class="content">
                                     <div class="section-header-r">迷離夜蘇活</div>
-                                    <span class="body1-b">Today</span><span class="caption-12 com-count com-6-count">+<span class="count">134</span></span>
+                                    <span class="body1-b">Today</span><span class="caption-12 com-count com-6-count">+<span class="count">119</span></span>
                                 </div>
                                 <div class="hover-gradient-card6"></div>
                             </div>
@@ -181,7 +181,7 @@
                                         <img src="images/forum_overview_page/card_7.jpg" alt="">
                                         <div class="content">
                                             <div class="section-header-r">詭扯</div>
-                                            <span class="body1-b">Today</span><span class="caption-12 com-count com-7-count">+<span class="count">134</span></span>
+                                            <span class="body1-b">Today</span><span class="caption-12 com-count com-7-count">+<span class="count">45</span></span>
                                         </div>
                                         <div class="hover-gradient-card7"></div>
                                     </div>
@@ -194,7 +194,7 @@
                                         <img src="images/forum_overview_page/card_8.jpg" alt="">
                                         <div class="content">
                                             <div class="section-header-r">瀑布</div>
-                                            <span class="body1-b">Today</span><span class="caption-12 com-count com-8-count">+<span class="count">134</span></span>
+                                            <span class="body1-b">Today</span><span class="caption-12 com-count com-8-count">+<span class="count">102</span></span>
                                         </div>
                                         <div class="hover-gradient-card8"></div>
                                     </div>
@@ -209,7 +209,7 @@
                                         <img src="images/forum_overview_page/card_9.jpg" alt="">
                                         <div class="content">
                                             <div class="section-header-r">永恆族</div>
-                                            <span class="body1-b">Today</span><span class="caption-12 com-count com-9-count">+<span class="count">134</span></span>
+                                            <span class="body1-b">Today</span><span class="caption-12 com-count com-9-count">+<span class="count">296</span></span>
                                         </div>
                                         <div class="hover-gradient-card9"></div>
                                     </div>
@@ -221,7 +221,7 @@
                                         <img src="images/forum_overview_page/card_10.jpg" alt="">
                                         <div class="content">
                                             <div class="section-header-r">金牌特務</div>
-                                            <span class="body1-b">Today</span><span class="caption-12 com-count com-10-count">+<span class="count">134</span></span>
+                                            <span class="body1-b">Today</span><span class="caption-12 com-count com-10-count">+<span class="count">166</span></span>
                                         </div>
                                         <div class="hover-gradient-card10"></div>
                                     </div>

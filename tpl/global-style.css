@@ -133,7 +133,12 @@ p { line-height: var(--line-height-160); }
     justify-content: space-between;
 }
 
-.subtitle .section-header-b { margin: auto 0; }
+.subtitle .section-header-b { 
+    margin: auto 0; 
+    display: flex;
+    align-items: end;
+    margin-top: 4px;
+}
 
 .subtitle .sub-title-r {
     line-height: 100%;
@@ -1048,7 +1053,6 @@ footer p {
     .spoiler-tag {
         width: 26px;
         height: 26px;
-        line-height: 100%;
     }
 
     /* -------movinon navbar-------*/

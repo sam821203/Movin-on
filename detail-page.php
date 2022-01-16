@@ -436,7 +436,7 @@
                                 </li>
                             </ul>
                         </div>
-                        
+
                         <!-- < 418 -->
                         <div class="row articles-md d-sm-flex d-md-none d-lg-none d-xl-none">
                             <ul>
@@ -860,7 +860,9 @@
                                     foreach ($arr as $objSteel) {
                                     ?>
                                         <li class="movie">
-                                            <div class="movie-frame img-wrap"><img src="images/detail_page/movie_stills/<?= $objSteel['photo'] ?>.jpg"></div>
+                                            <div class="movie-frame img-wrap">
+                                                <img src="images/detail_page/movie_stills/<?= $objSteel['photo'] ?>.jpg">
+                                            </div>
                                         </li>
                                     <?php } ?>
                                 </div>
@@ -918,6 +920,7 @@
                 //         $('.movie-stills .hall-screen img').attr('src', imgSrc);
                 //     });
                 // });
+
                 $(document).ready(function() {
 
                     // ----------分級判斷--------
@@ -930,14 +933,13 @@
                     pgRate.each((i, v) => {
                         if ($(v).text() == green) {
                             pgRate.eq(i).addClass('green');
-                        }else if($(v).text() == blue){
+                        } else if ($(v).text() == blue) {
                             pgRate.eq(i).addClass('blue');
-                        }else if($(v).text() == yellow){
+                        } else if ($(v).text() == yellow) {
                             pgRate.eq(i).addClass('yellow');
-                        }else if($(v).text() == red){
+                        } else if ($(v).text() == red) {
                             pgRate.eq(i).addClass('red');
                         };
-
                     });
 
                     // --------雷標籤------------
@@ -951,9 +953,8 @@
                             sTag.eq(i).addClass('spoiler-tag');
                         };
                     });
-                });
 
-                var foo = function() {
+                    var foo = function() {
                         // Change image on selection
                         $(".movie-stills-carousel .carousel-wrap li img").click(function() {
 
@@ -968,20 +969,23 @@
 
                             // Change image
                             $('.movie-stills .hall-screen img').attr('src', imgSrc);
-                    });
-                };
-
-                // call foo 
-                foo();
-
-                // when width() < 418, remove foo
-                $(window).resize(function() {
-
-                    let newWidth = $(window).width();
-                    if (newWidth < 418) {
-                        $("body").off("click", ".movie-stills-carousel .carousel-wrap li img", foo);
+                        });
                     };
+
+                    // call foo 
+                    foo();
+
+                    // when width() < 418, remove foo
+                    $(window).resize(function() {
+
+                        let newWidth = $(window).width();
+                        if (newWidth < 418) {
+                            $("body").off("click", ".movie-stills-carousel .carousel-wrap li img", foo);
+                        };
+                    });
                 });
+
+                
 
                 // -------------------- hall screen carousel --------------------
                 $('.movie-stills-carousel .prev-btn').click(function() {

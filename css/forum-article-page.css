@@ -50,7 +50,7 @@ body {
     background-color: var(--bg-color);
 }
 
-.left-side-article .spoiler,
+/* .left-side-article .spoiler,
 .left-side-article .spoiler-free {
     border-radius: var(--border-radius-50);
     width: 30px;
@@ -72,7 +72,7 @@ body {
 .left-side-article .spoiler-free {
     background-color: rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.1);
-}
+} */
 
 .left-side-article .sub-title-r {
     opacity: var(--opacity-75);

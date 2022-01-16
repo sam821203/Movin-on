@@ -219,8 +219,8 @@ body {
 }
 
 .movie-showtime-section .divide-line {
-    background-color: rgba(255, 255, 255, 0.25);
-    height: 1px;
+    background-color: rgba(255, 255, 255, 0.10);
+    height: 0.5px;
     border-radius: var(--border-radius-50);
     margin-top: 32px;
     margin-bottom: 4px;
