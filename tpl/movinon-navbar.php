@@ -63,7 +63,7 @@
                             foreach ($arr as $objMember) {
                             ?>
                                 <div class="avatar">
-                                    <img src="images/member_center_page/avatar/<?= $objMember['avatar'] ?>.jpg" alt="">
+                                    <img src=".\images\avatar\<?= $objMember['avatar'] ?>.jpg" >
                                 </div>
                             <?php } ?>
                         <?php } ?>

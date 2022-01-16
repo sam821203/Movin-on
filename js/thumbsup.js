@@ -22,15 +22,17 @@ $(".thumb").click(function (event) {
         $(".like-count").eq(comment_index).text(count_like)
         let comment_id = $(this).attr('href')
         let like = "off"
+        let member_id = $(".user_identify").attr('id')
         // console.log (count_like)
         // console.log (comment_id)
 
         let objComment = {
             count_like: count_like,
             comment_id: comment_id,
-            like: like
+            like: like,
+            member_id: member_id
         };
-
+        console.log(objComment)
         $.post("insertThumbsCount.php", objComment, function (obj) {
             // if (obj['success']) {
             //     alert('送出成功');
@@ -49,15 +51,17 @@ $(".thumb").click(function (event) {
         $(".like-count").eq(comment_index).text(count_like)
         let comment_id = $(this).attr('href')
         let like = "on"
+        let member_id = $(".user_identify").attr('id')
         // console.log (count_like)
         // console.log (comment_id)
 
         let objComment = {
             count_like: count_like,
             comment_id: comment_id,
-            like: like
+            like: like,
+            member_id: member_id
         };
-
+        console.log(objComment)
         $.post("insertthumbscount.php", objComment, function (obj) {
             // if (obj['success']) {
             //     alert('送出成功');
@@ -69,8 +73,6 @@ $(".thumb").click(function (event) {
 
     }
 })
-
-
 
 
 

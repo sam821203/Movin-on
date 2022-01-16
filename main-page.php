@@ -691,12 +691,13 @@
                     </div>
 
                     <div class="col-8">
-                        <a href="#">
+                        <a href="forum-masonry-page.php?movie_id=73">
                             <div class="img-wrap card-3">
                                 <img src="images/forum_overview_page/card_3.jpg" alt="">
                                 <div class="content">
                                     <div class="section-header-r">蜘蛛人: 無家日</div>
                                     <span class="body1-b">Today</span><span class="caption-12 com-count com-3-count">+<span class="count">334</span></span>
+                                    <p class="text">故事接續《蜘蛛人：離家日》片尾，描述號角日報對外公佈了蜘蛛人真實身份是彼得帕克後，警察指控他利用無人機殺害神秘法師，讓彼得帕克遭到輿論攻擊、而他與親友的生活也大受影響。為了改變現況，絕望的彼得帕克找上了「奇異博士」，希望他施展法術讓大家忘記他是蜘蛛人的事實。</p>
                                 </div>
                             </div>
                         </a>

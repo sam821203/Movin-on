@@ -206,7 +206,9 @@
                 let txt = item.innerHTML.substring(0, len) + '...';
                 item.innerHTML = txt;
             }
-        })
+        });
+        gsap.from('.mycard', { duration: 6, opacity: 0, delay: 0.25, stagger: .1, ease: 'elastic' });
+
     </script>
 </body>
 </html>

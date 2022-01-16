@@ -13,14 +13,22 @@ if (isset($_POST['comment']) && isset($_POST['title_id'])) {
     try {
         //新增使用者的 SQL 語法
         $comment = "INSERT INTO `comment` ( `comment_content`,`title_id`,`member_id`)
-                    VALUES ( '{$_POST['comment']}','{$_POST['title_id']}','{$_POST['member_id']}' );" ;
+                    VALUES ( '{$_POST['comment']}','{$_POST['title_id']}','{$_POST['member_id']}' );";
 
-        $user_like ="INSERT INTO `user_like` ( `member_id`,`title_id`,`comment_id`)
-                VALUES ( '{$_POST['member_id']}','{$_POST['title_id']}','{$_POST['comment_id']}' ) ;";
+        $idset = "INSERT INTO `user_like` ( `comment_id`)
+        SELECT comment_id  
+        FROM `comment` 
+        WHERE `comment_content`='{$_POST['comment']}';";
+
+        $user_like = "UPDATE `user_like` 
+        SET `member_id`='{$_POST['member_id']}',`title_id`='{$_POST['title_id']}'
+        WHERE `comment_id`=(SELECT MAX(`comment_id`) FROM `user_like`);";
 
         //執行 SQL 語法
         $stmt = $pdo->query($comment);
-        $stmt1 = $pdo->query($user_like);
+        $stmt1 = $pdo->query($idset);
+        $stmt2 = $pdo->query($user_like);
+
 
         //判斷是否寫入資料
         if ($stmt->rowCount() > 0) {

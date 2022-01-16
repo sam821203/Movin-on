@@ -1,6 +1,7 @@
 <?php require_once './tpl/head.php' ?>
 <?php require_once 'db.inc.php' ?>
 <?php session_start() ?>
+<?php echo $_SESSION['member_id']?>
 
 <style>
     <?php require_once './css/forum-article-page.css' ?>
@@ -17,7 +18,7 @@
                     <!-- 01/12 更改 文章欄資料提取  -->
                     <?php
                     if (isset($_GET['id'])) {
-                        $sql = "SELECT `article_cat`, `title`, `article`, `article_photo`, `spoiler_tag`, `thumb_num`, `member_id`, `article_id` FROM `spider_forum_article` WHERE `article_id`={$_GET['id']}";
+                        $sql = "SELECT `article_cat`, `title`, `article`,`thumb_num`, `article_photo`, `spoiler_tag`, `thumb_num`, `member_id`, `article_id` FROM `spider_forum_article` WHERE `id`={$_GET['id']}";
                         $arr = $pdo->query($sql)->fetch();
                     }
                     ?>
@@ -35,7 +36,7 @@
                                 <p class="sub-title-r"><?= nl2br($arr['article']) ?></p>
 
                                 <div class="img-wrap">
-                                    <img src="<?= $arr['article_photo'] ?>.jpg">
+                                <img src="images/forum_masonry_page/<?= $arr['article_photo'] ?>.jpg" alt="">
                                 </div>
                             </div>
 
@@ -43,22 +44,22 @@
                                 <div class="d-flex">
                                     <a href="#">
                                         <div class="thumbs-up">
-                                            <i class="fas fa-thumbs-up"></i><span>243</span>
+                                            <i class="fas fa-thumbs-up"></i><span><?= $arr['thumb_num'] ?></span>
                                         </div>
                                     </a>
 
                                     <!-- 01/12 更改 留言筆數提取  -->
                                     <?php
                                     if (isset($_GET['id'])) {
-                                        $sql = "SELECT COUNT(*) FROM `comment` WHERE `title_id`={$_GET['id']}";
-                                        $total = $pdo->query($sql)->fetch();
+                                        $comment = "SELECT COUNT(*) FROM `comment` WHERE `title_id`={$_GET['id']}";
+                                        $total = $pdo->query($comment)->fetch();
                                     }
                                     ?>
 
                                     <!-- 01/12 更改 留言筆數置入  -->
                                     <a href="#">
                                         <div class="comment">
-                                            <span><i class="far fa-comment"></i><?php echo ($total['COUNT(*)']) ?></span>
+                                            <span><i class="far fa-comment"></i><?= $total['COUNT(*)'] ?></span>
                                         </div>
                                     </a>
                                 </div>
@@ -109,7 +110,7 @@
                                             <div class="comment comment-1">
                                                 <div class="avatar">
                                                     <div class="img-wrap">
-                                                        <img src=".\images\forum_article_page\avatar\<?= $obj['avatar'] ?>.svg">
+                                                        <img src=".\images\avatar\<?= $obj['avatar'] ?>.jpg">
                                                     </div>
                                                 </div>
                                                 <div class="content">
@@ -167,8 +168,8 @@
 
                                             <?php
                                             if (isset($_GET['id'])) {
-                                                $sql = "SELECT COUNT(*) FROM `comment` WHERE `title_id`={$_GET['id']}";
-                                                $total = $pdo->query($sql)->fetch();
+                                                $comment = "SELECT COUNT(*) FROM `comment` WHERE `title_id`={$_GET['id']}";
+                                                $total = $pdo->query($comment)->fetch();
                                             }
                                             ?>
 
@@ -176,7 +177,7 @@
                                             <div class="comment comment-1">
                                                 <div class="avatar">
                                                     <div class="img-wrap">
-                                                        <img src=".\images\forum_article_page\avatar\<?= $obj['avatar'] ?>.svg">
+                                                    <img src=".\images\avatar\<?= $obj['avatar'] ?>.jpg">
                                                     </div>
                                                 </div>
                                                 <div class="content">
@@ -205,7 +206,7 @@
                                                                 $a = $pdo->query($like)->fetch();
                                                             }
                                                             ?>
-                                                            <a class="thumb-<?= $a['like'] ?>" href="<?= $obj['comment_id'] ?>"><i class="fas fa-thumbs-up"></i></a><span class="like-count"><?= $obj['like_num_cm'] ?></span>
+                                                            <a class="thumb thumb-<?= $a['like'] ?>" href="<?= $obj['comment_id'] ?>"><i class="fas fa-thumbs-up"></i></a><span class="like-count"><?= $obj['like_num_cm'] ?></span>
                                                         </div>
                                                         <div class="reply">
                                                             <a href="#"><span>回覆</span></a>
@@ -231,7 +232,8 @@
                                 <div class="write-comment">
                                     <div class="avatar">
                                         <div class="img-wrap">
-                                            <img class="user_identify" id="<?= $obj['member_id'] ?>" src=".\images\forum_article_page\avatar\<?= $obj['avatar'] ?>.svg">
+                                            <img class="user_identify" id="<?= $obj['member_id'] ?>" src=".\images\avatar\<?= $obj['avatar'] ?>.jpg">
+                                            
                                         </div>
                                     </div>
                                     <div class="form">

@@ -245,7 +245,7 @@
                                         <?php } ?>
                                         <?php if (isset($_SESSION['name'])) { ?>
 
-                                            <img src="images/member_center_page/avatar/<?= $objMember['avatar'] ?>.jpg" alt="">
+                                            <img src=".\images\avatar\<?= $objMember['avatar'] ?>.jpg" >
                                         <?php } ?>
                                     </div>
                             </div>

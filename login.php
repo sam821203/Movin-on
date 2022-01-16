@@ -12,7 +12,7 @@ if( isset($_POST['email']) && isset($_POST['pwd']) ){
 
 try{
 
-    $sql = "SELECT `email`, `name`
+    $sql = "SELECT `member_id`,`email`, `name`
             FROM `users`
             WHERE `email` = '{$_POST['email']}'
             AND`pwd` = '{$pwd}'
@@ -34,6 +34,7 @@ try{
         //建立 session 資料
         $_SESSION['email'] = $objUser['email'];
         $_SESSION['name'] = $objUser['name'];
+        $_SESSION['member_id'] = $objUser['member_id'];
     }
     
 

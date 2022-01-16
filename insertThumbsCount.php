@@ -18,7 +18,9 @@ if( isset($_POST['count_like']) && isset($_POST['comment_id']) ){
 
         $user_like = "UPDATE `user_like` 
                 SET `like` = '{$_POST['like']}'
-                WHERE `comment_id` = '{$_POST['comment_id']}'";
+                WHERE `comment_id` = '{$_POST['comment_id']}'
+                AND `member_id`='{$_POST['member_id']}'";
+                
         
         //執行 SQL 語法
         $stmt=$pdo->query($sql);

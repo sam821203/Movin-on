@@ -99,9 +99,34 @@ body {
     max-height: 244px;
 }
 
+/* 0115hover效果 */
 .forum-cards-section .card-3 {
     width: 100%;
     height: 100%;
+    overflow: hidden;
+}
+.forum-cards-section .card-3 .content{
+    transform: translateY(80px);
+    transition: ease-in .5s;
+}
+.forum-cards-section .card-3:hover .content{
+    transition: ease-in .5s;
+    transform: translateY(0);
+}
+.forum-cards-section .card-3 .content p{
+    transform: translateY(80px);
+    transition: ease-in .5s;
+}
+.forum-cards-section .card-3:hover .content p{
+    transition: ease-in .5s;
+    transform: translateY(10px);
+}
+.forum-cards-section .card-3 img {
+    transition: 1s;
+}
+.forum-cards-section .card-3:hover img {
+    transform: scale(1.2);
+    transition: 1s;
 }
 
 .forum-cards-section .row3 .col-9 {

@@ -29,9 +29,9 @@
 
                 <div class="movie-type-wrap d-flex align-items-center flex-wrap">
 
-                <!-- 1/15 修改 "全部" 選項 -->
+                    <!-- 1/15 修改 "全部" 選項 -->
                     <a href="">
-                        <span class="body1-m type g-tag news" data-cat='1'>全部</span>
+                        <span class="body1-m type g-tag all" >全部</span>
                     </a>
 
                     <a href="">
@@ -66,52 +66,73 @@
             <div>
                 <div class="masonry-wrapper">
                     <div class="masonry">
-                        <?php $sql = "SELECT `article_cat_id`,`article_cat`,`movie_id`,`title`, `article`, `article_photo`, `spoiler_tag` FROM `spider_forum_article` WHERE `movie_id` = '{$_GET['movie_id']}'";
+                        <?php $sql = "SELECT `id`,`article_cat_id`,`article_cat`,`movie_id`,`title`, `article`,`thumb_num`, `article_photo`, `spoiler_tag`, `article_date` FROM `spider_forum_article` WHERE `movie_id` = '{$_GET['movie_id']}'";
                         $arr = $pdo->query($sql)->fetchAll();
                         foreach ($arr as $obj) {
                         ?>
                             <div class="masonry-item masonry-item<?= $obj['article_cat_id'] ?>" data-cat="<?= $obj['article_cat_id'] ?>">
-                                <div class="masonry-content">
-                                    <div class="article-tag">
-                                        <p class="article-cat body1-m"><?= $obj['article_cat'] ?></p>
-                                        <p class="spoiler-free-tag"><?= $obj['spoiler_tag'] ?></p>
-                                    </div>
+                                <a href="./forum-article-page.php?id=<?= $obj['id'] ?>">
+                                    <div class="masonry-content">
+                                        <div class="article-tag">
+                                            <p class="article-cat body1-m"><?= $obj['article_cat'] ?></p>
+                                            <p class="spoiler-free-tag"><?= $obj['spoiler_tag'] ?></p>
+                                        </div>
 
-                                    <div>
-                                        <div class="img-wrap">
-                                            <div class="img-gradient-20"></div>
-                                            <div class="img-filter-50"></div>
-                                            <img src="images/forum_masonry_page/<?= $obj['article_photo']?>.jpg" alt="">
+                                        <div>
+                                            <div class="img-wrap">
+                                                <div class="img-gradient-20"></div>
+                                                <div class="img-filter-50"></div>
+                                                <img src="images/forum_masonry_page/<?= $obj['article_photo'] ?>.jpg" alt="">
+                                            </div>
                                         </div>
-                                    </div>
+                                        <!-- 1/15 修改 亂數提取會員資料 -->
+                                        <?php
+                                        $random = rand(1, 15);
+                                        $info = "SELECT `avatar`, `name` 
+                                    FROM `users` 
+                                    WHERE `member_id` = '$random' ";
+                                        $author = $pdo->query($info)->fetch();
 
-                                    <div class="article-avatar">
-                                        <div class="avatar">
-                                            <img src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-                                        </div>
-                                    </div>
+                                        ?>
 
-                                    <div class="masonry-content-text">
-                                        <div>2021-12-20</span>by<span>aaa</span></div>
-                                        <h3 class="masonry-title sub-title-b"><?= $obj['title'] ?></h3>
-                                        <p class="masonry-description">
-                                            <?= nl2br($obj['article']) ?>
-                                        </p>
-                                    </div>
-                                    <div class="article-like">
-                                        <div class="like-btn">
-                                            <i class="fas fa-thumbs-up"></i>
-                                            <p>20</p>
+                                        <div class="article-avatar">
+                                            <div class="avatar">
+                                                <!--1/15 修改 置入avatar -->
+                                                <img src=".\images\avatar\<?= $author['avatar'] ?>.jpg">
+                                            </div>
                                         </div>
-                                        <div class="comment">
-                                            <i class="far fa-comment"></i>
-                                            <p>10</p>
+
+                                        <div class="masonry-content-text">
+                                            <!--1/15 修改 置入&nbsp;與用戶名 -->
+                                            <div><?= $obj['article_date']?>&nbsp;</span>by&nbsp;<span><?= $author['name'] ?>&nbsp;</span></div>
+                                            <?php
+
+                                            ?>
+                                            <h3 class="masonry-title sub-title-b"><?= $obj['title'] ?></h3>
+                                            <p class="masonry-description">
+                                                <?= nl2br($obj['article']) ?>
+                                            </p>
                                         </div>
+                                        <div class="article-like">
+                                            <div class="like-btn">
+                                                <i class="fas fa-thumbs-up"></i>
+                                                <p><?= $obj['thumb_num'] ?></p>
+                                            </div>
+                                            <?php
+                                            // 1/15 修改 提取留言總數 
+                                            $comment = "SELECT COUNT(*) FROM `comment` WHERE `title_id`={$obj['id']}";
+                                            $total = $pdo->query($comment)->fetch();
+                                            ?>
+                                            <div class="comment">
+                                                <i class="far fa-comment"></i>
+                                                <!--1/15 修改 置入留言總數 -->
+                                                <p><?= $total['COUNT(*)'] ?></p>
+                                            </div>
+                                        </div>
+                                        <div class="overflow-gradient"></div>
                                     </div>
-                                    <div class="overflow-gradient"></div>
-                                </div>
+                                </a>
                             </div>
-
                         <?php } ?>
                     </div>
                 </div>
@@ -134,6 +155,7 @@
                 sTag.each((i, v) => {
                     if ($(v).text() == spoiler) {
                         sTag.eq(i).addClass('spoiler-tag');
+                        $('.masonry-description').eq(i).css('color','rgba(255,255,255,0.1)');
                     };
                 });
             });
@@ -145,6 +167,19 @@
             let msItem4 = $('.masonry-item4');
             let msItem5 = $('.masonry-item5');
             let msItem6 = $('.masonry-item6');
+            $('.all').click(function(e) {
+                e.preventDefault();
+                msItem.each((i, v) => {
+                        msItem1.show();
+                        msItem2.show();
+                        msItem3.show();
+                        msItem4.show();
+                        msItem5.show();
+                        msItem6.show();
+                    
+                });
+            });
+
             $('.news').click(function(e) {
                 e.preventDefault();
                 msItem.each((i, v) => {
@@ -228,6 +263,7 @@
                     };
                 });
             });
+            gsap.from('.masonry-item', { duration: 6, opacity: 0, delay: 0.25, stagger: .2, ease: 'elastic' });
         </script>
         <script src="js/forum-masonry-page.js"></script>
 
