@@ -249,7 +249,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 96px;
+    margin-bottom: 16px;
     border: none;
     padding: 0;
 }
@@ -791,6 +791,11 @@ body {
         margin-bottom: 16px;
     }
 
+    .left-side-comment #myTab {
+        margin-bottom: 8px;
+    }
+
+    /* aside related articles */
     .aside-related-articles .d-lg-block .col-12,
     .aside-related-articles .d-lg-block .col-sm-6,
     .aside-related-articles .d-lg-block .col-md-6,

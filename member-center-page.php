@@ -54,7 +54,7 @@
                             <div class="setting-row setting-row-select">
                                 <div class="d-flex align-items-center">
                                     <div class="img-wrap">
-                                        <img src="images/ticket.svg" alt="">
+                                        <img src="images/icon_ticket_outline.svg" alt="">
                                     </div>
                                     <span>我的票夾</span>
                                 </div>
@@ -68,7 +68,7 @@
                             <div class="setting-row">
                                 <div class="d-flex align-items-center">
                                     <div class="img-wrap">
-                                        <img src="images/ticket.svg" alt="">
+                                        <img src="images/icon_like.svg" alt="">
                                     </div>
                                     <span>文章蒐藏</span>
                                 </div>
@@ -81,7 +81,7 @@
                             <div class="setting-row">
                                 <div class="d-flex align-items-center">
                                     <div class="img-wrap">
-                                        <img src="images/ticket.svg" alt="">
+                                        <img src="images/icon_comment_notice.svg" alt="">
                                     </div>
                                     <span>留言追蹤</span>
                                 </div>
@@ -94,7 +94,7 @@
                             <div class="setting-row">
                                 <div class="d-flex align-items-center">
                                     <div class="img-wrap">
-                                        <img src="images/ticket.svg" alt="">
+                                        <img src="images/icon_article.svg" alt="">
                                     </div>
                                     <span>發文記錄</span>
                                 </div>
@@ -108,7 +108,7 @@
                             <div class="setting-row">
                                 <div class="d-flex align-items-center">
                                     <div class="img-wrap">
-                                        <img src="images/ticket.svg" alt="">
+                                        <img src="images/icon_credit_card.svg" alt="">
                                     </div>
                                     <span>信用卡設定</span>
                                 </div>
@@ -121,7 +121,7 @@
                             <div class="setting-row">
                                 <div class="d-flex align-items-center">
                                     <div class="img-wrap">
-                                        <img src="images/ticket.svg" alt="">
+                                        <img src="images/icon_setting.svg" alt="">
                                     </div>
                                     <span>設定</span>
                                 </div>

@@ -107,7 +107,7 @@
                                     ?>
 
                                             <!-- ------------------第一則留言 comment------------------ -->
-                                            <div class="comment comment-1">
+                                            <div class="comment">
                                                 <div class="avatar">
                                                     <div class="img-wrap">
                                                         <img src=".\images\avatar\<?= $obj['avatar'] ?>.jpg">

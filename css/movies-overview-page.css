@@ -163,3 +163,43 @@
     width: 100%;
     justify-content: space-between;
 }
+
+/* ------------------------  小於 418px  ------------------------*/
+@media screen and (max-width: 418px) {
+
+    .movies-tab-bar {
+        margin-top: 96px;
+    }
+
+    .movies-tab-bar #myTab {
+        margin-bottom: 24px;
+    }
+
+    .content-section .mycard-height.col-6:nth-child(even) {
+        padding: 0 0 0 8px;
+    }
+
+    .content-section .mycard-height.col-6:nth-child(odd) {
+        padding: 0 8px 0 0;
+    }
+
+    .content-section .movie-title p {
+        line-height: 100%;
+        margin-bottom: 4px;
+    } 
+
+    .content-section .movie-title .sub-title-r {
+        font-size: 16px;
+        font-weight: 500;
+    } 
+
+    .content-section .mycard-height {
+        height: 304px;
+        overflow-y: hidden;
+        margin-bottom: 16px;
+    }
+
+    .content-section .mycard-info .rating .fa-star,
+    .content-section .mycard-info .rating span {
+        font-size: 14px;
+    }
