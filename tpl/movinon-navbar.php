@@ -106,8 +106,8 @@
                 </div>
 
                 <div class="menu-items">
-                    <a class="btn border-light rounded text-white mb-3" href="#" data-toggle="modal" data-target="#exampleModalLogin">登入</a>
-                    <a type="button" class="btn border-light rounded text-white mb-4" href="#" data-toggle="modal" data-target="#exampleModal">註冊</a>
+                    <a class="btn rounded text-white mb-3" href="#" data-toggle="modal" data-target="#exampleModalLogin">登入</a>
+                    <a type="button" class="btn rounded text-white mb-4" href="#" data-toggle="modal" data-target="#exampleModal">註冊</a>
 
                     <a href="./movies-overview-page.php">
                         <div class="item mb-2">電影排行榜</div>
@@ -123,7 +123,6 @@
                     </a>
                 </div>
             </div>
-
             
 
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

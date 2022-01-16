@@ -62,11 +62,11 @@ if (!isset($_SESSION['seat'])) {
                                                     </div>
 
                                                     <div class="content-row">
-                                                        <div>
+                                                        <div class="mycinema">
                                                             <div class="body2-r">影城</div>
                                                             <div class="sub-title-b"><?= $obj['cinema'] ?></div>
                                                         </div>
-                                                        <div>
+                                                        <div class="myseat">
                                                             <div class="body2-r">座位</div>
                                                             <div class="sub-title-b"><?= $objSeatName ?></div>
                                                         </div>

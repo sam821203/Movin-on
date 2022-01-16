@@ -1068,8 +1068,12 @@ footer p {
 
     .movinon-navbar .menu-items,
     .movinon-navbar .menu-bar.open .menu-items {
-        top: 48px;
-        right: 24px;
+        top: 0px;
+        right: 0px;
+        width: 100%;
+        height: 100%;
+        padding: 80px 24px 24px 24px;
+        text-align: center;
     }
 
     /* -------movinon footer-------*/

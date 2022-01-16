@@ -96,6 +96,11 @@
     color: rgba(18, 18, 18, 0.5);
 }
 
+.payment-section-l .content-row .mycinema .sub-title-b,
+.payment-section-l .content-row .myseat .sub-title-b {
+    line-height: 110%;
+}
+
 /* -----------------payment section r----------------- */
 .payment-section-r .detail-head,
 .payment-section-r .detail-head .detail-head-l,
