@@ -587,7 +587,7 @@ button .img-wrap img {
 
 .movinon-navbar .navbar-icons .img-wrap1 { width: 40px; }
 
-.movinon-navbar .navbar-icons .img-wrap2 {  width: 56px; }
+.movinon-navbar .navbar-icons .img-wrap2 {  width: 43.75px; }
 
 .movinon-navbar .navbar-icons .img-wrap1 img,
 .movinon-navbar .navbar-icons .img-wrap2 img {
@@ -607,6 +607,11 @@ button .img-wrap img {
 
 .movinon-navbar .navbar-icons .img-wrap2 .btn.dropdown-toggle {
     padding-top: 0;
+    margin-top: 6px;
+}
+
+.movinon-navbar .navbar-icons .img-wrap2 .btn {
+    line-height: 100%;
 }
 
 /* menu bar */
