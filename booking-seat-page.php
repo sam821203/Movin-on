@@ -55,7 +55,7 @@
                                             <div class="d-flex">
                                                 <div class="movie-poster">
                                                     <div class="img-wrap">
-                                                        <img src="images/movies_overview_page/現正熱映/<?= $obj['movie_poster'] ?>.jpg" alt="">
+                                                        <img src="images/poster_images/<?= $obj['movie_poster'] ?>.jpg" alt="">
                                                     </div>
                                                 </div>
                                                 <div class="content">

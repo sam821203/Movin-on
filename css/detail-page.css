@@ -977,6 +977,11 @@ body {
         text-align: left;
     }
 
+    .actors-list-section .actor-overflow-418 {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
     .actors-list-section .actor-name-tc1,
     .actors-list-section .actor-name-en1,
     .actors-list-section .actor-name-tc2,
@@ -994,6 +999,11 @@ body {
     .actors-list-section .actor-name-tc8,
     .actors-list-section .actor-name-en8 {
         opacity: var(--opacity-90);
+    }
+
+    .actors-list-section .character-name-tc1,
+    .actors-list-section .character-name-en1 {
+        display: none;
     }
 
     /* ----- movie stills ----- */

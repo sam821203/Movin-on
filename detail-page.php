@@ -11,12 +11,12 @@
     $arr = $pdo->query($sql)->fetchAll(); ?>
     <style>
         body {
-            background-image: url('images/booking_time_page/bg_img/<?= $arr[0]['movie_bg'] ?>.jpg');
+            background-image: url('images/detail_page/bg_img/<?= $arr[0]['movie_bg'] ?>.jpg');
         }
 
         @media screen and (max-width:418px) {
             body {
-                background-image: url('images/booking_time_page/bg_img/<?= $arr[0]['movie_bg418'] ?>.jpg');
+                background-image: url('images/detail_page/bg_img/<?= $arr[0]['movie_bg418'] ?>.jpg');
             }
         }
     </style>
@@ -66,7 +66,7 @@
                             <div class="col-xl-6 d-flex">
                                 <div class="col-sm-3 col-lg-6 movie-poster">
                                     <div class="img-wrap">
-                                        <img src="images/movies_overview_page/現正熱映/<?= $obj['poster'] ?>.jpg" alt="">
+                                        <img src="images/poster_images/<?= $obj['poster'] ?>.jpg" alt="">
                                     </div>
                                 </div>
 
@@ -133,7 +133,7 @@
                                 <button type="button" class="btn-brand">
                                     <?php
                                     $sql = "SELECT `movie_id`, `poster`, `division_id`, `date_id` FROM `movie` INNER JOIN `division` INNER JOIN `date`
-                                WHERE `movie_id` = 1
+                                WHERE `movie_id` = '{$_GET['movie_id']}'
                                 AND `division_id` = 'DV1'
                                 AND `date_id` = 'D1'";
                                     $arr = $pdo->query($sql)->fetchAll();
@@ -172,7 +172,7 @@
                             ?>
                                 <div class="mycol-4 movie-poster">
                                     <div class="img-wrap">
-                                        <img src="images/movies_overview_page/現正熱映/<?= $obj['poster'] ?>.jpg" alt="">
+                                        <img src="images/poster_images/<?= $obj['poster'] ?>.jpg" alt="">
                                     </div>
                                 </div>
 
@@ -294,7 +294,7 @@
 
                         <div class="row articles-1920 d-none d-xl-flex">
                             <?php
-                            $sql = "SELECT `movie_id`,`article_cat`,`title`,`spoiler_tag` FROM `spider_forum_article` WHERE `movie_id` = {$_GET['movie_id']}";
+                            $sql = "SELECT `movie_id`,`article_cat`,`title`,`spoiler_tag` FROM `spider_forum_article` WHERE `movie_id` = {$_GET['movie_id']} LIMIT 0, 8";
                             $arr = $pdo->query($sql)->fetchAll();
                             foreach ($arr as $objArt) {
                             ?>
@@ -666,131 +666,19 @@
                                                 </div>
                                             </div>
                                             <div class="actor-name">
-                                                <span class="actor-name-tc1 sub-title-b"><?= $obj['aName_TC'] ?></span>
-                                                <span class="actor-name-en1 italic-16"><?= $obj['aName_EN'] ?></span>
+                                                <div class="actor-overflow-418">
+                                                    <span class="actor-name-tc1 sub-title-b"><?= $obj['aName_TC'] ?></span>
+                                                </div>
+
+                                                <div class="actor-overflow-418">
+                                                    <span class="actor-name-en1 italic-16"><?= $obj['aName_EN'] ?></span>
+                                                </div>
 
                                                 <span class="character-name-tc1 sub-title-b"><?= $obj['character_TC'] ?></span>
                                                 <span class="character-name-en1 italic-16"><?= $obj['character_EN'] ?></span>
                                             </div>
                                         </li>
                                     <?php } ?>
-
-                                    <li class="list-unstyled">
-                                        <div class="img-wrap actor2">
-                                            <img src="images/detail_page/actors_list_section/actor-2-25.jpg" alt="">
-                                            <div>
-                                                <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="actor-name">
-                                            <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
-                                            <span class="actor-name-en1 italic-16">English</span>
-                                        </div>
-                                    </li>
-
-                                    <li class="list-unstyled">
-                                        <div class="img-wrap actor3">
-                                            <img src="images/detail_page/actors_list_section/actor-3-25.jpg" alt="">
-                                            <div>
-                                                <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="actor-name">
-                                            <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
-                                            <span class="actor-name-en1 italic-16">English</span>
-                                        </div>
-                                    </li>
-
-                                    <li class="list-unstyled">
-                                        <div class="img-wrap actor4">
-                                            <img src="images/detail_page/actors_list_section/actor-4-25.jpg" alt="">
-                                            <div>
-                                                <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="actor-name">
-                                            <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
-                                            <span class="actor-name-en1 italic-16">English</span>
-                                        </div>
-                                    </li>
-
-                                    <li class="list-unstyled">
-                                        <div class="img-wrap actor5">
-                                            <img src="images/detail_page/actors_list_section/actor-5-25.jpg" alt="">
-                                            <div>
-                                                <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="actor-name">
-                                            <span class="actor-name-tc1  sub-title-b mb-1">中文姓名</span>
-                                            <span class="actor-name-en1 italic-16">English</span>
-                                        </div>
-                                    </li>
-
-                                    <li class="list-unstyled">
-                                        <div class="img-wrap actor6">
-                                            <img src="images/detail_page/actors_list_section/actor-6-25.jpg" alt="">
-                                            <div>
-                                                <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="actor-name">
-                                            <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
-                                            <span class="actor-name-en1 italic-16">English</span>
-                                        </div>
-                                    </li>
-
-                                    <li class="list-unstyled">
-                                        <div class="img-wrap actor7">
-                                            <img src="images/detail_page/actors_list_section/actor-7-25.jpg" alt="">
-                                            <div>
-                                                <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="actor-name">
-                                            <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
-                                            <span class="actor-name-en1 italic-16">English</span>
-                                        </div>
-                                    </li>
-
-                                    <li class="list-unstyled">
-                                        <div class="img-wrap actor8">
-                                            <img src="images/detail_page/actors_list_section/actor-8-25.jpg" alt="">
-                                            <div>
-                                                <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="actor-name">
-                                            <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
-                                            <span class="actor-name-en1 italic-16">English</span>
-                                        </div>
-                                    </li>
-
-                                    <li class="list-unstyled">
-                                        <div class="img-wrap actor9">
-                                            <img src="images/detail_page/actors_list_section/actor-9-25.jpg" alt="">
-                                            <div>
-                                                <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="actor-name">
-                                            <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
-                                            <span class="actor-name-en1 italic-16">English</span>
-                                        </div>
-                                    </li>
-
-                                    <li class="list-unstyled">
-                                        <div class="img-wrap actor10">
-                                            <img src="images/detail_page/actors_list_section/actor-10-25.jpg" alt="">
-                                            <div>
-                                                <img class="image-hover actor-hover-char1" src="images/detail_page/actors_list_section/actor-4-hover.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="actor-name">
-                                            <span class="actor-name-tc1 sub-title-b mb-1">中文姓名</span>
-                                            <span class="actor-name-en1 italic-16">English</span>
-                                        </div>
-                                    </li>
                                 </div>
                             </div>
                         </div>

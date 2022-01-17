@@ -41,7 +41,7 @@
                                 ?>
                                     <div class="booking-time-poster">
                                         <div class="img-wrap">
-                                            <img src="images/movies_overview_page/現正熱映/<?= $objM['poster'] ?>.jpg" alt="">
+                                            <img src="images/poster_images/<?= $objM['poster'] ?>.jpg" alt="">
                                         </div>
                                     </div>
 
